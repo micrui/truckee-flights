@@ -9,7 +9,7 @@ week. This is what the scheduled GitHub Action runs every Monday.
   python3 weekly.py                        # last complete Mon-Sun week
   python3 weekly.py --dates 2026-08-01,2026-08-08   # explicit range (inclusive)
   python3 weekly.py --note "Study week"    # attach a note to the entry
-  python3 weekly.py --render-only          # just rebuild docs/weekly.html
+  python3 weekly.py --render-only          # just rebuild docs/quiet-hours.html
 
 Standard library only.
 """
