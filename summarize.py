@@ -14,7 +14,7 @@ returns the structures instead of writing the study-wide files.
 """
 import json, glob, os, datetime
 from collections import Counter
-from pipeline import hav_nm, nearest_airport, AIRPORT, TZ, window_bounds, t2s
+from pipeline import hav_nm, nearest_airport, AIRPORT, TZ, window_bounds, t2s, klass
 
 QUIET_END = (7, 0)   # local; KTRK voluntary Fly Quiet runs 22:00 to 07:00
 
@@ -47,10 +47,10 @@ def build(dates=None, window="morning"):
             allpts = [(base + e[0], e[1], e[2], (None if e[3] == "ground" else e[3]), e[3] == "ground")
                       for e in t.get("trace", [])]
             flags = t.get("dbFlags", 0) or 0
-            meta = dict(date=datestr, reg=rec["reg"], type=rec["type"], cls=rec["class"],
-                        own=(rec["own"] or "")[:60])
+            meta = dict(date=datestr, reg=rec["reg"], type=rec["type"],
+                        cls=klass(rec.get("type")), own=(rec["own"] or "")[:60])
             a = aircraft.setdefault(rec["reg"] or h, {
-                "reg": rec["reg"], "hex": h, "type": rec["type"], "class": rec["class"],
+                "reg": rec["reg"], "hex": h, "type": rec["type"], "class": klass(rec.get("type")),
                 "desc": rec.get("desc"), "owner": rec["own"],
                 "ladd": bool(flags & 8), "pia": bool(flags & 4), "days_seen": []})
             a["days_seen"].append(datestr)
