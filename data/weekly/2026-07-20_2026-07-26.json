@@ -46,7 +46,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "05:26",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -79,7 +79,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "06:20",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -134,7 +134,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "22:38",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -156,7 +156,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "23:05",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -189,7 +189,7 @@
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "ev": "DEP",
    "hm": "06:34",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -244,7 +244,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "22:46",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -255,7 +255,7 @@
    "own": "JG AVIATION LLC",
    "ev": "DEP",
    "hm": "06:33",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -299,7 +299,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "05:26",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -332,7 +332,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "06:20",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -431,7 +431,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:50",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -475,7 +475,7 @@
    "own": "NETJETS SALES INC",
    "ev": "DEP",
    "hm": "07:58",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -519,7 +519,7 @@
    "own": "CIRRUS DESIGN CORP",
    "ev": "DEP",
    "hm": "07:23",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -541,7 +541,7 @@
    "own": "LAWRENCE KAM M",
    "ev": "DEP",
    "hm": "07:34",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -552,7 +552,7 @@
    "own": "BACKCOUNTRYAVIATION LLC",
    "ev": "DEP",
    "hm": "07:36",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -607,7 +607,7 @@
    "own": "LIM FLT INC",
    "ev": "DEP",
    "hm": "08:00",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -651,7 +651,7 @@
    "own": "HOOTS HUSKY LLC",
    "ev": "DEP",
    "hm": "08:14",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -684,7 +684,7 @@
    "own": "WALLACE RICHARD RONALD",
    "ev": "DEP",
    "hm": "07:06",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -695,7 +695,7 @@
    "own": "WALLACE RICHARD RONALD",
    "ev": "DEP",
    "hm": "07:23",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -717,7 +717,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:57",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -728,7 +728,7 @@
    "own": "HOOTS HUSKY LLC",
    "ev": "DEP",
    "hm": "07:59",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -772,7 +772,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "22:38",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -794,7 +794,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "23:05",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -827,7 +827,7 @@
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "ev": "DEP",
    "hm": "06:34",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -904,7 +904,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "08:13",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -981,7 +981,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:59",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1014,7 +1014,7 @@
    "own": "FARM DOG HOLDINGS LLC",
    "ev": "DEP",
    "hm": "08:09",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1025,7 +1025,7 @@
    "own": "CCX-2300-0103 LLC",
    "ev": "DEP",
    "hm": "08:11",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1058,7 +1058,7 @@
    "own": "SIMMONS AND ASSOCIATES INC",
    "ev": "DEP",
    "hm": "08:20",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1102,7 +1102,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "22:46",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -1113,7 +1113,7 @@
    "own": "JG AVIATION LLC",
    "ev": "DEP",
    "hm": "06:33",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -1135,7 +1135,7 @@
    "own": "43KB LLC",
    "ev": "DEP",
    "hm": "07:04",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1168,7 +1168,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:31",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1190,7 +1190,7 @@
    "own": "FLEISCHER RUSSELL, MOUNTAINTIME AVIATION LLC, BLUE SKIES SUN",
    "ev": "DEP",
    "hm": "07:39",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1234,7 +1234,7 @@
    "own": "JASINSKI DAVID W TRUSTEE, JASINSKI AMY TRUSTEE",
    "ev": "DEP",
    "hm": "08:16",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1256,7 +1256,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:54",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1267,7 +1267,7 @@
    "own": "MARIANI BROS AIR SUPPORT LLC",
    "ev": "DEP",
    "hm": "07:54",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1311,7 +1311,7 @@
    "own": "MARIANI BROS AIR SUPPORT LLC",
    "ev": "DEP",
    "hm": "08:18",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {

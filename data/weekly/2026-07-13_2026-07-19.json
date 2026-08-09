@@ -57,7 +57,7 @@
    "own": "HELIBRO LLC",
    "ev": "DEP",
    "hm": "00:21",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -178,7 +178,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "06:25",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -200,7 +200,7 @@
    "own": "SWISS MISS LLC, SWISS MADE LLC",
    "ev": "DEP",
    "hm": "06:27",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -233,7 +233,7 @@
    "own": "HELIGROUP FIRE LLC",
    "ev": "DEP",
    "hm": "22:05",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -310,7 +310,7 @@
    "own": "HELIBRO LLC",
    "ev": "DEP",
    "hm": "23:02",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -321,7 +321,7 @@
    "own": "BEAM 33 INC",
    "ev": "DEP",
    "hm": "23:04",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -343,7 +343,7 @@
    "own": "BILLINGS FLYING SERVICE LLC",
    "ev": "DEP",
    "hm": "23:39",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -459,7 +459,7 @@
    "own": "HELIBRO LLC",
    "ev": "DEP",
    "hm": "00:21",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -580,7 +580,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "06:25",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -602,7 +602,7 @@
    "own": "SWISS MISS LLC, SWISS MADE LLC",
    "ev": "DEP",
    "hm": "06:27",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -723,7 +723,7 @@
    "own": "HELIGROUP FIRE LLC",
    "ev": "DEP",
    "hm": "22:05",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -800,7 +800,7 @@
    "own": "HELIBRO LLC",
    "ev": "DEP",
    "hm": "23:02",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -811,7 +811,7 @@
    "own": "BEAM 33 INC",
    "ev": "DEP",
    "hm": "23:04",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -833,7 +833,7 @@
    "own": "BILLINGS FLYING SERVICE LLC",
    "ev": "DEP",
    "hm": "23:39",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -877,7 +877,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:51",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -888,7 +888,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:55",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -899,7 +899,7 @@
    "own": "CHASE DAN",
    "ev": "DEP",
    "hm": "08:05",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -932,7 +932,7 @@
    "own": "EL AERO SERVICES LLC",
    "ev": "DEP",
    "hm": "08:11",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -965,7 +965,7 @@
    "own": "REGISTRATION PENDING",
    "ev": "DEP",
    "hm": "08:24",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -976,7 +976,7 @@
    "own": "CIRRUS DESIGN CORP",
    "ev": "DEP",
    "hm": "08:26",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1031,7 +1031,7 @@
    "own": "HOWELL WILLIAM J",
    "ev": "DEP",
    "hm": "07:35",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1097,7 +1097,7 @@
    "own": "UP UP AND AWAY LLC",
    "ev": "DEP",
    "hm": "08:12",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1119,7 +1119,7 @@
    "own": "OSTROFF ALAN",
    "ev": "DEP",
    "hm": "08:18",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1174,7 +1174,7 @@
    "own": "THYS EDOUARD B",
    "ev": "DEP",
    "hm": "07:43",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1240,7 +1240,7 @@
    "own": "D & D KAYE INC",
    "ev": "DEP",
    "hm": "08:20",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1295,7 +1295,7 @@
    "own": "CHASE DAN",
    "ev": "DEP",
    "hm": "07:24",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1306,7 +1306,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:34",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1317,7 +1317,7 @@
    "own": "HESS RONALD",
    "ev": "DEP",
    "hm": "07:36",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1372,7 +1372,7 @@
    "own": "43KB LLC",
    "ev": "DEP",
    "hm": "08:00",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1383,7 +1383,7 @@
    "own": "412 AVIATION LLC",
    "ev": "DEP",
    "hm": "08:00",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1482,7 +1482,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:18",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1504,7 +1504,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:37",
-   "other": "LOCAL loop",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {

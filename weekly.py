@@ -43,7 +43,7 @@ def collect(dates, note=None, window="full"):
         "quiet_hours_ops": len(quiet),
         "quiet_hours_by_class": dict(Counter(e["cls"] for e in quiet)),
         "quiet_hours_events": quiet,
-        "local_flights": sum(1 for e in events if e["other"] == "LOCAL loop"),
+        "local_flights": sum(1 for e in events if e["other"].startswith("Local flight")),
         "ladd_operators": sorted({a["reg"] for a in aircraft
                                   if a["ladd"] and a["reg"] in {e["reg"] for e in events}}),
         "note": note,

@@ -76,7 +76,7 @@ def build(dates=None, window="morning"):
                     ref = post[0] if post else after[-1]
                     oth = nearest_airport(ref[1], ref[2])
                     if oth.startswith("KTRK"):
-                        oth = "LOCAL loop"
+                        oth = "Local flight (returned to KTRK)"
                     events.append(dict(meta, ev="DEP", hm=t2s(b1), other=oth, pre7=b1 < QE))
 
             earlypts = [p for p in allpts if W0 <= p[0] < QE and not p[4] and p[3] is not None
