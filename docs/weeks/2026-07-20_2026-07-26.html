@@ -59,7 +59,7 @@
   aircraft that flew low nearby during quiet hours without landing. Times left of the dashed line are during the
   voluntary quiet hours; marks left of midnight belong to the evening before the row's date. Hover any mark for details; click it for that aircraft&rsquo;s full log.</p>
   <div class="panel">
-    <div class="chart-scroll"><svg id="chart" width="920" height="660" viewBox="0 0 920 660" role="img" aria-label="Timeline of operations for Jul 20 to 26, 2026"></svg></div>
+    <div class="chart-scroll"><svg id="chart" width="920" height="750" viewBox="0 0 920 750" role="img" aria-label="Timeline of operations for Jul 20 to 26, 2026"></svg></div>
     <div class="legend">
       <span class="item"><span class="sw" style="background:var(--fire)"></span>Fire operations</span>
       <span class="item"><span class="sw" style="background:var(--medical)"></span>Medical</span>
@@ -87,6 +87,8 @@ function catOf(e) {
   return "light";
 }
 const colorOf = e => CAT_COLORS[catOf(e)];
+const LANES = { fire: 0, medical: 1, jet: 2, turboprop: 3, light: 4 };
+const N_LANES = 5;
 const DAYS = W_DATA.days;
 const DAYLBL = DAYS.map(d => {
   const dt = new Date(d + "T12:00:00");
@@ -99,7 +101,7 @@ const SPAN = smin > emin ? (1440 - smin) + emin : emin - smin;
 const rel = m => (smin > emin && m < smin) ? m + 1440 - smin : m - smin;
 
 const M = { l: 92, r: 18, t: 26, b: 34 };
-const W = 920, H = 660;
+const W = 920, H = 750;
 const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
 const rowH = plotH / DAYS.length;
 function xOf(hm) {
@@ -107,6 +109,8 @@ function xOf(hm) {
   return M.l + rel(m) / SPAN * plotW;
 }
 const yOf = di => M.t + di * rowH + rowH / 2;
+const laneH = rowH / N_LANES;
+const yLane = (di, e) => M.t + di * rowH + (LANES[catOf(e)] + 0.5) * laneH;
 
 const svg = document.getElementById("chart");
 const NS = "http://www.w3.org/2000/svg";
@@ -139,14 +143,14 @@ function layout(items) {
   const placed = [];
   items.sort((a, b) => a.x - b.x);
   for (const it of items) {
-    let lane = 0;
-    const taken = new Set(placed.filter(p => Math.abs(p.x - it.x) < 9).map(p => p.lane));
-    while (taken.has(lane)) lane++;
-    it.lane = lane; placed.push(it);
+    let slot = 0;
+    const taken = new Set(placed.filter(p => Math.abs(p.x - it.x) < 9).map(p => p.slot));
+    while (taken.has(slot)) slot++;
+    it.slot = slot; placed.push(it);
   }
   for (const it of items) {
-    const dir = it.lane % 2 === 1 ? 1 : -1;
-    it.y += dir * Math.ceil(it.lane / 2) * 13;
+    const dir = it.slot % 2 === 1 ? 1 : -1;
+    it.y += dir * Math.ceil(it.slot / 2) * 6;
   }
 }
 const tip = document.getElementById("tip");
@@ -165,16 +169,18 @@ const marks = [];
 for (const e of (W_DATA.events || [])) {
   const di = DAYS.indexOf(e.date);
   if (di < 0) continue;
-  marks.push({ x: xOf(e.hm), y: yOf(di), day: di, kind: e.ev, e });
+  marks.push({ x: xOf(e.hm), y: yLane(di, e), day: di, lane: LANES[catOf(e)], kind: e.ev, e });
 }
 const ovf = W_DATA.overflights || (W_DATA.airborne_quiet || []).filter(a =>
   !(W_DATA.events || []).some(e => e.date === a.date && e.reg === a.reg));
 for (const a of ovf) {
   const di = DAYS.indexOf(a.date);
   if (di < 0) continue;
-  marks.push({ x: xOf(a.first), y: yOf(di), day: di, kind: "OVF", e: a, x2: xOf(a.last) });
+  marks.push({ x: xOf(a.first), y: yLane(di, a), day: di, lane: LANES[catOf(a)], kind: "OVF", e: a, x2: xOf(a.last) });
 }
-for (let i = 0; i < DAYS.length; i++) layout(marks.filter(m => m.day === i));
+for (let i = 0; i < DAYS.length; i++)
+  for (let l = 0; l < N_LANES; l++)
+    layout(marks.filter(m => m.day === i && m.lane === l));
 
 // pair quick turns: ARR then DEP by the same aircraft within 45 minutes reads as one stop
 const relMin = hm => { const m = parseInt(hm.slice(0,2))*60 + parseInt(hm.slice(3)); return (smin > emin && m < smin) ? m + 1440 - smin : m - smin; };
