@@ -87,7 +87,7 @@ def render():
                 f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
                 f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                 f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
-                f'<td class="mono">{html.escape(e["type"] or "?")}</td><td>{e["cls"]}</td>'
+                f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
                 f'<td>{html.escape(e["other"])}</td>'
                 f'<td>{html.escape(e["own"] or "")}</td></tr>'
                 for e in w["quiet_hours_events"])
@@ -344,8 +344,8 @@ def render_operators(weeks):
         log_rows.sort(key=lambda kv: kv[0])
         ev_rows = "".join(r for k, r in log_rows)
         sections.append(
-            f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {html.escape(a["type"])} · {a["cls"]}{badge}'
-            f' <span class="own">{html.escape(a["own"] or "")}</span>{role_tag(a)}</h3>'
+            f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {type_link(a["type"], a.get("desc"))} · {a["cls"]}{badge}'
+            f' <span class="own">{html.escape(a.get("desc") or "")}{" · " if a.get("desc") and a.get("own") else ""}{html.escape(a["own"] or "")}</span>{role_tag(a)}</h3>'
             f'<div class="table-scroll"><table><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
             f'<tbody>{ev_rows}</tbody></table></div>')
 
