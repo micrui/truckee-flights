@@ -156,8 +156,7 @@ def render():
     (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
     first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
-    for flights that need the edges of the quiet window; the log records all movements and
-    characterizes none. For evening flights (10:00 pm to midnight), the time shown belongs
+    for flights that need the edges of the quiet window. For evening flights (10:00 pm to midnight), the time shown belongs
     to the night before the listed date. Context for night operations: the district\'s own
     <a href="https://pilots.truckeetahoeairport.com/fuel.html">fuel service hours</a> are 7:00 am to
     7:00 pm, with after-hours fueling available by arrangement. Per-aircraft tallies and a full log for every tail
@@ -420,9 +419,8 @@ def render_operators(weeks):
   <h1>Operators, by quiet-hours activity</h1>
   <p class="standfirst">
     Every aircraft recorded taking off or landing at the field ({span}), tallied by operations during the
-    voluntary quiet hours (10:00 pm to 7:00 am) and listed with its full recorded log below. Includes air
-    ambulances and other flights most people would not question; the record characterizes none of them.
-    Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
+    voluntary quiet hours (10:00 pm to 7:00 am) and listed with its full recorded log below, air
+    ambulances and other working flights included. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
   </p>
   <div class="table-scroll"><table>
     <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
