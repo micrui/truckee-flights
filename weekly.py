@@ -152,14 +152,16 @@ def render():
     Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
     (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
-    first 90 minutes after they end. (Weeks tagged "mornings only" were collected before
+    first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
+    for flights that need the edges of the quiet window; the log records all movements and
+    characterizes none. (Weeks tagged "mornings only" were collected before
     evening coverage began and cover 4:00 to 8:30 am; for evening flights, the time shown
     belongs to the night before the listed date.) Quiet-hours activity is listed
     flight by flight below; the record includes air ambulances and other flights most people
     would not question, and characterizes none of them.
   </p>
   <div class="table-scroll"><table>
-    <thead><tr><th>Week</th><th>Takeoffs + landings</th><th>Local round trips</th><th>During quiet hours (before 7:00 am)</th></tr></thead>
+    <thead><tr><th>Week</th><th>Takeoffs + landings</th><th>Local departures</th><th>During quiet hours (before 7:00 am)</th></tr></thead>
     <tbody>
       {"".join(rows)}
     </tbody>
