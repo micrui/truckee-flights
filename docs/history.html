@@ -1,0 +1,141 @@
+<meta charset="utf-8">
+<title>truckee-flights: a documented timeline</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; margin: 0; padding: 48px 20px 72px; }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow a { color: inherit; }
+  h1 { font-size: clamp(26px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .standfirst { font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 34px; }
+  .era { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    font-weight: 650; margin: 38px 0 6px; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .entry { display: grid; grid-template-columns: 92px 1fr; gap: 14px; padding: 12px 0;
+    border-bottom: 1px solid var(--grid); }
+  .entry .when { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px;
+    color: var(--ink-2); font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .entry .what { font-size: 14.5px; max-width: 66ch; }
+  .entry .what q { font-style: italic; }
+  .entry .src { display: block; font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .entry .src a { color: var(--muted); }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 12px 0 4px; }
+  th { text-align: right; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--axis); }
+  th:first-child, td:first-child { text-align: left; }
+  td { text-align: right; padding: 4px 10px 4px 0; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  .table-scroll { overflow-x: auto; }
+  .src-note { font-size: 12px; color: var(--muted); max-width: 70ch; }
+  a { color: var(--accent); }
+  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
+  @media (max-width: 560px) { .entry { grid-template-columns: 1fr; gap: 2px; } }
+</style>
+<div class="wrap">
+  <p class="eyebrow"><a href="./">truckee-flights</a> · a documented timeline</p>
+  <h1>How the airport got here</h1>
+  <p class="standfirst">
+    A dated record of the airport's founding, funding, growth, and community programs, assembled from
+    district documents, federal records, and local reporting. Quotes are verbatim. Every entry links its
+    source. Entries that reflect the district's mitigation efforts and entries that reflect growth are
+    presented on the same terms.
+  </p>
+
+  <p class="era">Founding and funding</p>
+  <div class="entry"><div class="when">1933</div><div class="what">An airstrip is cleared at Truckee, used by Boeing as an emergency landing field on the Trans-Sierra airmail route.
+    <span class="src"><a href="https://truckeetahoeairport.com/news/48-truckee-tahoe-airport-history-and-stats">District history page</a></span></div></div>
+  <div class="entry"><div class="when">May 1958</div><div class="what">The Truckee Tahoe Airport District is created by a vote of the electorate, organized by the Chamber of Commerce, whose members were <q>eager to have a modern airport that would bring tourists to the area.</q> The property tax that still funds the district is approved by voters as part of the district's formation.
+    <span class="src"><a href="https://truckeetahoeairport.com/news/48-truckee-tahoe-airport-history-and-stats">District history page</a> · <a href="https://www.truckee.com/special-district">truckee.com, special districts</a></span></div></div>
+  <div class="entry"><div class="when">1978</div><div class="what">Proposition 13 fixes the district's share of the countywide 1% property tax levy. The share becomes automatic: no reauthorization, no sunset, no separate line on a tax bill. It has not been voted on since 1958. District receipts under this allocation reach $9.3 million by 2024, roughly half of total revenue.
+    <span class="src"><a href="https://truckeetahoeairport.com/administration/finance">District finance page</a> · <a href="https://truckeetahoeairport.com/board_meetings/368/view_file?file=tab+09b+-+ttad+historic+and+approved+budget+summary+v3.pdf">budget history</a></span></div></div>
+
+  <p class="era">The expansion era</p>
+  <div class="entry"><div class="when">~2000</div><div class="what">The airport's master plan of this era anticipates growth: <q>Ten years ago, the Truckee Tahoe Airport District anticipated bigger planes and more of them. It planned to build parallel runways.</q>
+    <span class="src"><a href="https://www.capradio.org/articles/2014/06/23/new-truckee-tahoe-airport-master-plan-anticipates-less-growth/">CapRadio, June 2014</a></span></div></div>
+  <div class="entry"><div class="when">2004</div><div class="what">Noise conflict is already substantial: the district processes 936 noise calls this year and publishes annual noise reports. Following a Town of Truckee legal memo, the board adopts Resolution 2004-03, agreeing to support phasing out Stage I and II business jets and to <q>engage in mitigation efforts</q> when triggers are met, including <q>the portion of jets exceeds 15% of the total.</q>
+    <span class="src"><a href="http://web.archive.org/web/20050517005053/http://www.truckeetahoeairport.com:80/2004%20Annual%20Noise%20Report.pdf">2004 Annual Noise Report (archived)</a> · <a href="https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf">staff memo on Resolution 2004-03</a></span></div></div>
+  <div class="entry"><div class="when">2003–2018</div><div class="what">The district invests $17.48 million in non-aviation community projects over fifteen years, per its own ledger: $3M toward the Waddle Ranch open-space purchase (2007) plus $3M in forestry there, $2.77M for the Ponderosa Golf Course (2008), $1.81M for Martis Creek open space (2011), $930K for the community pool (2015), among others.
+    <span class="src"><a href="https://truckeetahoeairport.com/documents/404-ttad_community_partner_benefits_sept_2018-pdf">TTAD Investments in the Community, 2003–2018 (district document)</a></span></div></div>
+
+  <p class="era">The inflection: 2014–2018</p>
+  <div class="entry"><div class="when">May 2014</div><div class="what">Surf Air begins scheduled Pilatus PC-12 membership service between San Carlos and Truckee. Airport general manager Kevin Smith: <q>Any way to improve access to the area is a benefit to the community.</q>
+    <span class="src"><a href="https://www.sierrasun.com/news/local/surf-air-expands-flight-service-to-truckee/">Sierra Sun, May 2014</a></span></div></div>
+  <div class="entry"><div class="when">2014</div><div class="what">Jet operations reach 15.1% of the total (3,448 of 22,764), crossing the 15% trigger in Resolution 2004-03. The district also purchases the Vector VNOMS noise and operations monitoring system this year.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf">staff memo</a> · <a href="https://truckeetahoeairport.com/news/26-ttad-chooses-new-noise-and-operations-monitoring-system">district announcement</a></span></div></div>
+  <div class="entry"><div class="when">Jan 2015</div><div class="what">A staff memo addresses the crossed trigger: <q>There is no debate that Jet operations in 2014 are at or above 15%.</q> It argues the resolution's thresholds should be read against 2004's higher operations estimates, and that boards and staff <q>have worked over the years on mitigation tactics well beyond the scope of the Resolution.</q> The airfield's fuel and service hours have been reduced since 2004; hangar tenants receive incentives for observing the voluntary night curfew.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf">staff memo on Resolution 2004-03, Jan 28, 2015</a></span></div></div>
+  <div class="entry"><div class="when">Jul 2015</div><div class="what">The new Airport Master Plan is finalized around <q>managed growth of aviation facilities.</q> A proposed third runway is eliminated. The plan declines to pursue lower instrument-approach minimums, asks <q>Will aircraft using the airport get any larger; how can this be prevented at TRK?</q>, and targets 25% of property tax revenue to <q>Annoyance Reduction and Community Outreach Projects.</q> Board president John Jones reports jet traffic up 113% from 2009 to 2014, and a survey finding that 88% of respondents want airport growth managed.
+    <span class="src"><a href="https://truckeetahoeairport.com/documents/79-trk_amp_july_2015_final-completereport-pdf">2015 Airport Master Plan</a> · <a href="https://truckeetahoeairport.com/board_meetings/121/view_file?file=tab+01+-+john+jones+ttad+budget+presentation+sept++2015+(2).pdf">Jones budget presentation, Sept 2015</a></span></div></div>
+  <div class="entry"><div class="when">2017</div><div class="what">The district opens a control tower (seasonal trial June; year-round from December), contracting Midwest ATC at roughly $860K–$1M per year of district funds, <q>to enhance safety and mitigate community annoyance.</q> Class D airspace follows in March 2018.
+    <span class="src"><a href="https://www.aopa.org/news-and-media/all-news/2017/december/19/seasonal-tower-operating-at-truckee-tahoe">AOPA, Dec 2017</a> · <a href="https://truckeetahoeairport.com/board_meetings/217/view_file?file=tab+14+-+fy+2020+budget+narrative.pdf">FY2020 budget preface</a></span></div></div>
+  <div class="entry"><div class="when">Nov 2018</div><div class="what">The no-marketing posture is codified in the adopted FY2019 budget: <q>it does not market for or encourage increased flight operations but responds to the needs of the region it serves.</q> By FY2021 the wording becomes <q>traditionally does not market.</q> No earlier appearance of this language was found in district records.
+    <span class="src"><a href="https://truckeetahoeairport.com/public_files/446-cy_2019_budget-pdf">FY2019 budget</a> · <a href="https://truckeetahoeairport.com/documents/581-fy_2021_approved_budget-pdf">FY2021 budget</a></span></div></div>
+
+  <p class="era">The heavy era: 2019–present</p>
+  <div class="entry"><div class="when">2019</div><div class="what">Total operations peak at 36,379. They have not returned to this level since.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf">district tracking reports</a></span></div></div>
+  <div class="entry"><div class="when">2020</div><div class="what">Total operations fall 8%; operations by jets over 12,500 lbs rise 23.7% (3,432 to 4,246). The fleet is getting heavier while the airport gets no busier.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf">district annual report</a> · <a href="https://tahoequarterly.com/features/aviation-climbs-to-new-heights">Tahoe Quarterly</a></span></div></div>
+  <div class="entry"><div class="when">2021</div><div class="what">Jet operations peak at 5,175 (up 74% from 2013). Noise comments peak at 1,320, from 240 households. The board unanimously amends the district's mission statement, removing the word "aviation." General manager Kevin Smith, on community giving: <q>We're flying airplanes and jets in and out of here and making noise. We feel an obligation to get out there.</q>
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf">district data</a> · <a href="https://www.moonshineink.com/tahoe-news/in-the-crosswinds/">Moonshine Ink</a> · <a href="https://www.moonshineink.com/tahoe-news/plane-and-clear/">Moonshine Ink, "Plane and Clear"</a></span></div></div>
+  <div class="entry"><div class="when">2023</div><div class="what">Runway 2/20 is closed June 25 to November 16 and reconstructed with $6.3M in FAA grant funds, the district's largest federal award on record. Each accepted federal grant extends the district's grant-assurance obligations, including nondiscriminatory access for all aeronautical users, for 20 years.
+    <span class="src"><a href="https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf">FY2023 audit</a> · <a href="https://www.faa.gov/airports/aip/grant_assurances">FAA grant assurances</a></span></div></div>
+  <div class="entry"><div class="when">2024</div><div class="what">Operations by jets over 50,000 lbs reach 450, the highest on record and up 45% in a year; the category did not exist in district tracking before 2015. Jets draw 44% of noise comments while flying about 15% of operations. The Community Benefit budget line reaches $4.9M, including a pivot of roughly $2M per year to direct wildfire-mitigation funding for local fire agencies.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf">district annual report</a> · <a href="https://truckeetahoeairport.com/documents/944-tab_14a_-_2024_final_detail_operating_budget___reference_guide-pdf">2024 final budget</a> · <a href="https://www.ttcf.net/ttad-partnership-program/">TTCF</a></span></div></div>
+  <div class="entry"><div class="when">2025</div><div class="what">The adopted budget carries a $2.97M Community Benefit line and anticipates $1.475M in new federal grants, including the Apron A2 project (<q>parking circles/ramp in front of Unicom</q>). Budgeted fuel: 500,000 gallons of jet fuel against 100,000 gallons of avgas. The district pledges a $2M match toward the new Truckee library, contingent on private fundraising.
+    <span class="src"><a href="https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf">2025 Budget Reference Guide</a> · <a href="https://www.sierrasun.com/news/tahoe-truckee-airport-district-commits-2-million-in-funding-for-new-truckee-regional-library-through-matching-opportunity/">Sierra Sun</a></span></div></div>
+
+  <p class="era">The record in one table</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Year</th><th>Total ops</th><th>Jet ops</th><th>Jets &gt;12,500 lbs</th><th>Jets &gt;50,000 lbs</th><th>Noise comments</th></tr></thead>
+    <tbody>
+      <tr><td>2013</td><td>21,618</td><td>2,966</td><td>1,920</td><td>—</td><td>119</td></tr>
+      <tr><td>2014</td><td>22,764</td><td>3,448</td><td>2,172</td><td>—</td><td>272</td></tr>
+      <tr><td>2015</td><td>27,613</td><td>3,411</td><td>2,487</td><td>227</td><td>463</td></tr>
+      <tr><td>2016</td><td>32,524</td><td>3,674</td><td>2,756</td><td></td><td>680</td></tr>
+      <tr><td>2017</td><td>33,580</td><td>4,140</td><td>3,180</td><td></td><td>617</td></tr>
+      <tr><td>2018</td><td>34,847</td><td>4,549</td><td>3,653</td><td></td><td>690</td></tr>
+      <tr><td>2019</td><td>36,379</td><td>4,430</td><td>3,432</td><td></td><td>771</td></tr>
+      <tr><td>2020</td><td>33,441</td><td>5,075</td><td>4,246</td><td>424</td><td>854</td></tr>
+      <tr><td>2021</td><td>31,323</td><td>5,175</td><td>4,381</td><td></td><td>1,320</td></tr>
+      <tr><td>2022</td><td>32,136</td><td>5,049</td><td>4,458</td><td>412</td><td>1,217</td></tr>
+      <tr><td>2023</td><td>30,140</td><td>4,300</td><td>3,695</td><td></td><td>819</td></tr>
+      <tr><td>2024</td><td>30,536</td><td>4,513</td><td>3,723</td><td>450</td><td>720</td></tr>
+    </tbody>
+  </table></div>
+  <p class="src-note">All figures from the district's Operations and Community Comment Reports
+  (<a href="https://truckeetahoeairport.com/documents/354-ops_comments_2013_to2017-pdf">2013–2017</a>,
+  <a href="https://truckeetahoeairport.com/documents/456-2014-2018_opscomment_tracking1-11-19-pdf">2014–2018</a>,
+  <a href="https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf">2019–2023</a>,
+  <a href="https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf">2020–2024</a>).
+  Blank cells: the &gt;50,000 lb category begins in 2015 and the district did not publish it every year; only published values appear here.
+  The district notes complaint-counting methods changed in 2014, 2017, and 2018, so early and later comment counts are not strictly comparable.
+  The FAA's public operations figures for this airport are static estimates and do not reflect measured traffic; the district's tracking data is the only measured series.</p>
+
+  <div class="foot">
+    <p>This page is a dated record, not an argument. It includes the district's mitigation and community
+    investment history on the same terms as its growth history. Corrections with sources are welcome via
+    <a href="https://github.com/micrui/truckee-flights">GitHub</a>.</p>
+  </div>
+</div>
