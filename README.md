@@ -35,7 +35,7 @@ Scope notes: one summer week; ADS-B-equipped aircraft only, so light-aircraft co
 
 ## Reference: airport finances
 
-[The ledger](https://micrui.github.io/truckee-flights/financials.html): district revenue by source (43% property tax, 27% operating, 28% federal grants in audited 2023), the multimillion-dollar annual operating loss that taxes cover, fuel revenue by aircraft type (jet fuel is 85% of budgeted fuel revenue), the 2003-2023 federal grant history ($29.75M across 29 grants) with the 20-year grant-assurance mechanism explained, and the district's $2.97M Community Benefit budget. Every line sourced to district or federal documents.
+[How the airport is funded](https://micrui.github.io/truckee-flights/financials.html): district revenue by source (43% property tax, 27% operating, 28% federal grants in audited 2023), the multimillion-dollar annual operating loss that taxes cover, fuel revenue by aircraft type (jet fuel is 85% of budgeted fuel revenue), the 2003-2023 federal grant history ($29.75M across 29 grants) with the 20-year grant-assurance mechanism explained, and the district's $2.97M Community Benefit budget. Every line sourced to district or federal documents.
 
 ## Ongoing: quiet-hours flight log
 
