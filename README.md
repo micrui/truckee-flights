@@ -4,7 +4,7 @@ Independent, reproducible flight data for Truckee Tahoe Airport (KTRK).
 
 Public discussion of the airport, its traffic, its noise, and its voluntary curfew generally draws on two kinds of sources: the airport district's own reporting (board presentations, the [Fly Quiet program](https://truckeetahoeairport.com/current-projects/fly-quiet), the [PlaneNoise comment portal](https://www.planenoise.com/ktrk/)) and the Town of Truckee's planning documents (the [General Plan Noise Element](https://www.townoftruckee.gov/DocumentCenter/View/738/Chapter-8---Noise-Element-PDF)). Both are useful. Neither can be independently checked by a resident without tooling.
 
-Aircraft broadcast their positions publicly over ADS-B, so most factual claims about who flies here, when, and from where are directly verifiable. This repository is tooling and data for doing that. It is not affiliated with the airport district, the town, or any operator, and it takes no position on airport policy.
+Aircraft broadcast their positions publicly over ADS-B, so most factual claims about who flies here, when, and from where are directly verifiable. This repository is tooling and data for doing that. It is not affiliated with the airport district, the town, or any operator.
 
 ## What is here
 
