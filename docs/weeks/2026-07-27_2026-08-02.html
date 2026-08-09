@@ -59,7 +59,7 @@
   aircraft that flew low nearby during quiet hours without landing. Times left of the dashed line are during the
   voluntary quiet hours; marks left of midnight belong to the evening before the row's date. Hover any mark for details; click it for that aircraft&rsquo;s full log.</p>
   <div class="panel">
-    <div class="chart-scroll"><svg id="chart" width="920" height="420" viewBox="0 0 920 420" role="img" aria-label="Timeline of operations for Jul 27 to Aug 2, 2026"></svg></div>
+    <div class="chart-scroll"><svg id="chart" width="920" height="660" viewBox="0 0 920 660" role="img" aria-label="Timeline of operations for Jul 27 to Aug 2, 2026"></svg></div>
     <div class="legend">
       <span class="item"><span class="sw" style="background:var(--jet)"></span>Jet</span>
       <span class="item"><span class="sw" style="background:var(--tprop)"></span>Turboprop</span>
@@ -88,7 +88,7 @@ const SPAN = smin > emin ? (1440 - smin) + emin : emin - smin;
 const rel = m => (smin > emin && m < smin) ? m + 1440 - smin : m - smin;
 
 const M = { l: 92, r: 18, t: 26, b: 34 };
-const W = 920, H = 420;
+const W = 920, H = 660;
 const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
 const rowH = plotH / DAYS.length;
 function xOf(hm) {
@@ -135,7 +135,7 @@ function layout(items) {
   }
   for (const it of items) {
     const dir = it.lane % 2 === 1 ? 1 : -1;
-    it.y += dir * Math.ceil(it.lane / 2) * 10;
+    it.y += dir * Math.ceil(it.lane / 2) * 13;
   }
 }
 const tip = document.getElementById("tip");
