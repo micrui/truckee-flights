@@ -10,21 +10,21 @@
   "2026-07-25",
   "2026-07-26"
  ],
- "window_local": "04:00-08:30",
- "total_ops": 86,
- "unique_aircraft": 55,
+ "window_local": "22:00-08:30",
+ "total_ops": 96,
+ "unique_aircraft": 56,
  "by_class": {
   "turboprop": 13,
-  "piston": 48,
+  "piston": 50,
   "jet": 21,
-  "helicopter": 4
+  "helicopter": 12
  },
- "quiet_hours_ops": 12,
+ "quiet_hours_ops": 22,
  "quiet_hours_by_class": {
   "turboprop": 5,
-  "piston": 3,
+  "piston": 5,
   "jet": 3,
-  "helicopter": 1
+  "helicopter": 9
  },
  "quiet_hours_events": [
   {
@@ -127,6 +127,61 @@
    "pre7": true
   },
   {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "22:38",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:04",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "23:05",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:55",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "23:56",
+   "other": "KMCC McClellan",
+   "pre7": true
+  },
+  {
    "date": "2026-07-23",
    "reg": "N460NG",
    "type": "PC12",
@@ -134,6 +189,61 @@
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "ev": "DEP",
    "hm": "06:34",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:58",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "ARR",
+   "hm": "00:34",
+   "other": "KCCR Concord",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "01:08",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "DEP",
+   "hm": "22:34",
+   "other": "KCCR Concord",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "22:46",
    "other": "LOCAL loop",
    "pre7": true
   },
@@ -160,7 +270,7 @@
    "pre7": true
   }
  ],
- "local_flights": 27,
+ "local_flights": 30,
  "ladd_operators": [
   "N460NG",
   "N469JG",
@@ -655,6 +765,61 @@
    "pre7": false
   },
   {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "22:38",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:04",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "23:05",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:55",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "23:56",
+   "other": "KMCC McClellan",
+   "pre7": true
+  },
+  {
    "date": "2026-07-23",
    "reg": "N460NG",
    "type": "PC12",
@@ -763,6 +928,39 @@
    "hm": "08:26",
    "other": "KSCK Stockton",
    "pre7": false
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:58",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "ARR",
+   "hm": "00:34",
+   "other": "KCCR Concord",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "01:08",
+   "other": "KTRK Truckee",
+   "pre7": true
   },
   {
    "date": "2026-07-24",
@@ -884,6 +1082,28 @@
    "hm": "08:28",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "DEP",
+   "hm": "22:34",
+   "other": "KCCR Concord",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "22:46",
+   "other": "LOCAL loop",
+   "pre7": true
   },
   {
    "date": "2026-07-25",
@@ -1115,6 +1335,298 @@
    "hm": "08:26",
    "other": "KRNO Reno",
    "pre7": false
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-07-20",
+   "reg": "N13GX",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "EPIC II LLC",
+   "first": "05:19",
+   "last": "06:32",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-20",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "first": "06:12",
+   "last": "06:19",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-20",
+   "reg": "N95DR",
+   "type": "RV8",
+   "cls": "piston",
+   "own": "ROSS DAN G",
+   "first": "06:07",
+   "last": "06:13",
+   "min_alt": 9325
+  },
+  {
+   "date": "2026-07-20",
+   "reg": "N320QS",
+   "type": "C680",
+   "cls": "jet",
+   "own": "",
+   "first": "06:08",
+   "last": "06:17",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-20",
+   "reg": "N714K",
+   "type": "FA7X",
+   "cls": "jet",
+   "own": "N15FX TRUST",
+   "first": "06:27",
+   "last": "06:30",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-20",
+   "reg": "N750NG",
+   "type": "C750",
+   "cls": "jet",
+   "own": "FESTINA LENTE LLC",
+   "first": "06:55",
+   "last": "06:57",
+   "min_alt": 11675
+  },
+  {
+   "date": "2026-07-21",
+   "reg": "N3066W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "FORTIS AIRCRAFT LEASING LLC",
+   "first": "06:39",
+   "last": "06:40",
+   "min_alt": 11900
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N2266S",
+   "type": "T210",
+   "cls": "piston",
+   "own": "WEEKEND AIR LLC",
+   "first": "06:01",
+   "last": "06:13",
+   "min_alt": 5300
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N84ST",
+   "type": "SLG4",
+   "cls": "piston",
+   "own": "SKY SLINGERS FLYING CLUB - SPC INC",
+   "first": "06:32",
+   "last": "06:40",
+   "min_alt": 11000
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N9171V",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "MAU ALLEN D",
+   "first": "06:57",
+   "last": "06:59",
+   "min_alt": 11200
+  },
+  {
+   "date": "2026-07-22",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:36",
+   "last": "05:45",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N8488M",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC, FIGUEROA JAMES",
+   "first": "00:48",
+   "last": "00:59",
+   "min_alt": 10950
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N814JH",
+   "type": "C182",
+   "cls": "piston",
+   "own": "OCEAN AVE LLC",
+   "first": "06:57",
+   "last": "06:59",
+   "min_alt": 7900
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N132N",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "FLYING COWBOYS LLC",
+   "first": "22:47",
+   "last": "22:51",
+   "min_alt": 11800
+  },
+  {
+   "date": "2026-07-23",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:52",
+   "last": "22:58",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N216AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "first": "06:50",
+   "last": "06:56",
+   "min_alt": 5800
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N406AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "first": "06:54",
+   "last": "06:59",
+   "min_alt": 6000
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N232ST",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SIERRA TANGO MANAGEMENT LLC",
+   "first": "22:00",
+   "last": "22:01",
+   "min_alt": 10775
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "first": "22:34",
+   "last": "00:34",
+   "min_alt": 5400
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:46",
+   "last": "01:08",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N430TS",
+   "type": "DA42",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "first": "05:47",
+   "last": "05:53",
+   "min_alt": 9250
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N260HS",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "06:11",
+   "last": "06:12",
+   "min_alt": 11800
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N79DM",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "KSG CAPITAL LLC",
+   "first": "06:29",
+   "last": "06:31",
+   "min_alt": 12825
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N469JG",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "JG AVIATION LLC",
+   "first": "06:33",
+   "last": "06:42",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "first": "06:56",
+   "last": "06:59",
+   "min_alt": 10750
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N550CP",
+   "type": "T206",
+   "cls": "piston",
+   "own": "CIVIL AIR PATROL",
+   "first": "06:58",
+   "last": "06:59",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-25",
+   "reg": "N614RX",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "first": "23:13",
+   "last": "23:21",
+   "min_alt": 8450
+  },
+  {
+   "date": "2026-07-26",
+   "reg": "N7368Y",
+   "type": "PA30",
+   "cls": "piston",
+   "own": "HOENMANS JOHN P, SELBERT KURT R",
+   "first": "05:50",
+   "last": "05:55",
+   "min_alt": 11250
+  },
+  {
+   "date": "2026-07-26",
+   "reg": "N6969B",
+   "type": "PTS2",
+   "cls": "piston",
+   "own": "BROWN DENNIS K",
+   "first": "06:09",
+   "last": "06:17",
+   "min_alt": 11200
   }
  ]
 }

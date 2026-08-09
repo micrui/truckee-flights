@@ -1562,5 +1562,367 @@
    "other": "KSNA John Wayne",
    "pre7": true
   }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-07-13",
+   "reg": "N314RX",
+   "type": "EC35",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "first": "04:19",
+   "last": "04:28",
+   "min_alt": 8775
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N61NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "THROTTLE N FLOW LLC",
+   "first": "06:06",
+   "last": "06:32",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N74270",
+   "type": "AA5",
+   "cls": "piston",
+   "own": "R & D BENNETT LLC",
+   "first": "06:15",
+   "last": "06:23",
+   "min_alt": 12700
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N13GX",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "EPIC II LLC",
+   "first": "06:15",
+   "last": "06:20",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N797GM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SWISS MISS LLC, SWISS MADE LLC",
+   "first": "06:19",
+   "last": "06:23",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "first": "06:29",
+   "last": "06:34",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "first": "22:00",
+   "last": "22:52",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "22:37",
+   "last": "00:51",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "first": "22:52",
+   "last": "01:08",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "first": "22:54",
+   "last": "00:31",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "first": "23:28",
+   "last": "01:10",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-07-14",
+   "reg": "N3066W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "FORTIS AIRCRAFT LEASING LLC",
+   "first": "03:10",
+   "last": "03:10",
+   "min_alt": 12850
+  },
+  {
+   "date": "2026-07-14",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "03:30",
+   "last": "03:30",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-14",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "first": "05:37",
+   "last": "05:37",
+   "min_alt": 12850
+  },
+  {
+   "date": "2026-07-16",
+   "reg": "N52590",
+   "type": "C182",
+   "cls": "piston",
+   "own": "AEREO FLYERS INC",
+   "first": "05:35",
+   "last": "05:39",
+   "min_alt": 9850
+  },
+  {
+   "date": "2026-07-16",
+   "reg": "N735XE",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MANT THOMAS A",
+   "first": "05:40",
+   "last": "05:46",
+   "min_alt": 9475
+  },
+  {
+   "date": "2026-07-16",
+   "reg": "N301JC",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "GARDNER JEFFREY",
+   "first": "06:34",
+   "last": "06:47",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:47",
+   "last": "22:53",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N172UP",
+   "type": "A306",
+   "cls": "piston",
+   "own": "UNITED PARCEL SERVICE CO",
+   "first": "05:15",
+   "last": "05:15",
+   "min_alt": 12400
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N872HL",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "HL AIRCRAFT LLC",
+   "first": "05:23",
+   "last": "05:26",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N224BL",
+   "type": "GLST",
+   "cls": "piston",
+   "own": "LISBONNE ROBERT",
+   "first": "05:36",
+   "last": "05:44",
+   "min_alt": 9850
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N756JZ",
+   "type": "T206",
+   "cls": "piston",
+   "own": "BROWNE THOMAS J",
+   "first": "05:51",
+   "last": "05:58",
+   "min_alt": 9350
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N923AS",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "DJP PROPERTIES LLC",
+   "first": "06:46",
+   "last": "06:46",
+   "min_alt": 13000
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N714SM",
+   "type": "RV14",
+   "cls": "piston",
+   "own": "MULKIN SHAWN ALLEN",
+   "first": "06:45",
+   "last": "06:52",
+   "min_alt": 9550
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:46",
+   "last": "23:53",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N260HS",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "05:11",
+   "last": "05:14",
+   "min_alt": 12800
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N850TS",
+   "type": "TBM8",
+   "cls": "turboprop",
+   "own": "WESTERN FARMING LLC",
+   "first": "05:53",
+   "last": "05:58",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N830TD",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "WHITE AND BLUE LLC",
+   "first": "06:30",
+   "last": "06:36",
+   "min_alt": 12775
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N854AH",
+   "type": "RV8",
+   "cls": "piston",
+   "own": "UNZE STEVEN G TRUSTEE, EDWARDS KATHLEEN M TRUSTEE",
+   "first": "06:45",
+   "last": "06:51",
+   "min_alt": 9425
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N726G",
+   "type": "RV10",
+   "cls": "piston",
+   "own": "HEAD DAVID A TRUSTEE",
+   "first": "06:52",
+   "last": "06:58",
+   "min_alt": 12750
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N417MK",
+   "type": "P28S",
+   "cls": "piston",
+   "own": "KAMRADT ELIZABETH J",
+   "first": "06:56",
+   "last": "06:59",
+   "min_alt": 10200
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N614RX",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "first": "22:00",
+   "last": "22:03",
+   "min_alt": 8525
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "first": "22:35",
+   "last": "22:41",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-07-19",
+   "reg": "N9790R",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "RORKE DAVID E, MCANINCH DANNY",
+   "first": "05:47",
+   "last": "05:55",
+   "min_alt": 9875
+  },
+  {
+   "date": "2026-07-19",
+   "reg": "N9340Y",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "WATERS KENNETH A",
+   "first": "05:58",
+   "last": "06:06",
+   "min_alt": 11400
+  },
+  {
+   "date": "2026-07-19",
+   "reg": "N5CS",
+   "type": "SF50",
+   "cls": "jet",
+   "own": "FAFO AVIATION LLC",
+   "first": "22:00",
+   "last": "22:04",
+   "min_alt": 5575
+  }
  ]
 }

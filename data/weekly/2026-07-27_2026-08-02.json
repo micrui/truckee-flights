@@ -10,20 +10,21 @@
   "2026-08-01",
   "2026-08-02"
  ],
- "window_local": "04:00-08:30",
- "total_ops": 140,
- "unique_aircraft": 67,
+ "window_local": "22:00-08:30",
+ "total_ops": 149,
+ "unique_aircraft": 72,
  "by_class": {
-  "turboprop": 35,
-  "piston": 77,
-  "jet": 26,
-  "helicopter": 2
+  "turboprop": 36,
+  "piston": 80,
+  "jet": 29,
+  "helicopter": 4
  },
- "quiet_hours_ops": 12,
+ "quiet_hours_ops": 21,
  "quiet_hours_by_class": {
-  "turboprop": 6,
-  "piston": 4,
-  "jet": 2
+  "turboprop": 7,
+  "piston": 7,
+  "jet": 5,
+  "helicopter": 2
  },
  "quiet_hours_events": [
   {
@@ -137,6 +138,17 @@
    "pre7": true
   },
   {
+   "date": "2026-07-29",
+   "reg": "N31MC",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "KWH LLC",
+   "ev": "ARR",
+   "hm": "23:50",
+   "other": "(38.39,-119.40)",
+   "pre7": true
+  },
+  {
    "date": "2026-07-31",
    "reg": "N566KB",
    "type": "C560",
@@ -145,6 +157,72 @@
    "ev": "DEP",
    "hm": "06:21",
    "other": "(29.64,-95.27)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N93MF",
+   "type": "SR22",
+   "cls": "piston",
+   "own": "MIKE FOXTROT AVIATION LLC",
+   "ev": "DEP",
+   "hm": "22:08",
+   "other": "(36.94,-121.79)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N550CP",
+   "type": "T206",
+   "cls": "piston",
+   "own": "CIVIL AIR PATROL",
+   "ev": "ARR",
+   "hm": "22:38",
+   "other": "KRTS Reno-Stead",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "ARR",
+   "hm": "22:55",
+   "other": "(39.09,-93.20)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(40.29,-121.24)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "DEP",
+   "hm": "23:11",
+   "other": "KHWD Hayward",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "ev": "ARR",
+   "hm": "01:07",
+   "other": "(38.38,-121.96)",
    "pre7": true
   },
   {
@@ -157,11 +235,34 @@
    "hm": "06:13",
    "other": "KSQL San Carlos",
    "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:01",
+   "other": "(38.91,-121.35)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "(40.29,-121.24)",
+   "pre7": true
   }
  ],
  "local_flights": 51,
  "ladd_operators": [
   "N107MY",
+  "N1989F",
   "N313WL",
   "N31MC",
   "N358VJ",
@@ -1033,6 +1134,17 @@
    "pre7": false
   },
   {
+   "date": "2026-07-29",
+   "reg": "N31MC",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "KWH LLC",
+   "ev": "ARR",
+   "hm": "23:50",
+   "other": "(38.39,-119.40)",
+   "pre7": true
+  },
+  {
    "date": "2026-07-30",
    "reg": "N9110H",
    "type": "C172",
@@ -1385,6 +1497,28 @@
    "pre7": false
   },
   {
+   "date": "2026-07-31",
+   "reg": "N93MF",
+   "type": "SR22",
+   "cls": "piston",
+   "own": "MIKE FOXTROT AVIATION LLC",
+   "ev": "DEP",
+   "hm": "22:08",
+   "other": "(36.94,-121.79)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N550CP",
+   "type": "T206",
+   "cls": "piston",
+   "own": "CIVIL AIR PATROL",
+   "ev": "ARR",
+   "hm": "22:38",
+   "other": "KRTS Reno-Stead",
+   "pre7": true
+  },
+  {
    "date": "2026-08-01",
    "reg": "N310LP",
    "type": "C310",
@@ -1550,6 +1684,50 @@
    "pre7": false
   },
   {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "ARR",
+   "hm": "22:55",
+   "other": "(39.09,-93.20)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(40.29,-121.24)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "DEP",
+   "hm": "23:11",
+   "other": "KHWD Hayward",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "ev": "ARR",
+   "hm": "01:07",
+   "other": "(38.38,-121.96)",
+   "pre7": true
+  },
+  {
    "date": "2026-08-02",
    "reg": "N412FF",
    "type": "EPIC",
@@ -1713,6 +1891,440 @@
    "hm": "08:28",
    "other": "LOCAL loop",
    "pre7": false
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:01",
+   "other": "(38.91,-121.35)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "(40.29,-121.24)",
+   "pre7": true
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-07-27",
+   "reg": "N797GM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SWISS MISS LLC, SWISS MADE LLC",
+   "first": "06:05",
+   "last": "06:09",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "first": "06:11",
+   "last": "06:17",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N211ML",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "06:20",
+   "last": "06:21",
+   "min_alt": 12750
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N234JH",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "HERD JAMES",
+   "first": "06:27",
+   "last": "06:38",
+   "min_alt": 7175
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N777NV",
+   "type": "B350",
+   "cls": "turboprop",
+   "own": "NEVADA DEPARTMENT OF TRANSPORTATION",
+   "first": "06:49",
+   "last": "06:49",
+   "min_alt": 12625
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N408AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A & P HELICOPTERS INC",
+   "first": "06:58",
+   "last": "06:59",
+   "min_alt": 6600
+  },
+  {
+   "date": "2026-07-27",
+   "reg": "N271WM",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "FARM DOG HOLDINGS LLC",
+   "first": "06:58",
+   "last": "06:59",
+   "min_alt": 7675
+  },
+  {
+   "date": "2026-07-28",
+   "reg": "N31MC",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "KWH LLC",
+   "first": "06:12",
+   "last": "06:15",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-28",
+   "reg": "N408AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A & P HELICOPTERS INC",
+   "first": "06:54",
+   "last": "06:59",
+   "min_alt": 6100
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "first": "06:29",
+   "last": "06:40",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N13GX",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "EPIC II LLC",
+   "first": "06:32",
+   "last": "06:37",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N971JS",
+   "type": "C750",
+   "cls": "jet",
+   "own": "CITATION X LEASING LLC",
+   "first": "06:43",
+   "last": "06:45",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N374PM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "MCLEAN AIR LLC",
+   "first": "06:52",
+   "last": "06:59",
+   "min_alt": 6225
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N75WZ",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "EBC MT AVIATION LLC",
+   "first": "23:48",
+   "last": "23:50",
+   "min_alt": 12875
+  },
+  {
+   "date": "2026-07-29",
+   "reg": "N31MC",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "KWH LLC",
+   "first": "23:46",
+   "last": "23:50",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-30",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "04:59",
+   "last": "04:59",
+   "min_alt": 12250
+  },
+  {
+   "date": "2026-07-30",
+   "reg": "N410CT",
+   "type": "RV14",
+   "cls": "piston",
+   "own": "CLAUDIO TONNINI",
+   "first": "06:05",
+   "last": "06:27",
+   "min_alt": 7550
+  },
+  {
+   "date": "2026-07-30",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "first": "06:19",
+   "last": "06:21",
+   "min_alt": 10050
+  },
+  {
+   "date": "2026-07-30",
+   "reg": "N4341J",
+   "type": "RV6",
+   "cls": "piston",
+   "own": "SUNDSTROM STEVEN, SUNDSTROM JOYCE",
+   "first": "22:11",
+   "last": "00:55",
+   "min_alt": 9700
+  },
+  {
+   "date": "2026-07-30",
+   "reg": "N68CE",
+   "type": "T206",
+   "cls": "piston",
+   "own": "EBRIGHT INC",
+   "first": "22:25",
+   "last": "22:33",
+   "min_alt": 8450
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N1188N",
+   "type": "C82R",
+   "cls": "piston",
+   "own": "LLL AVIATION LLC",
+   "first": "06:20",
+   "last": "06:26",
+   "min_alt": 9025
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N566KB",
+   "type": "C560",
+   "cls": "jet",
+   "own": "T3 FARMS LLC",
+   "first": "06:21",
+   "last": "06:25",
+   "min_alt": 5450
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N61NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "THROTTLE N FLOW LLC",
+   "first": "06:23",
+   "last": "06:24",
+   "min_alt": 12725
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N2291C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FORTY FOUR FIFTEEN LLC, SERIES N2291C",
+   "first": "06:29",
+   "last": "06:41",
+   "min_alt": 8250
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N292ED",
+   "type": "C172",
+   "cls": "piston",
+   "own": "L1 AVIATION LLC",
+   "first": "06:33",
+   "last": "06:43",
+   "min_alt": 9100
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "06:39",
+   "last": "06:40",
+   "min_alt": 12100
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N93MF",
+   "type": "SR22",
+   "cls": "piston",
+   "own": "MIKE FOXTROT AVIATION LLC",
+   "first": "22:08",
+   "last": "22:19",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-07-31",
+   "reg": "N550CP",
+   "type": "T206",
+   "cls": "piston",
+   "own": "CIVIL AIR PATROL",
+   "first": "22:32",
+   "last": "22:38",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N305JC",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ACCURATE AERO LLC",
+   "first": "06:28",
+   "last": "06:32",
+   "min_alt": 10400
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N74527",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "WHITE JESSE J, WHITE KATHERINE J",
+   "first": "06:43",
+   "last": "06:50",
+   "min_alt": 9300
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N9666V",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "first": "06:47",
+   "last": "06:57",
+   "min_alt": 10150
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N157CD",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "SIERRA SKY AVIATION LLC",
+   "first": "22:08",
+   "last": "22:17",
+   "min_alt": 10075
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "first": "22:51",
+   "last": "23:15",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:54",
+   "last": "22:59",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "05:58",
+   "last": "06:01",
+   "min_alt": 10475
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N412FF",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "412 AVIATION LLC",
+   "first": "06:13",
+   "last": "06:16",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N68CE",
+   "type": "T206",
+   "cls": "piston",
+   "own": "EBRIGHT INC",
+   "first": "06:13",
+   "last": "06:22",
+   "min_alt": 10375
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "first": "22:00",
+   "last": "01:07",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "first": "22:01",
+   "last": "22:04",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N1968F",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "first": "23:29",
+   "last": "23:38",
+   "min_alt": 11475
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:46",
+   "last": "23:52",
+   "min_alt": 5600
   }
  ]
 }

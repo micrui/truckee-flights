@@ -1818,5 +1818,327 @@
    "other": "LOCAL loop",
    "pre7": false
   }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-07-06",
+   "reg": "N415BJ",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "DUNLAP WAYNE",
+   "first": "05:57",
+   "last": "06:05",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N71MB",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "BRETZ-AZTEC LLC",
+   "first": "06:10",
+   "last": "06:14",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N527DJ",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "PILATUS AIRCRAFT USA LTD",
+   "first": "06:28",
+   "last": "06:33",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N797GM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SWISS MISS LLC, SWISS MADE LLC",
+   "first": "06:29",
+   "last": "06:35",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N317DC",
+   "type": "RV8",
+   "cls": "piston",
+   "own": "RAMSEY BEAU A",
+   "first": "06:57",
+   "last": "06:59",
+   "min_alt": 5675
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:01",
+   "last": "03:51",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N3066W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "FORTIS AIRCRAFT LEASING LLC",
+   "first": "03:48",
+   "last": "03:49",
+   "min_alt": 12350
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N790T",
+   "type": "F900",
+   "cls": "jet",
+   "own": "N16FX TRUST",
+   "first": "05:59",
+   "last": "06:02",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N892DB",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "G4 INVESTMENTS CORP",
+   "first": "06:37",
+   "last": "06:41",
+   "min_alt": 11300
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "first": "22:00",
+   "last": "22:17",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N5656E",
+   "type": "C172",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "first": "22:19",
+   "last": "01:00",
+   "min_alt": 9150
+  },
+  {
+   "date": "2026-07-08",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "first": "06:40",
+   "last": "06:49",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-07-08",
+   "reg": "N64WY",
+   "type": "HUSK",
+   "cls": "piston",
+   "own": "HOOTS HUSKY LLC",
+   "first": "06:47",
+   "last": "06:54",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-07-08",
+   "reg": "N525AW",
+   "type": "C25A",
+   "cls": "jet",
+   "own": "D AND D AVIATION LLC",
+   "first": "06:56",
+   "last": "06:59",
+   "min_alt": 8450
+  },
+  {
+   "date": "2026-07-08",
+   "reg": "N622D",
+   "type": "CL60",
+   "cls": "jet",
+   "own": "DANFORTH LLC",
+   "first": "23:08",
+   "last": "23:10",
+   "min_alt": 11275
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "92-0553",
+   "type": "C130",
+   "cls": "piston",
+   "own": "",
+   "first": "00:17",
+   "last": "00:19",
+   "min_alt": 10700
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N985SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "WALNUT STREET 738 LLC",
+   "first": "06:12",
+   "last": "06:13",
+   "min_alt": 11550
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N85SV",
+   "type": "LJ35",
+   "cls": "jet",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "06:17",
+   "last": "06:17",
+   "min_alt": 12925
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N110TN",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "MALONEY CASEY, MALONEY DEANNA",
+   "first": "06:44",
+   "last": "06:54",
+   "min_alt": 9150
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N60BC",
+   "type": "LJ60",
+   "cls": "jet",
+   "own": "ARK AVIATION LLC",
+   "first": "06:43",
+   "last": "06:47",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:12",
+   "last": "00:43",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-10",
+   "reg": "N541ND",
+   "type": "P46T",
+   "cls": "turboprop",
+   "own": "BIG SKY FLIGHT LLC",
+   "first": "05:31",
+   "last": "05:37",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-10",
+   "reg": "N407AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A & P HELICOPTERS INC, AVAG INC",
+   "first": "06:44",
+   "last": "06:51",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-10",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "first": "22:10",
+   "last": "22:16",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-07-10",
+   "reg": "N3066W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "FORTIS AIRCRAFT LEASING LLC",
+   "first": "23:43",
+   "last": "23:44",
+   "min_alt": 12675
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N6446D",
+   "type": "C172",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "first": "01:44",
+   "last": "01:52",
+   "min_alt": 11075
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N2768X",
+   "type": "C180",
+   "cls": "piston",
+   "own": "MULLETT JAMES L, MULLETT CYNTHIA C",
+   "first": "06:06",
+   "last": "06:09",
+   "min_alt": 9575
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:44",
+   "last": "23:50",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "00:21",
+   "last": "05:41",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "first": "01:15",
+   "last": "01:31",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N1876T",
+   "type": "GA6C",
+   "cls": "jet",
+   "own": "TRANSPORTATION HOLDINGS VI LLC",
+   "first": "06:54",
+   "last": "06:58",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N964RG",
+   "type": "RV8",
+   "cls": "piston",
+   "own": "GRANT ROBERT G",
+   "first": "06:55",
+   "last": "06:59",
+   "min_alt": 8575
+  }
  ]
 }

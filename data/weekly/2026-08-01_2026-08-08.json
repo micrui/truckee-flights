@@ -11,23 +11,67 @@
   "2026-08-07",
   "2026-08-08"
  ],
- "window_local": "04:00-08:30",
- "total_ops": 122,
- "unique_aircraft": 59,
+ "window_local": "22:00-08:30",
+ "total_ops": 132,
+ "unique_aircraft": 62,
  "by_class": {
-  "piston": 54,
-  "jet": 34,
-  "turboprop": 32,
-  "helicopter": 2
+  "piston": 55,
+  "jet": 37,
+  "helicopter": 8,
+  "turboprop": 32
  },
- "quiet_hours_ops": 12,
+ "quiet_hours_ops": 22,
  "quiet_hours_by_class": {
-  "turboprop": 8,
-  "jet": 2,
-  "piston": 1,
-  "helicopter": 1
+  "jet": 5,
+  "helicopter": 7,
+  "piston": 2,
+  "turboprop": 8
  },
  "quiet_hours_events": [
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "ARR",
+   "hm": "22:55",
+   "other": "(39.09,-93.20)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(40.29,-121.24)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "DEP",
+   "hm": "23:11",
+   "other": "KHWD Hayward",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "ev": "ARR",
+   "hm": "01:07",
+   "other": "(38.38,-121.96)",
+   "pre7": true
+  },
   {
    "date": "2026-08-02",
    "reg": "N412FF",
@@ -37,6 +81,28 @@
    "ev": "DEP",
    "hm": "06:13",
    "other": "KSQL San Carlos",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:01",
+   "other": "(38.91,-121.35)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "(40.29,-121.24)",
    "pre7": true
   },
   {
@@ -92,6 +158,17 @@
    "ev": "DEP",
    "hm": "06:49",
    "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:30",
+   "other": "KTRK Truckee",
    "pre7": true
   },
   {
@@ -151,6 +228,28 @@
   },
   {
    "date": "2026-08-08",
+   "reg": "N429AS",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "WEST STATES LEASING INC",
+   "ev": "ARR",
+   "hm": "03:06",
+   "other": "KRTS Reno-Stead",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "03:31",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-08",
    "reg": "N901CF",
    "type": "AS50",
    "cls": "helicopter",
@@ -159,10 +258,22 @@
    "hm": "05:12",
    "other": "KTRK Truckee",
    "pre7": true
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:56",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
- "local_flights": 47,
+ "local_flights": 48,
  "ladd_operators": [
+  "N1989F",
   "N281EB",
   "N313WL",
   "N460NG",
@@ -339,6 +450,50 @@
    "pre7": false
   },
   {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "ARR",
+   "hm": "22:55",
+   "other": "(39.09,-93.20)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(40.29,-121.24)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "ev": "DEP",
+   "hm": "23:11",
+   "other": "KHWD Hayward",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "ev": "ARR",
+   "hm": "01:07",
+   "other": "(38.38,-121.96)",
+   "pre7": true
+  },
+  {
    "date": "2026-08-02",
    "reg": "N412FF",
    "type": "EPIC",
@@ -502,6 +657,28 @@
    "hm": "08:28",
    "other": "LOCAL loop",
    "pre7": false
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:01",
+   "other": "(38.91,-121.35)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "(40.29,-121.24)",
+   "pre7": true
   },
   {
    "date": "2026-08-03",
@@ -788,6 +965,17 @@
    "hm": "08:21",
    "other": "(37.55,-121.16)",
    "pre7": false
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:30",
+   "other": "KTRK Truckee",
+   "pre7": true
   },
   {
    "date": "2026-08-04",
@@ -1407,6 +1595,28 @@
   },
   {
    "date": "2026-08-08",
+   "reg": "N429AS",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "WEST STATES LEASING INC",
+   "ev": "ARR",
+   "hm": "03:06",
+   "other": "KRTS Reno-Stead",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "03:31",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-08",
    "reg": "N901CF",
    "type": "AS50",
    "cls": "helicopter",
@@ -1514,6 +1724,329 @@
    "hm": "08:29",
    "other": "KRTS Reno-Stead",
    "pre7": false
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:56",
+   "other": "KRNO Reno",
+   "pre7": true
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-08-01",
+   "reg": "N305JC",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ACCURATE AERO LLC",
+   "first": "06:28",
+   "last": "06:32",
+   "min_alt": 10400
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N74527",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "WHITE JESSE J, WHITE KATHERINE J",
+   "first": "06:43",
+   "last": "06:50",
+   "min_alt": 9300
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N9666V",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "first": "06:47",
+   "last": "06:57",
+   "min_alt": 10150
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N157CD",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "SIERRA SKY AVIATION LLC",
+   "first": "22:08",
+   "last": "22:17",
+   "min_alt": 10075
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N1989F",
+   "type": "FA50",
+   "cls": "jet",
+   "own": "FLAGSHIP JET LEASING 115 LLC",
+   "first": "22:51",
+   "last": "23:15",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-08-01",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "22:54",
+   "last": "22:59",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "05:58",
+   "last": "06:01",
+   "min_alt": 10475
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N412FF",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "412 AVIATION LLC",
+   "first": "06:13",
+   "last": "06:16",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N68CE",
+   "type": "T206",
+   "cls": "piston",
+   "own": "EBRIGHT INC",
+   "first": "06:13",
+   "last": "06:22",
+   "min_alt": 10375
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "first": "22:00",
+   "last": "01:07",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N178MP",
+   "type": "C25B",
+   "cls": "jet",
+   "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
+   "first": "22:01",
+   "last": "22:04",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N1968F",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "first": "23:29",
+   "last": "23:38",
+   "min_alt": 11475
+  },
+  {
+   "date": "2026-08-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:46",
+   "last": "23:52",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N797GM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SWISS MISS LLC, SWISS MADE LLC",
+   "first": "06:31",
+   "last": "06:35",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N8144G",
+   "type": "P32R",
+   "cls": "piston",
+   "own": "DISTANT HORIZONS LLC",
+   "first": "06:47",
+   "last": "06:59",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N281EB",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "06:40",
+   "last": "06:46",
+   "min_alt": 5625
+  },
+  {
+   "date": "2026-08-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:25",
+   "last": "23:30",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-08-04",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "first": "01:13",
+   "last": "01:17",
+   "min_alt": 11900
+  },
+  {
+   "date": "2026-08-05",
+   "reg": "N1959C",
+   "type": "C182",
+   "cls": "piston",
+   "own": "TISDALE ANTHONY",
+   "first": "06:26",
+   "last": "06:33",
+   "min_alt": 10350
+  },
+  {
+   "date": "2026-08-05",
+   "reg": "N65DW",
+   "type": "C180",
+   "cls": "piston",
+   "own": "NORTH STREAM CAPITAL LLC",
+   "first": "06:47",
+   "last": "06:52",
+   "min_alt": 10100
+  },
+  {
+   "date": "2026-08-06",
+   "reg": "N586AT",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "HESSWINDS LLC",
+   "first": "06:16",
+   "last": "06:22",
+   "min_alt": 5550
+  },
+  {
+   "date": "2026-08-06",
+   "reg": "N1071Y",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "BREAUX JOHN JR",
+   "first": "06:30",
+   "last": "06:37",
+   "min_alt": 8300
+  },
+  {
+   "date": "2026-08-06",
+   "reg": "N691DK",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "D FORCE 2 LLC",
+   "first": "06:35",
+   "last": "06:39",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-08-06",
+   "reg": "N999FN",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "WING AIR LLC",
+   "first": "06:38",
+   "last": "06:42",
+   "min_alt": 5525
+  },
+  {
+   "date": "2026-08-06",
+   "reg": "N406AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "first": "06:47",
+   "last": "06:52",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-08-07",
+   "reg": "N567W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+   "first": "06:45",
+   "last": "06:50",
+   "min_alt": 11975
+  },
+  {
+   "date": "2026-08-07",
+   "reg": "N417SK",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SKN AIR LLC",
+   "first": "22:00",
+   "last": "22:01",
+   "min_alt": 11250
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N752DW",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYING START AERO SERVICES LLC",
+   "first": "06:42",
+   "last": "06:53",
+   "min_alt": 9600
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N429AS",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "WEST STATES LEASING INC",
+   "first": "22:20",
+   "last": "03:06",
+   "min_alt": 5575
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "first": "22:42",
+   "last": "02:52",
+   "min_alt": 5475
+  },
+  {
+   "date": "2026-08-08",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "first": "23:51",
+   "last": "05:12",
+   "min_alt": 5500
   }
  ]
 }

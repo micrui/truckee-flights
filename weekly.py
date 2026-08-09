@@ -156,9 +156,9 @@ def render():
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
     first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
     for flights that need the edges of the quiet window; the log records all movements and
-    characterizes none. (Weeks tagged "mornings only" were collected before
-    evening coverage began and cover 4:00 to 8:30 am; for evening flights, the time shown
-    belongs to the night before the listed date.) Quiet-hours activity is listed
+    characterizes none. For evening flights (10:00 pm to midnight), the time shown belongs
+    to the night before the listed date. Per-aircraft tallies and a full log for every tail
+    number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
     flight by flight below; the record includes air ambulances and other flights most people
     would not question, and characterizes none of them.
   </p>
@@ -208,6 +208,119 @@ def render():
                         .replace("%%DATA%%", json.dumps(payload, separators=(",", ":"))))
             open(f'docs/weeks/{w["start"]}_{w["end"]}.html', "w").write(page_w)
         print(f"rendered {len(asc)} week timeline page(s)")
+
+    render_operators(weeks)
+
+
+OP_CSS = """
+  body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.55; margin: 0; padding: 48px 20px 72px; }
+  :root { color-scheme: light; --page:#f6f7f9; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e;
+    --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10); --accent:#2a78d6; }
+  @media (prefers-color-scheme: dark) { :root:where(:not([data-theme='light'])) { color-scheme: dark;
+    --page:#0c0e11; --surface:#1a1a19; --ink:#fff; --ink-2:#c3c2b7; --muted:#898781; --grid:#2c2c2a;
+    --axis:#383835; --border:rgba(255,255,255,0.10); --accent:#3987e5; } }
+  :root[data-theme='dark'] { color-scheme: dark; --page:#0c0e11; --surface:#1a1a19; --ink:#fff; --ink-2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,0.10); --accent:#3987e5; }
+  :root[data-theme='light'] { color-scheme: light; --page:#f6f7f9; --surface:#fcfcfb; --ink:#0b0b0b;
+    --ink-2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,0.10); --accent:#2a78d6; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
+  .eyebrow a { color: inherit; }
+  h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  h3 { font-size: 15px; font-weight: 650; margin: 30px 0 4px; scroll-margin-top: 20px; }
+  h3 .own { color: var(--ink-2); font-weight: 400; font-size: 13px; }
+  .standfirst { font-size: 15.5px; color: var(--ink-2); max-width: 68ch; margin: 0 0 26px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th { text-align: left; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--axis); }
+  td { padding: 5px 10px 5px 0; border-bottom: 1px solid var(--grid); vertical-align: top; font-variant-numeric: tabular-nums; }
+  .tag { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  .table-scroll { overflow-x: auto; }
+  a { color: var(--accent); }
+  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
+"""
+
+
+def render_operators(weeks):
+    """Aggregate every recorded event across all weeks into per-aircraft logs."""
+    seen, all_events = set(), []
+    ladd = set()
+    for w in weeks:
+        ladd.update(w.get("ladd_operators", []))
+        for e in w.get("events", []):
+            key = (e["date"], e["hm"], e["reg"], e["ev"])
+            if key in seen:
+                continue
+            seen.add(key)
+            all_events.append(e)
+    ac = {}
+    for e in all_events:
+        a = ac.setdefault(e["reg"] or "?", {"reg": e["reg"] or "?", "type": e["type"] or "?",
+                                            "cls": e["cls"], "own": e["own"], "events": []})
+        a["events"].append(e)
+    for a in ac.values():
+        a["events"].sort(key=lambda e: (e["date"], e["hm"]))
+        a["quiet"] = sum(1 for e in a["events"] if e["pre7"])
+        a["qdates"] = sorted({e["date"][5:] for e in a["events"] if e["pre7"]})
+    ranked = sorted(ac.values(), key=lambda a: (-a["quiet"], -len(a["events"]), a["reg"]))
+
+    rows = []
+    for a in ranked:
+        if a["quiet"] == 0:
+            continue
+        badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
+        rows.append(f'<tr><td class="mono"><a href="#{html.escape(a["reg"])}">{html.escape(a["reg"])}</a>{badge}</td>'
+                    f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
+                    f'<td>{a["quiet"]}</td><td>{len(a["events"])}</td>'
+                    f'<td class="mono">{", ".join(a["qdates"])}</td>'
+                    f'<td>{html.escape(a["own"] or "")}</td></tr>')
+
+    QCHIP = '<span class="tag">quiet hours</span>'
+    sections = []
+    for a in ranked:
+        badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
+        ev_rows = "".join(
+            f'<tr><td class="mono">{e["date"]}</td><td class="mono">{e["hm"]}</td>'
+            f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
+            f'<td>{html.escape(e["other"])}</td>'
+            f'<td>{QCHIP if e["pre7"] else ""}</td></tr>'
+            for e in a["events"])
+        sections.append(
+            f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {html.escape(a["type"])} · {a["cls"]}{badge}'
+            f' <span class="own">{html.escape(a["own"] or "")}</span></h3>'
+            f'<div class="table-scroll"><table><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
+            f'<tbody>{ev_rows}</tbody></table></div>')
+
+    span = f'{min(w["start"] for w in weeks)} to {max(w["end"] for w in weeks)}' if weeks else ""
+    page = f"""<meta charset="utf-8">
+<title>truckee-flights: operators</title>
+<style>{OP_CSS}</style>
+<div class="wrap">
+  <p class="eyebrow"><a href="./">truckee-flights</a> · <a href="quiet-hours.html">quiet-hours log</a> · operators</p>
+  <h1>Operators, by quiet-hours activity</h1>
+  <p class="standfirst">
+    Every aircraft recorded taking off or landing at the field ({span}), tallied by operations during the
+    voluntary quiet hours (10:00 pm to 7:00 am) and listed with its full recorded log below. Includes air
+    ambulances and other flights most people would not question; the record characterizes none of them.
+    Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
+  </p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
+    <tbody>{"".join(rows)}</tbody>
+  </table></div>
+  <h1 style="font-size:20px;margin-top:44px;">Per-aircraft logs</h1>
+  {"".join(sections)}
+  <div class="foot"><p>Generated from the weekly log data in
+  <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>; overlapping
+  weeks are de-duplicated. Aircraft identity and ownership as recorded in the FAA registry.</p></div>
+</div>
+"""
+    open("docs/operators.html", "w").write(page)
+    print(f"rendered docs/operators.html: {len(ranked)} aircraft, {len(all_events)} events")
 
 
 if __name__ == "__main__":
