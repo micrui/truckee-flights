@@ -57,7 +57,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:11",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -134,7 +134,7 @@
    "own": "CITATION X LEASING LLC",
    "ev": "DEP",
    "hm": "06:43",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": true
   },
   {
@@ -156,7 +156,7 @@
    "own": "T3 FARMS LLC",
    "ev": "DEP",
    "hm": "06:21",
-   "other": "(29.64,-95.27)",
+   "other": "KHOU Houston",
    "pre7": true
   },
   {
@@ -167,7 +167,7 @@
    "own": "MIKE FOXTROT AVIATION LLC",
    "ev": "DEP",
    "hm": "22:08",
-   "other": "(36.94,-121.79)",
+   "other": "KWVI Watsonville",
    "pre7": true
   },
   {
@@ -178,7 +178,7 @@
    "own": "CIVIL AIR PATROL",
    "ev": "ARR",
    "hm": "22:38",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": true
   },
   {
@@ -189,7 +189,7 @@
    "own": "FLAGSHIP JET LEASING 115 LLC",
    "ev": "ARR",
    "hm": "22:55",
-   "other": "(39.09,-93.20)",
+   "other": "KMHL Marshall",
    "pre7": true
   },
   {
@@ -200,7 +200,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -222,7 +222,7 @@
    "own": "RV SQUARED LLC",
    "ev": "ARR",
    "hm": "01:07",
-   "other": "(38.38,-121.96)",
+   "other": "KVCB Vacaville",
    "pre7": true
   },
   {
@@ -244,7 +244,7 @@
    "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
    "ev": "DEP",
    "hm": "22:01",
-   "other": "(38.91,-121.35)",
+   "other": "KLHM Lincoln",
    "pre7": true
   },
   {
@@ -255,7 +255,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:53",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   }
  ],
@@ -305,7 +305,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:11",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -316,7 +316,7 @@
    "own": "FARM DOG HOLDINGS LLC",
    "ev": "ARR",
    "hm": "07:03",
-   "other": "(36.67,-119.45)",
+   "other": "KO32 Reedley",
    "pre7": false
   },
   {
@@ -349,7 +349,7 @@
    "own": "SIERRA AERO LLC",
    "ev": "DEP",
    "hm": "07:10",
-   "other": "(38.91,-121.35)",
+   "other": "KLHM Lincoln",
    "pre7": false
   },
   {
@@ -404,7 +404,7 @@
    "own": "FARM DOG HOLDINGS LLC",
    "ev": "DEP",
    "hm": "07:34",
-   "other": "(36.67,-119.45)",
+   "other": "KO32 Reedley",
    "pre7": false
   },
   {
@@ -437,7 +437,7 @@
    "own": "VALIAIR LC TRUSTEE",
    "ev": "ARR",
    "hm": "07:43",
-   "other": "(36.21,-115.20)",
+   "other": "KVGT Las Vegas",
    "pre7": false
   },
   {
@@ -470,7 +470,7 @@
    "own": "QUARRY VILLAGE REALTY LLC",
    "ev": "DEP",
    "hm": "07:59",
-   "other": "(33.63,-111.90)",
+   "other": "KSDL Scottsdale",
    "pre7": false
   },
   {
@@ -492,7 +492,7 @@
    "own": "ESTELLA AIR TRAVEL LLC, EMERALD INTERNATIONAL CORP, LT PARTN",
    "ev": "ARR",
    "hm": "08:02",
-   "other": "KHHR Hawthorne",
+   "other": "KLAX Los Angeles",
    "pre7": false
   },
   {
@@ -668,7 +668,7 @@
    "own": "THROTTLE N FLOW LLC",
    "ev": "DEP",
    "hm": "07:41",
-   "other": "(46.17,-112.78)",
+   "other": "K3U3 Anaconda",
    "pre7": false
   },
   {
@@ -866,7 +866,7 @@
    "own": "HANGAR LLC",
    "ev": "ARR",
    "hm": "08:28",
-   "other": "KHND Henderson",
+   "other": "KHND Las Vegas",
    "pre7": false
   },
   {
@@ -877,7 +877,7 @@
    "own": "EJH TETON PROPERTIES LLC",
    "ev": "DEP",
    "hm": "08:29",
-   "other": "(38.15,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -943,7 +943,7 @@
    "own": "CITATION X LEASING LLC",
    "ev": "DEP",
    "hm": "06:43",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": true
   },
   {
@@ -954,7 +954,7 @@
    "own": "MCLEAN AIR LLC",
    "ev": "ARR",
    "hm": "07:00",
-   "other": "KSUN Sun Valley",
+   "other": "KSUN Hailey",
    "pre7": false
   },
   {
@@ -987,7 +987,7 @@
    "own": "OBERMAN MARK, OBERMAN JANIE",
    "ev": "DEP",
    "hm": "07:10",
-   "other": "(41.10,-119.15)",
+   "other": "NV05 Gerlach",
    "pre7": false
   },
   {
@@ -998,7 +998,7 @@
    "own": "HOMO HOLDINGS LLC",
    "ev": "DEP",
    "hm": "07:11",
-   "other": "(47.77,-116.81)",
+   "other": "KCOE Coeur d'Alene",
    "pre7": false
   },
   {
@@ -1075,7 +1075,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:48",
-   "other": "KSLC Salt Lake",
+   "other": "KSLC Salt Lake City",
    "pre7": false
   },
   {
@@ -1086,7 +1086,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "07:54",
-   "other": "KHND Henderson",
+   "other": "KHND Las Vegas",
    "pre7": false
   },
   {
@@ -1174,7 +1174,7 @@
    "own": "TAHOE FLYING CLUB INC",
    "ev": "DEP",
    "hm": "07:36",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": false
   },
   {
@@ -1207,7 +1207,7 @@
    "own": "MCLEAN AIR LLC",
    "ev": "ARR",
    "hm": "07:49",
-   "other": "KMHR Mather",
+   "other": "KMHR Sacramento",
    "pre7": false
   },
   {
@@ -1372,7 +1372,7 @@
    "own": "T3 FARMS LLC",
    "ev": "DEP",
    "hm": "06:21",
-   "other": "(29.64,-95.27)",
+   "other": "KHOU Houston",
    "pre7": true
   },
   {
@@ -1427,7 +1427,7 @@
    "own": "BANK OF UTAH TRUSTEE",
    "ev": "DEP",
    "hm": "07:58",
-   "other": "(48.31,-114.25)",
+   "other": "KGPI Kalispell",
    "pre7": false
   },
   {
@@ -1460,7 +1460,7 @@
    "own": "FARM DOG HOLDINGS LLC",
    "ev": "ARR",
    "hm": "08:17",
-   "other": "(36.67,-119.45)",
+   "other": "KO32 Reedley",
    "pre7": false
   },
   {
@@ -1471,7 +1471,7 @@
    "own": "WESTERN FARMING LLC",
    "ev": "DEP",
    "hm": "08:24",
-   "other": "(37.55,-121.16)",
+   "other": "CN99 Patterson",
    "pre7": false
   },
   {
@@ -1482,7 +1482,7 @@
    "own": "LOLA AVIATION LLC",
    "ev": "ARR",
    "hm": "08:27",
-   "other": "(38.26,-122.61)",
+   "other": "O69 Petaluma",
    "pre7": false
   },
   {
@@ -1493,7 +1493,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "DEP",
    "hm": "08:27",
-   "other": "(35.67,-120.63)",
+   "other": "KPRB Paso Robles",
    "pre7": false
   },
   {
@@ -1504,7 +1504,7 @@
    "own": "MIKE FOXTROT AVIATION LLC",
    "ev": "DEP",
    "hm": "22:08",
-   "other": "(36.94,-121.79)",
+   "other": "KWVI Watsonville",
    "pre7": true
   },
   {
@@ -1515,7 +1515,7 @@
    "own": "CIVIL AIR PATROL",
    "ev": "ARR",
    "hm": "22:38",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": true
   },
   {
@@ -1537,7 +1537,7 @@
    "own": "UP TOP AVIATION LLC",
    "ev": "DEP",
    "hm": "07:54",
-   "other": "(45.23,-117.95)",
+   "other": "KLGD La Grande",
    "pre7": false
   },
   {
@@ -1548,7 +1548,7 @@
    "own": "SORAN PATRICK DAVID",
    "ev": "ARR",
    "hm": "07:56",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": false
   },
   {
@@ -1614,7 +1614,7 @@
    "own": "ISAACS W BRADFORD",
    "ev": "DEP",
    "hm": "08:14",
-   "other": "(35.95,-114.86)",
+   "other": "KBVU Boulder City",
    "pre7": false
   },
   {
@@ -1658,7 +1658,7 @@
    "own": "PACIFIC COAST JET CHARTER INC",
    "ev": "ARR",
    "hm": "08:21",
-   "other": "KMHR Mather",
+   "other": "KMHR Sacramento",
    "pre7": false
   },
   {
@@ -1669,7 +1669,7 @@
    "own": "PEAK AVIATION LLC",
    "ev": "DEP",
    "hm": "08:22",
-   "other": "(45.44,-98.41)",
+   "other": "KABR Aberdeen",
    "pre7": false
   },
   {
@@ -1691,7 +1691,7 @@
    "own": "FLAGSHIP JET LEASING 115 LLC",
    "ev": "ARR",
    "hm": "22:55",
-   "other": "(39.09,-93.20)",
+   "other": "KMHL Marshall",
    "pre7": true
   },
   {
@@ -1702,7 +1702,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -1724,7 +1724,7 @@
    "own": "RV SQUARED LLC",
    "ev": "ARR",
    "hm": "01:07",
-   "other": "(38.38,-121.96)",
+   "other": "KVCB Vacaville",
    "pre7": true
   },
   {
@@ -1757,7 +1757,7 @@
    "own": "GUNNER THE RED BARON LLC",
    "ev": "ARR",
    "hm": "07:32",
-   "other": "KHND Henderson",
+   "other": "KHND Las Vegas",
    "pre7": false
   },
   {
@@ -1900,7 +1900,7 @@
    "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
    "ev": "DEP",
    "hm": "22:01",
-   "other": "(38.91,-121.35)",
+   "other": "KLHM Lincoln",
    "pre7": true
   },
   {
@@ -1911,7 +1911,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:53",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   }
  ],

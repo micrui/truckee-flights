@@ -57,7 +57,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:12",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -68,7 +68,7 @@
    "own": "",
    "ev": "ARR",
    "hm": "06:17",
-   "other": "(29.54,-98.46)",
+   "other": "KSAT San Antonio",
    "pre7": true
   },
   {
@@ -101,7 +101,7 @@
    "own": "N15FX TRUST",
    "ev": "DEP",
    "hm": "06:27",
-   "other": "(32.85,-96.85)",
+   "other": "KDAL Dallas",
    "pre7": true
   },
   {
@@ -112,7 +112,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "06:28",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": true
   },
   {
@@ -123,7 +123,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "05:45",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -178,7 +178,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "23:56",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -266,7 +266,7 @@
    "own": "CIVIL AIR PATROL",
    "ev": "DEP",
    "hm": "06:58",
-   "other": "(40.51,-122.30)",
+   "other": "KRDD Redding",
    "pre7": true
   }
  ],
@@ -310,7 +310,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:12",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -321,7 +321,7 @@
    "own": "",
    "ev": "ARR",
    "hm": "06:17",
-   "other": "(29.54,-98.46)",
+   "other": "KSAT San Antonio",
    "pre7": true
   },
   {
@@ -354,7 +354,7 @@
    "own": "N15FX TRUST",
    "ev": "DEP",
    "hm": "06:27",
-   "other": "(32.85,-96.85)",
+   "other": "KDAL Dallas",
    "pre7": true
   },
   {
@@ -365,7 +365,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "06:28",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": true
   },
   {
@@ -420,7 +420,7 @@
    "own": "C R WANNAMAKER LAW PLLC, CBRE HOLDCO INC, DICK DEWESE CHEVRO",
    "ev": "ARR",
    "hm": "07:44",
-   "other": "(37.38,-118.37)",
+   "other": "KBIH Bishop",
    "pre7": false
   },
   {
@@ -486,7 +486,7 @@
    "own": "MINASIAN PAUL RYAN TRUSTEE, MINASIAN SUSAN ROFF TRUSTEE",
    "ev": "DEP",
    "hm": "08:00",
-   "other": "(39.49,-121.61)",
+   "other": "KOVE Oroville",
    "pre7": false
   },
   {
@@ -497,7 +497,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "DEP",
    "hm": "07:03",
-   "other": "(33.04,-116.91)",
+   "other": "KRNM Ramona",
    "pre7": false
   },
   {
@@ -530,7 +530,7 @@
    "own": "LAWRENCE KAM M",
    "ev": "ARR",
    "hm": "07:30",
-   "other": "KTVL S.Lake Tahoe",
+   "other": "KTVL South Lake Tahoe",
    "pre7": false
   },
   {
@@ -585,7 +585,7 @@
    "own": "CIRRUS DESIGN CORP",
    "ev": "DEP",
    "hm": "07:59",
-   "other": "(38.58,-121.86)",
+   "other": "KDWA Davis/Woodland/Winters",
    "pre7": false
   },
   {
@@ -618,7 +618,7 @@
    "own": "ECOVERY LLC, ENERPAC TOOL GROUP CORP, FOURSHARE LLC, HKO AIR",
    "ev": "ARR",
    "hm": "08:07",
-   "other": "KPAO Palo Alto",
+   "other": "KNUQ Mountain View",
    "pre7": false
   },
   {
@@ -640,7 +640,7 @@
    "own": "BTFD LLC",
    "ev": "DEP",
    "hm": "08:12",
-   "other": "(38.51,-122.81)",
+   "other": "KSTS Santa Rosa",
    "pre7": false
   },
   {
@@ -662,7 +662,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "05:45",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -761,7 +761,7 @@
    "own": "WALLACE RICHARD RONALD",
    "ev": "DEP",
    "hm": "08:25",
-   "other": "(34.85,-111.79)",
+   "other": "KSEZ Sedona",
    "pre7": false
   },
   {
@@ -816,7 +816,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "23:56",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -838,7 +838,7 @@
    "own": "SBR FLIGHT SUPPORT LLC",
    "ev": "DEP",
    "hm": "07:05",
-   "other": "(38.15,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -849,7 +849,7 @@
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "ev": "DEP",
    "hm": "07:13",
-   "other": "(39.23,-106.87)",
+   "other": "KASE Aspen",
    "pre7": false
   },
   {
@@ -882,7 +882,7 @@
    "own": "NETJETS SALES INC, ARM INC, CA HOLDINGS LLC, JACK STRAW LLC,",
    "ev": "DEP",
    "hm": "08:10",
-   "other": "(61.19,-150.01)",
+   "other": "PANC Anchorage",
    "pre7": false
   },
   {
@@ -915,7 +915,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "08:19",
-   "other": "(40.85,-74.06)",
+   "other": "KTEB Teterboro",
    "pre7": false
   },
   {
@@ -1003,7 +1003,7 @@
    "own": "FARM DOG HOLDINGS LLC",
    "ev": "ARR",
    "hm": "08:06",
-   "other": "(36.67,-119.45)",
+   "other": "KO32 Reedley",
    "pre7": false
   },
   {
@@ -1069,7 +1069,7 @@
    "own": "FLEXJET LLC, SHAW PATRICIA HEARST, TOBIN JOSEPH O, EARL BREN",
    "ev": "DEP",
    "hm": "08:26",
-   "other": "(33.13,-117.28)",
+   "other": "KCRQ Carlsbad",
    "pre7": false
   },
   {
@@ -1124,7 +1124,7 @@
    "own": "CIVIL AIR PATROL",
    "ev": "DEP",
    "hm": "06:58",
-   "other": "(40.51,-122.30)",
+   "other": "KRDD Redding",
    "pre7": true
   },
   {
@@ -1212,7 +1212,7 @@
    "own": "JASINSKI DAVID W TRUSTEE, JASINSKI AMY TRUSTEE",
    "ev": "ARR",
    "hm": "08:11",
-   "other": "(38.26,-122.61)",
+   "other": "O69 Petaluma",
    "pre7": false
   },
   {
@@ -1223,7 +1223,7 @@
    "own": "FLEISCHER RUSSELL, MOUNTAINTIME AVIATION LLC, BLUE SKIES SUN",
    "ev": "DEP",
    "hm": "08:12",
-   "other": "(40.96,-72.25)",
+   "other": "KJPX East Hampton",
    "pre7": false
   },
   {
@@ -1245,7 +1245,7 @@
    "own": "RDH AIR LLC",
    "ev": "DEP",
    "hm": "07:24",
-   "other": "(39.91,-105.12)",
+   "other": "KBJC Denver",
    "pre7": false
   },
   {
@@ -1300,7 +1300,7 @@
    "own": "SRB3 LLC",
    "ev": "ARR",
    "hm": "08:09",
-   "other": "KSNA John Wayne",
+   "other": "KSNA Santa Ana",
    "pre7": false
   },
   {
@@ -1322,7 +1322,7 @@
    "own": "ALC AIR LLC",
    "ev": "ARR",
    "hm": "08:21",
-   "other": "(38.51,-122.81)",
+   "other": "KSTS Santa Rosa",
    "pre7": false
   },
   {

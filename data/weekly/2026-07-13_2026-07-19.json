@@ -79,7 +79,7 @@
    "own": "BEAM 33 INC",
    "ev": "DEP",
    "hm": "00:25",
-   "other": "(45.81,-108.56)",
+   "other": "KBIL Billings",
    "pre7": true
   },
   {
@@ -211,7 +211,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:29",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -299,7 +299,7 @@
    "own": "BEAM 33 INC",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(45.80,-108.53)",
+   "other": "KBIL Billings",
    "pre7": true
   },
   {
@@ -365,7 +365,7 @@
    "own": "HL AIRCRAFT LLC",
    "ev": "DEP",
    "hm": "05:23",
-   "other": "(35.40,-97.59)",
+   "other": "KOKC Oklahoma City",
    "pre7": true
   },
   {
@@ -387,7 +387,7 @@
    "own": "WESTERN FARMING LLC",
    "ev": "DEP",
    "hm": "05:53",
-   "other": "(37.55,-121.16)",
+   "other": "CN99 Patterson",
    "pre7": true
   },
   {
@@ -398,7 +398,7 @@
    "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
    "ev": "ARR",
    "hm": "22:41",
-   "other": "(32.41,-111.21)",
+   "other": "KAVQ Marana",
    "pre7": true
   },
   {
@@ -409,7 +409,7 @@
    "own": "FAFO AVIATION LLC",
    "ev": "ARR",
    "hm": "22:03",
-   "other": "KSNA John Wayne",
+   "other": "KSNA Santa Ana",
    "pre7": true
   }
  ],
@@ -481,7 +481,7 @@
    "own": "BEAM 33 INC",
    "ev": "DEP",
    "hm": "00:25",
-   "other": "(45.81,-108.56)",
+   "other": "KBIL Billings",
    "pre7": true
   },
   {
@@ -613,7 +613,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "06:29",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -657,7 +657,7 @@
    "own": "EPIC II LLC",
    "ev": "DEP",
    "hm": "07:16",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -679,7 +679,7 @@
    "own": "CLARKE BROADCASTING CORP",
    "ev": "DEP",
    "hm": "07:36",
-   "other": "(38.82,-104.72)",
+   "other": "KCOS Colorado Springs",
    "pre7": false
   },
   {
@@ -701,7 +701,7 @@
    "own": "",
    "ev": "ARR",
    "hm": "08:22",
-   "other": "KSNA John Wayne",
+   "other": "KSNA Santa Ana",
    "pre7": false
   },
   {
@@ -789,7 +789,7 @@
    "own": "BEAM 33 INC",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(45.80,-108.53)",
+   "other": "KBIL Billings",
    "pre7": true
   },
   {
@@ -844,7 +844,7 @@
    "own": "FLEXJET LLC",
    "ev": "DEP",
    "hm": "08:14",
-   "other": "KPAO Palo Alto",
+   "other": "KNUQ Mountain View",
    "pre7": false
   },
   {
@@ -921,7 +921,7 @@
    "own": "TOWN & COUNTRY AVIATION LLC",
    "ev": "ARR",
    "hm": "08:10",
-   "other": "(36.94,-121.79)",
+   "other": "KWVI Watsonville",
    "pre7": false
   },
   {
@@ -954,7 +954,7 @@
    "own": "REGISTRATION PENDING",
    "ev": "ARR",
    "hm": "08:21",
-   "other": "(38.51,-122.81)",
+   "other": "KSTS Santa Rosa",
    "pre7": false
   },
   {
@@ -987,7 +987,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "08:28",
-   "other": "(44.89,-116.10)",
+   "other": "KMYL McCall",
    "pre7": false
   },
   {
@@ -1009,7 +1009,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "DEP",
    "hm": "07:24",
-   "other": "(33.73,-117.02)",
+   "other": "KHMT Hemet",
    "pre7": false
   },
   {
@@ -1053,7 +1053,7 @@
    "own": "UP UP AND AWAY LLC",
    "ev": "ARR",
    "hm": "07:58",
-   "other": "(40.48,-107.23)",
+   "other": "KHDN Hayden",
    "pre7": false
   },
   {
@@ -1108,7 +1108,7 @@
    "own": "OSTROFF ALAN",
    "ev": "ARR",
    "hm": "08:16",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -1152,7 +1152,7 @@
    "own": "HL AIRCRAFT LLC",
    "ev": "DEP",
    "hm": "05:23",
-   "other": "(35.40,-97.59)",
+   "other": "KOKC Oklahoma City",
    "pre7": true
   },
   {
@@ -1185,7 +1185,7 @@
    "own": "SIMMONS AND ASSOCIATES INC",
    "ev": "DEP",
    "hm": "07:48",
-   "other": "(40.14,-119.92)",
+   "other": "US-0986 Herlong, CA",
    "pre7": false
   },
   {
@@ -1196,7 +1196,7 @@
    "own": "CCX-2300-0103 LLC",
    "ev": "DEP",
    "hm": "07:48",
-   "other": "(40.14,-119.92)",
+   "other": "US-0986 Herlong, CA",
    "pre7": false
   },
   {
@@ -1207,7 +1207,7 @@
    "own": "WHEELS UP PARTNERS LLC",
    "ev": "DEP",
    "hm": "07:49",
-   "other": "(36.45,-105.68)",
+   "other": "KSKX Taos",
    "pre7": false
   },
   {
@@ -1229,7 +1229,7 @@
    "own": "BANK OF UTAH TRUSTEE",
    "ev": "ARR",
    "hm": "08:17",
-   "other": "(42.12,-87.91)",
+   "other": "KPWK Chicago/Prospect Heights/Wheeling",
    "pre7": false
   },
   {
@@ -1262,7 +1262,7 @@
    "own": "WESTERN FARMING LLC",
    "ev": "DEP",
    "hm": "05:53",
-   "other": "(37.55,-121.16)",
+   "other": "CN99 Patterson",
    "pre7": true
   },
   {
@@ -1273,7 +1273,7 @@
    "own": "DOUBLE C AIR LLC",
    "ev": "ARR",
    "hm": "07:11",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": false
   },
   {
@@ -1284,7 +1284,7 @@
    "own": "DOUBLE C AIR LLC",
    "ev": "DEP",
    "hm": "07:19",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": false
   },
   {
@@ -1350,7 +1350,7 @@
    "own": "MOUNTAIN LION AVIATION LLC",
    "ev": "DEP",
    "hm": "07:56",
-   "other": "KBUR Burbank",
+   "other": "KWHP Pacoima",
    "pre7": false
   },
   {
@@ -1361,7 +1361,7 @@
    "own": "412 AVIATION LLC",
    "ev": "ARR",
    "hm": "07:58",
-   "other": "(33.13,-117.27)",
+   "other": "KCRQ Carlsbad",
    "pre7": false
   },
   {
@@ -1394,7 +1394,7 @@
    "own": "BARON CHARTER SERVICE LLC, MOLASKY ALAN, FLYING WREN LLC, FR",
    "ev": "DEP",
    "hm": "08:01",
-   "other": "(47.78,-116.82)",
+   "other": "KCOE Coeur d'Alene",
    "pre7": false
   },
   {
@@ -1427,7 +1427,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "DEP",
    "hm": "08:16",
-   "other": "(36.03,-119.06)",
+   "other": "KPTV Porterville",
    "pre7": false
   },
   {
@@ -1471,7 +1471,7 @@
    "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
    "ev": "ARR",
    "hm": "22:41",
-   "other": "(32.41,-111.21)",
+   "other": "KAVQ Marana",
    "pre7": true
   },
   {
@@ -1526,7 +1526,7 @@
    "own": "GOTTESMAN DAVID",
    "ev": "ARR",
    "hm": "08:10",
-   "other": "(38.25,-122.60)",
+   "other": "O69 Petaluma",
    "pre7": false
   },
   {
@@ -1537,7 +1537,7 @@
    "own": "SYNAPSE ELECTRIC",
    "ev": "ARR",
    "hm": "08:12",
-   "other": "(38.15,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -1559,7 +1559,7 @@
    "own": "FAFO AVIATION LLC",
    "ev": "ARR",
    "hm": "22:03",
-   "other": "KSNA John Wayne",
+   "other": "KSNA Santa Ana",
    "pre7": true
   }
  ],

@@ -35,7 +35,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "03:46",
-   "other": "(41.49,-120.56)",
+   "other": "KAAT Alturas",
    "pre7": true
   },
   {
@@ -57,7 +57,7 @@
    "own": "BRETZ-AZTEC LLC",
    "ev": "ARR",
    "hm": "06:14",
-   "other": "KSLC Salt Lake",
+   "other": "KSLC Salt Lake City",
    "pre7": true
   },
   {
@@ -123,7 +123,7 @@
    "own": "RAMSEY BEAU A",
    "ev": "DEP",
    "hm": "06:57",
-   "other": "(38.19,-121.71)",
+   "other": "KO88 Rio Vista",
    "pre7": true
   },
   {
@@ -134,7 +134,7 @@
    "own": "N16FX TRUST",
    "ev": "DEP",
    "hm": "05:59",
-   "other": "(32.85,-96.85)",
+   "other": "KDAL Dallas",
    "pre7": true
   },
   {
@@ -189,7 +189,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "00:43",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -200,7 +200,7 @@
    "own": "ARK AVIATION LLC",
    "ev": "ARR",
    "hm": "06:47",
-   "other": "(33.57,-117.13)",
+   "other": "KF70 Murrieta",
    "pre7": true
   },
   {
@@ -233,7 +233,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "ARR",
    "hm": "22:16",
-   "other": "(33.04,-116.91)",
+   "other": "KRNM Ramona",
    "pre7": true
   },
   {
@@ -244,7 +244,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:50",
-   "other": "(41.48,-120.56)",
+   "other": "KAAT Alturas",
    "pre7": true
   },
   {
@@ -255,7 +255,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "00:21",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -288,7 +288,7 @@
    "own": "TRANSPORTATION HOLDINGS VI LLC",
    "ev": "ARR",
    "hm": "06:58",
-   "other": "(32.85,-96.86)",
+   "other": "KDAL Dallas",
    "pre7": true
   }
  ],
@@ -319,7 +319,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "03:46",
-   "other": "(41.49,-120.56)",
+   "other": "KAAT Alturas",
    "pre7": true
   },
   {
@@ -341,7 +341,7 @@
    "own": "BRETZ-AZTEC LLC",
    "ev": "ARR",
    "hm": "06:14",
-   "other": "KSLC Salt Lake",
+   "other": "KSLC Salt Lake City",
    "pre7": true
   },
   {
@@ -407,7 +407,7 @@
    "own": "RAMSEY BEAU A",
    "ev": "DEP",
    "hm": "06:57",
-   "other": "(38.19,-121.71)",
+   "other": "KO88 Rio Vista",
    "pre7": true
   },
   {
@@ -451,7 +451,7 @@
    "own": "AERONAVIS LLC",
    "ev": "DEP",
    "hm": "07:21",
-   "other": "(41.54,-93.66)",
+   "other": "KDSM Des Moines",
    "pre7": false
   },
   {
@@ -517,7 +517,7 @@
    "own": "QUARRY VILLAGE REALTY LLC",
    "ev": "DEP",
    "hm": "07:32",
-   "other": "KSUN Sun Valley",
+   "other": "KSUN Hailey",
    "pre7": false
   },
   {
@@ -561,7 +561,7 @@
    "own": "PILATUS AIRCRAFT USA LTD",
    "ev": "DEP",
    "hm": "07:40",
-   "other": "KBFI Boeing Fld",
+   "other": "KRNT Renton",
    "pre7": false
   },
   {
@@ -594,7 +594,7 @@
    "own": "FLEXJET LLC",
    "ev": "DEP",
    "hm": "07:58",
-   "other": "KBFI Boeing Fld",
+   "other": "KBFI Seattle",
    "pre7": false
   },
   {
@@ -627,7 +627,7 @@
    "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
    "ev": "ARR",
    "hm": "08:09",
-   "other": "(39.58,-104.85)",
+   "other": "KAPA Denver",
    "pre7": false
   },
   {
@@ -693,7 +693,7 @@
    "own": "N16FX TRUST",
    "ev": "DEP",
    "hm": "05:59",
-   "other": "(32.85,-96.85)",
+   "other": "KDAL Dallas",
    "pre7": true
   },
   {
@@ -704,7 +704,7 @@
    "own": "SBR FLIGHT SUPPORT LLC",
    "ev": "DEP",
    "hm": "07:13",
-   "other": "(33.63,-111.90)",
+   "other": "KSDL Scottsdale",
    "pre7": false
   },
   {
@@ -737,7 +737,7 @@
    "own": "ZACHARY DAVID K",
    "ev": "DEP",
    "hm": "07:28",
-   "other": "(48.32,-114.26)",
+   "other": "KGPI Kalispell",
    "pre7": false
   },
   {
@@ -803,7 +803,7 @@
    "own": "",
    "ev": "ARR",
    "hm": "07:59",
-   "other": "KSMF Sacramento Intl",
+   "other": "KSMF Sacramento",
    "pre7": false
   },
   {
@@ -858,7 +858,7 @@
    "own": "YC POWDER LLC",
    "ev": "DEP",
    "hm": "08:15",
-   "other": "(33.43,-112.01)",
+   "other": "KPHX Phoenix",
    "pre7": false
   },
   {
@@ -880,7 +880,7 @@
    "own": "FLEXJET LLC, LKV AIR LLC, THG 4368 LLC, RET 5 INC, TVPX AIRC",
    "ev": "DEP",
    "hm": "08:19",
-   "other": "KSUN Sun Valley",
+   "other": "KSUN Hailey",
    "pre7": false
   },
   {
@@ -902,7 +902,7 @@
    "own": "",
    "ev": "ARR",
    "hm": "08:23",
-   "other": "(35.24,-120.64)",
+   "other": "KSBP San Luis Obispo",
    "pre7": false
   },
   {
@@ -990,7 +990,7 @@
    "own": "D AND D AVIATION LLC",
    "ev": "DEP",
    "hm": "07:11",
-   "other": "(33.63,-116.16)",
+   "other": "KTRM Palm Springs",
    "pre7": false
   },
   {
@@ -1045,7 +1045,7 @@
    "own": "O'NEAL SEAN M",
    "ev": "DEP",
    "hm": "08:21",
-   "other": "(36.93,-121.79)",
+   "other": "KWVI Watsonville",
    "pre7": false
   },
   {
@@ -1067,7 +1067,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "00:43",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -1078,7 +1078,7 @@
    "own": "ARK AVIATION LLC",
    "ev": "ARR",
    "hm": "06:47",
-   "other": "(33.57,-117.13)",
+   "other": "KF70 Murrieta",
    "pre7": true
   },
   {
@@ -1089,7 +1089,7 @@
    "own": "ARK AVIATION LLC",
    "ev": "DEP",
    "hm": "07:08",
-   "other": "KSNA John Wayne",
+   "other": "KSNA Santa Ana",
    "pre7": false
   },
   {
@@ -1100,7 +1100,7 @@
    "own": "NETJETS SALES INC",
    "ev": "DEP",
    "hm": "07:14",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": false
   },
   {
@@ -1199,7 +1199,7 @@
    "own": "FLEXJET LLC",
    "ev": "DEP",
    "hm": "08:20",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": false
   },
   {
@@ -1232,7 +1232,7 @@
    "own": "YNWA LLC, OAK HILL AVIATION LLC, JOURNEY ON LLC, MODESTO MOT",
    "ev": "DEP",
    "hm": "08:25",
-   "other": "(39.64,-106.91)",
+   "other": "KEGE Eagle",
    "pre7": false
   },
   {
@@ -1243,7 +1243,7 @@
    "own": "SON RAES MEDICAL PRODUCTS ARIZONA LLC",
    "ev": "ARR",
    "hm": "08:28",
-   "other": "(33.13,-117.28)",
+   "other": "KCRQ Carlsbad",
    "pre7": false
   },
   {
@@ -1287,7 +1287,7 @@
    "own": "FIRST BANK, WILMINGTON TRUST CO TRUSTEE, BRAND REAL ESTATE S",
    "ev": "ARR",
    "hm": "07:14",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -1331,7 +1331,7 @@
    "own": "FLEXJET LLC",
    "ev": "DEP",
    "hm": "07:36",
-   "other": "(42.73,-114.46)",
+   "other": "KJER Jerome",
    "pre7": false
   },
   {
@@ -1430,7 +1430,7 @@
    "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
    "ev": "ARR",
    "hm": "22:16",
-   "other": "(33.04,-116.91)",
+   "other": "KRNM Ramona",
    "pre7": true
   },
   {
@@ -1452,7 +1452,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:43",
-   "other": "(39.85,-104.66)",
+   "other": "KDEN Denver",
    "pre7": false
   },
   {
@@ -1474,7 +1474,7 @@
    "own": "ADAMS BRIAN E",
    "ev": "ARR",
    "hm": "07:47",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": false
   },
   {
@@ -1496,7 +1496,7 @@
    "own": "FLEXJET LLC, HILLSTONE RESTAURANT GROUP INC, LMT ILLUMINATIO",
    "ev": "DEP",
    "hm": "07:51",
-   "other": "(40.48,-107.21)",
+   "other": "KHDN Hayden",
    "pre7": false
   },
   {
@@ -1551,7 +1551,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:56",
-   "other": "(33.63,-111.91)",
+   "other": "KSDL Scottsdale",
    "pre7": false
   },
   {
@@ -1683,7 +1683,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:50",
-   "other": "(41.48,-120.56)",
+   "other": "KAAT Alturas",
    "pre7": true
   },
   {
@@ -1694,7 +1694,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "DEP",
    "hm": "00:21",
-   "other": "KMCC McClellan",
+   "other": "KMCC Sacramento",
    "pre7": true
   },
   {
@@ -1727,7 +1727,7 @@
    "own": "TRANSPORTATION HOLDINGS VI LLC",
    "ev": "ARR",
    "hm": "06:58",
-   "other": "(32.85,-96.86)",
+   "other": "KDAL Dallas",
    "pre7": true
   },
   {
@@ -1793,7 +1793,7 @@
    "own": "QUARRY VILLAGE REALTY LLC",
    "ev": "DEP",
    "hm": "08:06",
-   "other": "(37.04,-113.51)",
+   "other": "KSGU St George",
    "pre7": false
   },
   {

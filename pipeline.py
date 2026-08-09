@@ -47,47 +47,57 @@ TURBOPROP = {'PC12','TBM7','TBM8','TBM9','B350','BE20','BE9L','BE9T','BE10','U21
 HELI = {'AS50','AS55','B212','B06','B407','B429','B505','EC20','EC30','EC35','EC45','EC55','EC75','R22','R44','R66','S76','UH1','H500','MD50','A109','A139','H60','EH10'}
 GLIDER = {'DISC','AS29','AS33','ASW2','LS8','LS4','LS6','DG80','DG40','DG1T','DUOD','ARCU','ARCP','NIMB','VENT','JS3','JS1','PK20','SZD5','ASK2','G103','SF25','ASW7','ASG2','ASG3','TWSH','PIK2','GROB'}
 
-# Airports used to name origins/destinations (nearest within 6 nm of a ground fix).
-AIRPORTS = [("KTRK Truckee",39.320,-120.140),("KRNO Reno",39.499,-119.768),
-("KRTS Reno-Stead",39.668,-119.876),("KTVL S.Lake Tahoe",38.894,-119.995),
-("KMEV Minden",38.998,-119.751),("KCXP Carson City",39.192,-119.734),
-("KAUN Auburn",38.955,-121.082),("KBLU Blue Canyon",39.275,-120.708),
-("KGOO Grass Valley",39.224,-121.003),("O02 Beckwourth",39.818,-120.352),
-("2O1 Quincy",39.944,-120.945),("KSVE Susanville",40.376,-120.573),
-("KPVF Placerville",38.724,-120.753),("KJAC Jackson Hole",43.607,-110.738),
-("KSMF Sacramento Intl",38.695,-121.591),("KMCC McClellan",38.668,-121.401),
-("KMHR Mather",38.554,-121.298),("KSAC Sac Exec",38.513,-121.493),
-("KOAK Oakland",37.721,-122.221),("KSFO San Francisco",37.619,-122.375),
-("KSJC San Jose",37.363,-121.929),("KAPC Napa",38.213,-122.281),
-("KCCR Concord",37.990,-122.057),("KHWD Hayward",37.659,-122.122),
-("KPAO Palo Alto",37.461,-122.115),("KSQL San Carlos",37.512,-122.250),
-("KLVK Livermore",37.694,-121.820),("KVNY Van Nuys",34.210,-118.490),
-("KBUR Burbank",34.201,-118.359),("KSNA John Wayne",33.676,-117.868),
-("KLAS Las Vegas",36.080,-115.152),("KHND Henderson",35.973,-115.134),
-("KSUN Sun Valley",43.504,-114.296),("KBZN Bozeman",45.777,-111.153),
-("KSLC Salt Lake",40.788,-111.978),("KPVU Provo",40.219,-111.723),
-("KBOI Boise",43.564,-116.223),("KEUG Eugene",44.125,-123.212),
-("KPDX Portland",45.589,-122.597),("KSEA Seattle",47.450,-122.309),
-("KBFI Boeing Fld",47.530,-122.302),("KPAE Paine Fld",47.906,-122.282),
-("KSCK Stockton",37.894,-121.238),("KMOD Modesto",37.626,-120.954),
-("KFAT Fresno",36.776,-119.718),("KHHR Hawthorne",33.923,-118.335),
-("KSMO Santa Monica",34.016,-118.451),("KCMA Camarillo",34.214,-119.094),
-("KSBA Santa Barbara",34.426,-119.840),("KMRY Monterey",36.587,-121.843)]
+# Airports used to name origins and destinations: the OurAirports public-domain
+# dataset (data/airports.csv, US/CA/MX, includes heliports), fetched by
+# tools/fetch_airports.py. Positions farther than MATCH_NM from any entry keep
+# raw coordinates rather than guessing.
+MATCH_NM = 5.0
+_AIRPORTS = None
 
-# ---------------------------------------------------------------- helpers
+def _load_airports():
+    global _AIRPORTS
+    if _AIRPORTS is None:
+        import csv
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "airports.csv")
+        _AIRPORTS = []
+        with open(path, newline="") as f:
+            for r in csv.DictReader(f):
+                _AIRPORTS.append((r["ident"], float(r["lat"]), float(r["lon"]),
+                                  r["label"], r["type"]))
+    return _AIRPORTS
+
 
 def hav_nm(lat1, lon1, lat2, lon2):
     r = 3440.065
     p1, p2 = math.radians(lat1), math.radians(lat2)
-    dp, dl = math.radians(lat2 - lat1), math.radians(lon2 - lon1)
+    dp, dl = math.radians(lat2-lat1), math.radians(lon2-lon1)
     a = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
     return 2*r*math.asin(math.sqrt(a))
 
 def nearest_airport(lat, lon):
-    best = min(AIRPORTS, key=lambda ap: hav_nm(lat, lon, ap[1], ap[2]))
-    if hav_nm(lat, lon, best[1], best[2]) < 6:
-        return best[0]
-    return f"({lat:.2f},{lon:.2f})"
+    """Nearest field within MATCH_NM. Airports outrank heliports unless the
+    point is truly at a helipad (no airport within 1.5 nm), since fixed-wing
+    aircraft cannot use helipads but medevac helicopters do."""
+    apt, apt_d, heli, heli_d = None, MATCH_NM, None, MATCH_NM
+    for ident, alat, alon, label, typ in _load_airports():
+        if abs(alat - lat) > 0.12 or abs(alon - lon) > 0.15:
+            continue
+        d = hav_nm(lat, lon, alat, alon)
+        if "heli" in typ:
+            if d < heli_d:
+                heli, heli_d = (ident, label, typ), d
+        else:
+            if d < apt_d:
+                apt, apt_d = (ident, label, typ), d
+    best = apt if apt and (heli is None or apt_d <= 1.5 or apt_d <= heli_d) else heli
+    if best is None:
+        return f"({lat:.2f},{lon:.2f})"
+    ident, label, typ = best
+    out = f"{ident} {label}" if label and not ident.startswith(label) else (label or ident)
+    if "heli" in typ:
+        out += " (heliport)"
+    return out
+
 
 def klass(t):
     if not t: return "unknown"
@@ -226,7 +236,7 @@ def run_day(datestr, window="morning"):
                     post = [p for p in allpts if p[4] and p[0] > b1 + 600]
                     ref = post[0] if post else airborne_after[-1]
                     dest = nearest_airport(ref[1], ref[2])
-                    times["to"] = "LOCAL(returned)" if dest.split()[0] in AIRPORTS[0][0] else dest
+                    times["to"] = "LOCAL(returned)" if dest.startswith("KTRK") else dest
             if not ops:
                 ops.append("GROUND_ONLY"); times["gnd"] = f"{t2s(gnd[0][0])}-{t2s(gnd[-1][0])}"
         else:

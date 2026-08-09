@@ -36,7 +36,7 @@
    "own": "FLAGSHIP JET LEASING 115 LLC",
    "ev": "ARR",
    "hm": "22:55",
-   "other": "(39.09,-93.20)",
+   "other": "KMHL Marshall",
    "pre7": true
   },
   {
@@ -47,7 +47,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -69,7 +69,7 @@
    "own": "RV SQUARED LLC",
    "ev": "ARR",
    "hm": "01:07",
-   "other": "(38.38,-121.96)",
+   "other": "KVCB Vacaville",
    "pre7": true
   },
   {
@@ -91,7 +91,7 @@
    "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
    "ev": "DEP",
    "hm": "22:01",
-   "other": "(38.91,-121.35)",
+   "other": "KLHM Lincoln",
    "pre7": true
   },
   {
@@ -102,7 +102,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:53",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -179,7 +179,7 @@
    "own": "HESSWINDS LLC",
    "ev": "DEP",
    "hm": "06:16",
-   "other": "(33.62,-111.92)",
+   "other": "KSDL Scottsdale",
    "pre7": true
   },
   {
@@ -234,7 +234,7 @@
    "own": "WEST STATES LEASING INC",
    "ev": "ARR",
    "hm": "03:06",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": true
   },
   {
@@ -303,7 +303,7 @@
    "own": "UP TOP AVIATION LLC",
    "ev": "DEP",
    "hm": "07:54",
-   "other": "(45.23,-117.95)",
+   "other": "KLGD La Grande",
    "pre7": false
   },
   {
@@ -314,7 +314,7 @@
    "own": "SORAN PATRICK DAVID",
    "ev": "ARR",
    "hm": "07:56",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": false
   },
   {
@@ -380,7 +380,7 @@
    "own": "ISAACS W BRADFORD",
    "ev": "DEP",
    "hm": "08:14",
-   "other": "(35.95,-114.86)",
+   "other": "KBVU Boulder City",
    "pre7": false
   },
   {
@@ -424,7 +424,7 @@
    "own": "PACIFIC COAST JET CHARTER INC",
    "ev": "ARR",
    "hm": "08:21",
-   "other": "KMHR Mather",
+   "other": "KMHR Sacramento",
    "pre7": false
   },
   {
@@ -435,7 +435,7 @@
    "own": "PEAK AVIATION LLC",
    "ev": "DEP",
    "hm": "08:22",
-   "other": "(45.44,-98.41)",
+   "other": "KABR Aberdeen",
    "pre7": false
   },
   {
@@ -457,7 +457,7 @@
    "own": "FLAGSHIP JET LEASING 115 LLC",
    "ev": "ARR",
    "hm": "22:55",
-   "other": "(39.09,-93.20)",
+   "other": "KMHL Marshall",
    "pre7": true
   },
   {
@@ -468,7 +468,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "22:59",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -490,7 +490,7 @@
    "own": "RV SQUARED LLC",
    "ev": "ARR",
    "hm": "01:07",
-   "other": "(38.38,-121.96)",
+   "other": "KVCB Vacaville",
    "pre7": true
   },
   {
@@ -523,7 +523,7 @@
    "own": "GUNNER THE RED BARON LLC",
    "ev": "ARR",
    "hm": "07:32",
-   "other": "KHND Henderson",
+   "other": "KHND Las Vegas",
    "pre7": false
   },
   {
@@ -666,7 +666,7 @@
    "own": "AIRTRUST LLC - 6 - SERIESS 6 TRUSTEE",
    "ev": "DEP",
    "hm": "22:01",
-   "other": "(38.91,-121.35)",
+   "other": "KLHM Lincoln",
    "pre7": true
   },
   {
@@ -677,7 +677,7 @@
    "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
    "ev": "ARR",
    "hm": "23:53",
-   "other": "(40.29,-121.24)",
+   "other": "KO05 Chester",
    "pre7": true
   },
   {
@@ -875,7 +875,7 @@
    "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
    "ev": "DEP",
    "hm": "08:09",
-   "other": "KPAO Palo Alto",
+   "other": "KNUQ Mountain View",
    "pre7": false
   },
   {
@@ -886,7 +886,7 @@
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "ev": "DEP",
    "hm": "08:12",
-   "other": "(35.68,-120.63)",
+   "other": "KPRB Paso Robles",
    "pre7": false
   },
   {
@@ -908,7 +908,7 @@
    "own": "KC TRVL LLC, HERBERT LAWRENCE, CJET LLC, MCGEE SUZANNE P, MC",
    "ev": "DEP",
    "hm": "08:13",
-   "other": "(42.00,-87.91)",
+   "other": "KORD Chicago",
    "pre7": false
   },
   {
@@ -952,7 +952,7 @@
    "own": "BROWN LAWRENCE M, AVILLA LORETTA C",
    "ev": "DEP",
    "hm": "08:19",
-   "other": "KSJC San Jose",
+   "other": "KRHV San Jose",
    "pre7": false
   },
   {
@@ -963,7 +963,7 @@
    "own": "WESTERN FARMING LLC",
    "ev": "DEP",
    "hm": "08:21",
-   "other": "(37.55,-121.16)",
+   "other": "CN99 Patterson",
    "pre7": false
   },
   {
@@ -1095,7 +1095,7 @@
    "own": "MCLEAN AIR LLC",
    "ev": "ARR",
    "hm": "07:12",
-   "other": "(38.51,-122.81)",
+   "other": "KSTS Santa Rosa",
    "pre7": false
   },
   {
@@ -1128,7 +1128,7 @@
    "own": "RAVENCREST LLC",
    "ev": "DEP",
    "hm": "07:29",
-   "other": "(35.62,-106.09)",
+   "other": "KSAF Santa Fe",
    "pre7": false
   },
   {
@@ -1194,7 +1194,7 @@
    "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
    "ev": "DEP",
    "hm": "08:13",
-   "other": "KMHR Mather",
+   "other": "KMHR Sacramento",
    "pre7": false
   },
   {
@@ -1205,7 +1205,7 @@
    "own": "QUARRY VILLAGE REALTY LLC",
    "ev": "DEP",
    "hm": "08:25",
-   "other": "(39.56,-104.85)",
+   "other": "KAPA Denver",
    "pre7": false
   },
   {
@@ -1227,7 +1227,7 @@
    "own": "HESSWINDS LLC",
    "ev": "DEP",
    "hm": "06:16",
-   "other": "(33.62,-111.92)",
+   "other": "KSDL Scottsdale",
    "pre7": true
   },
   {
@@ -1315,7 +1315,7 @@
    "own": "MJJ CAPITAL MANAGEMENT INC, ONEILL BEVERAGES CO LLC",
    "ev": "ARR",
    "hm": "07:40",
-   "other": "(38.14,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -1425,7 +1425,7 @@
    "own": "MJJ CAPITAL MANAGEMENT INC, ONEILL BEVERAGES CO LLC",
    "ev": "DEP",
    "hm": "08:27",
-   "other": "(38.15,-122.56)",
+   "other": "KDVO Novato",
    "pre7": false
   },
   {
@@ -1436,7 +1436,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "08:29",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": false
   },
   {
@@ -1469,7 +1469,7 @@
    "own": "WESTERN FARMING LLC",
    "ev": "DEP",
    "hm": "07:19",
-   "other": "(44.51,-114.31)",
+   "other": "99ID Challis (heliport)",
    "pre7": false
   },
   {
@@ -1491,7 +1491,7 @@
    "own": "A7P TRUST CO INC TRUSTEE",
    "ev": "ARR",
    "hm": "07:37",
-   "other": "KPAO Palo Alto",
+   "other": "KNUQ Mountain View",
    "pre7": false
   },
   {
@@ -1546,7 +1546,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:53",
-   "other": "KHHR Hawthorne",
+   "other": "KLAX Los Angeles",
    "pre7": false
   },
   {
@@ -1579,7 +1579,7 @@
    "own": "RANGER STREAMS LLC, AMERICAN WEST INVESTMENT CORP, JOHNSON F",
    "ev": "ARR",
    "hm": "08:28",
-   "other": "(35.43,-119.05)",
+   "other": "KBFL Bakersfield",
    "pre7": false
   },
   {
@@ -1601,7 +1601,7 @@
    "own": "WEST STATES LEASING INC",
    "ev": "ARR",
    "hm": "03:06",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": true
   },
   {
@@ -1656,7 +1656,7 @@
    "own": "",
    "ev": "DEP",
    "hm": "07:41",
-   "other": "KJAC Jackson Hole",
+   "other": "KJAC Jackson",
    "pre7": false
   },
   {
@@ -1667,7 +1667,7 @@
    "own": "CRIMSON PHOENIX LLC",
    "ev": "DEP",
    "hm": "07:47",
-   "other": "(42.06,-111.79)",
+   "other": "US-5908 Preston (heliport)",
    "pre7": false
   },
   {
@@ -1722,7 +1722,7 @@
    "own": "RAMSEY BEAU A",
    "ev": "DEP",
    "hm": "08:29",
-   "other": "KRTS Reno-Stead",
+   "other": "KRTS Reno",
    "pre7": false
   },
   {
