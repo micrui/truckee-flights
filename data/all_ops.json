@@ -1,0 +1,2982 @@
+[
+ {
+  "date": "2026-08-01",
+  "hex": "a332b0",
+  "reg": "N305JC",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "own": "ACCURATE AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:26",
+  "last": "06:35",
+  "min_dist": 6.9,
+  "min_alt": 9300
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "aa07db",
+  "reg": "N74527",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "own": "WHITE JESSE J, WHITE KATHERINE J",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:40",
+  "last": "06:52",
+  "min_dist": 5.8,
+  "min_alt": 9000
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "ad75ae",
+  "reg": "N9666V",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "MEDIA STEW LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:44",
+  "last": "07:00",
+  "min_dist": 2.8,
+  "min_alt": 10125
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a3b3dc",
+  "reg": "N338DK",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "own": "UP TOP AVIATION LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:54",
+   "to": "(45.23,-117.95)"
+  },
+  "first": "07:30",
+  "last": "08:01",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a519ea",
+  "reg": "N428FX",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "own": "FLEXJET LLC, SIZUL AIR LLC, STATESIDE AIR LLC, SWANSON THOR, SCH",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "07:33-08:27"
+  },
+  "first": "07:33",
+  "last": "08:27",
+  "min_dist": 0.2,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a347d9",
+  "reg": "N310LP",
+  "type": "C310",
+  "class": "piston",
+  "desc": "CESSNA 310",
+  "own": "ISAACS W BRADFORD",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:14",
+   "to": "(35.95,-114.86)"
+  },
+  "first": "07:39",
+  "last": "08:25",
+  "min_dist": 0.1,
+  "min_alt": 5400
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a9796a",
+  "reg": "N70977",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "SORAN PATRICK DAVID",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "arr": "08:17",
+   "from": "KTRK Truckee",
+   "dep": "07:59",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:45",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:10",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:45",
+  "last": "08:20",
+  "min_dist": 0.1,
+  "min_alt": 5450
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a4380d",
+  "reg": "N371FP",
+  "type": "GLF4",
+  "class": "jet",
+  "desc": "GULFSTREAM 4",
+  "own": "WING AVIATION GROUP LLC",
+  "dbFlags": 8,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:47",
+  "last": "07:51",
+  "min_dist": 7.0,
+  "min_alt": 9725
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a9247d",
+  "reg": "N68885",
+  "type": "GLF6",
+  "class": "jet",
+  "desc": "GULFSTREAM G650",
+  "own": "A7P TRUST CO INC TRUSTEE",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:59",
+   "from": "KMRY Monterey",
+   "dep": "08:01",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:53",
+  "last": "08:01",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "ad2104",
+  "reg": "N945PD",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "HICKMOTT MARK T",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:11",
+   "to": "KLVK Livermore"
+  },
+  "first": "07:55",
+  "last": "08:21",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "abd368",
+  "reg": "N861JT",
+  "type": "RV12",
+  "class": "piston",
+  "desc": null,
+  "own": "RV SQUARED LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:19",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:59",
+  "last": "08:28",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a66e03",
+  "reg": "N513QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:00",
+  "last": "08:05",
+  "min_dist": 1.0,
+  "min_alt": 12600
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a353f5",
+  "reg": "N313WL",
+  "type": "C25A",
+  "class": "jet",
+  "desc": null,
+  "own": "PEAK AVIATION LLC",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:16",
+   "from": "KTRK Truckee",
+   "dep": "08:22",
+   "to": "(45.44,-98.41)"
+  },
+  "first": "08:05",
+  "last": "08:27",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a5de18",
+  "reg": "N47740",
+  "type": "P28S",
+  "class": "piston",
+  "desc": "PIPER PA-28R-201T",
+  "own": "MEDIA STEW LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:11",
+  "last": "08:20",
+  "min_dist": 8.3,
+  "min_alt": 6975
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "a46e70",
+  "reg": "N385FX",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": "UNIVERSITY OF NOTRE DAME, GILLCO ENERGY AIR LLC, HOFFMAN JONATHA",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:11-08:25"
+  },
+  "first": "08:11",
+  "last": "08:25",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-01",
+  "hex": "ad4114",
+  "reg": "N953PC",
+  "type": "C56X",
+  "class": "jet",
+  "desc": "CESSNA 560XL Citation XLS",
+  "own": "PACIFIC COAST JET CHARTER INC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:21",
+   "from": "KMHR Mather",
+   "dep": "08:23",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:15",
+  "last": "08:23",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a71ab4",
+  "reg": "N557PC",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "05:56",
+  "last": "06:02",
+  "min_dist": 3.2,
+  "min_alt": 8700
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a4dc11",
+  "reg": "N412FF",
+  "type": "EPIC",
+  "class": "turboprop",
+  "desc": null,
+  "own": "412 AVIATION LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "06:13",
+   "to": "KSQL San Carlos"
+  },
+  "first": "06:08",
+  "last": "06:19",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a90115",
+  "reg": "N68CE",
+  "type": "T206",
+  "class": "piston",
+  "desc": null,
+  "own": "EBRIGHT INC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:10",
+  "last": "06:24",
+  "min_dist": 3.0,
+  "min_alt": 9750
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a3973e",
+  "reg": "N330QS",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "ARR"
+  ],
+  "times": {
+   "arr": "07:12",
+   "from": "KLAS Las Vegas"
+  },
+  "first": "06:34",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a495ef",
+  "reg": "N395FX",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": "MANSEFELDT INVESTMENT CORP, GALLOWAY HOLDINGS LLC, SEA-HAWK INC,",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:06",
+   "to": "KPDX Portland"
+  },
+  "first": "07:17",
+  "last": "08:10",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a03fe5",
+  "reg": "N115MM",
+  "type": "SR22",
+  "class": "piston",
+  "desc": "CIRRUS SR-22",
+  "own": "GUNNER THE RED BARON LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR"
+  ],
+  "times": {
+   "arr": "07:32",
+   "from": "KHND Henderson"
+  },
+  "first": "07:27",
+  "last": "07:36",
+  "min_dist": 0.1,
+  "min_alt": 5550
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:28",
+   "to": "LOCAL(returned)",
+   "arr": "08:21",
+   "from": "KTRK Truckee"
+  },
+  "first": "07:27",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "abe115",
+  "reg": "N8647W",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "own": "CHASE DAN",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:43",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:34",
+  "last": "07:53",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a047a3",
+  "reg": "N117QS",
+  "type": "GL5T",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-700 Global 5000/5500",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:37",
+  "last": "07:42",
+  "min_dist": 7.5,
+  "min_alt": 10225
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a1e632",
+  "reg": "N221RC",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "BTFD LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:15",
+   "from": "KTRK Truckee",
+   "dep": "08:20",
+   "to": "KOAK Oakland"
+  },
+  "first": "07:45",
+  "last": "08:26",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "ac9b27",
+  "reg": "N911HX",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "own": "CCX-2300-0103 LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:53",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:46",
+  "last": "08:29",
+  "min_dist": 0.0,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a9b9f0",
+  "reg": "N726BA",
+  "type": "B58T",
+  "class": "piston",
+  "desc": "BEECH 58TC Baron",
+  "own": "CRIMSON PHOENIX LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:03",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:50",
+  "last": "08:11",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a7bd16",
+  "reg": "N598WC",
+  "type": "F900",
+  "class": "jet",
+  "desc": "DASSAULT Falcon 900",
+  "own": "WASTE CONNECTIONS US INC",
+  "dbFlags": 8,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "07:51-08:29"
+  },
+  "first": "07:51",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a4abc5",
+  "reg": "N40RF",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "GAMMA FLIGHT LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:54",
+  "last": "08:12",
+  "min_dist": 7.1,
+  "min_alt": 10800
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a4d4b3",
+  "reg": "N410FX",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "own": "FLEXJET LLC, LYONDELLBASELL ACETYLS LLC, KEYSTONE AIR LLC, KDP H",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:58",
+  "last": "08:03",
+  "min_dist": 7.0,
+  "min_alt": 10325
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "ac6c8c",
+  "reg": "N9XE",
+  "type": "RV9",
+  "class": "piston",
+  "desc": "VANS RV-9",
+  "own": "R A F S LLC",
+  "dbFlags": 8,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:00",
+  "last": "08:29",
+  "min_dist": 5.8,
+  "min_alt": 6425
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "ac9b29",
+  "reg": "N911HZ",
+  "type": "HIGH",
+  "class": "piston",
+  "desc": "JUST JA20 Highlander",
+  "own": "SIMMONS AND ASSOCIATES INC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:14",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:05",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a75ea3",
+  "reg": "N574Q",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "own": "SDL CONSULTING LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:11",
+  "last": "08:29",
+  "min_dist": 8.3,
+  "min_alt": 6350
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a4405f",
+  "reg": "N373QS",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:25",
+  "last": "08:29",
+  "min_dist": 8.1,
+  "min_alt": 10175
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a864ed",
+  "reg": "N64WY",
+  "type": "HUSK",
+  "class": "piston",
+  "desc": "CHRISTEN Husky",
+  "own": "HOOTS HUSKY LLC",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:27-08:29"
+  },
+  "first": "08:27",
+  "last": "08:29",
+  "min_dist": 0.3,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-02",
+  "hex": "a4fade",
+  "reg": "N42SH",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "own": "LEJORAN LLC",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:29-08:29"
+  },
+  "first": "08:29",
+  "last": "08:29",
+  "min_dist": 0.3,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "aad2a8",
+  "reg": "N797GM",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "SWISS MISS LLC, SWISS MADE LLC",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:12",
+   "from": "KTRK Truckee",
+   "dep": "07:16",
+   "to": "KSQL San Carlos"
+  },
+  "first": "06:30",
+  "last": "07:21",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a3f7f3",
+  "reg": "N355FX",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": "FLEXJET LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:03",
+   "to": "KHWD Hayward"
+  },
+  "first": "06:36",
+  "last": "07:11",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "ab1b23",
+  "reg": "N8144G",
+  "type": "P32R",
+  "class": "piston",
+  "desc": "PIPER PA-32R-300/301/301T",
+  "own": "DISTANT HORIZONS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "dep": "06:47",
+   "to": "LOCAL(returned)",
+   "arr": "07:19",
+   "from": "KTRK Truckee"
+  },
+  "first": "06:36",
+  "last": "07:21",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a2d218",
+  "reg": "N281EB",
+  "type": "PC24",
+  "class": "jet",
+  "desc": "PILATUS PC-24",
+  "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:46",
+   "from": "KTRK Truckee",
+   "dep": "08:09",
+   "to": "KPAO Palo Alto"
+  },
+  "first": "06:38",
+  "last": "08:14",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a03676",
+  "reg": "N1123V",
+  "type": "BE36",
+  "class": "piston",
+  "desc": "BEECH 36 Bonanza",
+  "own": "LIZARRAGA TONY CLAUDE",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:01",
+   "to": "KLVK Livermore"
+  },
+  "first": "06:53",
+  "last": "07:10",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a8c701",
+  "reg": "N665CC",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "own": "43KB LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "dep": "07:21",
+   "to": "LOCAL(returned)",
+   "arr": "07:56",
+   "from": "KTRK Truckee"
+  },
+  "first": "07:09",
+  "last": "07:58",
+  "min_dist": 0.2,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a59ace",
+  "reg": "N460NG",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "NOVEMBER GOLF MANAGEMENT LLC",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:33",
+   "from": "KRNO Reno",
+   "dep": "08:12",
+   "to": "(35.68,-120.63)"
+  },
+  "first": "07:26",
+  "last": "08:18",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a10eff",
+  "reg": "N1677C",
+  "type": "C180",
+  "class": "piston",
+  "desc": "CESSNA  180 Skywagon",
+  "own": "DAVIS AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:00",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:29",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a1d2c6",
+  "reg": "N2164X",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "own": "BROWN LAWRENCE M, AVILLA LORETTA C",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:19",
+   "to": "KSJC San Jose",
+   "arr": "08:12",
+   "from": "KTRK Truckee"
+  },
+  "first": "07:39",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5675
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "abe115",
+  "reg": "N8647W",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "own": "CHASE DAN",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:14",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:05",
+  "last": "08:25",
+  "min_dist": 0.1,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a645a8",
+  "reg": "N503FX",
+  "type": "CL35",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-100 Challenger 350",
+  "own": "KC TRVL LLC, HERBERT LAWRENCE, CJET LLC, MCGEE SUZANNE P, MCGEE ",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:13",
+   "to": "(42.00,-87.91)"
+  },
+  "first": "08:07",
+  "last": "08:17",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "acc6df",
+  "reg": "N922PB",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+  "dbFlags": 8,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:15",
+   "to": "KPAO Palo Alto"
+  },
+  "first": "08:10",
+  "last": "08:21",
+  "min_dist": 0.1,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "a6f58d",
+  "reg": "N5479N",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "TAHOE FLYING CLUB INC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:18",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:10",
+  "last": "08:28",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "acd4ea",
+  "reg": "N926ET",
+  "type": "T206",
+  "class": "piston",
+  "desc": "CESSNA T206 Turbo Stationair",
+  "own": "WESTERN FARMING LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:21",
+   "to": "(37.55,-121.16)"
+  },
+  "first": "08:15",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-03",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:20-08:28"
+  },
+  "first": "08:20",
+  "last": "08:28",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a52723",
+  "reg": "N431DC",
+  "type": "B350",
+  "class": "turboprop",
+  "desc": null,
+  "own": "DIESEL ACQUISITIONS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:16",
+  "last": "07:22",
+  "min_dist": 0.4,
+  "min_alt": 8425
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "add288",
+  "reg": "N99YZ",
+  "type": "T210",
+  "class": "piston",
+  "desc": "CESSNA T210 Turbo Centurion",
+  "own": "EDWAL AVIATION LLC",
+  "dbFlags": 8,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:33",
+  "last": "07:43",
+  "min_dist": 8.0,
+  "min_alt": 8300
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "acebe9",
+  "reg": "N9311P",
+  "type": "T206",
+  "class": "piston",
+  "desc": "CESSNA T206 Turbo Stationair",
+  "own": "JJJFGT CAPITAL HOLDINGS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:47",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:35",
+  "last": "07:57",
+  "min_dist": 0.1,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "abe115",
+  "reg": "N8647W",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "own": "CHASE DAN",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "dep": "07:50",
+   "to": "LOCAL(returned)",
+   "arr": "08:22",
+   "from": "KTRK Truckee"
+  },
+  "first": "07:42",
+  "last": "08:24",
+  "min_dist": 0.1,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a9ceaf",
+  "reg": "N7309S",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "BRUNO VINCENT P, MARYMEE JAMES P, BURGESS ALAN S, NEW LEADERS VE",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "07:55-08:29"
+  },
+  "first": "07:51",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a40b89",
+  "reg": "N36SF",
+  "type": null,
+  "class": "unknown",
+  "desc": null,
+  "own": "NORTH FORK LLC",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:00-08:04"
+  },
+  "first": "08:00",
+  "last": "08:04",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a1dc79",
+  "reg": "N219RS",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "own": "CASTLE PEAK LEASING LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:09",
+   "to": "KCCR Concord"
+  },
+  "first": "08:00",
+  "last": "08:17",
+  "min_dist": 0.1,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "aa13a7",
+  "reg": "N7487Z",
+  "type": "PA25",
+  "class": "piston",
+  "desc": "PIPER PA-25 Pawnee",
+  "own": "TRUCKEE TAHOE SOARING ASSOC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:08",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:01",
+  "last": "08:08",
+  "min_dist": 0.2,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:03",
+   "from": "KTRK Truckee",
+   "dep": "08:22",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:01",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a4d951",
+  "reg": "N411RC",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "own": "LOLA AVIATION LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:11",
+   "to": "KCCR Concord"
+  },
+  "first": "08:01",
+  "last": "08:19",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a75afd",
+  "reg": "N573QS",
+  "type": "C56X",
+  "class": "jet",
+  "desc": "CESSNA 560XL Citation XLS",
+  "own": "NETJETS SALES INC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:11",
+   "from": "KSFO San Francisco",
+   "dep": "08:13",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:03",
+  "last": "08:13",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "ada2cc",
+  "reg": "N978QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:03-08:29"
+  },
+  "first": "08:03",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "a4a8d1",
+  "reg": "N4KA",
+  "type": "B06",
+  "class": "helicopter",
+  "desc": "BELL 206 JetRanger",
+  "own": "AMBROSE GROUP INC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:15",
+  "last": "08:29",
+  "min_dist": 1.0,
+  "min_alt": 8125
+ },
+ {
+  "date": "2026-08-04",
+  "hex": "ad00bf",
+  "reg": "N937MB",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "own": "MIKELOU LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:26",
+  "last": "08:29",
+  "min_dist": 4.8,
+  "min_alt": 7675
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a17e54",
+  "reg": "N1959C",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "TISDALE ANTHONY",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:23",
+  "last": "06:36",
+  "min_dist": 7.2,
+  "min_alt": 10150
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a88ac1",
+  "reg": "N65DW",
+  "type": "C180",
+  "class": "piston",
+  "desc": "CESSNA  180 Skywagon",
+  "own": "NORTH STREAM CAPITAL LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:44",
+  "last": "06:55",
+  "min_dist": 7.4,
+  "min_alt": 10000
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a8c701",
+  "reg": "N665CC",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "own": "43KB LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "dep": "07:18",
+   "to": "LOCAL(returned)",
+   "arr": "08:29",
+   "from": "KTRK Truckee"
+  },
+  "first": "07:03",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5550
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a5ec5c",
+  "reg": "N481AM",
+  "type": "C25C",
+  "class": "jet",
+  "desc": "CESSNA 525C Citation CJ4",
+  "own": "RAVENCREST LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:29",
+   "to": "(35.62,-106.09)"
+  },
+  "first": "07:06",
+  "last": "07:34",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a443f8",
+  "reg": "N374PM",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "MCLEAN AIR LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:12",
+   "from": "(38.51,-122.81)",
+   "dep": "07:20",
+   "to": "KSQL San Carlos"
+  },
+  "first": "07:07",
+  "last": "07:26",
+  "min_dist": 0.1,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a536a2",
+  "reg": "N435KR",
+  "type": "RV9",
+  "class": "piston",
+  "desc": "VANS RV-9",
+  "own": "HAUG WILLIAM C TRUSTEE, HAUG SUSAN V TRUSTEE",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:17",
+  "last": "07:30",
+  "min_dist": 2.1,
+  "min_alt": 9825
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a742df",
+  "reg": "N567W",
+  "type": "BE9L",
+  "class": "turboprop",
+  "desc": "BEECH 90 King Air",
+  "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:22",
+  "last": "07:31",
+  "min_dist": 4.2,
+  "min_alt": 8400
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:38",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:24",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "ad0bed",
+  "reg": "N94ML",
+  "type": "E55P",
+  "class": "jet",
+  "desc": null,
+  "own": "QUARRY VILLAGE REALTY LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:25",
+   "to": "(39.56,-104.85)"
+  },
+  "first": "07:32",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5625
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a59ace",
+  "reg": "N460NG",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "NOVEMBER GOLF MANAGEMENT LLC",
+  "dbFlags": 8,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:33",
+  "last": "07:42",
+  "min_dist": 0.4,
+  "min_alt": 8400
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "abe115",
+  "reg": "N8647W",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "own": "CHASE DAN",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:55",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:45",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a12c8b",
+  "reg": "N175JC",
+  "type": "TBM9",
+  "class": "turboprop",
+  "desc": null,
+  "own": "SACRAMENTO COUNTY SHERIFFS OFFICE",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:49",
+  "last": "07:56",
+  "min_dist": 1.8,
+  "min_alt": 8150
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a2e167",
+  "reg": "N285JS",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "FLYTRUCKEETAHOE INC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:09",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:50",
+  "last": "08:24",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "aa2102",
+  "reg": "N7516Z",
+  "type": "PA25",
+  "class": "piston",
+  "desc": "PIPER PA-25 Pawnee",
+  "own": "TRUCKEE TAHOE SOARING ASSOC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:04",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:01",
+  "last": "08:04",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "adbf57",
+  "reg": "N985SR",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "WALNUT STREET 738 LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:04",
+  "last": "08:10",
+  "min_dist": 9.3,
+  "min_alt": 11425
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "acc6df",
+  "reg": "N922PB",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+  "dbFlags": 8,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:13",
+   "to": "KMHR Mather"
+  },
+  "first": "08:06",
+  "last": "08:19",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a118fd",
+  "reg": "N17YC",
+  "type": "GLID",
+  "class": "piston",
+  "desc": "PW-6U",
+  "own": "TRUCKEE TAHOE SOARING ASSOC",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "08:15-08:24"
+  },
+  "first": "08:15",
+  "last": "08:24",
+  "min_dist": 0.4,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-05",
+  "hex": "a6b42a",
+  "reg": "N531AF",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "RIGI INC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:27",
+  "last": "08:29",
+  "min_dist": 5.9,
+  "min_alt": 8775
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a78c44",
+  "reg": "N586AT",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "HESSWINDS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "06:16",
+   "to": "(33.62,-111.92)"
+  },
+  "first": "06:05",
+  "last": "06:29",
+  "min_dist": 0.1,
+  "min_alt": 5550
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a02147",
+  "reg": "N1071Y",
+  "type": "M20P",
+  "class": "piston",
+  "desc": null,
+  "own": "BREAUX JOHN JR",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:28",
+  "last": "06:39",
+  "min_dist": 0.9,
+  "min_alt": 8200
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a92ec2",
+  "reg": "N691DK",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "D FORCE 2 LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:46",
+   "from": "KTRK Truckee",
+   "dep": "07:59",
+   "to": "KOAK Oakland"
+  },
+  "first": "06:34",
+  "last": "08:06",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "adf49c",
+  "reg": "N999FN",
+  "type": "EPIC",
+  "class": "turboprop",
+  "desc": "EPIC AIRCRAFT Epic LT",
+  "own": "WING AIR LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:48",
+   "from": "KTRK Truckee",
+   "dep": "07:59",
+   "to": "KPAO Palo Alto"
+  },
+  "first": "06:36",
+  "last": "08:09",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a4c2f9",
+  "reg": "N406AP",
+  "type": "B407",
+  "class": "helicopter",
+  "desc": "BELL 407",
+  "own": "A&P HELICOPTERS INC",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "06:50-06:52"
+  },
+  "first": "06:45",
+  "last": "06:52",
+  "min_dist": 2.4,
+  "min_alt": 5700
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "adce1b",
+  "reg": "N989RS",
+  "type": "C25B",
+  "class": "jet",
+  "desc": "CESSNA 525B Citation CJ3",
+  "own": "LUCKY DEVIL LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "arr": "08:22",
+   "from": "KTRK Truckee",
+   "dep": "07:26",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:06",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5550
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a7bc8e",
+  "reg": "N598QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "07:06-08:29"
+  },
+  "first": "07:06",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "ac701b",
+  "reg": "N900KP",
+  "type": "PC24",
+  "class": "jet",
+  "desc": null,
+  "own": "TOBARTHS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:30",
+   "to": "KBOI Boise"
+  },
+  "first": "07:15",
+  "last": "07:34",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a742df",
+  "reg": "N567W",
+  "type": "BE9L",
+  "class": "turboprop",
+  "desc": "BEECH 90 King Air",
+  "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:19",
+  "last": "07:27",
+  "min_dist": 2.2,
+  "min_alt": 8575
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a065a6",
+  "reg": "N1245S",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "MCCAIN MICHAEL E",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:31",
+  "last": "07:49",
+  "min_dist": 5.7,
+  "min_alt": 9250
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a30589",
+  "reg": "N294NG",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "MJJ CAPITAL MANAGEMENT INC, ONEILL BEVERAGES CO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:03",
+   "from": "KTRK Truckee",
+   "dep": "08:27",
+   "to": "(38.15,-122.56)"
+  },
+  "first": "07:35",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "ab8148",
+  "reg": "N840QS",
+  "type": "C700",
+  "class": "jet",
+  "desc": null,
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:29",
+   "to": "KJAC Jackson Hole"
+  },
+  "first": "07:38",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "abe115",
+  "reg": "N8647W",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "own": "CHASE DAN",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:55",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:46",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5550
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a37361",
+  "reg": "N321PW",
+  "type": "C82S",
+  "class": "piston",
+  "desc": "CESSNA T182 Turbo Skylane",
+  "own": "SQUAW VALLEY AIR FORCE LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:50",
+  "last": "08:04",
+  "min_dist": 2.5,
+  "min_alt": 8300
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "ab2837",
+  "reg": "N818MR",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "own": "SDL CONSULTING LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:59",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5675
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a87cf4",
+  "reg": "N646QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "ARR"
+  ],
+  "times": {
+   "arr": "08:22",
+   "from": "KRNO Reno"
+  },
+  "first": "08:17",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-06",
+  "hex": "a01b3a",
+  "reg": "N106CK",
+  "type": "F900",
+  "class": "jet",
+  "desc": "DASSAULT Falcon 900",
+  "own": "BLT NET CHARTER INC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:22",
+  "last": "08:27",
+  "min_dist": 1.0,
+  "min_alt": 10325
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a17108",
+  "reg": "N192QS",
+  "type": "GL7T",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-700 Global 7000/7500",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:53",
+   "to": "KHHR Hawthorne"
+  },
+  "first": "06:16",
+  "last": "08:00",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a742df",
+  "reg": "N567W",
+  "type": "BE9L",
+  "class": "turboprop",
+  "desc": "BEECH 90 King Air",
+  "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:43",
+  "last": "06:51",
+  "min_dist": 0.5,
+  "min_alt": 8825
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a8c701",
+  "reg": "N665CC",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "own": "43KB LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "dep": "07:12",
+   "to": "LOCAL(returned)",
+   "arr": "08:07",
+   "from": "KTRK Truckee"
+  },
+  "first": "06:56",
+  "last": "08:09",
+  "min_dist": 0.1,
+  "min_alt": 5450
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "acebe9",
+  "reg": "N9311P",
+  "type": "T206",
+  "class": "piston",
+  "desc": "CESSNA T206 Turbo Stationair",
+  "own": "JJJFGT CAPITAL HOLDINGS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:12",
+   "to": "KSQL San Carlos"
+  },
+  "first": "06:58",
+  "last": "07:22",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a3236f",
+  "reg": "N301EB",
+  "type": "T210",
+  "class": "piston",
+  "desc": "CESSNA T210 Turbo Centurion",
+  "own": "QUESNEL WILLIAM G",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:21",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:10",
+  "last": "07:27",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a6661a",
+  "reg": "N511KU",
+  "type": "RV10",
+  "class": "piston",
+  "desc": "VANS RV-10",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:15",
+  "last": "07:22",
+  "min_dist": 7.2,
+  "min_alt": 8550
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a12036",
+  "reg": "N1717E",
+  "type": "C172",
+  "class": "piston",
+  "desc": null,
+  "own": "N2893E LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:15",
+  "last": "07:51",
+  "min_dist": 8.8,
+  "min_alt": 7100
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "aba912",
+  "reg": "N850TS",
+  "type": "TBM8",
+  "class": "turboprop",
+  "desc": "SOCATA TBM-850",
+  "own": "WESTERN FARMING LLC",
+  "dbFlags": 8,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:19",
+   "to": "(44.51,-114.31)"
+  },
+  "first": "07:15",
+  "last": "07:24",
+  "min_dist": 0.1,
+  "min_alt": 5450
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a2d218",
+  "reg": "N281EB",
+  "type": "PC24",
+  "class": "jet",
+  "desc": "PILATUS PC-24",
+  "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP",
+   "ARR"
+  ],
+  "times": {
+   "arr": "08:28",
+   "from": "KTRK Truckee",
+   "dep": "07:44",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:31",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "ac91c2",
+  "reg": "N909MV",
+  "type": "LJ45",
+  "class": "jet",
+  "desc": "LEARJET 45",
+  "own": "XCEL JET MANAGEMENT INC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:38",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:31",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a9247d",
+  "reg": "N68885",
+  "type": "GLF6",
+  "class": "jet",
+  "desc": "GULFSTREAM G650",
+  "own": "A7P TRUST CO INC TRUSTEE",
+  "dbFlags": 8,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "07:37",
+   "from": "KPAO Palo Alto",
+   "dep": "07:38",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:32",
+  "last": "07:38",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a323d4",
+  "reg": "N301JC",
+  "type": "C82S",
+  "class": "piston",
+  "desc": null,
+  "own": "GARDNER JEFFREY",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "07:44-07:54"
+  },
+  "first": "07:44",
+  "last": "08:01",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "ac1232",
+  "reg": "N877V",
+  "type": "AS29",
+  "class": "glider",
+  "desc": "Motorglider",
+  "own": "ROBERTS BRUCE C",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "07:48-07:49"
+  },
+  "first": "07:48",
+  "last": "07:49",
+  "min_dist": 0.4,
+  "min_alt": 5400
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a75ea3",
+  "reg": "N574Q",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "own": "SDL CONSULTING LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:51",
+  "last": "08:15",
+  "min_dist": 8.4,
+  "min_alt": 5650
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a3d55a",
+  "reg": "N346U",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "own": "FORMAN PETER",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:53",
+  "last": "08:08",
+  "min_dist": 9.7,
+  "min_alt": 7250
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a9ceaf",
+  "reg": "N7309S",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "BRUNO VINCENT P, MARYMEE JAMES P, BURGESS ALAN S, NEW LEADERS VE",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "08:03-08:14"
+  },
+  "first": "08:01",
+  "last": "08:25",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a6a0a7",
+  "reg": "N526QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:14-08:29"
+  },
+  "first": "08:14",
+  "last": "08:29",
+  "min_dist": 0.4,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a07a6f",
+  "reg": "N13SG",
+  "type": "DISC",
+  "class": "glider",
+  "desc": "Motorglider",
+  "own": "BAY AREA SOARING ASSOCIATES INC",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "08:19-08:27"
+  },
+  "first": "08:19",
+  "last": "08:27",
+  "min_dist": 0.4,
+  "min_alt": 5525
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a5bbd9",
+  "reg": "N469JG",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "own": "JG AVIATION LLC",
+  "dbFlags": 8,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:20-08:29"
+  },
+  "first": "08:20",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a3acac",
+  "reg": "N336FX",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "own": "RANGER STREAMS LLC, AMERICAN WEST INVESTMENT CORP, JOHNSON FINAN",
+  "dbFlags": 0,
+  "ops": [
+   "ARR"
+  ],
+  "times": {
+   "arr": "08:28",
+   "from": "(35.43,-119.05)"
+  },
+  "first": "08:22",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5450
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a4c0a3",
+  "reg": "N405QS",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": "ABUNDANT AVIATION HOLDINGS LLC, RAMSEY JOHN, LG ADVENTURES LLC, ",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:23-08:29"
+  },
+  "first": "08:23",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "a3729a",
+  "reg": "N321FX",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "own": "CONNIE 749 LLC, WALLYHUT LLC, TVPX AIRCRAFT SOLUTIONS INC TRUSTE",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:25",
+  "last": "08:29",
+  "min_dist": 7.0,
+  "min_alt": 10625
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "GROUND_ONLY"
+  ],
+  "times": {
+   "gnd": "08:28-08:29"
+  },
+  "first": "08:28",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-07",
+  "hex": "abd368",
+  "reg": "N861JT",
+  "type": "RV12",
+  "class": "piston",
+  "desc": null,
+  "own": "RV SQUARED LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:29",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:28",
+  "last": "08:29",
+  "min_dist": 0.2,
+  "min_alt": null
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "ac731b",
+  "reg": "N901CF",
+  "type": "AS50",
+  "class": "helicopter",
+  "desc": "AEROSPATIALE AS-350 Ecureuil",
+  "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "05:12",
+   "from": "KTRK Truckee",
+   "dep": "08:19",
+   "to": "(39.60,-120.73)"
+  },
+  "first": "05:03",
+  "last": "08:27",
+  "min_dist": 0.5,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "aa21d7",
+  "reg": "N752DW",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "FLYING START AERO SERVICES LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "06:38",
+  "last": "06:56",
+  "min_dist": 0.3,
+  "min_alt": 7800
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a7e666",
+  "reg": "N608QS",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "own": null,
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:41",
+   "to": "KJAC Jackson Hole"
+  },
+  "first": "06:41",
+  "last": "07:46",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "ac6025",
+  "reg": "N897JH",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "own": "N D AIR LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:00",
+  "last": "07:04",
+  "min_dist": 6.0,
+  "min_alt": 9725
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a9730e",
+  "reg": "N708J",
+  "type": "RV8",
+  "class": "piston",
+  "desc": "VANS RV-8",
+  "own": "JACOBSEN SAMUEL J",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:09",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:05",
+  "last": "08:00",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a2dc14",
+  "reg": "N2834R",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "PENCE LEVI B",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:11",
+  "last": "07:28",
+  "min_dist": 3.6,
+  "min_alt": 8600
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "ac9cc2",
+  "reg": "N9110H",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "SIERRA AERO LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:32",
+   "to": "LOCAL(returned)"
+  },
+  "first": "07:22",
+  "last": "08:21",
+  "min_dist": 0.1,
+  "min_alt": 5450
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a1cfda",
+  "reg": "N216AP",
+  "type": "B212",
+  "class": "helicopter",
+  "desc": "BELL 212",
+  "own": "A&P HELICOPTERS INC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:26",
+  "last": "08:27",
+  "min_dist": 6.9,
+  "min_alt": 6100
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a9b9f0",
+  "reg": "N726BA",
+  "type": "B58T",
+  "class": "piston",
+  "desc": "BEECH 58TC Baron",
+  "own": "CRIMSON PHOENIX LLC",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "07:47",
+   "to": "(42.06,-111.79)"
+  },
+  "first": "07:37",
+  "last": "07:54",
+  "min_dist": 0.1,
+  "min_alt": 5475
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a6863b",
+  "reg": "N5197R",
+  "type": "C172",
+  "class": "piston",
+  "desc": null,
+  "own": "MEDIA STEW LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:43",
+  "last": "08:00",
+  "min_dist": 2.3,
+  "min_alt": 10050
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "ab9937",
+  "reg": "N8465N",
+  "type": "BE33",
+  "class": "piston",
+  "desc": "BEECH 33 Bonanza",
+  "own": "SHONNARD KEITH M TRUSTEE, MUSCARI C TRACY TRUSTEE",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:47",
+  "last": "07:59",
+  "min_dist": 0.9,
+  "min_alt": 7200
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "ad8b0e",
+  "reg": "N97196",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "LITCHFIELD WILLIAM",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:47",
+  "last": "08:22",
+  "min_dist": 4.2,
+  "min_alt": 7400
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a12122",
+  "reg": "N172FK",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "own": "BIG HEART ARTS LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "07:52",
+  "last": "08:05",
+  "min_dist": 7.5,
+  "min_alt": 9425
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a9ceaf",
+  "reg": "N7309S",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "own": "BRUNO VINCENT P, MARYMEE JAMES P, BURGESS ALAN S, NEW LEADERS VE",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "07:54-08:05"
+  },
+  "first": "07:53",
+  "last": "08:16",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a59ace",
+  "reg": "N460NG",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "NOVEMBER GOLF MANAGEMENT LLC",
+  "dbFlags": 8,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:09",
+   "to": "KPAO Palo Alto"
+  },
+  "first": "08:03",
+  "last": "08:17",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a35062",
+  "reg": "N312XX",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "own": "UBIQUITAIR LLC",
+  "dbFlags": 0,
+  "ops": [
+   "TRANSIT_LOW"
+  ],
+  "times": {},
+  "first": "08:04",
+  "last": "08:13",
+  "min_dist": 4.6,
+  "min_alt": 10200
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "acb17b",
+  "reg": "N917JG",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "own": "PACIFIC CREST AIR LLC",
+  "dbFlags": 0,
+  "ops": [
+   "ARR",
+   "DEP"
+  ],
+  "times": {
+   "arr": "08:17",
+   "from": "KMOD Modesto",
+   "dep": "08:20",
+   "to": "LOCAL(returned)"
+  },
+  "first": "08:12",
+  "last": "08:20",
+  "min_dist": 0.1,
+  "min_alt": 5500
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a36120",
+  "reg": "N317DC",
+  "type": "RV8",
+  "class": "piston",
+  "desc": "VANS RV-8",
+  "own": "RAMSEY BEAU A",
+  "dbFlags": 0,
+  "ops": [
+   "DEP"
+  ],
+  "times": {
+   "dep": "08:29",
+   "to": "KRTS Reno-Stead"
+  },
+  "first": "08:22",
+  "last": "08:29",
+  "min_dist": 0.0,
+  "min_alt": 5575
+ },
+ {
+  "date": "2026-08-08",
+  "hex": "a323d4",
+  "reg": "N301JC",
+  "type": "C82S",
+  "class": "piston",
+  "desc": null,
+  "own": "GARDNER JEFFREY",
+  "dbFlags": 0,
+  "ops": [
+   "PATTERN/LOW"
+  ],
+  "times": {
+   "low": "08:23-08:29"
+  },
+  "first": "08:23",
+  "last": "08:29",
+  "min_dist": 0.1,
+  "min_alt": 5600
+ }
+]

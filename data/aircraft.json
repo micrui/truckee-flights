@@ -1,0 +1,1575 @@
+[
+ {
+  "reg": "N13SG",
+  "hex": "a07a6f",
+  "type": "DISC",
+  "class": "glider",
+  "desc": "Motorglider",
+  "owner": "BAY AREA SOARING ASSOCIATES INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N877V",
+  "hex": "ac1232",
+  "type": "AS29",
+  "class": "glider",
+  "desc": "Motorglider",
+  "owner": "ROBERTS BRUCE C",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N216AP",
+  "hex": "a1cfda",
+  "type": "B212",
+  "class": "helicopter",
+  "desc": "BELL 212",
+  "owner": "A&P HELICOPTERS INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N406AP",
+  "hex": "a4c2f9",
+  "type": "B407",
+  "class": "helicopter",
+  "desc": "BELL 407",
+  "owner": "A&P HELICOPTERS INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N4KA",
+  "hex": "a4a8d1",
+  "type": "B06",
+  "class": "helicopter",
+  "desc": "BELL 206 JetRanger",
+  "owner": "AMBROSE GROUP INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N901CF",
+  "hex": "ac731b",
+  "type": "AS50",
+  "class": "helicopter",
+  "desc": "AEROSPATIALE AS-350 Ecureuil",
+  "owner": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N106CK",
+  "hex": "a01b3a",
+  "type": "F900",
+  "class": "jet",
+  "desc": "DASSAULT Falcon 900",
+  "owner": "BLT NET CHARTER INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N117QS",
+  "hex": "a047a3",
+  "type": "GL5T",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-700 Global 5000/5500",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N192QS",
+  "hex": "a17108",
+  "type": "GL7T",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-700 Global 7000/7500",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N281EB",
+  "hex": "a2d218",
+  "type": "PC24",
+  "class": "jet",
+  "desc": "PILATUS PC-24",
+  "owner": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N313WL",
+  "hex": "a353f5",
+  "type": "C25A",
+  "class": "jet",
+  "desc": null,
+  "owner": "PEAK AVIATION LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N321FX",
+  "hex": "a3729a",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "owner": "CONNIE 749 LLC, WALLYHUT LLC, TVPX AIRCRAFT SOLUTIONS INC TRUSTE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N330QS",
+  "hex": "a3973e",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N336FX",
+  "hex": "a3acac",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "owner": "RANGER STREAMS LLC, AMERICAN WEST INVESTMENT CORP, JOHNSON FINAN",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N355FX",
+  "hex": "a3f7f3",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": "FLEXJET LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N371FP",
+  "hex": "a4380d",
+  "type": "GLF4",
+  "class": "jet",
+  "desc": "GULFSTREAM 4",
+  "owner": "WING AVIATION GROUP LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N373QS",
+  "hex": "a4405f",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N385FX",
+  "hex": "a46e70",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": "UNIVERSITY OF NOTRE DAME, GILLCO ENERGY AIR LLC, HOFFMAN JONATHA",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N395FX",
+  "hex": "a495ef",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": "MANSEFELDT INVESTMENT CORP, GALLOWAY HOLDINGS LLC, SEA-HAWK INC,",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N405QS",
+  "hex": "a4c0a3",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": "ABUNDANT AVIATION HOLDINGS LLC, RAMSEY JOHN, LG ADVENTURES LLC, ",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N410FX",
+  "hex": "a4d4b3",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "owner": "FLEXJET LLC, LYONDELLBASELL ACETYLS LLC, KEYSTONE AIR LLC, KDP H",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N428FX",
+  "hex": "a519ea",
+  "type": "E545",
+  "class": "jet",
+  "desc": "EMBRAER EMB545 Praetor 500",
+  "owner": "FLEXJET LLC, SIZUL AIR LLC, STATESIDE AIR LLC, SWANSON THOR, SCH",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N481AM",
+  "hex": "a5ec5c",
+  "type": "C25C",
+  "class": "jet",
+  "desc": "CESSNA 525C Citation CJ4",
+  "owner": "RAVENCREST LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N503FX",
+  "hex": "a645a8",
+  "type": "CL35",
+  "class": "jet",
+  "desc": "BOMBARDIER BD-100 Challenger 350",
+  "owner": "KC TRVL LLC, HERBERT LAWRENCE, CJET LLC, MCGEE SUZANNE P, MCGEE ",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N513QS",
+  "hex": "a66e03",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N526QS",
+  "hex": "a6a0a7",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N573QS",
+  "hex": "a75afd",
+  "type": "C56X",
+  "class": "jet",
+  "desc": "CESSNA 560XL Citation XLS",
+  "owner": "NETJETS SALES INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N598QS",
+  "hex": "a7bc8e",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N598WC",
+  "hex": "a7bd16",
+  "type": "F900",
+  "class": "jet",
+  "desc": "DASSAULT Falcon 900",
+  "owner": "WASTE CONNECTIONS US INC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N608QS",
+  "hex": "a7e666",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N646QS",
+  "hex": "a87cf4",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N68885",
+  "hex": "a9247d",
+  "type": "GLF6",
+  "class": "jet",
+  "desc": "GULFSTREAM G650",
+  "owner": "A7P TRUST CO INC TRUSTEE",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N840QS",
+  "hex": "ab8148",
+  "type": "C700",
+  "class": "jet",
+  "desc": null,
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N897JH",
+  "hex": "ac6025",
+  "type": "E55P",
+  "class": "jet",
+  "desc": "EMBRAER EMB-505 Phenom 300",
+  "owner": "N D AIR LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N900KP",
+  "hex": "ac701b",
+  "type": "PC24",
+  "class": "jet",
+  "desc": null,
+  "owner": "TOBARTHS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N909MV",
+  "hex": "ac91c2",
+  "type": "LJ45",
+  "class": "jet",
+  "desc": "LEARJET 45",
+  "owner": "XCEL JET MANAGEMENT INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N94ML",
+  "hex": "ad0bed",
+  "type": "E55P",
+  "class": "jet",
+  "desc": null,
+  "owner": "QUARRY VILLAGE REALTY LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N953PC",
+  "hex": "ad4114",
+  "type": "C56X",
+  "class": "jet",
+  "desc": "CESSNA 560XL Citation XLS",
+  "owner": "PACIFIC COAST JET CHARTER INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N978QS",
+  "hex": "ada2cc",
+  "type": "C68A",
+  "class": "jet",
+  "desc": "CESSNA 680 Citation Latitude",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N989RS",
+  "hex": "adce1b",
+  "type": "C25B",
+  "class": "jet",
+  "desc": "CESSNA 525B Citation CJ3",
+  "owner": "LUCKY DEVIL LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N1071Y",
+  "hex": "a02147",
+  "type": "M20P",
+  "class": "piston",
+  "desc": null,
+  "owner": "BREAUX JOHN JR",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N1123V",
+  "hex": "a03676",
+  "type": "BE36",
+  "class": "piston",
+  "desc": "BEECH 36 Bonanza",
+  "owner": "LIZARRAGA TONY CLAUDE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N115MM",
+  "hex": "a03fe5",
+  "type": "SR22",
+  "class": "piston",
+  "desc": "CIRRUS SR-22",
+  "owner": "GUNNER THE RED BARON LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N1245S",
+  "hex": "a065a6",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "MCCAIN MICHAEL E",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N1677C",
+  "hex": "a10eff",
+  "type": "C180",
+  "class": "piston",
+  "desc": "CESSNA  180 Skywagon",
+  "owner": "DAVIS AERO LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N1717E",
+  "hex": "a12036",
+  "type": "C172",
+  "class": "piston",
+  "desc": null,
+  "owner": "N2893E LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N172FK",
+  "hex": "a12122",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "BIG HEART ARTS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N17YC",
+  "hex": "a118fd",
+  "type": "GLID",
+  "class": "piston",
+  "desc": "PW-6U",
+  "owner": "TRUCKEE TAHOE SOARING ASSOC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N1959C",
+  "hex": "a17e54",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "TISDALE ANTHONY",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N2164X",
+  "hex": "a1d2c6",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "owner": "BROWN LAWRENCE M, AVILLA LORETTA C",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N219RS",
+  "hex": "a1dc79",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "owner": "CASTLE PEAK LEASING LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N2834R",
+  "hex": "a2dc14",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "PENCE LEVI B",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N285JS",
+  "hex": "a2e167",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "FLYTRUCKEETAHOE INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N301EB",
+  "hex": "a3236f",
+  "type": "T210",
+  "class": "piston",
+  "desc": "CESSNA T210 Turbo Centurion",
+  "owner": "QUESNEL WILLIAM G",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N301JC",
+  "hex": "a323d4",
+  "type": "C82S",
+  "class": "piston",
+  "desc": null,
+  "owner": "GARDNER JEFFREY",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07",
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N305JC",
+  "hex": "a332b0",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "owner": "ACCURATE AERO LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N310LP",
+  "hex": "a347d9",
+  "type": "C310",
+  "class": "piston",
+  "desc": "CESSNA 310",
+  "owner": "ISAACS W BRADFORD",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N312XX",
+  "hex": "a35062",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "owner": "UBIQUITAIR LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N317DC",
+  "hex": "a36120",
+  "type": "RV8",
+  "class": "piston",
+  "desc": "VANS RV-8",
+  "owner": "RAMSEY BEAU A",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N321PW",
+  "hex": "a37361",
+  "type": "C82S",
+  "class": "piston",
+  "desc": "CESSNA T182 Turbo Skylane",
+  "owner": "SQUAW VALLEY AIR FORCE LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N338DK",
+  "hex": "a3b3dc",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "owner": "UP TOP AVIATION LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N346U",
+  "hex": "a3d55a",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "owner": "FORMAN PETER",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N40RF",
+  "hex": "a4abc5",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "GAMMA FLIGHT LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N411RC",
+  "hex": "a4d951",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "owner": "LOLA AVIATION LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N42SH",
+  "hex": "a4fade",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "owner": "LEJORAN LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N435KR",
+  "hex": "a536a2",
+  "type": "RV9",
+  "class": "piston",
+  "desc": "VANS RV-9",
+  "owner": "HAUG WILLIAM C TRUSTEE, HAUG SUSAN V TRUSTEE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N469JG",
+  "hex": "a5bbd9",
+  "type": "S22T",
+  "class": "piston",
+  "desc": "CIRRUS SR-22T Turbo",
+  "owner": "JG AVIATION LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N47740",
+  "hex": "a5de18",
+  "type": "P28S",
+  "class": "piston",
+  "desc": "PIPER PA-28R-201T",
+  "owner": "MEDIA STEW LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N511KU",
+  "hex": "a6661a",
+  "type": "RV10",
+  "class": "piston",
+  "desc": "VANS RV-10",
+  "owner": null,
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N5197R",
+  "hex": "a6863b",
+  "type": "C172",
+  "class": "piston",
+  "desc": null,
+  "owner": "MEDIA STEW LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N5479N",
+  "hex": "a6f58d",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "TAHOE FLYING CLUB INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N574Q",
+  "hex": "a75ea3",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "owner": "SDL CONSULTING LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N64WY",
+  "hex": "a864ed",
+  "type": "HUSK",
+  "class": "piston",
+  "desc": "CHRISTEN Husky",
+  "owner": "HOOTS HUSKY LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N65DW",
+  "hex": "a88ac1",
+  "type": "C180",
+  "class": "piston",
+  "desc": "CESSNA  180 Skywagon",
+  "owner": "NORTH STREAM CAPITAL LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N665CC",
+  "hex": "a8c701",
+  "type": "CC11",
+  "class": "piston",
+  "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+  "owner": "43KB LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03",
+   "2026-08-05",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N68CE",
+  "hex": "a90115",
+  "type": "T206",
+  "class": "piston",
+  "desc": null,
+  "owner": "EBRIGHT INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N708J",
+  "hex": "a9730e",
+  "type": "RV8",
+  "class": "piston",
+  "desc": "VANS RV-8",
+  "owner": "JACOBSEN SAMUEL J",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N70977",
+  "hex": "a9796a",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "SORAN PATRICK DAVID",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N726BA",
+  "hex": "a9b9f0",
+  "type": "B58T",
+  "class": "piston",
+  "desc": "BEECH 58TC Baron",
+  "owner": "CRIMSON PHOENIX LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02",
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N7309S",
+  "hex": "a9ceaf",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "BRUNO VINCENT P, MARYMEE JAMES P, BURGESS ALAN S, NEW LEADERS VE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04",
+   "2026-08-07",
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N74527",
+  "hex": "aa07db",
+  "type": "M20P",
+  "class": "piston",
+  "desc": "MOONEY M-20",
+  "owner": "WHITE JESSE J, WHITE KATHERINE J",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N7487Z",
+  "hex": "aa13a7",
+  "type": "PA25",
+  "class": "piston",
+  "desc": "PIPER PA-25 Pawnee",
+  "owner": "TRUCKEE TAHOE SOARING ASSOC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N7516Z",
+  "hex": "aa2102",
+  "type": "PA25",
+  "class": "piston",
+  "desc": "PIPER PA-25 Pawnee",
+  "owner": "TRUCKEE TAHOE SOARING ASSOC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N752DW",
+  "hex": "aa21d7",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "FLYING START AERO SERVICES LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N8144G",
+  "hex": "ab1b23",
+  "type": "P32R",
+  "class": "piston",
+  "desc": "PIPER PA-32R-300/301/301T",
+  "owner": "DISTANT HORIZONS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N818MR",
+  "hex": "ab2837",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "owner": "SDL CONSULTING LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N8465N",
+  "hex": "ab9937",
+  "type": "BE33",
+  "class": "piston",
+  "desc": "BEECH 33 Bonanza",
+  "owner": "SHONNARD KEITH M TRUSTEE, MUSCARI C TRACY TRUSTEE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N861JT",
+  "hex": "abd368",
+  "type": "RV12",
+  "class": "piston",
+  "desc": null,
+  "owner": "RV SQUARED LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N8647W",
+  "hex": "abe115",
+  "type": "P28B",
+  "class": "piston",
+  "desc": "PIPER PA-28-201T/235/236",
+  "owner": "CHASE DAN",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02",
+   "2026-08-03",
+   "2026-08-04",
+   "2026-08-05",
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N9110H",
+  "hex": "ac9cc2",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "SIERRA AERO LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01",
+   "2026-08-02",
+   "2026-08-03",
+   "2026-08-04",
+   "2026-08-05",
+   "2026-08-07",
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N911HX",
+  "hex": "ac9b27",
+  "type": "CC19",
+  "class": "piston",
+  "desc": null,
+  "owner": "CCX-2300-0103 LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N911HZ",
+  "hex": "ac9b29",
+  "type": "HIGH",
+  "class": "piston",
+  "desc": "JUST JA20 Highlander",
+  "owner": "SIMMONS AND ASSOCIATES INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N926ET",
+  "hex": "acd4ea",
+  "type": "T206",
+  "class": "piston",
+  "desc": "CESSNA T206 Turbo Stationair",
+  "owner": "WESTERN FARMING LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N9311P",
+  "hex": "acebe9",
+  "type": "T206",
+  "class": "piston",
+  "desc": "CESSNA T206 Turbo Stationair",
+  "owner": "JJJFGT CAPITAL HOLDINGS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N937MB",
+  "hex": "ad00bf",
+  "type": "S22T",
+  "class": "piston",
+  "desc": null,
+  "owner": "MIKELOU LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N945PD",
+  "hex": "ad2104",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "HICKMOTT MARK T",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N9666V",
+  "hex": "ad75ae",
+  "type": "C172",
+  "class": "piston",
+  "desc": "CESSNA 172 Skyhawk",
+  "owner": "MEDIA STEW LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-01"
+  ]
+ },
+ {
+  "reg": "N97196",
+  "hex": "ad8b0e",
+  "type": "C182",
+  "class": "piston",
+  "desc": "CESSNA 182 Skylane",
+  "owner": "LITCHFIELD WILLIAM",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N99YZ",
+  "hex": "add288",
+  "type": "T210",
+  "class": "piston",
+  "desc": "CESSNA T210 Turbo Centurion",
+  "owner": "EDWAL AVIATION LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N9XE",
+  "hex": "ac6c8c",
+  "type": "RV9",
+  "class": "piston",
+  "desc": "VANS RV-9",
+  "owner": "R A F S LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N175JC",
+  "hex": "a12c8b",
+  "type": "TBM9",
+  "class": "turboprop",
+  "desc": null,
+  "owner": "SACRAMENTO COUNTY SHERIFFS OFFICE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N221RC",
+  "hex": "a1e632",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "BTFD LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N294NG",
+  "hex": "a30589",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "MJJ CAPITAL MANAGEMENT INC, ONEILL BEVERAGES CO LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N374PM",
+  "hex": "a443f8",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "MCLEAN AIR LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N412FF",
+  "hex": "a4dc11",
+  "type": "EPIC",
+  "class": "turboprop",
+  "desc": null,
+  "owner": "412 AVIATION LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N431DC",
+  "hex": "a52723",
+  "type": "B350",
+  "class": "turboprop",
+  "desc": null,
+  "owner": "DIESEL ACQUISITIONS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ },
+ {
+  "reg": "N460NG",
+  "hex": "a59ace",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "NOVEMBER GOLF MANAGEMENT LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03",
+   "2026-08-05",
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N531AF",
+  "hex": "a6b42a",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "RIGI INC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N557PC",
+  "hex": "a71ab4",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-02"
+  ]
+ },
+ {
+  "reg": "N567W",
+  "hex": "a742df",
+  "type": "BE9L",
+  "class": "turboprop",
+  "desc": "BEECH 90 King Air",
+  "owner": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05",
+   "2026-08-06",
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N586AT",
+  "hex": "a78c44",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "HESSWINDS LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N691DK",
+  "hex": "a92ec2",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "D FORCE 2 LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N797GM",
+  "hex": "aad2a8",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "SWISS MISS LLC, SWISS MADE LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03"
+  ]
+ },
+ {
+  "reg": "N850TS",
+  "hex": "aba912",
+  "type": "TBM8",
+  "class": "turboprop",
+  "desc": "SOCATA TBM-850",
+  "owner": "WESTERN FARMING LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-07"
+  ]
+ },
+ {
+  "reg": "N917JG",
+  "hex": "acb17b",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "PACIFIC CREST AIR LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-08"
+  ]
+ },
+ {
+  "reg": "N922PB",
+  "hex": "acc6df",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+  "ladd": true,
+  "pia": false,
+  "days_seen": [
+   "2026-08-03",
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N985SR",
+  "hex": "adbf57",
+  "type": "PC12",
+  "class": "turboprop",
+  "desc": "PILATUS PC-12",
+  "owner": "WALNUT STREET 738 LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-05"
+  ]
+ },
+ {
+  "reg": "N999FN",
+  "hex": "adf49c",
+  "type": "EPIC",
+  "class": "turboprop",
+  "desc": "EPIC AIRCRAFT Epic LT",
+  "owner": "WING AIR LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-06"
+  ]
+ },
+ {
+  "reg": "N36SF",
+  "hex": "a40b89",
+  "type": null,
+  "class": "unknown",
+  "desc": null,
+  "owner": "NORTH FORK LLC",
+  "ladd": false,
+  "pia": false,
+  "days_seen": [
+   "2026-08-04"
+  ]
+ }
+]
