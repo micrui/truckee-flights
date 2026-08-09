@@ -1639,6 +1639,7 @@
    "first": "06:07",
    "last": "06:13",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 9325,
    "min_dist": 5.4
   },
@@ -1651,6 +1652,7 @@
    "first": "06:55",
    "last": "06:57",
    "dwell_min": 2,
+   "quiet_min": 2,
    "min_alt": 11675,
    "min_dist": 7.2
   },
@@ -1663,6 +1665,7 @@
    "first": "08:05",
    "last": "08:17",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 9400,
    "min_dist": 6.6
   },
@@ -1675,6 +1678,7 @@
    "first": "06:39",
    "last": "06:40",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 11900,
    "min_dist": 7.7
   },
@@ -1687,6 +1691,7 @@
    "first": "07:09",
    "last": "07:21",
    "dwell_min": 12,
+   "quiet_min": 0,
    "min_alt": 8800,
    "min_dist": 3.9
   },
@@ -1699,6 +1704,7 @@
    "first": "07:19",
    "last": "07:42",
    "dwell_min": 23,
+   "quiet_min": 0,
    "min_alt": 5500,
    "min_dist": 0.1
   },
@@ -1711,6 +1717,7 @@
    "first": "07:36",
    "last": "07:43",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 12275,
    "min_dist": 6.1
   },
@@ -1723,6 +1730,7 @@
    "first": "08:09",
    "last": "08:19",
    "dwell_min": 9,
+   "quiet_min": 0,
    "min_alt": 7300,
    "min_dist": 6.4
   },
@@ -1735,6 +1743,7 @@
    "first": "08:07",
    "last": "08:29",
    "dwell_min": 22,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.1
   },
@@ -1747,6 +1756,7 @@
    "first": "08:15",
    "last": "08:19",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 10250,
    "min_dist": 5.4
   },
@@ -1759,6 +1769,7 @@
    "first": "06:01",
    "last": "06:13",
    "dwell_min": 12,
+   "quiet_min": 12,
    "min_alt": 5300,
    "min_dist": 0.1
   },
@@ -1771,6 +1782,7 @@
    "first": "06:32",
    "last": "06:40",
    "dwell_min": 8,
+   "quiet_min": 8,
    "min_alt": 11000,
    "min_dist": 0.0
   },
@@ -1783,6 +1795,7 @@
    "first": "06:57",
    "last": "07:04",
    "dwell_min": 7,
+   "quiet_min": 2,
    "min_alt": 11200,
    "min_dist": 0.5
   },
@@ -1795,6 +1808,7 @@
    "first": "07:07",
    "last": "07:12",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 9950,
    "min_dist": 6.8
   },
@@ -1807,6 +1821,7 @@
    "first": "07:24",
    "last": "07:29",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 5525,
    "min_dist": 0.1
   },
@@ -1819,6 +1834,7 @@
    "first": "07:56",
    "last": "08:04",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 7400,
    "min_dist": 4.4
   },
@@ -1831,6 +1847,7 @@
    "first": "08:02",
    "last": "08:02",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12725,
    "min_dist": 9.9
   },
@@ -1843,6 +1860,7 @@
    "first": "08:13",
    "last": "08:21",
    "dwell_min": 8,
+   "quiet_min": 0,
    "min_alt": 11000,
    "min_dist": 1.5
   },
@@ -1855,6 +1873,7 @@
    "first": "08:15",
    "last": "08:23",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 10200,
    "min_dist": 0.1
   },
@@ -1867,6 +1886,7 @@
    "first": "00:48",
    "last": "00:59",
    "dwell_min": 11,
+   "quiet_min": 11,
    "min_alt": 10950,
    "min_dist": 0.8
   },
@@ -1879,6 +1899,7 @@
    "first": "06:57",
    "last": "07:11",
    "dwell_min": 13,
+   "quiet_min": 2,
    "min_alt": 6750,
    "min_dist": 0.3
   },
@@ -1891,6 +1912,7 @@
    "first": "07:04",
    "last": "07:15",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 7100,
    "min_dist": 5.4
   },
@@ -1903,6 +1925,7 @@
    "first": "08:00",
    "last": "08:02",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 11700,
    "min_dist": 4.6
   },
@@ -1915,6 +1938,7 @@
    "first": "08:02",
    "last": "08:14",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 10100,
    "min_dist": 3.8
   },
@@ -1927,6 +1951,7 @@
    "first": "08:23",
    "last": "08:29",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 5500,
    "min_dist": 0.1
   },
@@ -1939,6 +1964,7 @@
    "first": "22:47",
    "last": "22:51",
    "dwell_min": 3,
+   "quiet_min": 3,
    "min_alt": 11800,
    "min_dist": 5.1
   },
@@ -1949,8 +1975,22 @@
    "cls": "helicopter",
    "own": "A&P HELICOPTERS INC",
    "first": "06:50",
+   "last": "06:56",
+   "dwell_min": 5,
+   "quiet_min": 5,
+   "min_alt": 5800,
+   "min_dist": 2.6
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N216AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "first": "08:01",
    "last": "08:29",
-   "dwell_min": 99,
+   "dwell_min": 28,
+   "quiet_min": 0,
    "min_alt": 5800,
    "min_dist": 2.6
   },
@@ -1961,10 +2001,24 @@
    "cls": "helicopter",
    "own": "A&P HELICOPTERS INC",
    "first": "06:54",
-   "last": "08:29",
-   "dwell_min": 95,
+   "last": "07:00",
+   "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 5800,
    "min_dist": 2.4
+  },
+  {
+   "date": "2026-07-24",
+   "reg": "N406AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "first": "08:05",
+   "last": "08:29",
+   "dwell_min": 24,
+   "quiet_min": 0,
+   "min_alt": 5800,
+   "min_dist": 2.7
   },
   {
    "date": "2026-07-24",
@@ -1975,6 +2029,7 @@
    "first": "07:25",
    "last": "07:32",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 10050,
    "min_dist": 8.3
   },
@@ -1987,6 +2042,7 @@
    "first": "07:38",
    "last": "07:45",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 9550,
    "min_dist": 2.2
   },
@@ -1999,6 +2055,7 @@
    "first": "07:44",
    "last": "07:49",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 8750,
    "min_dist": 6.9
   },
@@ -2011,6 +2068,7 @@
    "first": "07:56",
    "last": "08:16",
    "dwell_min": 20,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.1
   },
@@ -2023,6 +2081,7 @@
    "first": "22:00",
    "last": "22:01",
    "dwell_min": 1,
+   "quiet_min": 1,
    "min_alt": 10775,
    "min_dist": 4.3
   },
@@ -2035,6 +2094,7 @@
    "first": "05:47",
    "last": "05:53",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 9250,
    "min_dist": 3.6
   },
@@ -2047,6 +2107,7 @@
    "first": "06:11",
    "last": "06:12",
    "dwell_min": 1,
+   "quiet_min": 1,
    "min_alt": 11800,
    "min_dist": 7.1
   },
@@ -2059,6 +2120,7 @@
    "first": "06:29",
    "last": "06:31",
    "dwell_min": 1,
+   "quiet_min": 1,
    "min_alt": 12825,
    "min_dist": 6.4
   },
@@ -2071,6 +2133,7 @@
    "first": "06:56",
    "last": "06:59",
    "dwell_min": 3,
+   "quiet_min": 3,
    "min_alt": 10750,
    "min_dist": 8.3
   },
@@ -2083,6 +2146,7 @@
    "first": "07:00",
    "last": "07:04",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 8550,
    "min_dist": 8.3
   },
@@ -2095,6 +2159,7 @@
    "first": "07:39",
    "last": "07:49",
    "dwell_min": 9,
+   "quiet_min": 0,
    "min_alt": 10125,
    "min_dist": 1.1
   },
@@ -2107,6 +2172,7 @@
    "first": "07:41",
    "last": "07:50",
    "dwell_min": 9,
+   "quiet_min": 0,
    "min_alt": 6800,
    "min_dist": 6.6
   },
@@ -2119,6 +2185,7 @@
    "first": "07:38",
    "last": "07:44",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 5900,
    "min_dist": 2.5
   },
@@ -2131,6 +2198,7 @@
    "first": "07:44",
    "last": "07:49",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 11400,
    "min_dist": 7.3
   },
@@ -2143,6 +2211,7 @@
    "first": "08:12",
    "last": "08:22",
    "dwell_min": 9,
+   "quiet_min": 0,
    "min_alt": 8175,
    "min_dist": 2.5
   },
@@ -2155,6 +2224,7 @@
    "first": "08:28",
    "last": "08:29",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.2
   },
@@ -2167,6 +2237,7 @@
    "first": "23:13",
    "last": "23:21",
    "dwell_min": 7,
+   "quiet_min": 7,
    "min_alt": 8450,
    "min_dist": 4.5
   },
@@ -2179,6 +2250,7 @@
    "first": "05:50",
    "last": "05:55",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 11250,
    "min_dist": 5.9
   },
@@ -2191,6 +2263,7 @@
    "first": "06:09",
    "last": "06:17",
    "dwell_min": 8,
+   "quiet_min": 8,
    "min_alt": 11200,
    "min_dist": 6.2
   },
@@ -2203,6 +2276,7 @@
    "first": "07:30",
    "last": "07:36",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 9475,
    "min_dist": 7.3
   },
@@ -2215,6 +2289,7 @@
    "first": "07:37",
    "last": "07:43",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 11250,
    "min_dist": 3.1
   },
@@ -2227,6 +2302,7 @@
    "first": "08:10",
    "last": "08:17",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 7975,
    "min_dist": 5.4
   },
@@ -2239,6 +2315,7 @@
    "first": "08:21",
    "last": "08:29",
    "dwell_min": 8,
+   "quiet_min": 0,
    "min_alt": 7650,
    "min_dist": 4.3
   }

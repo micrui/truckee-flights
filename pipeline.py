@@ -44,8 +44,8 @@ HDRS = {"Referer": BASE + "/", "User-Agent": "Mozilla/5.0 (noise-attribution res
 JET = {'C68A','E55P','C25A','C25B','C25C','C25M','C500','C501','C510','C525','C550','C551','C560','C56X','C650','C680','C700','C750','CL30','CL35','CL60','GLF3','GLF4','GLF5','GLF6','GA5C','GA6C','GLEX','GL5T','GL7T','E35L','E545','E550','LJ31','LJ35','LJ40','LJ45','LJ60','LJ70','LJ75','F2TH','F900','FA10','FA20','FA50','FA5X','FA6X','FA7X','FA8X','HDJT','HA4T','PRM1','BE40','H25B','H25C','G150','G280','SF50','EA50','PC24'}
 AIRLINER = {'E75L','E75S','E170','E190','CRJ2','CRJ7','CRJ9','B737','B738','B739','B38M','A319','A320','A321','A20N','A21N','B752','DH8D','B763','B77W'}
 TURBOPROP = {'PC12','TBM7','TBM8','TBM9','B350','BE20','BE9L','BE9T','BE10','U21','C208','C08T','EPIC','E1000','P46T','M600','KODI','PC6T','SW4','DHC6','AT8T'}
-HELI = {'AS50','AS55','B212','B06','B407','B429','B505','EC20','EC30','EC35','EC45','EC55','EC75','R22','R44','R66','S76','UH1','H500','MD50','A109','A139','H60','EH10'}
-GLIDER = {'DISC','AS29','AS33','ASW2','LS8','LS4','LS6','DG80','DG40','DG1T','DUOD','ARCU','ARCP','NIMB','VENT','JS3','JS1','PK20','SZD5','ASK2','G103','SF25','ASW7','ASG2','ASG3','TWSH','PIK2','GROB'}
+HELI = {'AS50','AS55','B212','B06','B407','B429','B505','EC20','EC30','EC35','EC45','EC55','EC75','R22','R44','R66','S76','UH1','H500','MD50','A109','A139','H60','EH10','H47','CH47','S61','S64','K126','B105','B412','AS32'}
+GLIDER = {'GLID','DISC','AS29','AS33','ASW2','LS8','LS4','LS6','DG80','DG40','DG1T','DUOD','ARCU','ARCP','NIMB','VENT','JS3','JS1','PK20','SZD5','ASK2','G103','SF25','ASW7','ASG2','ASG3','TWSH','PIK2','GROB'}
 
 # Airports used to name origins and destinations: the OurAirports public-domain
 # dataset (data/airports.csv, US/CA/MX, includes heliports), fetched by

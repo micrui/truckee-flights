@@ -85,17 +85,27 @@ def build(dates=None, window="morning"):
                 airborne_early.append(dict(meta, first=t2s(earlypts[0][0]), last=t2s(earlypts[-1][0]),
                                            min_alt=min(p[3] for p in earlypts)))
 
-            # non-landing low presence across the whole window (overflights, tours, transits)
+            # non-landing low presences across the whole window (overflights, tours,
+            # transits). A gap over 20 minutes splits separate visits into separate
+            # sessions so two passes hours apart never read as one long dwell.
             had_event = any(ev["date"] == datestr and ev["reg"] == rec["reg"] for ev in events)
             if not had_event:
                 presence = [(p, hav_nm(p[1], p[2], *AIRPORT)) for p in allpts
                             if W0 <= p[0] <= W1 and not p[4] and p[3] is not None and p[3] <= 13000]
                 presence = [(p, d) for p, d in presence if d <= 10]
-                if presence:
-                    dwell = int((presence[-1][0][0] - presence[0][0][0]) / 60)
-                    overflights.append(dict(meta, first=t2s(presence[0][0][0]), last=t2s(presence[-1][0][0]),
-                                            dwell_min=dwell, min_alt=min(p[3] for p, d in presence),
-                                            min_dist=round(min(d for p, d in presence), 1)))
+                sessions, cur = [], []
+                for p, d in presence:
+                    if cur and p[0] - cur[-1][0][0] > 1200:
+                        sessions.append(cur); cur = []
+                    cur.append((p, d))
+                if cur: sessions.append(cur)
+                for s in sessions:
+                    t0, t1 = s[0][0][0], s[-1][0][0]
+                    quiet_min = max(0, int((min(t1, QE) - t0) / 60)) if t0 < QE else 0
+                    overflights.append(dict(meta, first=t2s(t0), last=t2s(t1),
+                                            dwell_min=int((t1 - t0) / 60), quiet_min=quiet_min,
+                                            min_alt=min(p[3] for p, d in s),
+                                            min_dist=round(min(d for p, d in s), 1)))
 
     events.sort(key=lambda e: (e["date"], e["hm"]))
     aircraft_list = sorted(aircraft.values(), key=lambda a: (a["class"], a["reg"] or ""))

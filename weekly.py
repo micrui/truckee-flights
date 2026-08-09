@@ -258,16 +258,32 @@ def render_operators(weeks):
                 continue
             seen.add(key)
             all_events.append(e)
+    ovf_seen, all_ovf = set(), []
+    for w in weeks:
+        for o in w.get("overflights", []):
+            key = (o["date"], o["reg"], o["first"])
+            if key in ovf_seen:
+                continue
+            ovf_seen.add(key)
+            all_ovf.append(o)
+
     ac = {}
     for e in all_events:
         a = ac.setdefault(e["reg"] or "?", {"reg": e["reg"] or "?", "type": e["type"] or "?",
-                                            "cls": e["cls"], "own": e["own"], "events": []})
+                                            "cls": e["cls"], "own": e["own"], "events": [], "ovf": []})
         a["events"].append(e)
+    for o in all_ovf:
+        a = ac.setdefault(o["reg"] or "?", {"reg": o["reg"] or "?", "type": o["type"] or "?",
+                                            "cls": o["cls"], "own": o["own"], "events": [], "ovf": []})
+        a["ovf"].append(o)
     for a in ac.values():
         a["events"].sort(key=lambda e: (e["date"], e["hm"]))
+        a["ovf"].sort(key=lambda o: (o["date"], o["first"]))
         a["quiet"] = sum(1 for e in a["events"] if e["pre7"])
         a["qdates"] = sorted({e["date"][5:] for e in a["events"] if e["pre7"]})
-    ranked = sorted(ac.values(), key=lambda a: (-a["quiet"], -len(a["events"]), a["reg"]))
+        a["q_ovf_min"] = sum(o.get("quiet_min", 0) for o in a["ovf"])
+        a["q_ovf_dates"] = sorted({o["date"][5:] for o in a["ovf"] if o.get("quiet_min", 0) > 0})
+    ranked = sorted(ac.values(), key=lambda a: (-a["quiet"], -len(a["events"]), -a["q_ovf_min"], a["reg"]))
 
     rows = []
     for a in ranked:
@@ -281,15 +297,35 @@ def render_operators(weeks):
                     f'<td>{html.escape(a["own"] or "")}</td></tr>')
 
     QCHIP = '<span class="tag">quiet hours</span>'
+    dw_rows = []
+    for a in sorted(ac.values(), key=lambda a: (-a["q_ovf_min"], a["reg"])):
+        if a["q_ovf_min"] < 10:
+            continue
+        badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
+        n_sess = sum(1 for o in a["ovf"] if o.get("quiet_min", 0) > 0)
+        dw_rows.append(f'<tr><td class="mono"><a href="#{html.escape(a["reg"])}">{html.escape(a["reg"])}</a>{badge}</td>'
+                       f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
+                       f'<td>{a["q_ovf_min"]}</td><td>{n_sess}</td>'
+                       f'<td class="mono">{", ".join(a["q_ovf_dates"])}</td>'
+                       f'<td>{html.escape(a["own"] or "")}</td></tr>')
+
     sections = []
     for a in ranked:
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
-        ev_rows = "".join(
-            f'<tr><td class="mono">{e["date"]}</td><td class="mono">{e["hm"]}</td>'
-            f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
-            f'<td>{html.escape(e["other"])}</td>'
-            f'<td>{QCHIP if e["pre7"] else ""}</td></tr>'
-            for e in a["events"])
+        log_rows = [(f'{e["date"]} {e["hm"]}',
+                     f'<tr><td class="mono">{e["date"]}</td><td class="mono">{e["hm"]}</td>'
+                     f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
+                     f'<td>{html.escape(e["other"])}</td>'
+                     f'<td>{QCHIP if e["pre7"] else ""}</td></tr>')
+                    for e in a["events"]]
+        log_rows += [(f'{o["date"]} {o["first"]}',
+                      f'<tr><td class="mono">{o["date"]}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
+                      f'<td>Airborne nearby, no landing ({o["dwell_min"]} min)</td>'
+                      f'<td>min {o["min_alt"]:,.0f} ft, {o["min_dist"]} nm from field</td>'
+                      f'<td>{QCHIP if o.get("quiet_min", 0) > 0 else ""}</td></tr>')
+                     for o in a["ovf"]]
+        log_rows.sort(key=lambda kv: kv[0])
+        ev_rows = "".join(r for k, r in log_rows)
         sections.append(
             f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {html.escape(a["type"])} · {a["cls"]}{badge}'
             f' <span class="own">{html.escape(a["own"] or "")}</span></h3>'
@@ -312,6 +348,14 @@ def render_operators(weeks):
   <div class="table-scroll"><table>
     <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
     <tbody>{"".join(rows)}</tbody>
+  </table></div>
+  <h1 style="font-size:20px;margin-top:44px;">Airborne over the area during quiet hours, no landing</h1>
+  <p class="standfirst">Aircraft that spent 10 or more minutes airborne within 10 nautical miles of the field
+  during quiet hours without taking off or landing here, ranked by total time. Separate visits are counted as
+  separate sessions. Includes working aircraft (fire and utility helicopters) alongside recreational overflights.</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours minutes</th><th>Sessions</th><th>Dates</th><th>Registered owner</th></tr></thead>
+    <tbody>{"".join(dw_rows)}</tbody>
   </table></div>
   <h1 style="font-size:20px;margin-top:44px;">Per-aircraft logs</h1>
   {"".join(sections)}

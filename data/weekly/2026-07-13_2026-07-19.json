@@ -1935,6 +1935,7 @@
    "first": "04:19",
    "last": "04:28",
    "dwell_min": 9,
+   "quiet_min": 9,
    "min_alt": 8775,
    "min_dist": 4.0
   },
@@ -1947,6 +1948,7 @@
    "first": "06:15",
    "last": "06:23",
    "dwell_min": 8,
+   "quiet_min": 8,
    "min_alt": 12700,
    "min_dist": 3.2
   },
@@ -1959,6 +1961,7 @@
    "first": "07:01",
    "last": "07:03",
    "dwell_min": 2,
+   "quiet_min": 0,
    "min_alt": 12750,
    "min_dist": 7.0
   },
@@ -1971,6 +1974,7 @@
    "first": "07:31",
    "last": "07:38",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 11025,
    "min_dist": 1.0
   },
@@ -1983,6 +1987,7 @@
    "first": "08:13",
    "last": "08:13",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 5550,
    "min_dist": 0.2
   },
@@ -1995,6 +2000,7 @@
    "first": "03:10",
    "last": "03:10",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12850,
    "min_dist": 9.9
   },
@@ -2007,6 +2013,7 @@
    "first": "03:30",
    "last": "03:30",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.5
   },
@@ -2017,8 +2024,22 @@
    "cls": "turboprop",
    "own": "NOVEMBER GOLF MANAGEMENT LLC",
    "first": "05:37",
+   "last": "05:37",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 12850,
+   "min_dist": 9.8
+  },
+  {
+   "date": "2026-07-14",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "first": "07:31",
    "last": "07:35",
-   "dwell_min": 118,
+   "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 8450,
    "min_dist": 0.1
   },
@@ -2031,6 +2052,7 @@
    "first": "07:08",
    "last": "07:15",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 12675,
    "min_dist": 3.1
   },
@@ -2043,6 +2065,7 @@
    "first": "07:27",
    "last": "07:31",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 11575,
    "min_dist": 9.5
   },
@@ -2055,6 +2078,7 @@
    "first": "07:39",
    "last": "07:47",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 12650,
    "min_dist": 3.1
   },
@@ -2067,6 +2091,7 @@
    "first": "07:07",
    "last": "07:21",
    "dwell_min": 13,
+   "quiet_min": 0,
    "min_alt": 10025,
    "min_dist": 3.5
   },
@@ -2079,6 +2104,7 @@
    "first": "07:20",
    "last": "07:32",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 10250,
    "min_dist": 0.1
   },
@@ -2089,10 +2115,24 @@
    "cls": "piston",
    "own": "PACIFIC VALLEY AVIATION INC",
    "first": "07:17",
-   "last": "08:02",
-   "dwell_min": 45,
+   "last": "07:20",
+   "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 9400,
    "min_dist": 8.9
+  },
+  {
+   "date": "2026-07-15",
+   "reg": "N761AL",
+   "type": "C210",
+   "cls": "piston",
+   "own": "PACIFIC VALLEY AVIATION INC",
+   "first": "08:00",
+   "last": "08:02",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 9600,
+   "min_dist": 9.7
   },
   {
    "date": "2026-07-15",
@@ -2103,6 +2143,7 @@
    "first": "08:27",
    "last": "08:29",
    "dwell_min": 2,
+   "quiet_min": 0,
    "min_alt": 9600,
    "min_dist": 6.4
   },
@@ -2115,6 +2156,7 @@
    "first": "05:35",
    "last": "05:39",
    "dwell_min": 3,
+   "quiet_min": 3,
    "min_alt": 9850,
    "min_dist": 8.9
   },
@@ -2127,6 +2169,7 @@
    "first": "05:40",
    "last": "05:46",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 9475,
    "min_dist": 6.4
   },
@@ -2139,6 +2182,7 @@
    "first": "06:34",
    "last": "06:47",
    "dwell_min": 12,
+   "quiet_min": 12,
    "min_alt": 5700,
    "min_dist": 0.1
   },
@@ -2151,6 +2195,7 @@
    "first": "07:26",
    "last": "07:37",
    "dwell_min": 10,
+   "quiet_min": 0,
    "min_alt": 9200,
    "min_dist": 2.0
   },
@@ -2163,6 +2208,7 @@
    "first": "07:03",
    "last": "07:04",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 10750,
    "min_dist": 6.4
   },
@@ -2175,6 +2221,7 @@
    "first": "07:09",
    "last": "07:15",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 10225,
    "min_dist": 7.5
   },
@@ -2187,6 +2234,7 @@
    "first": "07:43",
    "last": "07:55",
    "dwell_min": 12,
+   "quiet_min": 0,
    "min_alt": 10250,
    "min_dist": 3.0
   },
@@ -2199,6 +2247,7 @@
    "first": "07:54",
    "last": "07:54",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 13000,
    "min_dist": 9.3
   },
@@ -2211,6 +2260,7 @@
    "first": "08:02",
    "last": "08:16",
    "dwell_min": 14,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.1
   },
@@ -2223,6 +2273,7 @@
    "first": "08:12",
    "last": "08:19",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 11250,
    "min_dist": 2.3
   },
@@ -2235,6 +2286,7 @@
    "first": "08:12",
    "last": "08:20",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 9125,
    "min_dist": 2.5
   },
@@ -2247,6 +2299,7 @@
    "first": "08:17",
    "last": "08:29",
    "dwell_min": 12,
+   "quiet_min": 0,
    "min_alt": 8500,
    "min_dist": 3.0
   },
@@ -2259,6 +2312,7 @@
    "first": "08:24",
    "last": "08:29",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 8600,
    "min_dist": 7.9
   },
@@ -2271,6 +2325,7 @@
    "first": "08:20",
    "last": "08:26",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 7575,
    "min_dist": 8.5
   },
@@ -2283,6 +2338,7 @@
    "first": "08:29",
    "last": "08:29",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 9075,
    "min_dist": 8.8
   },
@@ -2295,6 +2351,7 @@
    "first": "05:15",
    "last": "05:15",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12400,
    "min_dist": 9.5
   },
@@ -2307,6 +2364,7 @@
    "first": "05:36",
    "last": "05:44",
    "dwell_min": 7,
+   "quiet_min": 7,
    "min_alt": 9850,
    "min_dist": 4.1
   },
@@ -2319,6 +2377,7 @@
    "first": "05:51",
    "last": "05:58",
    "dwell_min": 6,
+   "quiet_min": 6,
    "min_alt": 9350,
    "min_dist": 4.3
   },
@@ -2331,6 +2390,7 @@
    "first": "06:46",
    "last": "06:46",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 13000,
    "min_dist": 9.1
   },
@@ -2343,6 +2403,7 @@
    "first": "06:45",
    "last": "06:52",
    "dwell_min": 6,
+   "quiet_min": 6,
    "min_alt": 9550,
    "min_dist": 3.7
   },
@@ -2355,6 +2416,7 @@
    "first": "07:02",
    "last": "07:07",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 11325,
    "min_dist": 7.6
   },
@@ -2367,6 +2429,7 @@
    "first": "07:15",
    "last": "07:22",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 11500,
    "min_dist": 5.4
   },
@@ -2379,6 +2442,7 @@
    "first": "07:35",
    "last": "07:42",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 9975,
    "min_dist": 6.8
   },
@@ -2391,6 +2455,7 @@
    "first": "07:36",
    "last": "07:48",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 6000,
    "min_dist": 2.3
   },
@@ -2403,6 +2468,7 @@
    "first": "07:41",
    "last": "07:49",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 11200,
    "min_dist": 1.2
   },
@@ -2415,6 +2481,7 @@
    "first": "07:57",
    "last": "08:13",
    "dwell_min": 15,
+   "quiet_min": 0,
    "min_alt": 8100,
    "min_dist": 2.6
   },
@@ -2427,6 +2494,7 @@
    "first": "08:20",
    "last": "08:27",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 8600,
    "min_dist": 4.7
   },
@@ -2439,6 +2507,7 @@
    "first": "08:21",
    "last": "08:29",
    "dwell_min": 8,
+   "quiet_min": 0,
    "min_alt": 9950,
    "min_dist": 0.6
   },
@@ -2451,6 +2520,7 @@
    "first": "08:25",
    "last": "08:26",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 11975,
    "min_dist": 6.1
   },
@@ -2463,6 +2533,7 @@
    "first": "08:25",
    "last": "08:29",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 6200,
    "min_dist": 0.9
   },
@@ -2475,6 +2546,7 @@
    "first": "05:11",
    "last": "05:14",
    "dwell_min": 2,
+   "quiet_min": 2,
    "min_alt": 12800,
    "min_dist": 6.6
   },
@@ -2487,6 +2559,7 @@
    "first": "06:30",
    "last": "06:36",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 12775,
    "min_dist": 6.6
   },
@@ -2499,6 +2572,7 @@
    "first": "06:45",
    "last": "06:51",
    "dwell_min": 5,
+   "quiet_min": 5,
    "min_alt": 9425,
    "min_dist": 0.8
   },
@@ -2511,6 +2585,7 @@
    "first": "06:52",
    "last": "06:58",
    "dwell_min": 6,
+   "quiet_min": 6,
    "min_alt": 12750,
    "min_dist": 4.3
   },
@@ -2523,6 +2598,7 @@
    "first": "06:56",
    "last": "07:03",
    "dwell_min": 6,
+   "quiet_min": 3,
    "min_alt": 10200,
    "min_dist": 2.6
   },
@@ -2535,6 +2611,7 @@
    "first": "07:06",
    "last": "07:21",
    "dwell_min": 14,
+   "quiet_min": 0,
    "min_alt": 5500,
    "min_dist": 0.1
   },
@@ -2547,6 +2624,7 @@
    "first": "08:01",
    "last": "08:02",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 11475,
    "min_dist": 7.3
   },
@@ -2559,6 +2637,7 @@
    "first": "08:14",
    "last": "08:25",
    "dwell_min": 10,
+   "quiet_min": 0,
    "min_alt": 9350,
    "min_dist": 9.2
   },
@@ -2571,6 +2650,7 @@
    "first": "08:11",
    "last": "08:18",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 9825,
    "min_dist": 3.9
   },
@@ -2583,6 +2663,7 @@
    "first": "22:00",
    "last": "22:03",
    "dwell_min": 3,
+   "quiet_min": 3,
    "min_alt": 8525,
    "min_dist": 7.2
   },
@@ -2595,6 +2676,7 @@
    "first": "05:47",
    "last": "05:55",
    "dwell_min": 7,
+   "quiet_min": 7,
    "min_alt": 9875,
    "min_dist": 0.1
   },
@@ -2607,6 +2689,7 @@
    "first": "05:58",
    "last": "06:06",
    "dwell_min": 7,
+   "quiet_min": 7,
    "min_alt": 11400,
    "min_dist": 2.2
   },
@@ -2619,6 +2702,7 @@
    "first": "07:20",
    "last": "07:25",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 10050,
    "min_dist": 7.6
   },
@@ -2631,6 +2715,7 @@
    "first": "07:08",
    "last": "07:09",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 10825,
    "min_dist": 6.6
   },
@@ -2643,6 +2728,7 @@
    "first": "07:14",
    "last": "07:22",
    "dwell_min": 8,
+   "quiet_min": 0,
    "min_alt": 9300,
    "min_dist": 6.1
   },
@@ -2655,6 +2741,7 @@
    "first": "07:31",
    "last": "07:38",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 10300,
    "min_dist": 2.5
   },
@@ -2667,6 +2754,7 @@
    "first": "08:07",
    "last": "08:12",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 10050,
    "min_dist": 6.1
   },
@@ -2679,6 +2767,7 @@
    "first": "08:25",
    "last": "08:29",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 5550,
    "min_dist": 0.4
   }

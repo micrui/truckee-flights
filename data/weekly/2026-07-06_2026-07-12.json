@@ -2149,10 +2149,24 @@
    "cls": "piston",
    "own": "JERK ASSETS LLC",
    "first": "07:19",
-   "last": "08:29",
-   "dwell_min": 70,
-   "min_alt": 8300,
+   "last": "07:24",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 10300,
    "min_dist": 7.6
+  },
+  {
+   "date": "2026-07-06",
+   "reg": "N2363K",
+   "type": "C172",
+   "cls": "piston",
+   "own": "JERK ASSETS LLC",
+   "first": "08:28",
+   "last": "08:29",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 8300,
+   "min_dist": 7.7
   },
   {
    "date": "2026-07-06",
@@ -2163,6 +2177,7 @@
    "first": "08:20",
    "last": "08:22",
    "dwell_min": 2,
+   "quiet_min": 0,
    "min_alt": 6150,
    "min_dist": 9.3
   },
@@ -2175,6 +2190,7 @@
    "first": "03:48",
    "last": "03:49",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12350,
    "min_dist": 9.3
   },
@@ -2185,8 +2201,22 @@
    "cls": "piston",
    "own": "G4 INVESTMENTS CORP",
    "first": "06:37",
+   "last": "06:41",
+   "dwell_min": 4,
+   "quiet_min": 4,
+   "min_alt": 11300,
+   "min_dist": 6.6
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N892DB",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "G4 INVESTMENTS CORP",
+   "first": "07:37",
    "last": "07:43",
-   "dwell_min": 66,
+   "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 10300,
    "min_dist": 4.0
   },
@@ -2199,6 +2229,7 @@
    "first": "07:13",
    "last": "07:18",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 11775,
    "min_dist": 1.2
   },
@@ -2211,6 +2242,7 @@
    "first": "08:05",
    "last": "08:08",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 6250,
    "min_dist": 9.7
   },
@@ -2221,9 +2253,23 @@
    "cls": "piston",
    "own": "N2893E LLC",
    "first": "22:19",
-   "last": "01:00",
-   "dwell_min": 161,
+   "last": "22:36",
+   "dwell_min": 16,
+   "quiet_min": 16,
    "min_alt": 9150,
+   "min_dist": 3.1
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N5656E",
+   "type": "C172",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "first": "00:50",
+   "last": "01:00",
+   "dwell_min": 10,
+   "quiet_min": 10,
+   "min_alt": 11300,
    "min_dist": 0.8
   },
   {
@@ -2235,6 +2281,7 @@
    "first": "07:49",
    "last": "07:50",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 6000,
    "min_dist": 9.1
   },
@@ -2247,6 +2294,7 @@
    "first": "07:54",
    "last": "07:58",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 9900,
    "min_dist": 9.7
   },
@@ -2259,6 +2307,7 @@
    "first": "23:08",
    "last": "23:10",
    "dwell_min": 1,
+   "quiet_min": 1,
    "min_alt": 11275,
    "min_dist": 8.3
   },
@@ -2271,6 +2320,7 @@
    "first": "00:17",
    "last": "00:19",
    "dwell_min": 1,
+   "quiet_min": 1,
    "min_alt": 10700,
    "min_dist": 4.3
   },
@@ -2283,6 +2333,7 @@
    "first": "06:12",
    "last": "06:13",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 11550,
    "min_dist": 7.0
   },
@@ -2295,6 +2346,7 @@
    "first": "06:17",
    "last": "06:17",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12925,
    "min_dist": 9.6
   },
@@ -2307,6 +2359,7 @@
    "first": "06:44",
    "last": "06:54",
    "dwell_min": 9,
+   "quiet_min": 9,
    "min_alt": 9150,
    "min_dist": 2.1
   },
@@ -2319,6 +2372,7 @@
    "first": "07:11",
    "last": "07:17",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 7975,
    "min_dist": 1.2
   },
@@ -2331,6 +2385,7 @@
    "first": "07:21",
    "last": "07:32",
    "dwell_min": 10,
+   "quiet_min": 0,
    "min_alt": 10025,
    "min_dist": 4.0
   },
@@ -2343,6 +2398,7 @@
    "first": "07:38",
    "last": "07:43",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 5550,
    "min_dist": 0.1
   },
@@ -2355,6 +2411,7 @@
    "first": "07:49",
    "last": "07:53",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 9250,
    "min_dist": 8.7
   },
@@ -2367,6 +2424,7 @@
    "first": "08:00",
    "last": "08:06",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 10300,
    "min_dist": 7.3
   },
@@ -2379,6 +2437,7 @@
    "first": "07:36",
    "last": "07:37",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 11875,
    "min_dist": 6.5
   },
@@ -2391,6 +2450,7 @@
    "first": "08:10",
    "last": "08:28",
    "dwell_min": 18,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.1
   },
@@ -2403,6 +2463,7 @@
    "first": "08:12",
    "last": "08:22",
    "dwell_min": 9,
+   "quiet_min": 0,
    "min_alt": 8575,
    "min_dist": 6.7
   },
@@ -2415,6 +2476,7 @@
    "first": "08:14",
    "last": "08:18",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 9800,
    "min_dist": 8.1
   },
@@ -2427,6 +2489,7 @@
    "first": "08:17",
    "last": "08:28",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 5650,
    "min_dist": 0.1
   },
@@ -2439,6 +2502,7 @@
    "first": "08:23",
    "last": "08:29",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 5625,
    "min_dist": 0.2
   },
@@ -2451,6 +2515,7 @@
    "first": "23:43",
    "last": "23:44",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 12675,
    "min_dist": 7.7
   },
@@ -2463,6 +2528,7 @@
    "first": "01:44",
    "last": "01:52",
    "dwell_min": 7,
+   "quiet_min": 7,
    "min_alt": 11075,
    "min_dist": 3.4
   },
@@ -2475,6 +2541,7 @@
    "first": "06:06",
    "last": "06:09",
    "dwell_min": 3,
+   "quiet_min": 3,
    "min_alt": 9575,
    "min_dist": 8.5
   },
@@ -2487,6 +2554,7 @@
    "first": "07:35",
    "last": "07:40",
    "dwell_min": 4,
+   "quiet_min": 0,
    "min_alt": 9800,
    "min_dist": 7.2
   },
@@ -2499,6 +2567,7 @@
    "first": "07:00",
    "last": "07:01",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 11550,
    "min_dist": 7.5
   },
@@ -2511,6 +2580,7 @@
    "first": "07:13",
    "last": "07:27",
    "dwell_min": 13,
+   "quiet_min": 0,
    "min_alt": 10225,
    "min_dist": 3.0
   },
@@ -2523,6 +2593,7 @@
    "first": "07:36",
    "last": "07:47",
    "dwell_min": 10,
+   "quiet_min": 0,
    "min_alt": 10250,
    "min_dist": 1.0
   },
@@ -2535,6 +2606,7 @@
    "first": "07:51",
    "last": "07:52",
    "dwell_min": 1,
+   "quiet_min": 0,
    "min_alt": 5700,
    "min_dist": 0.2
   },
@@ -2547,6 +2619,7 @@
    "first": "08:00",
    "last": "08:22",
    "dwell_min": 21,
+   "quiet_min": 0,
    "min_alt": 5625,
    "min_dist": 0.1
   },
@@ -2559,6 +2632,7 @@
    "first": "08:11",
    "last": "08:22",
    "dwell_min": 11,
+   "quiet_min": 0,
    "min_alt": 8400,
    "min_dist": 3.5
   },
@@ -2571,6 +2645,7 @@
    "first": "08:15",
    "last": "08:23",
    "dwell_min": 7,
+   "quiet_min": 0,
    "min_alt": 8300,
    "min_dist": 4.4
   },
@@ -2583,6 +2658,7 @@
    "first": "08:18",
    "last": "08:22",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 8850,
    "min_dist": 7.2
   },
@@ -2595,6 +2671,7 @@
    "first": "06:55",
    "last": "07:26",
    "dwell_min": 31,
+   "quiet_min": 4,
    "min_alt": 7750,
    "min_dist": 1.6
   },
@@ -2607,6 +2684,7 @@
    "first": "07:37",
    "last": "07:40",
    "dwell_min": 3,
+   "quiet_min": 0,
    "min_alt": 10825,
    "min_dist": 6.9
   },
@@ -2619,6 +2697,7 @@
    "first": "07:38",
    "last": "07:44",
    "dwell_min": 6,
+   "quiet_min": 0,
    "min_alt": 5600,
    "min_dist": 0.3
   },
@@ -2631,6 +2710,7 @@
    "first": "08:22",
    "last": "08:22",
    "dwell_min": 0,
+   "quiet_min": 0,
    "min_alt": 5550,
    "min_dist": 0.2
   },
@@ -2643,6 +2723,7 @@
    "first": "08:24",
    "last": "08:29",
    "dwell_min": 5,
+   "quiet_min": 0,
    "min_alt": 8525,
    "min_dist": 0.7
   }
