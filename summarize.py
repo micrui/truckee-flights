@@ -18,6 +18,31 @@ from pipeline import hav_nm, nearest_airport, AIRPORT, TZ, window_bounds, t2s, k
 
 QUIET_END = (7, 0)   # local; KTRK voluntary Fly Quiet runs 22:00 to 07:00
 
+# Factual role tags for recurring operators whose line of business is public
+# knowledge. Matched against the FAA registry owner string; shown as context,
+# never as characterization of any single flight.
+OPERATOR_ROLES = [
+    ("REGIONAL EMERGENCY MEDICAL", "air ambulance"),
+    ("CARE FLIGHT", "air ambulance"),
+    ("CAREFLIGHT", "air ambulance"),
+    ("BILLINGS FLYING SERVICE", "firefighting contractor"),
+    ("A&P HELICOPTERS", "fire/utility contractor"),
+    ("A & P HELICOPTERS", "fire/utility contractor"),
+    ("SIERRA AERO", "flight school"),
+    ("FLYING START AERO", "flight school"),
+    ("TRUCKEE TAHOE SOARING", "glider operation"),
+    ("BAY AREA SOARING", "glider operation"),
+    ("NETJETS", "fractional jet charter"),
+    ("FLEXJET", "fractional jet charter"),
+]
+
+def operator_role(own):
+    o = (own or "").upper()
+    for needle, role in OPERATOR_ROLES:
+        if needle in o:
+            return role
+    return ""
+
 
 def build(dates=None, window="morning"):
     """Extract events for the given dates (default: every day under days/).
@@ -48,7 +73,8 @@ def build(dates=None, window="morning"):
                       for e in t.get("trace", [])]
             flags = t.get("dbFlags", 0) or 0
             meta = dict(date=datestr, reg=rec["reg"], type=rec["type"],
-                        cls=klass(rec.get("type")), own=(rec["own"] or "")[:60])
+                        cls=klass(rec.get("type")), own=(rec["own"] or "")[:60],
+                        role=operator_role(rec.get("own")))
             a = aircraft.setdefault(rec["reg"] or h, {
                 "reg": rec["reg"], "hex": h, "type": rec["type"], "class": klass(rec.get("type")),
                 "desc": rec.get("desc"), "owner": rec["own"],

@@ -16,7 +16,7 @@ Standard library only.
 import argparse, datetime, glob, html, json, os
 from collections import Counter
 from pipeline import run_day, TZ
-from summarize import build
+from summarize import build, operator_role
 
 CLASSES = ["jet", "turboprop", "piston", "helicopter", "glider", "unknown"]
 
@@ -246,6 +246,11 @@ OP_CSS = """
 """
 
 
+def role_tag(a):
+    r = operator_role(a.get("own"))
+    return f' <span class="tag">{r}</span>' if r else ""
+
+
 def render_operators(weeks):
     """Aggregate every recorded event across all weeks into per-aircraft logs."""
     seen, all_events = set(), []
@@ -294,7 +299,7 @@ def render_operators(weeks):
                     f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
                     f'<td>{a["quiet"]}</td><td>{len(a["events"])}</td>'
                     f'<td class="mono">{", ".join(a["qdates"])}</td>'
-                    f'<td>{html.escape(a["own"] or "")}</td></tr>')
+                    f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')
 
     QCHIP = '<span class="tag">quiet hours</span>'
     dw_rows = []
@@ -307,7 +312,7 @@ def render_operators(weeks):
                        f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
                        f'<td>{a["q_ovf_min"]}</td><td>{n_sess}</td>'
                        f'<td class="mono">{", ".join(a["q_ovf_dates"])}</td>'
-                       f'<td>{html.escape(a["own"] or "")}</td></tr>')
+                       f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')
 
     sections = []
     for a in ranked:
@@ -328,7 +333,7 @@ def render_operators(weeks):
         ev_rows = "".join(r for k, r in log_rows)
         sections.append(
             f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {html.escape(a["type"])} · {a["cls"]}{badge}'
-            f' <span class="own">{html.escape(a["own"] or "")}</span></h3>'
+            f' <span class="own">{html.escape(a["own"] or "")}</span>{role_tag(a)}</h3>'
             f'<div class="table-scroll"><table><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
             f'<tbody>{ev_rows}</tbody></table></div>')
 
