@@ -246,6 +246,16 @@ OP_CSS = """
 """
 
 
+def type_link(code, desc=""):
+    """Type designator as a reference link with the aircraft's name as title."""
+    if not code or code in ("?", "GLID"):
+        label = html.escape(desc or code or "?")
+        return f'<span title="{label}">{html.escape(code or "?")}</span>'
+    t = html.escape(desc or code)
+    return (f'<a href="https://doc8643.com/aircraft/{html.escape(code)}" title="{t}" '
+            f'target="_blank" rel="noopener">{html.escape(code)}</a>')
+
+
 def role_tag(a):
     r = operator_role(a.get("own"))
     return f' <span class="tag">{r}</span>' if r else ""
@@ -275,11 +285,13 @@ def render_operators(weeks):
     ac = {}
     for e in all_events:
         a = ac.setdefault(e["reg"] or "?", {"reg": e["reg"] or "?", "type": e["type"] or "?",
-                                            "cls": e["cls"], "own": e["own"], "events": [], "ovf": []})
+                                            "cls": e["cls"], "own": e["own"], "desc": e.get("desc", ""),
+                                            "events": [], "ovf": []})
         a["events"].append(e)
     for o in all_ovf:
         a = ac.setdefault(o["reg"] or "?", {"reg": o["reg"] or "?", "type": o["type"] or "?",
-                                            "cls": o["cls"], "own": o["own"], "events": [], "ovf": []})
+                                            "cls": o["cls"], "own": o["own"], "desc": o.get("desc", ""),
+                                            "events": [], "ovf": []})
         a["ovf"].append(o)
     for a in ac.values():
         a["events"].sort(key=lambda e: (e["date"], e["hm"]))
@@ -296,7 +308,7 @@ def render_operators(weeks):
             continue
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
         rows.append(f'<tr><td class="mono"><a href="#{html.escape(a["reg"])}">{html.escape(a["reg"])}</a>{badge}</td>'
-                    f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
+                    f'<td class="mono">{type_link(a["type"], a.get("desc"))}</td><td>{a["cls"]}</td>'
                     f'<td>{a["quiet"]}</td><td>{len(a["events"])}</td>'
                     f'<td class="mono">{", ".join(a["qdates"])}</td>'
                     f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')
@@ -309,7 +321,7 @@ def render_operators(weeks):
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
         n_sess = sum(1 for o in a["ovf"] if o.get("quiet_min", 0) > 0)
         dw_rows.append(f'<tr><td class="mono"><a href="#{html.escape(a["reg"])}">{html.escape(a["reg"])}</a>{badge}</td>'
-                       f'<td class="mono">{html.escape(a["type"])}</td><td>{a["cls"]}</td>'
+                       f'<td class="mono">{type_link(a["type"], a.get("desc"))}</td><td>{a["cls"]}</td>'
                        f'<td>{a["q_ovf_min"]}</td><td>{n_sess}</td>'
                        f'<td class="mono">{", ".join(a["q_ovf_dates"])}</td>'
                        f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')

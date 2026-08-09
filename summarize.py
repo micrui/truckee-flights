@@ -74,7 +74,7 @@ def build(dates=None, window="morning"):
             flags = t.get("dbFlags", 0) or 0
             meta = dict(date=datestr, reg=rec["reg"], type=rec["type"],
                         cls=klass(rec.get("type")), own=(rec["own"] or "")[:60],
-                        role=operator_role(rec.get("own")))
+                        role=operator_role(rec.get("own")), desc=(rec.get("desc") or "")[:60])
             a = aircraft.setdefault(rec["reg"] or h, {
                 "reg": rec["reg"], "hex": h, "type": rec["type"], "class": klass(rec.get("type")),
                 "desc": rec.get("desc"), "owner": rec["own"],

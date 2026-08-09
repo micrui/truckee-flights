@@ -184,9 +184,11 @@ for (const m of marks) {
   const e = m.e;
   const html = m.kind === "OVF"
     ? `<div class="t1">${e.reg} · ${e.type} · ${e.cls || ""}</div>
+       ${e.desc ? `<div class="t2">${e.desc}</div>` : ""}
        <div class="t2">airborne nearby ${e.first}–${e.last}${e.dwell_min ? ` (${e.dwell_min} min)` : ""}, no landing · min ${(e.min_alt||0).toLocaleString()} ft above sea level</div>
        <div class="t3">${e.own || ""}${e.role ? " · " + e.role.toUpperCase() : ""}</div>`
     : `<div class="t1">${e.reg} · ${e.type} · ${e.cls}</div>
+       ${e.desc ? `<div class="t2">${e.desc}</div>` : ""}
        <div class="t2">${e.ev === "ARR" ? "landed" : "took off"} ${e.hm} · ${e.ev === "ARR" ? "from" : "to"} ${e.other}</div>
        <div class="t3">${e.own || ""}${e.role ? " · " + e.role.toUpperCase() : ""}</div>`;
   g.addEventListener("pointermove", ev => showTip(ev, html));
