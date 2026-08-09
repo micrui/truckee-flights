@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<title>truckee-flights: weekly log</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55; margin: 0; padding: 48px 20px 72px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow a { color: inherit; }
+  h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .standfirst { font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 28px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th { text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--axis); }
+  td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  td.num { font-variant-numeric: tabular-nums; }
+  .tag { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .table-scroll { overflow-x: auto; }
+  details { margin: 14px 0; }
+  summary { cursor: pointer; font-size: 14px; color: var(--ink-2); }
+  h2 { font-size: 18px; font-weight: 700; margin: 40px 0 10px; }
+  a { color: var(--accent); }
+  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
+</style>
+<div class="wrap">
+  <p class="eyebrow"><a href="./">truckee-flights</a> · weekly log</p>
+  <h1>Weekly flight log</h1>
+  <p class="standfirst">
+    Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
+    (4:00 to 8:30 am), collected weekly from public flight-tracking data. The monitored window
+    covers the final three hours of the airport's voluntary quiet time (which runs 10:00 pm to
+    7:00 am) plus the first 90 minutes after it ends. Quiet-hours activity is listed
+    flight by flight below; the record includes air ambulances and other flights most people
+    would not question, and characterizes none of them.
+  </p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Week</th><th>Takeoffs + landings</th><th>Local round trips</th><th>During quiet hours (before 7:00 am)</th></tr></thead>
+    <tbody>
+      <tr><td>Aug 1 to 8, 2026 <span class="tag">Study week</span></td><td class="num">122</td><td class="num">47</td><td>12 (2 jet, 8 turboprop, 1 piston, 1 helicopter)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Quiet-hours detail</h2>
+  
+  <details>
+    <summary>Aug 1 to 8, 2026: 12 takeoffs/landings during quiet hours</summary>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th><th>Type</th><th>Class</th><th>From / to</th><th>Registered owner</th></tr></thead>
+      <tbody><tr><td class="mono">08-02</td><td class="mono num">06:13</td><td>Took off</td><td class="mono">N412FF</td><td class="mono">EPIC</td><td>turboprop</td><td>KSQL San Carlos</td><td>412 AVIATION LLC</td></tr><tr><td class="mono">08-03</td><td class="mono num">06:35</td><td>Landed</td><td class="mono">N797GM</td><td class="mono">PC12</td><td>turboprop</td><td>KSQL San Carlos</td><td>SWISS MISS LLC, SWISS MADE LLC</td></tr><tr><td class="mono">08-03</td><td class="mono num">06:38</td><td>Took off</td><td class="mono">N797GM</td><td class="mono">PC12</td><td>turboprop</td><td>LOCAL loop</td><td>SWISS MISS LLC, SWISS MADE LLC</td></tr><tr><td class="mono">08-03</td><td class="mono num">06:46</td><td>Landed</td><td class="mono">N281EB</td><td class="mono">PC24</td><td>jet</td><td>KRNO Reno</td><td>TVPX AIRCRAFT SOLUTIONS INC TRUSTEE</td></tr><tr><td class="mono">08-03</td><td class="mono num">06:47</td><td>Took off</td><td class="mono">N8144G</td><td class="mono">P32R</td><td>piston</td><td>LOCAL loop</td><td>DISTANT HORIZONS LLC</td></tr><tr><td class="mono">08-03</td><td class="mono num">06:49</td><td>Took off</td><td class="mono">N281EB</td><td class="mono">PC24</td><td>jet</td><td>LOCAL loop</td><td>TVPX AIRCRAFT SOLUTIONS INC TRUSTEE</td></tr><tr><td class="mono">08-06</td><td class="mono num">06:16</td><td>Took off</td><td class="mono">N586AT</td><td class="mono">PC12</td><td>turboprop</td><td>(33.62,-111.92)</td><td>HESSWINDS LLC</td></tr><tr><td class="mono">08-06</td><td class="mono num">06:39</td><td>Landed</td><td class="mono">N691DK</td><td class="mono">PC12</td><td>turboprop</td><td>KMOD Modesto</td><td>D FORCE 2 LLC</td></tr><tr><td class="mono">08-06</td><td class="mono num">06:41</td><td>Took off</td><td class="mono">N691DK</td><td class="mono">PC12</td><td>turboprop</td><td>LOCAL loop</td><td>D FORCE 2 LLC</td></tr><tr><td class="mono">08-06</td><td class="mono num">06:42</td><td>Landed</td><td class="mono">N999FN</td><td class="mono">EPIC</td><td>turboprop</td><td>KCCR Concord</td><td>WING AIR LLC</td></tr><tr><td class="mono">08-06</td><td class="mono num">06:44</td><td>Took off</td><td class="mono">N999FN</td><td class="mono">EPIC</td><td>turboprop</td><td>LOCAL loop</td><td>WING AIR LLC</td></tr><tr><td class="mono">08-08</td><td class="mono num">05:12</td><td>Landed</td><td class="mono">N901CF</td><td class="mono">AS50</td><td>helicopter</td><td>KTRK Truckee</td><td>REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY</td></tr></tbody>
+    </table></div>
+  </details>
+
+  <div class="foot">
+    <p>Updated Mondays by a scheduled job. Underlying per-flight data for each week is in
+    <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>;
+    method and limits in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>.
+    Aircraft without transponders do not appear. Late-evening quiet hours (10:00 pm to midnight)
+    are not yet monitored.</p>
+  </div>
+</div>

@@ -1,363 +1,139 @@
 <meta charset="utf-8">
-<title>truckee-flights: KTRK early-morning operations</title>
+<title>truckee-flights</title>
 <style>
   :root {
     color-scheme: light;
-    --page: #f6f7f9;
-    --surface: #fcfcfb;
-    --ink: #0b0b0b;
-    --ink-2: #52514e;
-    --muted: #898781;
-    --grid: #e1e0d9;
-    --axis: #c3c2b7;
-    --border: rgba(11,11,11,0.10);
-    --jet: #2a78d6;
-    --tprop: #eb6834;
-    --piston: #1baf7a;
-    --heli: #898781;
-    --curfew: #0b0b0b;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
-      --page: #0c0e11;
-      --surface: #1a1a19;
-      --ink: #ffffff;
-      --ink-2: #c3c2b7;
-      --muted: #898781;
-      --grid: #2c2c2a;
-      --axis: #383835;
-      --border: rgba(255,255,255,0.10);
-      --jet: #3987e5;
-      --tprop: #d95926;
-      --piston: #199e70;
-      --heli: #898781;
-      --curfew: #ffffff;
+      --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10); --accent: #3987e5;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --page: #0c0e11;
-    --surface: #1a1a19;
-    --ink: #ffffff;
-    --ink-2: #c3c2b7;
-    --muted: #898781;
-    --grid: #2c2c2a;
-    --axis: #383835;
-    --border: rgba(255,255,255,0.10);
-    --jet: #3987e5;
-    --tprop: #d95926;
-    --piston: #199e70;
-    --heli: #898781;
-    --curfew: #ffffff;
+    --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10); --accent: #3987e5;
   }
   :root[data-theme="light"] {
     color-scheme: light;
-    --page: #f6f7f9;
-    --surface: #fcfcfb;
-    --ink: #0b0b0b;
-    --ink-2: #52514e;
-    --muted: #898781;
-    --grid: #e1e0d9;
-    --axis: #c3c2b7;
-    --border: rgba(11,11,11,0.10);
-    --jet: #2a78d6;
-    --tprop: #eb6834;
-    --piston: #1baf7a;
-    --heli: #898781;
-    --curfew: #0b0b0b;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
   }
-
   body {
-    background: var(--page);
-    color: var(--ink);
+    background: var(--page); color: var(--ink);
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.55;
-    margin: 0;
-    padding: 48px 20px 72px;
+    line-height: 1.6; margin: 0; padding: 56px 20px 72px;
   }
-  .wrap { max-width: 920px; margin: 0 auto; }
-  .mono { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; }
-
+  .wrap { max-width: 760px; margin: 0 auto; }
   .eyebrow {
-    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--muted); margin: 0 0 10px;
-    font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
-  h1 {
-    font-size: clamp(30px, 5vw, 44px); font-weight: 700; letter-spacing: -0.02em;
-    line-height: 1.08; margin: 0 0 16px; text-wrap: balance;
+  h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 18px; }
+  .mission { font-size: 17px; color: var(--ink-2); margin: 0 0 14px; max-width: 62ch; }
+  .mission strong { color: var(--ink); }
+  h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; margin: 42px 0 12px; }
+  .card {
+    display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    padding: 16px 18px; margin: 0 0 12px; text-decoration: none; color: var(--ink);
   }
-  .standfirst { font-size: 17px; color: var(--ink-2); max-width: 62ch; margin: 0 0 34px; }
-  .standfirst strong { color: var(--ink); }
-
-  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 0 0 36px; }
-  .tile {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-    padding: 14px 16px 12px;
+  .card:hover { border-color: var(--accent); }
+  .card .t { font-weight: 650; font-size: 16px; }
+  .card .t .tag {
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; margin-left: 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
   }
-  .tile .v { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
-  .tile .v small { font-size: 16px; font-weight: 600; color: var(--ink-2); }
-  .tile .k { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
-
-  .panel {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
-    padding: 20px 20px 14px; margin: 0 0 36px;
-  }
-  .panel h2 { font-size: 15px; font-weight: 650; margin: 0 0 2px; }
-  .panel .sub { font-size: 12.5px; color: var(--muted); margin: 0 0 12px; }
-  .chart-scroll { overflow-x: auto; }
-  #chart { display: block; }
-
-  .legend { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 10px 2px 4px; font-size: 12.5px; color: var(--ink-2); }
-  .legend .item { display: inline-flex; align-items: center; gap: 6px; }
-  .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .sw.tri { width: 0; height: 0; border-radius: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; }
-  .sw.ring { background: transparent; border: 2px solid var(--muted); width: 7px; height: 7px; }
-
-  #tip {
-    position: fixed; pointer-events: none; z-index: 10; display: none;
-    background: var(--surface); color: var(--ink); border: 1px solid var(--border);
-    border-radius: 6px; padding: 8px 11px; font-size: 12.5px; line-height: 1.45;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18); max-width: 300px;
-  }
-  #tip .t1 { font-weight: 650; }
-  #tip .t2 { color: var(--ink-2); }
-  #tip .t3 { color: var(--muted); font-size: 11.5px; }
-
-  h2.section { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; margin: 44px 0 6px; }
-  .section-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
-
-  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
-  th {
-    text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--muted); font-weight: 600; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--axis);
-  }
-  td { padding: 7px 12px 7px 0; border-bottom: 1px solid var(--grid); vertical-align: top; }
-  td.num, .mono { font-variant-numeric: tabular-nums; }
-  .chip { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; position: relative; top: -1px; }
-  .table-scroll { overflow-x: auto; }
-
-  .reading { max-width: 68ch; }
-  .reading p { margin: 0 0 14px; font-size: 15.5px; }
-  .reading b { font-weight: 650; }
-  ul.reading { padding-left: 20px; }
-  ul.reading li { margin-bottom: 12px; font-size: 15.5px; }
-
-  details { margin-top: 10px; }
-  summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2); }
-  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 72ch; }
-  .foot p { margin: 0 0 8px; }
-  a { color: var(--jet); }
+  .card .d { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+  p { max-width: 68ch; }
+  .body-p { font-size: 15.5px; margin: 0 0 14px; }
+  ul.res { padding-left: 0; list-style: none; margin: 0; }
+  ul.res li { margin: 0 0 14px; font-size: 15px; max-width: 70ch; }
+  ul.res li .rt { font-weight: 650; }
+  ul.res li .rd { color: var(--ink-2); font-size: 14px; }
+  a { color: var(--accent); }
+  .foot { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 72ch; }
 </style>
 
 <div class="wrap">
-  <p class="eyebrow">truckee-flights · KTRK · ADS-B analysis · Aug 1–8, 2026 · 04:00–08:30 PDT</p>
-  <h1>The jets wait for 7:00.</h1>
-  <p class="standfirst">
-    Early-morning aircraft noise is a real complaint in Truckee: people under the flight path are being woken up.
-    The disputed part is who is doing it. Eight straight mornings of public flight-tracking data show
-    <strong>no</strong> private jets taking off or landing before 7:00 am, when the airport's voluntary
-    quiet hours end. Several jets started up early and waited on the ground for 7:00. What did fly earlier:
-    a few <strong>turboprop</strong> planes headed for the Bay Area, one small jet making a 3-minute stop,
-    and an air-ambulance helicopter. A comparable amount of early noise comes from planes that never
-    land here at all.
+  <p class="eyebrow">an independent public record · Truckee Tahoe Airport (KTRK)</p>
+  <h1>truckee-flights</h1>
+  <p class="mission">
+    An independent, auditable record of flight activity at Truckee Tahoe Airport, maintained
+    from within the community it serves. Not affiliated with the airport district, the town,
+    or any aircraft operator. Built entirely from public data; every number here can be
+    reproduced from the <a href="https://github.com/micrui/truckee-flights">open code and data</a>.
+  </p>
+  <p class="mission">
+    Flight data can establish <strong>who flies here, when, and from where</strong>. It cannot settle
+    whether the current volume of jet traffic is what this community wants from a high-Sierra
+    airport that also serves glider pilots, recreational flyers, and local emergency services.
+    That is a community question. The purpose of this site is that it gets discussed over
+    shared, checkable facts.
   </p>
 
-  <div class="tiles">
-    <div class="tile"><div class="v">122</div><div class="k">takeoffs + landings at KTRK, 04:00–08:30, over 8 mornings</div></div>
-    <div class="tile"><div class="v">12</div><div class="k">of those happened before 7:00 am</div></div>
-    <div class="tile"><div class="v">2 <small>(one aircraft)</small></div><div class="k">jet takeoffs or landings before 7:00 all week: one small jet, a 3-minute stop on Aug 3</div></div>
-    <div class="tile"><div class="v">7:03</div><div class="k">earliest jet takeoff of the week, 3 minutes after quiet hours end</div></div>
-  </div>
+  <h2>Research</h2>
+  <a class="card" href="weekly.html">
+    <div class="t">Weekly flight log <span class="tag">ongoing · updated Mondays</span></div>
+    <div class="d">What flew each week in the early-morning window, including every takeoff and
+    landing during the airport's voluntary quiet hours, by aircraft class and tail number.</div>
+  </a>
+  <a class="card" href="study-2026-08-dawn.html">
+    <div class="t">Study 1: early mornings, August 1 to 8, 2026 <span class="tag">complete</span></div>
+    <div class="d">Eight consecutive dawn windows. Jets kept to the 7:00 boundary; most flying during
+    quiet hours was turboprops; a comparable share of early noise came from aircraft that never
+    landed here. Interactive timeline and full tables.</div>
+  </a>
 
-  <div class="panel">
-    <h2>Every early-morning takeoff and landing, one row per morning</h2>
-    <p class="sub">Solid marks are takeoffs and landings at the Truckee airport. Hollow rings are aircraft that flew low over the area without ever landing (audible locally, but not this airport's traffic). Hover any mark for details.</p>
-    <div class="chart-scroll"><svg id="chart" width="880" height="460" viewBox="0 0 880 460" role="img" aria-label="Timeline of KTRK operations by morning, Aug 1-8 2026"></svg></div>
-    <div class="legend">
-      <span class="item"><span class="sw" style="background:var(--jet)"></span>Jet</span>
-      <span class="item"><span class="sw" style="background:var(--tprop)"></span>Turboprop</span>
-      <span class="item"><span class="sw" style="background:var(--piston)"></span>Piston</span>
-      <span class="item"><span class="sw" style="background:var(--heli)"></span>Helicopter</span>
-      <span class="item"><span class="sw" style="background:var(--muted)"></span>Landing (circle)</span>
-      <span class="item"><span class="sw tri" style="border-bottom:10px solid var(--muted)"></span>Takeoff (triangle)</span>
-      <span class="item"><span class="sw ring"></span>Overflight, no landing</span>
-    </div>
-  </div>
+  <h2>Quiet hours, in plain terms</h2>
+  <p class="body-p">
+    The airport asks all aircraft not to fly between 10:00 pm and 7:00 am (the
+    <a href="https://truckeetahoeairport.com/current-projects/fly-quiet">Fly Quiet program</a>).
+    Federal law, the Airport Noise and Capacity Act of 1990, prevents the district from making
+    this mandatory, so it is a request, backed by lease incentives rather than enforcement.
+    The weekly log above records every takeoff and landing during the monitored portion of
+    quiet hours as a running public record, without characterizing any single flight: the
+    record includes air ambulances and other operations most people would not question.
+  </p>
 
-  <h2 class="section">Everything that moved at KTRK before 7:00 am</h2>
-  <p class="section-sub">Twelve takeoffs and landings across eight mornings. Ten of them are turboprops and an air-ambulance helicopter.</p>
-  <div class="table-scroll">
-  <table id="pre7table">
-    <thead><tr><th>Date</th><th>Time</th><th>Op</th><th>Aircraft</th><th>Type</th><th>Class</th><th>From / To</th><th>Registered owner</th></tr></thead>
-    <tbody></tbody>
-  </table>
-  </div>
-
-  <h2 class="section">Reading the data</h2>
-  <ul class="reading">
-    <li><b>Jet activity starts at 7:00, not before.</b> 34 jet takeoffs and landings across the 8 mornings, by 19 different jets: NetJets and Flexjet charters, a Gulfstream 650, a Global 7500, several Citations, a Challenger. The earliest jet movement each morning: 7:03, 7:12, 7:20, 7:29, 7:37, 7:41, 7:59, 8:11. On Aug 7 a Global 7500 showed up on the tracker at 6:16 and sat on the ground for 97 minutes before taking off at 7:53. On Aug 8 a NetJets Citation started up at 6:41 and took off at 7:41. That is not ignoring the quiet hours. That is watching the clock.</li>
-    <li><b>The one jet exception is a small Pilatus jet</b> (N281EB, registered through an owner trust). It came over from Reno and landed at 6:46 on Aug 3, sat for 3 minutes, and took off again at 6:49. It shows up 7 times across the week, moving between Truckee, Reno, and Palo Alto. It is the only jet that flew during quiet hours all week. One airplane, not a pattern.</li>
-    <li><b>Most of the flying before 7:00 is turboprops.</b> 8 of the 12 early movements were turboprops, mostly Pilatus PC-12s: propeller planes with turbine engines, quieter than jets but far from silent. They were flying to and from the Bay Area and beyond (San Carlos, Concord, Modesto, Scottsdale) between 6:13 and 6:44. The voluntary quiet hours cover them the same as jets. On this week's evidence they, not the jets, are the planes flying during quiet hours. Tail numbers are in the table above.</li>
-    <li><b>Recreational and training flights wait for 7:00 too.</b> 47 flights in the window took off from Truckee and came back to Truckee: one Piper that flew a morning lap on 5 of the 8 days, backcountry Cubs, flight-school Cessnas, and the tow planes that pull gliders up, starting around 8:00. Five of the 47 left before 7:00 all week. Local pleasure and training flying is a large share of morning traffic, and nearly all of it goes after quiet hours end.</li>
-    <li><b>A lot of what you hear at 6:30 is not this airport.</b> Every morning, two or three aircraft crossed low over the area without ever landing here: small planes passing through at 2,400 to 4,500 ft above the valley floor, turboprops climbing on their way somewhere else, fire and utility helicopters. Add the airline traffic descending into Reno east of the ridge and high-altitude flights overhead, and there is real early-morning engine noise that no Truckee operations log, including this one, will show.</li>
-    <li><b>The curfew is voluntary.</b> The Airport Noise and Capacity Act of 1990 preempts local mandatory curfews, so KTRK's "Fly Quiet" request (10 pm – 7 am, all aircraft) is backed by hangar-lease incentives rather than enforcement. In this week's data the most expensive aircraft on the field were also the most consistent with it; charter operators such as NetJets and Flexjet carry reputational exposure and appear to schedule around the boundary.</li>
-    <li><b>Tracking visibility varies by aircraft.</b> Most aircraft here are registered to LLCs and trusts, which is standard liability and estate practice at most asset levels and signals little on its own. Separately, 7 of the 59 aircraft that operated at KTRK this week are enrolled in the FAA's LADD program, which asks commercial tracking sites such as FlightAware not to display them; the 7 include the two most frequent pre-7:00 operators. None used the stronger PIA anonymized-registration program. LADD is legal, free, and grew in adoption after the celebrity jet-tracking accounts of 2022. The practical effect is that the flights most likely to prompt a lookup can be absent from the sites a resident would check first. The raw ADS-B broadcast remains public regardless, which is what this analysis uses.</li>
+  <h2>Tracking resources and their limits</h2>
+  <ul class="res">
+    <li>
+      <span class="rt"><a href="https://globe.adsbexchange.com/">ADS-B Exchange</a></span><br>
+      <span class="rd">The tracker this site is built on. Shows effectively all transmitting aircraft,
+      including those that have opted out of display elsewhere. Less polished than commercial trackers.</span>
+    </li>
+    <li>
+      <span class="rt"><a href="https://www.flightaware.com/">FlightAware</a> and <a href="https://www.flightradar24.com/">Flightradar24</a></span><br>
+      <span class="rd">Easier to use, but they honor FAA display-blocking requests
+      (<a href="https://www.faa.gov/pilots/ladd">LADD</a>). Some aircraft that use this airport will not
+      appear on them: in Study 1, 7 of the 59 aircraft that operated here were blocked, including the
+      two most frequent quiet-hours operators. If you look up a flight and find nothing, that is a
+      known limit of those sites, not proof the flight did not happen.</span>
+    </li>
+    <li>
+      <span class="rt"><a href="https://www.planenoise.com/ktrk/">Airport district comment portal</a></span><br>
+      <span class="rd">The district's official channel for noise comments (PlaneNoise). Comments become
+      part of the district's own reporting to its board.</span>
+    </li>
+    <li>
+      <span class="rt"><a href="https://truckeetahoeairport.com/">Truckee Tahoe Airport District</a></span><br>
+      <span class="rd">Operations statistics, board meetings, and the
+      <a href="https://pilots.truckeetahoeairport.com/noise-abatement.html">noise abatement procedures</a>
+      pilots are asked to follow.</span>
+    </li>
+    <li>
+      <span class="rt"><a href="https://www.townoftruckee.gov/DocumentCenter/View/738/Chapter-8---Noise-Element-PDF">Town of Truckee General Plan, Noise Element</a></span><br>
+      <span class="rd">The town's planning framework for noise, including aircraft noise.</span>
+    </li>
   </ul>
 
-  <details>
-    <summary>Full table: all 122 takeoffs and landings</summary>
-    <div class="table-scroll"><table id="fulltable">
-      <thead><tr><th>Date</th><th>Time</th><th>Op</th><th>Aircraft</th><th>Type</th><th>Class</th><th>From / To</th><th>Registered owner</th></tr></thead>
-      <tbody></tbody>
-    </table></div>
-  </details>
-
   <div class="foot">
-    <p><b>Method.</b> ADS-B Exchange historical replay data (half-hour heatmap slices, 11:00–15:30 UTC) parsed for all aircraft within 20 nm of KTRK on each of Aug 1–8, 2026; 110–126 aircraft per morning reduced to those within 13 nm below 20,000 ft; full-day position traces then pulled per aircraft and segmented into ground blocks at the field to derive arrival/departure times, origins and destinations. Aircraft type and ownership from the FAA registry via ADS-B Exchange. Reno-bound airliner traffic and high-altitude enroute overflights excluded. FAA privacy-program enrollment (LADD, PIA) read from the same per-aircraft records. Pipeline code, method notes, and the full derived dataset: <a href="https://github.com/micrui/truckee-flights">github.com/micrui/truckee-flights</a>.</p>
-    <p><b>Caveats.</b> One summer week; winter patterns may differ. ADS-B only: aircraft without transponders (some gliders, older pistons) are invisible, so piston counts are floors. Departure times at the 8:30 window edge are clipped. A 1-minute landing-takeoff pair (e.g. the Gulfstream 650 on Aug 7) may be a touch-and-go or a ground/air flag artifact. Ownership strings are FAA registry entries; LLCs and trusts obscure beneficial owners.</p>
+    <p>Data: ADS-B Exchange public replay archives. Aircraft identity and ownership: FAA registry.
+    Code, method notes, and full datasets: <a href="https://github.com/micrui/truckee-flights">github.com/micrui/truckee-flights</a>.
+    MIT licensed. Corrections welcome via GitHub issues.</p>
   </div>
 </div>
-<div id="tip"></div>
-
-<script>
-const DATA = {"events":[{"date":"2026-08-01","reg":"N310LP","type":"C310","cls":"piston","own":"Isaacs W Bradford","ev":"DEP","hm":"07:39","other":"LOCAL loop","pre7":false},{"date":"2026-08-01","reg":"N338DK","type":"S22T","cls":"piston","own":"Up Top Aviation Llc","ev":"DEP","hm":"07:54","other":"(45.23,-117.95)","pre7":false},{"date":"2026-08-01","reg":"N70977","type":"C182","cls":"piston","own":"Soran Patrick David","ev":"ARR","hm":"07:56","other":"KRTS Reno-Stead","pre7":false},{"date":"2026-08-01","reg":"N68885","type":"GLF6","cls":"jet","own":"A7P Trust Co Inc Trustee","ev":"ARR","hm":"07:59","other":"KMRY Monterey","pre7":false},{"date":"2026-08-01","reg":"N70977","type":"C182","cls":"piston","own":"Soran Patrick David","ev":"DEP","hm":"07:59","other":"LOCAL loop","pre7":false},{"date":"2026-08-01","reg":"N68885","type":"GLF6","cls":"jet","own":"A7P Trust Co Inc Trustee","ev":"DEP","hm":"08:01","other":"LOCAL loop","pre7":false},{"date":"2026-08-01","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"08:10","other":"LOCAL loop","pre7":false},{"date":"2026-08-01","reg":"N945PD","type":"C182","cls":"piston","own":"Hickmott Mark T","ev":"DEP","hm":"08:11","other":"KLVK Livermore","pre7":false},{"date":"2026-08-01","reg":"N310LP","type":"C310","cls":"piston","own":"Isaacs W Bradford","ev":"DEP","hm":"08:14","other":"(35.95,-114.86)","pre7":false},{"date":"2026-08-01","reg":"N313WL","type":"C25A","cls":"jet","own":"Peak Aviation Llc","ev":"ARR","hm":"08:16","other":"KTRK Truckee","pre7":false},{"date":"2026-08-01","reg":"N70977","type":"C182","cls":"piston","own":"Soran Patrick David","ev":"ARR","hm":"08:17","other":"KTRK Truckee","pre7":false},{"date":"2026-08-01","reg":"N861JT","type":"RV12","cls":"piston","own":"Rv Squared Llc","ev":"DEP","hm":"08:19","other":"LOCAL loop","pre7":false},{"date":"2026-08-01","reg":"N953PC","type":"C56X","cls":"jet","own":"Pacific Coast Jet Charter Inc","ev":"ARR","hm":"08:21","other":"KMHR Mather","pre7":false},{"date":"2026-08-01","reg":"N313WL","type":"C25A","cls":"jet","own":"Peak Aviation Llc","ev":"DEP","hm":"08:22","other":"(45.44,-98.41)","pre7":false},{"date":"2026-08-01","reg":"N953PC","type":"C56X","cls":"jet","own":"Pacific Coast Jet Charter Inc","ev":"DEP","hm":"08:23","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N412FF","type":"EPIC","cls":"turboprop","own":"412 Aviation Llc","ev":"DEP","hm":"06:13","other":"KSQL San Carlos","pre7":true},{"date":"2026-08-02","reg":"N330QS","type":"E55P","cls":"jet","own":"","ev":"ARR","hm":"07:12","other":"KLAS Las Vegas","pre7":false},{"date":"2026-08-02","reg":"N115MM","type":"SR22","cls":"piston","own":"Gunner The Red Baron Llc","ev":"ARR","hm":"07:32","other":"KHND Henderson","pre7":false},{"date":"2026-08-02","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"07:36","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"DEP","hm":"07:43","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N221RC","type":"PC12","cls":"turboprop","own":"Btfd Llc","ev":"ARR","hm":"07:51","other":"KCXP Carson City","pre7":false},{"date":"2026-08-02","reg":"N911HX","type":"CC19","cls":"piston","own":"Ccx-2300-0103 Llc","ev":"DEP","hm":"07:53","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N221RC","type":"PC12","cls":"turboprop","own":"Btfd Llc","ev":"DEP","hm":"07:54","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N726BA","type":"B58T","cls":"piston","own":"Crimson Phoenix Llc","ev":"DEP","hm":"08:03","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N395FX","type":"E55P","cls":"jet","own":"Mansefeldt Investment Corp, Galloway Holdings","ev":"DEP","hm":"08:06","other":"KPDX Portland","pre7":false},{"date":"2026-08-02","reg":"N911HZ","type":"HIGH","cls":"piston","own":"Simmons And Associates Inc","ev":"DEP","hm":"08:14","other":"LOCAL loop","pre7":false},{"date":"2026-08-02","reg":"N221RC","type":"PC12","cls":"turboprop","own":"Btfd Llc","ev":"ARR","hm":"08:15","other":"KTRK Truckee","pre7":false},{"date":"2026-08-02","reg":"N221RC","type":"PC12","cls":"turboprop","own":"Btfd Llc","ev":"DEP","hm":"08:20","other":"KOAK Oakland","pre7":false},{"date":"2026-08-02","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"ARR","hm":"08:21","other":"KTRK Truckee","pre7":false},{"date":"2026-08-02","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"08:28","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N797GM","type":"PC12","cls":"turboprop","own":"Swiss Miss Llc, Swiss Made Llc","ev":"ARR","hm":"06:35","other":"KSQL San Carlos","pre7":true},{"date":"2026-08-03","reg":"N797GM","type":"PC12","cls":"turboprop","own":"Swiss Miss Llc, Swiss Made Llc","ev":"DEP","hm":"06:38","other":"LOCAL loop","pre7":true},{"date":"2026-08-03","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"ARR","hm":"06:46","other":"KRNO Reno","pre7":true},{"date":"2026-08-03","reg":"N8144G","type":"P32R","cls":"piston","own":"Distant Horizons Llc","ev":"DEP","hm":"06:47","other":"LOCAL loop","pre7":true},{"date":"2026-08-03","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"DEP","hm":"06:49","other":"LOCAL loop","pre7":true},{"date":"2026-08-03","reg":"N1123V","type":"BE36","cls":"piston","own":"Lizarraga Tony Claude","ev":"DEP","hm":"07:01","other":"KLVK Livermore","pre7":false},{"date":"2026-08-03","reg":"N355FX","type":"E55P","cls":"jet","own":"Flexjet Llc","ev":"DEP","hm":"07:03","other":"KHWD Hayward","pre7":false},{"date":"2026-08-03","reg":"N797GM","type":"PC12","cls":"turboprop","own":"Swiss Miss Llc, Swiss Made Llc","ev":"ARR","hm":"07:12","other":"KTRK Truckee","pre7":false},{"date":"2026-08-03","reg":"N797GM","type":"PC12","cls":"turboprop","own":"Swiss Miss Llc, Swiss Made Llc","ev":"DEP","hm":"07:16","other":"KSQL San Carlos","pre7":false},{"date":"2026-08-03","reg":"N8144G","type":"P32R","cls":"piston","own":"Distant Horizons Llc","ev":"ARR","hm":"07:19","other":"KTRK Truckee","pre7":false},{"date":"2026-08-03","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"DEP","hm":"07:21","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N460NG","type":"PC12","cls":"turboprop","own":"November Golf Management Llc","ev":"ARR","hm":"07:33","other":"KRNO Reno","pre7":false},{"date":"2026-08-03","reg":"N1677C","type":"C180","cls":"piston","own":"Davis Aero Llc","ev":"DEP","hm":"07:36","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"ARR","hm":"07:46","other":"KTRK Truckee","pre7":false},{"date":"2026-08-03","reg":"N2164X","type":"M20P","cls":"piston","own":"Brown Lawrence M, Avilla Loretta C","ev":"DEP","hm":"07:55","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"ARR","hm":"07:56","other":"KTRK Truckee","pre7":false},{"date":"2026-08-03","reg":"N1677C","type":"C180","cls":"piston","own":"Davis Aero Llc","ev":"DEP","hm":"08:00","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"DEP","hm":"08:09","other":"KPAO Palo Alto","pre7":false},{"date":"2026-08-03","reg":"N460NG","type":"PC12","cls":"turboprop","own":"November Golf Management Llc","ev":"DEP","hm":"08:12","other":"(35.68,-120.63)","pre7":false},{"date":"2026-08-03","reg":"N2164X","type":"M20P","cls":"piston","own":"Brown Lawrence M, Avilla Loretta C","ev":"ARR","hm":"08:12","other":"KTRK Truckee","pre7":false},{"date":"2026-08-03","reg":"N503FX","type":"CL35","cls":"jet","own":"Kc Trvl Llc, Herbert Lawrence, Cjet Llc, Mcge","ev":"DEP","hm":"08:13","other":"(42.00,-87.91)","pre7":false},{"date":"2026-08-03","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"DEP","hm":"08:14","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N922PB","type":"PC12","cls":"turboprop","own":"Great Basin Advisors Llc, West Shore Iron Llc","ev":"DEP","hm":"08:15","other":"KPAO Palo Alto","pre7":false},{"date":"2026-08-03","reg":"N5479N","type":"C182","cls":"piston","own":"Tahoe Flying Club Inc","ev":"DEP","hm":"08:18","other":"LOCAL loop","pre7":false},{"date":"2026-08-03","reg":"N2164X","type":"M20P","cls":"piston","own":"Brown Lawrence M, Avilla Loretta C","ev":"DEP","hm":"08:19","other":"KSJC San Jose","pre7":false},{"date":"2026-08-03","reg":"N926ET","type":"T206","cls":"piston","own":"Western Farming Llc","ev":"DEP","hm":"08:21","other":"(37.55,-121.16)","pre7":false},{"date":"2026-08-04","reg":"N9311P","type":"T206","cls":"piston","own":"Jjjfgt Capital Holdings Llc","ev":"DEP","hm":"07:47","other":"LOCAL loop","pre7":false},{"date":"2026-08-04","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"DEP","hm":"07:50","other":"LOCAL loop","pre7":false},{"date":"2026-08-04","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"ARR","hm":"08:03","other":"KTRK Truckee","pre7":false},{"date":"2026-08-04","reg":"N7487Z","type":"PA25","cls":"piston","own":"Truckee Tahoe Soaring Assoc","ev":"DEP","hm":"08:08","other":"LOCAL loop","pre7":false},{"date":"2026-08-04","reg":"N219RS","type":"S22T","cls":"piston","own":"Castle Peak Leasing Llc","ev":"DEP","hm":"08:09","other":"KCCR Concord","pre7":false},{"date":"2026-08-04","reg":"N573QS","type":"C56X","cls":"jet","own":"Netjets Sales Inc","ev":"ARR","hm":"08:11","other":"KSFO San Francisco","pre7":false},{"date":"2026-08-04","reg":"N411RC","type":"S22T","cls":"piston","own":"Lola Aviation Llc","ev":"DEP","hm":"08:11","other":"KCCR Concord","pre7":false},{"date":"2026-08-04","reg":"N573QS","type":"C56X","cls":"jet","own":"Netjets Sales Inc","ev":"DEP","hm":"08:13","other":"LOCAL loop","pre7":false},{"date":"2026-08-04","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"08:22","other":"LOCAL loop","pre7":false},{"date":"2026-08-04","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"ARR","hm":"08:22","other":"KTRK Truckee","pre7":false},{"date":"2026-08-05","reg":"N374PM","type":"PC12","cls":"turboprop","own":"Mclean Air Llc","ev":"ARR","hm":"07:12","other":"(38.51,-122.81)","pre7":false},{"date":"2026-08-05","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"DEP","hm":"07:18","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N374PM","type":"PC12","cls":"turboprop","own":"Mclean Air Llc","ev":"DEP","hm":"07:20","other":"KSQL San Carlos","pre7":false},{"date":"2026-08-05","reg":"N481AM","type":"C25C","cls":"jet","own":"Ravencrest Llc","ev":"DEP","hm":"07:29","other":"(35.62,-106.09)","pre7":false},{"date":"2026-08-05","reg":"N94ML","type":"E55P","cls":"jet","own":"Quarry Village Realty Llc","ev":"DEP","hm":"07:37","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"07:38","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"DEP","hm":"07:55","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N7516Z","type":"PA25","cls":"piston","own":"Truckee Tahoe Soaring Assoc","ev":"DEP","hm":"08:04","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N285JS","type":"C172","cls":"piston","own":"Flytruckeetahoe Inc","ev":"DEP","hm":"08:09","other":"LOCAL loop","pre7":false},{"date":"2026-08-05","reg":"N922PB","type":"PC12","cls":"turboprop","own":"Great Basin Advisors Llc, West Shore Iron Llc","ev":"DEP","hm":"08:13","other":"KMHR Mather","pre7":false},{"date":"2026-08-05","reg":"N94ML","type":"E55P","cls":"jet","own":"Quarry Village Realty Llc","ev":"DEP","hm":"08:25","other":"(39.56,-104.85)","pre7":false},{"date":"2026-08-05","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"ARR","hm":"08:29","other":"KTRK Truckee","pre7":false},{"date":"2026-08-06","reg":"N586AT","type":"PC12","cls":"turboprop","own":"Hesswinds Llc","ev":"DEP","hm":"06:16","other":"(33.62,-111.92)","pre7":true},{"date":"2026-08-06","reg":"N691DK","type":"PC12","cls":"turboprop","own":"D Force 2 Llc","ev":"ARR","hm":"06:39","other":"KMOD Modesto","pre7":true},{"date":"2026-08-06","reg":"N691DK","type":"PC12","cls":"turboprop","own":"D Force 2 Llc","ev":"DEP","hm":"06:41","other":"LOCAL loop","pre7":true},{"date":"2026-08-06","reg":"N999FN","type":"EPIC","cls":"turboprop","own":"Wing Air Llc","ev":"ARR","hm":"06:42","other":"KCCR Concord","pre7":true},{"date":"2026-08-06","reg":"N999FN","type":"EPIC","cls":"turboprop","own":"Wing Air Llc","ev":"DEP","hm":"06:44","other":"LOCAL loop","pre7":true},{"date":"2026-08-06","reg":"N989RS","type":"C25B","cls":"jet","own":"Lucky Devil Llc","ev":"ARR","hm":"07:20","other":"KMEV Minden","pre7":false},{"date":"2026-08-06","reg":"N989RS","type":"C25B","cls":"jet","own":"Lucky Devil Llc","ev":"DEP","hm":"07:26","other":"LOCAL loop","pre7":false},{"date":"2026-08-06","reg":"N900KP","type":"PC24","cls":"jet","own":"Tobarths Llc","ev":"DEP","hm":"07:30","other":"KBOI Boise","pre7":false},{"date":"2026-08-06","reg":"N294NG","type":"PC12","cls":"turboprop","own":"Mjj Capital Management Inc, Oneill Beverages ","ev":"ARR","hm":"07:40","other":"(38.14,-122.56)","pre7":false},{"date":"2026-08-06","reg":"N294NG","type":"PC12","cls":"turboprop","own":"Mjj Capital Management Inc, Oneill Beverages ","ev":"DEP","hm":"07:42","other":"LOCAL loop","pre7":false},{"date":"2026-08-06","reg":"N691DK","type":"PC12","cls":"turboprop","own":"D Force 2 Llc","ev":"ARR","hm":"07:46","other":"KTRK Truckee","pre7":false},{"date":"2026-08-06","reg":"N999FN","type":"EPIC","cls":"turboprop","own":"Wing Air Llc","ev":"ARR","hm":"07:48","other":"KTRK Truckee","pre7":false},{"date":"2026-08-06","reg":"N8647W","type":"P28B","cls":"piston","own":"Chase Dan","ev":"DEP","hm":"07:55","other":"LOCAL loop","pre7":false},{"date":"2026-08-06","reg":"N691DK","type":"PC12","cls":"turboprop","own":"D Force 2 Llc","ev":"DEP","hm":"07:59","other":"KOAK Oakland","pre7":false},{"date":"2026-08-06","reg":"N999FN","type":"EPIC","cls":"turboprop","own":"Wing Air Llc","ev":"DEP","hm":"07:59","other":"KPAO Palo Alto","pre7":false},{"date":"2026-08-06","reg":"N294NG","type":"PC12","cls":"turboprop","own":"Mjj Capital Management Inc, Oneill Beverages ","ev":"ARR","hm":"08:03","other":"KTRK Truckee","pre7":false},{"date":"2026-08-06","reg":"N646QS","type":"C68A","cls":"jet","own":"","ev":"ARR","hm":"08:22","other":"KRNO Reno","pre7":false},{"date":"2026-08-06","reg":"N989RS","type":"C25B","cls":"jet","own":"Lucky Devil Llc","ev":"ARR","hm":"08:22","other":"KTRK Truckee","pre7":false},{"date":"2026-08-06","reg":"N294NG","type":"PC12","cls":"turboprop","own":"Mjj Capital Management Inc, Oneill Beverages ","ev":"DEP","hm":"08:27","other":"(38.15,-122.56)","pre7":false},{"date":"2026-08-06","reg":"N840QS","type":"C700","cls":"jet","own":"","ev":"DEP","hm":"08:29","other":"KJAC Jackson Hole","pre7":false},{"date":"2026-08-07","reg":"N9311P","type":"T206","cls":"piston","own":"Jjjfgt Capital Holdings Llc","ev":"DEP","hm":"07:12","other":"KSQL San Carlos","pre7":false},{"date":"2026-08-07","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"DEP","hm":"07:12","other":"LOCAL loop","pre7":false},{"date":"2026-08-07","reg":"N850TS","type":"TBM8","cls":"turboprop","own":"Western Farming Llc","ev":"DEP","hm":"07:19","other":"(44.51,-114.31)","pre7":false},{"date":"2026-08-07","reg":"N301EB","type":"T210","cls":"piston","own":"Quesnel William G","ev":"DEP","hm":"07:21","other":"LOCAL loop","pre7":false},{"date":"2026-08-07","reg":"N68885","type":"GLF6","cls":"jet","own":"A7P Trust Co Inc Trustee","ev":"ARR","hm":"07:37","other":"KPAO Palo Alto","pre7":false},{"date":"2026-08-07","reg":"N909MV","type":"LJ45","cls":"jet","own":"Xcel Jet Management Inc","ev":"DEP","hm":"07:38","other":"LOCAL loop","pre7":false},{"date":"2026-08-07","reg":"N68885","type":"GLF6","cls":"jet","own":"A7P Trust Co Inc Trustee","ev":"DEP","hm":"07:38","other":"LOCAL loop","pre7":false},{"date":"2026-08-07","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"ARR","hm":"07:39","other":"KRNO Reno","pre7":false},{"date":"2026-08-07","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"DEP","hm":"07:44","other":"LOCAL loop","pre7":false},{"date":"2026-08-07","reg":"N192QS","type":"GL7T","cls":"jet","own":"","ev":"DEP","hm":"07:53","other":"KHHR Hawthorne","pre7":false},{"date":"2026-08-07","reg":"N665CC","type":"CC11","cls":"piston","own":"43Kb Llc","ev":"ARR","hm":"08:07","other":"KTRK Truckee","pre7":false},{"date":"2026-08-07","reg":"N336FX","type":"E545","cls":"jet","own":"Ranger Streams Llc, American West Investment ","ev":"ARR","hm":"08:28","other":"(35.43,-119.05)","pre7":false},{"date":"2026-08-07","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","ev":"ARR","hm":"08:28","other":"KTRK Truckee","pre7":false},{"date":"2026-08-07","reg":"N861JT","type":"RV12","cls":"piston","own":"Rv Squared Llc","ev":"DEP","hm":"08:29","other":"LOCAL loop","pre7":false},{"date":"2026-08-08","reg":"N901CF","type":"AS50","cls":"helicopter","own":"Regional Emergency Medical Services Authority","ev":"ARR","hm":"05:12","other":"KTRK Truckee","pre7":true},{"date":"2026-08-08","reg":"N708J","type":"RV8","cls":"piston","own":"Jacobsen Samuel J","ev":"DEP","hm":"07:09","other":"LOCAL loop","pre7":false},{"date":"2026-08-08","reg":"N9110H","type":"C172","cls":"piston","own":"Sierra Aero Llc","ev":"DEP","hm":"07:32","other":"LOCAL loop","pre7":false},{"date":"2026-08-08","reg":"N608QS","type":"C68A","cls":"jet","own":"","ev":"DEP","hm":"07:41","other":"KJAC Jackson Hole","pre7":false},{"date":"2026-08-08","reg":"N726BA","type":"B58T","cls":"piston","own":"Crimson Phoenix Llc","ev":"DEP","hm":"07:47","other":"(42.06,-111.79)","pre7":false},{"date":"2026-08-08","reg":"N460NG","type":"PC12","cls":"turboprop","own":"November Golf Management Llc","ev":"DEP","hm":"08:09","other":"KPAO Palo Alto","pre7":false},{"date":"2026-08-08","reg":"N917JG","type":"PC12","cls":"turboprop","own":"Pacific Crest Air Llc","ev":"ARR","hm":"08:17","other":"KMOD Modesto","pre7":false},{"date":"2026-08-08","reg":"N901CF","type":"AS50","cls":"helicopter","own":"Regional Emergency Medical Services Authority","ev":"DEP","hm":"08:19","other":"(39.60,-120.73)","pre7":false},{"date":"2026-08-08","reg":"N917JG","type":"PC12","cls":"turboprop","own":"Pacific Crest Air Llc","ev":"DEP","hm":"08:20","other":"LOCAL loop","pre7":false},{"date":"2026-08-08","reg":"N317DC","type":"RV8","cls":"piston","own":"Ramsey Beau A","ev":"DEP","hm":"08:29","other":"KRTS Reno-Stead","pre7":false}],"airborne_pre7":[{"date":"2026-08-01","reg":"N305JC","type":"M20P","cls":"piston","own":"Accurate Aero Llc","first":"06:28","last":"06:32","min_alt":10400},{"date":"2026-08-01","reg":"N74527","type":"M20P","cls":"piston","own":"White Jesse J, White Katherine J","first":"06:43","last":"06:50","min_alt":9300},{"date":"2026-08-01","reg":"N9666V","type":"C172","cls":"piston","own":"Media Stew Llc","first":"06:47","last":"06:57","min_alt":10150},{"date":"2026-08-02","reg":"N557PC","type":"PC12","cls":"turboprop","own":"Tvpx Aircraft Solutions Inc Trustee","first":"05:58","last":"06:01","min_alt":10475},{"date":"2026-08-02","reg":"N412FF","type":"EPIC","cls":"turboprop","own":"412 Aviation Llc","first":"06:13","last":"06:16","min_alt":5575},{"date":"2026-08-02","reg":"N68CE","type":"T206","cls":"piston","own":"Ebright Inc","first":"06:13","last":"06:22","min_alt":10375},{"date":"2026-08-03","reg":"N797GM","type":"PC12","cls":"turboprop","own":"Swiss Miss Llc, Swiss Made Llc","first":"06:31","last":"06:35","min_alt":5625},{"date":"2026-08-03","reg":"N8144G","type":"P32R","cls":"piston","own":"Distant Horizons Llc","first":"06:47","last":"06:59","min_alt":5625},{"date":"2026-08-03","reg":"N281EB","type":"PC24","cls":"jet","own":"Tvpx Aircraft Solutions Inc Trustee","first":"06:40","last":"06:46","min_alt":5625},{"date":"2026-08-05","reg":"N1959C","type":"C182","cls":"piston","own":"Tisdale Anthony","first":"06:26","last":"06:33","min_alt":10350},{"date":"2026-08-05","reg":"N65DW","type":"C180","cls":"piston","own":"North Stream Capital Llc","first":"06:47","last":"06:52","min_alt":10100},{"date":"2026-08-06","reg":"N586AT","type":"PC12","cls":"turboprop","own":"Hesswinds Llc","first":"06:16","last":"06:22","min_alt":5550},{"date":"2026-08-06","reg":"N1071Y","type":"M20P","cls":"piston","own":"Breaux John Jr","first":"06:30","last":"06:37","min_alt":8300},{"date":"2026-08-06","reg":"N691DK","type":"PC12","cls":"turboprop","own":"D Force 2 Llc","first":"06:35","last":"06:39","min_alt":5525},{"date":"2026-08-06","reg":"N999FN","type":"EPIC","cls":"turboprop","own":"Wing Air Llc","first":"06:38","last":"06:42","min_alt":5525},{"date":"2026-08-06","reg":"N406AP","type":"B407","cls":"helicopter","own":"A&P Helicopters Inc","first":"06:47","last":"06:52","min_alt":5700},{"date":"2026-08-07","reg":"N567W","type":"BE9L","cls":"turboprop","own":"Refrigeration Supplies Distributor","first":"06:45","last":"06:50","min_alt":11975},{"date":"2026-08-08","reg":"N901CF","type":"AS50","cls":"helicopter","own":"Regional Emergency Medical Services Authority","first":"05:06","last":"05:12","min_alt":5500},{"date":"2026-08-08","reg":"N752DW","type":"C172","cls":"piston","own":"Flying Start Aero Services Llc","first":"06:42","last":"06:53","min_alt":9600}]};
-
-const COLORS = { jet: "var(--jet)", turboprop: "var(--tprop)", piston: "var(--piston)", helicopter: "var(--heli)" };
-const DAYS = ["2026-08-01","2026-08-02","2026-08-03","2026-08-04","2026-08-05","2026-08-06","2026-08-07","2026-08-08"];
-const DAYLBL = ["Fri Aug 1","Sat Aug 2","Sun Aug 3","Mon Aug 4","Tue Aug 5","Wed Aug 6","Thu Aug 7","Fri Aug 8"];
-
-const M = { l: 86, r: 18, t: 26, b: 34 };
-const W = 880, H = 460;
-const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
-const rowH = plotH / DAYS.length;
-const T0 = 4 * 60, T1 = 8.5 * 60;
-
-function xOf(hm) {
-  const [h, m] = hm.split(":").map(Number);
-  return M.l + ((h * 60 + m) - T0) / (T1 - T0) * plotW;
-}
-const yOf = di => M.t + di * rowH + rowH / 2;
-
-const svg = document.getElementById("chart");
-const NS = "http://www.w3.org/2000/svg";
-function el(name, attrs, parent) {
-  const e = document.createElementNS(NS, name);
-  for (const k in attrs) e.setAttribute(k, attrs[k]);
-  (parent || svg).appendChild(e);
-  return e;
-}
-
-// gridlines: every 30 min, hour lines slightly stronger labels
-for (let t = T0; t <= T1; t += 30) {
-  const x = M.l + (t - T0) / (T1 - T0) * plotW;
-  el("line", { x1: x, y1: M.t, x2: x, y2: M.t + plotH, stroke: "var(--grid)", "stroke-width": 1 });
-  if (t % 60 === 0) {
-    el("text", { x, y: H - 12, "text-anchor": "middle", fill: "var(--muted)", "font-size": 11.5,
-      "font-family": "ui-monospace, SF Mono, Menlo, monospace" }).textContent =
-      (t / 60 < 10 ? "0" : "") + (t / 60) + ":00";
-  }
-}
-// row separators + day labels
-DAYS.forEach((d, i) => {
-  if (i > 0) el("line", { x1: M.l, y1: M.t + i * rowH, x2: M.l + plotW, y2: M.t + i * rowH, stroke: "var(--grid)", "stroke-width": 1, "stroke-dasharray": "1 3" });
-  el("text", { x: M.l - 10, y: yOf(i) + 4, "text-anchor": "end", fill: "var(--ink-2)", "font-size": 12.5 }).textContent = DAYLBL[i];
-});
-el("line", { x1: M.l, y1: M.t + plotH, x2: M.l + plotW, y2: M.t + plotH, stroke: "var(--axis)", "stroke-width": 1 });
-
-// curfew line at 07:00
-const cx = xOf("07:00");
-el("line", { x1: cx, y1: M.t - 6, x2: cx, y2: M.t + plotH, stroke: "var(--curfew)", "stroke-width": 1.5, "stroke-dasharray": "5 4" });
-el("text", { x: cx, y: M.t - 12, "text-anchor": "middle", fill: "var(--ink)", "font-size": 11.5, "font-weight": 650 }).textContent = "voluntary curfew ends 07:00";
-
-// collision nudge: within a day, marks closer than 8 px get stacked offsets
-function layout(items) {
-  const placed = [];
-  items.sort((a, b) => a.x - b.x);
-  for (const it of items) {
-    let lane = 0;
-    const taken = new Set(placed.filter(p => Math.abs(p.x - it.x) < 9).map(p => p.lane));
-    while (taken.has(lane)) lane++;
-    it.lane = lane;
-    placed.push(it);
-  }
-  for (const it of items) {
-    const dir = it.lane % 2 === 1 ? 1 : -1;
-    it.y += dir * Math.ceil(it.lane / 2) * 11;
-  }
-}
-
-const tip = document.getElementById("tip");
-function showTip(evn, html) {
-  tip.innerHTML = html;
-  tip.style.display = "block";
-  const pad = 14;
-  let x = evn.clientX + pad, y = evn.clientY + pad;
-  const r = tip.getBoundingClientRect();
-  if (x + r.width > innerWidth - 8) x = evn.clientX - r.width - pad;
-  if (y + r.height > innerHeight - 8) y = evn.clientY - r.height - pad;
-  tip.style.left = x + "px"; tip.style.top = y + "px";
-}
-function hideTip() { tip.style.display = "none"; }
-
-const marks = [];
-for (const e of DATA.events) {
-  const di = DAYS.indexOf(e.date);
-  if (di < 0) continue;
-  marks.push({ x: xOf(e.hm), y: yOf(di), day: di, kind: e.ev, e });
-}
-for (const a of DATA.airborne_pre7) {
-  const di = DAYS.indexOf(a.date);
-  if (di < 0) continue;
-  marks.push({ x: xOf(a.first), y: yOf(di), day: di, kind: "OVF", e: a });
-}
-for (let i = 0; i < DAYS.length; i++) layout(marks.filter(m => m.day === i));
-
-for (const m of marks) {
-  const g = el("g", { cursor: "default" });
-  let shape;
-  if (m.kind === "OVF") {
-    shape = el("circle", { cx: m.x, cy: m.y, r: 3.5, fill: "none", stroke: "var(--muted)", "stroke-width": 1.6 }, g);
-  } else if (m.kind === "ARR") {
-    shape = el("circle", { cx: m.x, cy: m.y, r: 5, fill: COLORS[m.e.cls] || "var(--muted)", stroke: "var(--surface)", "stroke-width": 2 }, g);
-  } else {
-    const s = 6;
-    shape = el("path", { d: `M ${m.x} ${m.y - s} L ${m.x + s * 0.9} ${m.y + s * 0.75} L ${m.x - s * 0.9} ${m.y + s * 0.75} Z`,
-      fill: COLORS[m.e.cls] || "var(--muted)", stroke: "var(--surface)", "stroke-width": 2 }, g);
-  }
-  el("circle", { cx: m.x, cy: m.y, r: 11, fill: "transparent" }, g); // hit target
-  const e = m.e;
-  const html = m.kind === "OVF"
-    ? `<div class="t1">${e.reg} · ${e.type}</div>
-       <div class="t2">overflight ${e.first}–${e.last}, no landing · min ${e.min_alt.toLocaleString()} ft above sea level</div>
-       <div class="t3">${e.own || ""}</div>`
-    : `<div class="t1">${e.reg} · ${e.type} · ${e.cls}</div>
-       <div class="t2">${e.ev === "ARR" ? "landed" : "departed"} ${e.hm} · ${e.ev === "ARR" ? "from" : "to"} ${e.other}</div>
-       <div class="t3">${e.own || ""}</div>`;
-  g.addEventListener("pointermove", ev => showTip(ev, html));
-  g.addEventListener("pointerleave", hideTip);
-}
-
-// medevac annotation
-const med = marks.find(m => m.e.reg === "N901CF" && m.kind === "ARR");
-if (med) {
-  el("text", { x: med.x + 10, y: med.y + 4, fill: "var(--muted)", "font-size": 11 }).textContent = "air ambulance, 05:12";
-}
-
-// tables
-function fillTable(id, rows) {
-  const tb = document.querySelector(id + " tbody");
-  for (const e of rows) {
-    const tr = document.createElement("tr");
-    tr.innerHTML =
-      `<td class="mono">${e.date.slice(5)}</td><td class="mono num">${e.hm}</td>` +
-      `<td>${e.ev === "ARR" ? "Land" : "Depart"}</td>` +
-      `<td class="mono"><span class="chip" style="background:${COLORS[e.cls] || "var(--muted)"}"></span>${e.reg}</td>` +
-      `<td class="mono">${e.type}</td><td>${e.cls}</td><td>${e.other}</td><td>${e.own || ""}</td>`;
-    tb.appendChild(tr);
-  }
-}
-fillTable("#pre7table", DATA.events.filter(e => e.pre7));
-fillTable("#fulltable", DATA.events);
-</script>
