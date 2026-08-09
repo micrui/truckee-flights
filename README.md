@@ -12,9 +12,9 @@ Aircraft broadcast their positions publicly over ADS-B, so most factual claims a
 |---|---|
 | `pipeline.py` | Rebuilds an operations log for any date range from ADS-B Exchange public replay data. Python 3.9+, standard library only, no API key. Works for any airport by editing the configuration block. |
 | `summarize.py` | Reduces pipeline output to discrete arrival and departure events and per-aircraft records, including FAA privacy-program flags. |
-| `weekly.py` | Collects the most recent complete week and rebuilds the weekly log page. Runs every Monday via GitHub Actions (`.github/workflows/weekly.yml`); can also be run by hand. |
+| `weekly.py` | Collects the most recent complete week and rebuilds the quiet-hours flight log. Runs every Monday via GitHub Actions (`.github/workflows/weekly.yml`); can also be run by hand. |
 | `data/` | Derived datasets for completed studies, committed so findings are checkable without rerunning anything. |
-| `docs/` | The public site, served at [micrui.github.io/truckee-flights](https://micrui.github.io/truckee-flights/): landing page, [weekly flight log](https://micrui.github.io/truckee-flights/weekly.html), and study reports. |
+| `docs/` | The public site, served at [micrui.github.io/truckee-flights](https://micrui.github.io/truckee-flights/): landing page, [quiet-hours flight log](https://micrui.github.io/truckee-flights/quiet-hours.html), and study reports. |
 | `METHOD.md` | Data formats, algorithms, validation, and known limits. |
 
 ## Study 1: early-morning operations, August 1 to 8, 2026
@@ -33,9 +33,9 @@ Summary of what the data shows for those 8 mornings, 4:00 to 8:30 am PDT:
 
 Scope notes: one summer week; ADS-B-equipped aircraft only, so light-aircraft counts are floors; this study does not measure sound and cannot test multi-year traffic trends. The district's five-year operations summaries (roughly 55 percent piston, 17 percent jet per [staff reports to the board](https://citizenportal.ai/articles/6669375/california/nevada-county/truckee-town/California/Board-schedules-noise-deep-dive-hears-traffic-and-complaint-statistics-community-calls-for-easier-complaint-process)) are the source for long-run mix and trend questions.
 
-## Ongoing: weekly flight log
+## Ongoing: quiet-hours flight log
 
-A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [weekly log](https://micrui.github.io/truckee-flights/weekly.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). The monitored window is 4:00 to 8:30 am; late-evening quiet hours are not yet covered.
+A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [quiet-hours flight log](https://micrui.github.io/truckee-flights/quiet-hours.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). The monitored window is 4:00 to 8:30 am; late-evening quiet hours are not yet covered.
 
 ## Reproducing
 

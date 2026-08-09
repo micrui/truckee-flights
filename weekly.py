@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Weekly collection: run the pipeline for a week of mornings, record every
-takeoff and landing in the early-morning window, and regenerate the weekly
-log page (docs/weekly.html).
+takeoff and landing in the early-morning window, and regenerate the
+quiet-hours flight log (docs/quiet-hours.html).
 
 Default (no arguments): process the most recent complete Monday-to-Sunday
 week. This is what the scheduled GitHub Action runs every Monday.
@@ -97,7 +97,7 @@ def render():
   </details>''')
 
     page = f'''<meta charset="utf-8">
-<title>truckee-flights: weekly log</title>
+<title>truckee-flights: quiet-hours flight log</title>
 <style>
   :root {{
     color-scheme: light;
@@ -145,8 +145,8 @@ def render():
   .foot {{ margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }}
 </style>
 <div class="wrap">
-  <p class="eyebrow"><a href="./">truckee-flights</a> · weekly log</p>
-  <h1>Weekly flight log</h1>
+  <p class="eyebrow"><a href="./">truckee-flights</a> · quiet-hours flight log</p>
+  <h1>Quiet-hours flight log</h1>
   <p class="standfirst">
     Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
     (4:00 to 8:30 am), collected weekly from public flight-tracking data. The monitored window
@@ -174,8 +174,8 @@ def render():
   </div>
 </div>
 '''
-    open("docs/weekly.html", "w").write(page)
-    print(f"rendered docs/weekly.html with {len(weeks)} week(s)")
+    open("docs/quiet-hours.html", "w").write(page)
+    print(f"rendered docs/quiet-hours.html with {len(weeks)} week(s)")
 
 
 if __name__ == "__main__":

@@ -18,13 +18,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Collect last week and rebuild the log page
+      - name: Collect last week and rebuild the quiet-hours log
         run: python3 weekly.py
 
       - name: Commit results
         run: |
           git config user.name "truckee-flights weekly job"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/weekly docs/weekly.html
+          git add data/weekly docs/quiet-hours.html
           git diff --cached --quiet || git commit -m "Weekly log: $(date -u +%F)"
           git push
