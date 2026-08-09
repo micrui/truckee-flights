@@ -1,0 +1,172 @@
+<meta charset="utf-8">
+<title>truckee-flights: accidents and risk</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; margin: 0; padding: 48px 20px 72px; }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow a { color: inherit; }
+  h1 { font-size: clamp(26px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .standfirst { font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 30px; }
+  h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 40px 0 8px; }
+  p { max-width: 70ch; font-size: 15px; margin: 0 0 12px; }
+  p q, li q { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 10px 0 6px; }
+  th { text-align: left; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--axis); }
+  th.num, td.num { text-align: right; }
+  td { padding: 5px 10px 5px 0; border-bottom: 1px solid var(--grid); vertical-align: top; font-variant-numeric: tabular-nums; }
+  .src { font-size: 12px; color: var(--muted); margin: 4px 0 0; max-width: 70ch; }
+  .src a { color: var(--muted); }
+  .table-scroll { overflow-x: auto; }
+  details { margin: 10px 0; }
+  summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2); }
+  a { color: var(--accent); }
+  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
+  ul { max-width: 70ch; font-size: 15px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+</style>
+<div class="wrap">
+  <p class="eyebrow"><a href="./">truckee-flights</a> · accidents and risk</p>
+  <h1>Accidents and risk at the airport</h1>
+  <p class="standfirst">
+    The documented accident record at Truckee Tahoe Airport, the physical setting that shapes it, the
+    district&rsquo;s own decisions about it, and what living near a runway end actually means in the state&rsquo;s
+    own risk framework. Assembled from NTSB records, FAA publications, and district documents before the
+    subject becomes an argument. This page characterizes no flight and no fear; it reports.
+  </p>
+
+  <h2>The record: sixty years</h2>
+  <p>The NTSB has investigated <b>148 events</b> at or near Truckee since its public records begin (1964):
+  146 accidents and 2 incidents, including <b>32 fatal accidents</b> and <b>71 deaths</b>. The pattern by
+  decade tracks the national improvement in general aviation safety, until the current decade:</p>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Decade</th><th class="num">Fatal accidents</th><th class="num">Deaths</th><th class="num">All events</th></tr></thead>
+    <tbody>
+      <tr><td>1960s (from 1964)</td><td class="num">4</td><td class="num">7</td><td class="num">15</td></tr>
+      <tr><td>1970s</td><td class="num">4</td><td class="num">9</td><td class="num">22</td></tr>
+      <tr><td>1980s</td><td class="num">9</td><td class="num">17</td><td class="num">28</td></tr>
+      <tr><td>1990s</td><td class="num">6</td><td class="num">20</td><td class="num">33</td></tr>
+      <tr><td>2000s</td><td class="num">2</td><td class="num">3</td><td class="num">21</td></tr>
+      <tr><td>2010s</td><td class="num">4</td><td class="num">6</td><td class="num">21</td></tr>
+      <tr><td>2020s, through mid-2026</td><td class="num">3</td><td class="num">9</td><td class="num">4</td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">Source: <a href="https://data.ntsb.gov/carol-main-public/basic-search">NTSB CAROL database</a> (city: Truckee) and the
+  <a href="https://data.ntsb.gov/avdata">NTSB pre-1982 archive</a>. A 2026 fatal crash near Olympic Valley, en route to Truckee, is additional to these counts.</p>
+  <details>
+    <summary>All 32 fatal accidents, 1964&ndash;2024</summary>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Date</th><th>Aircraft</th><th>Phase</th><th class="num">Deaths</th><th>NTSB finding, condensed</th></tr></thead>
+      <tbody><tr><td class="num">1964-06-25</td><td>Grumman F7F air tanker</td><td>retardant run</td><td class="num">1</td><td>struck trees; misjudged clearance; pilot impairment</td></tr><tr><td class="num">1968-08-16</td><td>Beech N35</td><td>cruise</td><td class="num">2</td><td>stall; improper IFR operation, known equipment deficiencies</td></tr><tr><td class="num">1969-06-17</td><td>Cessna 180</td><td>descent</td><td class="num">1</td><td>continued VFR into adverse weather; struck trees</td></tr><tr><td class="num">1969-09-14</td><td>Cessna 177</td><td>in flight</td><td class="num">3</td><td>struck trees; misjudged altitude and clearance</td></tr><tr><td class="num">1975-09-04</td><td>Mooney M20G</td><td>takeoff</td><td class="num">3</td><td>engine malfunction, then stall</td></tr><tr><td class="num">1977-07-18</td><td>Piper PA-28</td><td>climb</td><td class="num">1</td><td>engine failure; struck trees</td></tr><tr><td class="num">1978-11-01</td><td>Bellanca 8KCAB</td><td>low aerobatics</td><td class="num">2</td><td>collision with ground; misjudged altitude</td></tr><tr><td class="num">1979-01-09</td><td>Cessna 182Q</td><td>initial climb</td><td class="num">3</td><td>stall; airframe ice</td></tr><tr><td class="num">1980-08-15</td><td>Cessna T210</td><td>descent</td><td class="num">4</td><td>controlled collision with ground</td></tr><tr><td class="num">1980-12-20</td><td>Citabria 7KCAB</td><td>aerobatics</td><td class="num">1</td><td>collision with ground; poor judgment</td></tr><tr><td class="num">1981-02-13</td><td>Piper PA-28</td><td>descent</td><td class="num">4</td><td>flown beyond experience; airframe ice</td></tr><tr><td class="num">1981-02-19</td><td>Cessna 182M</td><td>landing</td><td class="num">2</td><td>overshoot; wrong runway for the wind</td></tr><tr><td class="num">1982-02-21</td><td>Piper PA-28</td><td>night cruise</td><td class="num">1</td><td>VFR into weather at night; spatial disorientation</td></tr><tr><td class="num">1982-05-31</td><td>Cessna 182</td><td>go-around</td><td class="num">1</td><td>delayed go-around; high density altitude, high wind</td></tr><tr><td class="num">1982-06-13</td><td>Cessna 182</td><td>night cruise</td><td class="num">2</td><td>spatial disorientation, dark night, mountainous terrain</td></tr><tr><td class="num">1988-06-28</td><td>Minicoupe</td><td>low aerobatics</td><td class="num">1</td><td>improper maneuver; ostentatious display cited</td></tr><tr><td class="num">1989-01-25</td><td>Mooney M20F</td><td>night initial climb</td><td class="num">1</td><td>known fuel-system deficiency; power loss, stall</td></tr><tr><td class="num">1990-06-04</td><td>Schweizer 1-26B glider</td><td>after tow release</td><td class="num">1</td><td>released too low on the lee side of the mountains</td></tr><tr><td class="num">1993-02-10</td><td>Cessna 414</td><td>departure in IMC</td><td class="num">4</td><td>IFR procedures not followed; overweight; struck tree ~1 mi out in residential area</td></tr><tr><td class="num">1993-02-15</td><td>Piper PA-32</td><td>en route</td><td class="num">4</td><td>continued VFR into instrument conditions</td></tr><tr><td class="num">1993-12-25</td><td>Cessna 150G</td><td>low over Brockway Summit</td><td class="num">2</td><td>pilot impairment; failed to clear terrain and power line</td></tr><tr><td class="num">1994-09-05</td><td>Cessna 172RG</td><td>takeoff climb</td><td class="num">4</td><td>stall after takeoff; high density altitude, overweight</td></tr><tr><td class="num">1997-05-11</td><td>Beech A36TC</td><td>takeoff turnback at dusk</td><td class="num">5</td><td>terrain clearance lost in turnback; density altitude, disorientation</td></tr><tr><td class="num">2003-07-04</td><td>Globe Swift</td><td>takeoff</td><td class="num">1</td><td>excessive pitch-up, stall; high density altitude</td></tr><tr><td class="num">2005-12-28</td><td>Learjet 35A</td><td>circling, low base-to-final</td><td class="num">2</td><td>gusty crosswind; airspeed lost in steep low turn; down 1/3 mi from the threshold</td></tr><tr><td class="num">2010-06-17</td><td>Van's RV-8</td><td>base-to-final turn</td><td class="num">2</td><td>stall in steep turn to final</td></tr><tr><td class="num">2012-08-02</td><td>Piper PA-24</td><td>initial climb</td><td class="num">1</td><td>control lost; prescription-drug impairment; struck unoccupied hangar</td></tr><tr><td class="num">2014-03-03</td><td>Piper PA-46</td><td>missed approach in IMC</td><td class="num">1</td><td>missed approach improperly flown; instrument proficiency</td></tr><tr><td class="num">2018-07-17</td><td>Ryan Navion</td><td>turnback after power loss</td><td class="num">2</td><td>engine power lost, cause undetermined; upsloping terrain</td></tr><tr><td class="num">2021-06-15</td><td>Cirrus SR20</td><td>training, turns after takeoff</td><td class="num">1</td><td>student stalled in a turn; instructor's delayed correction</td></tr><tr><td class="num">2021-07-26</td><td>Challenger 605</td><td>unstabilized circling to rwy 11</td><td class="num">6</td><td>salvage of an unstabilized circling approach; stall warnings ignored; down between golf fairway and residential street</td></tr><tr><td class="num">2024-03-30</td><td>Daher TBM 960</td><td>night go-around, low maneuvering</td><td class="num">2</td><td>preliminary; no cause yet — tightening left turn, rapid descent, 3,200 ft from the rwy 11 approach end</td></tr></tbody>
+    </table></div>
+    <p class="src">Condensed from NTSB probable-cause reports; the 2024 accident remains under investigation. Report numbers and full texts via the CAROL search above.</p>
+  </details>
+
+  <h2>No one on the ground, ever — and two close calls</h2>
+  <p>In the entire sixty-year record, <b>no person on the ground has been injured or killed</b> by an aircraft
+  accident at Truckee. Both facts that follow are equally part of the record: the July 2021 Challenger came to
+  rest between a Ponderosa Golf Course fairway and a residential street about a mile west-northwest of the field,
+  under the runway 11 final approach; news reporting at the time described it narrowly missing homes and a school
+  bus. The March 2024 TBM came down about 3,200 feet from the runway 11 approach end, near the Olympic Heights
+  neighborhood, striking no structures. The two most recent fatal accidents both fell on the residential side of
+  the airport, and neither touched a house.</p>
+  <p class="src">Sources: <a href="https://www.ntsb.gov/news/press-releases/Pages/NR20230817.aspx">NTSB final report press release (2021 accident)</a> ·
+  <a href="https://aviation-safety.net/wikibase/318959">ASN 318959</a> · <a href="https://aviation-safety.net/wikibase/378178">ASN 378178 (2024, preliminary)</a> ·
+  <a href="https://cbsnews.com/amp/sacramento/news/truckee-plane-crash-investigation">CBS Sacramento</a>.</p>
+
+  <h2>The setting, in the district&rsquo;s and FAA&rsquo;s own words</h2>
+  <ul>
+    <li>The district, to pilots: <q>You will land in a bowl of mountains at 5,901 MSL</q>; <q>Density Altitudes commonly exceed 9,000&#39; in the summer</q>; <q>Winds are squirrely &ndash; our 4 wind socks can be 4 different directions</q>; <q>Afternoon winds are typically gusty and windshear is common.</q></li>
+    <li>The district, on its own accident history: <q>All serious IFR accidents at KTRK in the past 23 years were during circling maneuvers.</q> The record above bears this out: the 2005 Learjet, the 2010 RV-8, and the 2021 Challenger were all lost in low maneuvering to line up with a runway; the 2024 accident, still under investigation, occurred during low maneuvering after a night approach.</li>
+    <li>The FAA&rsquo;s official airport remarks: mountainous terrain surrounds the airport and runways, expect windshear and downdrafts; summer afternoon density altitudes frequently exceed 9,000 ft; no deicing available; cold-temperature altimetry corrections required.</li>
+    <li>No precision approach exists. The best minimums on the field require weather 582 ft above the runway, with a mandatory climb gradient on the missed approach. Two of the three instrument approaches are <b>not authorized at night</b>, and circling to three of the four runway ends is not authorized at night. The control tower operates roughly 7 am to 6&ndash;8 pm seasonally; outside those hours the field is uncontrolled.</li>
+    <li>After the 2021 accident, the NTSB issued a national safety alert on circling approaches (SA-084), counting 10 circling accidents and 17 deaths since 2008.</li>
+  </ul>
+  <p class="src">Sources: <a href="https://pilots.truckeetahoeairport.com/pilot-essentials.html">district pilot portal</a> ·
+  <a href="https://www.airnav.com/airport/KTRK">FAA record via AirNav</a> · current FAA approach plates
+  (<a href="https://aeronav.faa.gov/d-tpp/2608/06021R11.PDF">RNAV 11</a>, <a href="https://aeronav.faa.gov/d-tpp/2608/06021R20.PDF">RNAV 20</a>,
+  <a href="https://aeronav.faa.gov/d-tpp/2608/06021RA.PDF">RNAV-A</a>) ·
+  <a href="https://www.ntsb.gov/news/press-releases/Pages/NR20230817.aspx">NTSB SA-084 announcement</a>.</p>
+
+  <h2>The district&rsquo;s decisions</h2>
+  <ul>
+    <li>The 2015 Master Plan declines to pursue lower approach minimums, and reasons that <q>TRK&rsquo;s own challenging flight environment (i.e., high altitude, surrounding mountains, and fast-changing weather patterns) &hellip; dissuades much of this activity.</q> It weighs whether even a deicing facility <q>might incentivize all-weather activity.</q> The airport&rsquo;s difficulty is treated, on paper, as a demand-management tool.</li>
+    <li>The control tower (2017, about $860,000 a year of district funds) was established <q>to enhance safety and mitigate community annoyance</q> amid mixed glider, jet, training, and helicopter traffic.</li>
+    <li>After the 2021 accident the district posted the FAA&rsquo;s safety alert on visual approaches, and in 2024 launched FLY SAFE, paying hangar credits and instructor reimbursements for recurrent pilot training.</li>
+  </ul>
+  <p class="src">Sources: <a href="https://truckeetahoeairport.com/documents/79-trk_amp_july_2015_final-completereport-pdf">2015 Airport Master Plan</a> ·
+  <a href="https://truckeetahoeairport.com/board_meetings/217/view_file?file=tab+14+-+fy+2020+budget+narrative.pdf">FY2020 budget</a> ·
+  <a href="https://truckeetahoeairport.com/current-projects/fly-safe">FLY SAFE program</a>.</p>
+
+  <h2>Risk in context</h2>
+  <p>Two things are true at once. General aviation is <b>safer than it has ever been</b>: the national fatal
+  accident rate has roughly halved since the early 1990s (about 1.8 per 100,000 flight hours then; roughly 1.0
+  by NTSB measures in 2019&ndash;2020, and 0.65&ndash;0.68 in 2022&ndash;2023 by the AOPA Air Safety Institute&rsquo;s
+  accounting). And it remains <b>one of the riskiest common activities an American can undertake</b>: personal
+  flying&rsquo;s per-hour fatality risk sits near motorcycling, well above driving. It is risk of the same kind as
+  the skiing and mountain biking this community practices — voluntary, trainable, unforgiving of complacency —
+  at a magnitude closer to motorcycling than to anything on the hill.</p>
+  <p>The risk is also sharply stratified: professionally crewed turbine operations approach airline-like safety
+  nationally, while personal flying carries most of the fatal rate. Truckee&rsquo;s record complicates the
+  stratification honestly: the 2005 Learjet, 2021 Challenger, and 2024 TBM were all turbine aircraft, two of
+  them professionally crewed. The terrain taxes every class of operator.</p>
+  <p class="src">Sources: <a href="https://www.ntsb.gov/safety/data/Pages/table10.aspx">NTSB annual GA statistics</a> ·
+  <a href="https://www.aopa.org/news-and-media/all-news/2025/november/20/mcspadden-report-ga-accident-rate-down-in-2023">AOPA ASI McSpadden Report, 2023 data</a> ·
+  <a href="https://www.aopa.org/news-and-media/all-news/2025/april/17/ga-safer-than-ever-despite-recent-accidents">AOPA trend summary</a>.</p>
+
+  <h2>Living near a runway end</h2>
+  <p>The state treats proximity to runway ends as a defined, mapped condition, not a feeling. California&rsquo;s
+  Airport Land Use Planning Handbook found that near-airport accidents cluster in predictable zones: for runways
+  of Truckee&rsquo;s size, its six zones capture about 85% of near-airport accident sites, with the highest
+  concentration in the runway protection zones at the runway ends. The Truckee Tahoe Airport Land Use
+  Compatibility Plan (adopted 2016) applies those zones here. It records <q>residential areas to each side of
+  runway centerline within 1.0 mile of runway end</q> northwest of Runway 11 &mdash; and that <b>Runway 29
+  handles 96% of jet takeoffs</b>, meaning most jet departures climb out toward the residential side. Federal
+  and district open space wraps the airport&rsquo;s east and south; the neighborhoods are northwest.</p>
+  <p>Inside the mapped zones, the plan limits new residential density (from zero dwellings in the runway
+  protection zones to graduated limits outward) and prohibits new schools, day cares, and hospitals in the inner
+  zones. It has no authority over homes that already exist. California law requires that residential sales within
+  an airport influence area carry an airport-proximity disclosure, so every recent buyer in these neighborhoods
+  received formal notice at closing.</p>
+  <p>The base rate that closes the loop: nationally, over the decade 2013&ndash;2022, NTSB records show 25
+  accidents in which someone on the ground was killed &mdash; two or three a year, against roughly 28 million
+  annual flight hours. The chance that any single flight ends in any single yard is minuscule. The reason the
+  state draws zones anyway is thirty thousand operations a year, every year, concentrated along two extended
+  centerlines. Frequency times geometry, not fear.</p>
+  <p class="src">Sources: <a href="https://dot.ca.gov/-/media/dot-media/programs/aeronautics/documents/californiaairportlanduseplanninghandbook-a11y.pdf">California Airport Land Use Planning Handbook (2011)</a> ·
+  <a href="https://www.nctc.ca.gov/documents/TTALUC/TTALUCP%20Final%20Adopted%2010-27-16/TTALUCP_Complete_revised12-20-16.pdf">Truckee Tahoe Airport Land Use Compatibility Plan (2016)</a> ·
+  <a href="https://www.aopa.org/news-and-media/all-news/2025/april/17/ga-safer-than-ever-despite-recent-accidents">AOPA (NTSB ground-fatality query)</a>.</p>
+
+  <div class="foot">
+    <p><b>Scope and caveats.</b> NTSB public records begin in 1962; the earliest Truckee event on file is 1964.
+    Counts use NTSB city designation &ldquo;Truckee&rdquo;; area crashes filed under other towns are not included.
+    The March 2024 accident has no final report yet, and statements about it are from the NTSB preliminary. The
+    seismic setting includes the Polaris Fault, identified in 2011-era investigations at Martis Creek Dam adjacent
+    to the field. This page reports the record and takes no position on airport policy. Corrections with sources
+    welcome via <a href="https://github.com/micrui/truckee-flights">GitHub</a>.</p>
+  </div>
+</div>
