@@ -48,6 +48,7 @@ def collect(dates, note=None, window="full"):
                                   if a["ladd"] and a["reg"] in {e["reg"] for e in events}}),
         "note": note,
         "events": events,
+        "airborne_quiet": airborne_early,
     }
     os.makedirs("data/weekly", exist_ok=True)
     path = f"data/weekly/{week['start']}_{week['end']}.json"
@@ -74,8 +75,9 @@ def render():
         qparts = ", ".join(f"{qc[c]} {c}" for c in CLASSES if qc.get(c)) or "none"
         wtag = "" if w.get("window_local", "").startswith("22") else ' <span class="tag">mornings only</span>'
         note = (f' <span class="tag">{html.escape(w["note"])}</span>' if w.get("note") else "") + wtag
+        wk_href = f'weeks/{w["start"]}_{w["end"]}.html'
         rows.append(
-            f'<tr><td>{fmt_range(w)}{note}</td>'
+            f'<tr><td><a href="{wk_href}">{fmt_range(w)}</a>{note}</td>'
             f'<td class="num">{w["total_ops"]}</td>'
             f'<td class="num">{w["local_flights"]}</td>'
             f'<td>{w["quiet_hours_ops"]} ({qparts})</td></tr>')
@@ -90,7 +92,7 @@ def render():
                 for e in w["quiet_hours_events"])
             details.append(f'''
   <details>
-    <summary>{fmt_range(w)}: {w["quiet_hours_ops"]} takeoffs/landings during quiet hours</summary>
+    <summary>{fmt_range(w)}: {w["quiet_hours_ops"]} takeoffs/landings during quiet hours (<a href="{wk_href}">timeline</a>)</summary>
     <div class="table-scroll"><table>
       <thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th><th>Type</th><th>Class</th><th>From / to</th><th>Registered owner</th></tr></thead>
       <tbody>{ev_rows}</tbody>
@@ -180,6 +182,32 @@ def render():
 '''
     open("docs/quiet-hours.html", "w").write(page)
     print(f"rendered docs/quiet-hours.html with {len(weeks)} week(s)")
+
+    # one interactive timeline page per week
+    tpl_path = "templates/week.html"
+    if os.path.exists(tpl_path):
+        os.makedirs("docs/weeks", exist_ok=True)
+        tpl = open(tpl_path).read()
+        asc = sorted(weeks, key=lambda w: w["start"])
+        for i, w in enumerate(asc):
+            rng = fmt_range(w)
+            if w.get("window_local", "").startswith("22"):
+                sub = "Window: 10:00 pm through 8:30 am."
+            else:
+                sub = "This week was collected mornings only (4:00 to 8:30 am); evening quiet hours are not shown."
+            nav = []
+            if i > 0:
+                p = asc[i-1]; nav.append(f'<a href="{p["start"]}_{p["end"]}.html">&larr; {fmt_range(p)}</a>')
+            if i < len(asc) - 1:
+                n = asc[i+1]; nav.append(f'<a href="{n["start"]}_{n["end"]}.html">{fmt_range(n)} &rarr;</a>')
+            nav.append('<a href="../quiet-hours.html">all weeks</a>')
+            payload = {k: w.get(k) for k in ("days", "window_local", "events", "airborne_quiet")}
+            page_w = (tpl.replace("%%RANGE%%", rng)
+                        .replace("%%SUBTITLE%%", sub)
+                        .replace("%%PREVNEXT%%", " &middot; ".join(nav))
+                        .replace("%%DATA%%", json.dumps(payload, separators=(",", ":"))))
+            open(f'docs/weeks/{w["start"]}_{w["end"]}.html', "w").write(page_w)
+        print(f"rendered {len(asc)} week timeline page(s)")
 
 
 if __name__ == "__main__":

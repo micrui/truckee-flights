@@ -10,23 +10,34 @@
   "2026-07-11",
   "2026-07-12"
  ],
- "window_local": "04:00-08:30",
- "total_ops": 129,
- "unique_aircraft": 71,
+ "window_local": "22:00-08:30",
+ "total_ops": 137,
+ "unique_aircraft": 73,
  "by_class": {
-  "piston": 47,
+  "helicopter": 14,
+  "piston": 48,
   "jet": 42,
-  "turboprop": 31,
-  "helicopter": 9
+  "turboprop": 33
  },
- "quiet_hours_ops": 16,
+ "quiet_hours_ops": 24,
  "quiet_hours_by_class": {
-  "piston": 4,
+  "helicopter": 7,
+  "piston": 5,
   "jet": 5,
-  "turboprop": 5,
-  "helicopter": 2
+  "turboprop": 7
  },
  "quiet_hours_events": [
+  {
+   "date": "2026-07-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "03:46",
+   "other": "(41.49,-120.56)",
+   "pre7": true
+  },
   {
    "date": "2026-07-06",
    "reg": "N415BJ",
@@ -127,6 +138,28 @@
    "pre7": true
   },
   {
+   "date": "2026-07-07",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "ev": "ARR",
+   "hm": "22:01",
+   "other": "KSQL San Carlos",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "ev": "DEP",
+   "hm": "22:13",
+   "other": "KRNO Reno",
+   "pre7": true
+  },
+  {
    "date": "2026-07-08",
    "reg": "N665CC",
    "type": "CC11",
@@ -146,6 +179,17 @@
    "ev": "DEP",
    "hm": "06:47",
    "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "00:43",
+   "other": "KMCC McClellan",
    "pre7": true
   },
   {
@@ -182,6 +226,50 @@
    "pre7": true
   },
   {
+   "date": "2026-07-10",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "ev": "ARR",
+   "hm": "22:16",
+   "other": "(33.04,-116.91)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:50",
+   "other": "(41.48,-120.56)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "00:21",
+   "other": "KMCC McClellan",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "01:24",
+   "other": "KFAT Fresno",
+   "pre7": true
+  },
+  {
    "date": "2026-07-12",
    "reg": "N901CF",
    "type": "AS50",
@@ -209,6 +297,7 @@
   "N1876T",
   "N232ST",
   "N26179",
+  "N424PJ",
   "N424U",
   "N460NG",
   "N469JG",
@@ -222,6 +311,17 @@
  ],
  "note": null,
  "events": [
+  {
+   "date": "2026-07-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "03:46",
+   "other": "(41.49,-120.56)",
+   "pre7": true
+  },
   {
    "date": "2026-07-06",
    "reg": "N415BJ",
@@ -828,6 +928,28 @@
    "pre7": false
   },
   {
+   "date": "2026-07-07",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "ev": "ARR",
+   "hm": "22:01",
+   "other": "KSQL San Carlos",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-07",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "ev": "DEP",
+   "hm": "22:13",
+   "other": "KRNO Reno",
+   "pre7": true
+  },
+  {
    "date": "2026-07-08",
    "reg": "N665CC",
    "type": "CC11",
@@ -936,6 +1058,17 @@
    "hm": "08:29",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-07-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "00:43",
+   "other": "KMCC McClellan",
+   "pre7": true
   },
   {
    "date": "2026-07-09",
@@ -1290,6 +1423,17 @@
    "pre7": false
   },
   {
+   "date": "2026-07-10",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "ev": "ARR",
+   "hm": "22:16",
+   "other": "(33.04,-116.91)",
+   "pre7": true
+  },
+  {
    "date": "2026-07-11",
    "reg": "N407AP",
    "type": "B407",
@@ -1530,6 +1674,39 @@
    "hm": "08:27",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:50",
+   "other": "(41.48,-120.56)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "DEP",
+   "hm": "00:21",
+   "other": "KMCC McClellan",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "01:24",
+   "other": "KFAT Fresno",
+   "pre7": true
   },
   {
    "date": "2026-07-12",

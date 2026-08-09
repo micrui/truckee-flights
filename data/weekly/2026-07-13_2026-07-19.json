@@ -10,21 +10,133 @@
   "2026-07-18",
   "2026-07-19"
  ],
- "window_local": "04:00-08:30",
- "total_ops": 77,
- "unique_aircraft": 51,
+ "window_local": "22:00-08:30",
+ "total_ops": 103,
+ "unique_aircraft": 59,
  "by_class": {
-  "turboprop": 22,
-  "piston": 35,
-  "jet": 20
+  "helicopter": 7,
+  "turboprop": 26,
+  "piston": 49,
+  "jet": 21
  },
- "quiet_hours_ops": 9,
+ "quiet_hours_ops": 35,
  "quiet_hours_by_class": {
-  "turboprop": 7,
-  "piston": 1,
-  "jet": 1
+  "helicopter": 7,
+  "turboprop": 11,
+  "piston": 15,
+  "jet": 2
  },
  "quiet_hours_events": [
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "00:17",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "ARR",
+   "hm": "00:20",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "DEP",
+   "hm": "00:21",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "00:23",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "DEP",
+   "hm": "00:25",
+   "other": "(45.81,-108.56)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "DEP",
+   "hm": "00:33",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "ARR",
+   "hm": "00:51",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "01:08",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "01:10",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "01:43",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
   {
    "date": "2026-07-13",
    "reg": "N61NG",
@@ -103,6 +215,149 @@
    "pre7": true
   },
   {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "ARR",
+   "hm": "22:01",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "DEP",
+   "hm": "22:05",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "ARR",
+   "hm": "22:29",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "ARR",
+   "hm": "22:36",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:37",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "DEP",
+   "hm": "22:42",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "22:57",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(45.80,-108.53)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "DEP",
+   "hm": "23:02",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "DEP",
+   "hm": "23:04",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "23:34",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "DEP",
+   "hm": "23:39",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:53",
+   "other": "KAUN Auburn",
+   "pre7": true
+  },
+  {
    "date": "2026-07-17",
    "reg": "N872HL",
    "type": "CL35",
@@ -111,6 +366,17 @@
    "ev": "DEP",
    "hm": "05:23",
    "other": "(35.40,-97.59)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "KTRK Truckee",
    "pre7": true
   },
   {
@@ -123,12 +389,36 @@
    "hm": "05:53",
    "other": "(37.55,-121.16)",
    "pre7": true
+  },
+  {
+   "date": "2026-07-18",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "ARR",
+   "hm": "22:41",
+   "other": "(32.41,-111.21)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-19",
+   "reg": "N5CS",
+   "type": "SF50",
+   "cls": "jet",
+   "own": "FAFO AVIATION LLC",
+   "ev": "ARR",
+   "hm": "22:03",
+   "other": "KSNA John Wayne",
+   "pre7": true
   }
  ],
- "local_flights": 20,
+ "local_flights": 25,
  "ladd_operators": [
   "N107MY",
+  "N238PJ",
   "N3880",
+  "N424PJ",
   "N4838T",
   "N797GM",
   "N850TS",
@@ -139,6 +429,116 @@
  ],
  "note": null,
  "events": [
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "00:17",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "ARR",
+   "hm": "00:20",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "DEP",
+   "hm": "00:21",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "00:23",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "DEP",
+   "hm": "00:25",
+   "other": "(45.81,-108.56)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "DEP",
+   "hm": "00:33",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "ARR",
+   "hm": "00:51",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "01:08",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "01:10",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "01:43",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
   {
    "date": "2026-07-13",
    "reg": "N61NG",
@@ -303,6 +703,138 @@
    "hm": "08:22",
    "other": "KSNA John Wayne",
    "pre7": false
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "ARR",
+   "hm": "22:01",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "DEP",
+   "hm": "22:05",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "ARR",
+   "hm": "22:29",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "ARR",
+   "hm": "22:36",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N238PJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "ev": "DEP",
+   "hm": "22:37",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N947CH",
+   "type": "H47",
+   "cls": "piston",
+   "own": "HELIGROUP FIRE LLC",
+   "ev": "DEP",
+   "hm": "22:42",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "ARR",
+   "hm": "22:57",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "ARR",
+   "hm": "22:59",
+   "other": "(45.80,-108.53)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N424PJ",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "HELIBRO LLC",
+   "ev": "DEP",
+   "hm": "23:02",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N758PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BEAM 33 INC",
+   "ev": "DEP",
+   "hm": "23:04",
+   "other": "LOCAL loop",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "ARR",
+   "hm": "23:34",
+   "other": "(39.63,-120.00)",
+   "pre7": true
+  },
+  {
+   "date": "2026-07-13",
+   "reg": "N562AJ",
+   "type": "H47",
+   "cls": "piston",
+   "own": "BILLINGS FLYING SERVICE LLC",
+   "ev": "DEP",
+   "hm": "23:39",
+   "other": "LOCAL loop",
+   "pre7": true
   },
   {
    "date": "2026-07-14",
@@ -602,6 +1134,17 @@
    "pre7": false
   },
   {
+   "date": "2026-07-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "22:53",
+   "other": "KAUN Auburn",
+   "pre7": true
+  },
+  {
    "date": "2026-07-17",
    "reg": "N872HL",
    "type": "CL35",
@@ -699,6 +1242,17 @@
    "hm": "08:20",
    "other": "LOCAL loop",
    "pre7": false
+  },
+  {
+   "date": "2026-07-17",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "ev": "ARR",
+   "hm": "23:53",
+   "other": "KTRK Truckee",
+   "pre7": true
   },
   {
    "date": "2026-07-18",
@@ -910,6 +1464,17 @@
    "pre7": false
   },
   {
+   "date": "2026-07-18",
+   "reg": "N12DK",
+   "type": "BE55",
+   "cls": "piston",
+   "own": "TIM CROSS AVIATION LLC, GRISHAM AVIATION LLC",
+   "ev": "ARR",
+   "hm": "22:41",
+   "other": "(32.41,-111.21)",
+   "pre7": true
+  },
+  {
    "date": "2026-07-19",
    "reg": "N9110H",
    "type": "C172",
@@ -985,6 +1550,17 @@
    "hm": "08:20",
    "other": "KSBA Santa Barbara",
    "pre7": false
+  },
+  {
+   "date": "2026-07-19",
+   "reg": "N5CS",
+   "type": "SF50",
+   "cls": "jet",
+   "own": "FAFO AVIATION LLC",
+   "ev": "ARR",
+   "hm": "22:03",
+   "other": "KSNA John Wayne",
+   "pre7": true
   }
  ]
 }
