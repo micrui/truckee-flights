@@ -1,0 +1,154 @@
+<meta charset="utf-8">
+<title>truckee-flights: airport finances</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --accent: #2a78d6;
+  }
+  body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6; margin: 0; padding: 48px 20px 72px; }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    margin: 0 0 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .eyebrow a { color: inherit; }
+  h1 { font-size: clamp(26px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .standfirst { font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 30px; }
+  h2 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 40px 0 8px; }
+  p { max-width: 70ch; font-size: 15px; margin: 0 0 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; margin: 10px 0 6px; }
+  th { text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    font-weight: 600; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--axis); }
+  th.num, td.num { text-align: right; }
+  td { padding: 6px 12px 6px 0; border-bottom: 1px solid var(--grid); vertical-align: top; font-variant-numeric: tabular-nums; }
+  tr.total td { font-weight: 650; border-bottom: none; }
+  .src { font-size: 12px; color: var(--muted); margin: 4px 0 0; max-width: 70ch; }
+  .src a { color: var(--muted); }
+  .table-scroll { overflow-x: auto; }
+  a { color: var(--accent); }
+  .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
+</style>
+<div class="wrap">
+  <p class="eyebrow"><a href="./">truckee-flights</a> · airport finances</p>
+  <h1>The ledger: how the airport is funded</h1>
+  <p class="standfirst">
+    Where the Truckee Tahoe Airport District's money comes from and where it goes, drawn from its audited
+    financial statements, its adopted budgets, and federal spending records. Every line carries its source.
+    This page reports; it does not conclude.
+  </p>
+
+  <h2>Revenue, 2023 (audited)</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Source</th><th class="num">Amount</th><th class="num">Share</th></tr></thead>
+    <tbody>
+      <tr><td>Property taxes (share of the county 1% levy)</td><td class="num">$9,213,945</td><td class="num">43%</td></tr>
+      <tr><td>Operating revenues (fuel, hangars, leases, fees)</td><td class="num">$5,819,976</td><td class="num">27%</td></tr>
+      <tr><td>Federal grants (capital and operating)</td><td class="num">$5,890,479</td><td class="num">28%</td></tr>
+      <tr><td>Interest and other</td><td class="num">$438,000</td><td class="num">2%</td></tr>
+      <tr class="total"><td>Total</td><td class="num">≈ $21.4M</td><td class="num"></td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">Source: <a href="https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf">TTAD audited financial statements, FY2023</a>, Management's Discussion and Analysis.</p>
+
+  <h2>Operations run at a loss; taxes cover it</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Year</th><th class="num">Operating loss before depreciation</th><th class="num">Property tax revenue</th></tr></thead>
+    <tbody>
+      <tr><td>2021</td><td class="num">−$5,580,298</td><td class="num">$7,723,805</td></tr>
+      <tr><td>2022</td><td class="num">−$3,891,068</td><td class="num">$8,507,022</td></tr>
+      <tr><td>2023</td><td class="num">−$4,437,240</td><td class="num">$9,213,945</td></tr>
+    </tbody>
+  </table></div>
+  <p>Aviation activity does not cover the airport's operating costs in any recent year. Including depreciation,
+  the 2023 net operating loss was $7.06 million. The gap is closed by the property tax allocation, which is an
+  automatic share of the countywide 1% levy under California's post-Proposition 13 allocation formulas. It does
+  not appear as a separate line on a tax bill, is not voted on, and has no sunset. The district's tax receipts
+  grew from $6.8 million (2020) to $9.3 million (2024).</p>
+  <p class="src">Sources: <a href="https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf">FY2023 audit</a>;
+  <a href="https://truckeetahoeairport.com/board_meetings/368/view_file?file=tab+09b+-+ttad+historic+and+approved+budget+summary+v3.pdf">TTAD historical budget summary</a>;
+  <a href="https://truckeetahoeairport.com/administration/finance">district finance page</a>.</p>
+
+  <h2>What aviation customers pay for, by fuel type</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>2025 budget</th><th class="num">Gallons</th><th class="num">Avg price</th><th class="num">Revenue</th><th class="num">District's stated cost of goods</th></tr></thead>
+    <tbody>
+      <tr><td>Jet A / SAF (turbine aircraft)</td><td class="num">500,000</td><td class="num">$7.70</td><td class="num">$3,850,000</td><td class="num">72%</td></tr>
+      <tr><td>100LL avgas (piston aircraft)</td><td class="num">100,000</td><td class="num">$6.64</td><td class="num">$664,000</td><td class="num">83%</td></tr>
+    </tbody>
+  </table></div>
+  <p>By the district's own 2025 budget assumptions, jet fuel is about 85% of budgeted fuel revenue, and at the
+  stated margins about nine-tenths of fuel gross profit. Fuel is the largest airside operating revenue line.</p>
+  <p class="src">Source: <a href="https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf">2025 Budget Reference Guide</a>, sections 1 and 6.</p>
+
+  <h2>Federal grants and what accepting them means</h2>
+  <p>Federal spending records show 29 FAA grants to the district totaling $29.75 million from 2003 through 2023,
+  an average of about $1.4 million per year, with no gap longer than two years. The largest recent award is
+  $6.3 million (2023) for the reconstruction of runway 2/20. The district's 2025 budget anticipates a further
+  $300,000 in AIP funding plus $1,175,000 for the Apron A2 project ("parking circles/ramp in front of Unicom,"
+  in the budget's words).</p>
+  <p>Each accepted grant carries the FAA's standard grant assurances for 20 years from acceptance, including the
+  obligation to make the airport available to all aeronautical users on reasonable terms and without unjust
+  discrimination. This is the mechanism that places most access restrictions, including mandatory curfews,
+  outside the district's authority. On the current grant history, those obligations extend into the 2040s.
+  The district's audited net position is $70.5 million, with $10.4 million in cash; its auditors describe it
+  as being in excellent financial condition.</p>
+  <p class="src">Sources: <a href="https://www.usaspending.gov/">USASpending.gov</a> award records for
+  Truckee-Tahoe Airport District; <a href="https://www.faa.gov/airports/aip/grant_assurances">FAA airport grant
+  assurances</a>; <a href="https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf">FY2023 audit</a>;
+  <a href="https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf">2025 Budget Reference Guide</a>.</p>
+
+  <h2>Where the surplus goes</h2>
+  <div class="table-scroll"><table>
+    <thead><tr><th>Community Benefit budget, 2025</th><th class="num">Amount</th></tr></thead>
+    <tbody>
+      <tr><td>Strategic Initiatives</td><td class="num">$1,500,000</td></tr>
+      <tr><td>Non-Airport Expenses (lands management, etc.)</td><td class="num">$400,000</td></tr>
+      <tr><td>Tahoe Truckee Community Foundation</td><td class="num">$250,000</td></tr>
+      <tr><td>Housing Joint Powers Authority</td><td class="num">$250,000</td></tr>
+      <tr><td>Fly Quiet / Fly Safe initiatives</td><td class="num">$150,000</td></tr>
+      <tr><td>Aviation/STEAM partnerships</td><td class="num">$100,000</td></tr>
+      <tr><td>Transportation</td><td class="num">$100,000</td></tr>
+      <tr><td>Pilot events</td><td class="num">$100,000</td></tr>
+      <tr><td>Boys &amp; Girls Club (contract for services)</td><td class="num">$98,000</td></tr>
+      <tr><td>Airshow</td><td class="num">$20,000</td></tr>
+      <tr class="total"><td>Total</td><td class="num">$2,968,000</td></tr>
+    </tbody>
+  </table></div>
+  <p>Separately, the board designates 17% of the district's $13.6 million in unrestricted net assets as a
+  "Property Tax Fund for Community Benefit," and the district has pledged a $2 million match toward the new
+  Truckee library. The district describes this spending as sharing the airport's benefit with the community;
+  that description and the amounts are both part of the record.</p>
+  <p class="src">Sources: <a href="https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf">2025 Budget Reference Guide</a>, section 8;
+  <a href="https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf">FY2023 audit</a> (net position designations);
+  <a href="https://www.sierrasun.com/news/tahoe-truckee-airport-district-commits-2-million-in-funding-for-new-truckee-regional-library-through-matching-opportunity/">Sierra Sun</a> (library match).</p>
+
+  <h2>Reading the two ledgers together</h2>
+  <p>The district's <a href="https://truckeetahoeairport.com/documents/414-airport_economic_impact_study_-_final_-_sept_2018-pdf">2018
+  economic impact study</a> estimates what flows into the region because the airport exists (about $73 million per
+  year in activity, on 2017 data). The figures above record who pays for the airport itself. These answer
+  different questions, and a complete public conversation uses both.</p>
+
+  <div class="foot">
+    <p>All figures are from the linked public documents; nothing on this page is estimated by this site except
+    the fuel revenue multiplications (gallons × stated average price). Corrections welcome via
+    <a href="https://github.com/micrui/truckee-flights">GitHub</a>. This page reports the record and takes no
+    position on airport policy.</p>
+  </div>
+</div>

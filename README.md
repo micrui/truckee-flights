@@ -33,6 +33,10 @@ Summary of what the data shows for those 8 mornings, 4:00 to 8:30 am PDT:
 
 Scope notes: one summer week; ADS-B-equipped aircraft only, so light-aircraft counts are floors; this study does not measure sound and cannot test multi-year traffic trends. The district's five-year operations summaries (roughly 55 percent piston, 17 percent jet per [staff reports to the board](https://citizenportal.ai/articles/6669375/california/nevada-county/truckee-town/California/Board-schedules-noise-deep-dive-hears-traffic-and-complaint-statistics-community-calls-for-easier-complaint-process)) are the source for long-run mix and trend questions.
 
+## Reference: airport finances
+
+[The ledger](https://micrui.github.io/truckee-flights/financials.html): district revenue by source (43% property tax, 27% operating, 28% federal grants in audited 2023), the multimillion-dollar annual operating loss that taxes cover, fuel revenue by aircraft type (jet fuel is 85% of budgeted fuel revenue), the 2003-2023 federal grant history ($29.75M across 29 grants) with the 20-year grant-assurance mechanism explained, and the district's $2.97M Community Benefit budget. Every line sourced to district or federal documents.
+
 ## Ongoing: quiet-hours flight log
 
 A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [quiet-hours flight log](https://micrui.github.io/truckee-flights/quiet-hours.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). The monitored window is 4:00 to 8:30 am; late-evening quiet hours are not yet covered.
