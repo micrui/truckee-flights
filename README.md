@@ -13,12 +13,12 @@ Aircraft broadcast their positions publicly over ADS-B, so most factual claims a
 | `pipeline.py` | Rebuilds an operations log for any date range from ADS-B Exchange public replay data. Python 3.9+, standard library only, no API key. Works for any airport by editing the configuration block. |
 | `summarize.py` | Reduces pipeline output to discrete arrival and departure events and per-aircraft records, including FAA privacy-program flags. |
 | `data/` | Derived datasets for completed studies, committed so findings are checkable without rerunning anything. |
-| `docs/` | Readable reports with charts. |
+| `docs/` | Readable reports with charts, served at [micrui.github.io/truckee-flights](https://micrui.github.io/truckee-flights/). |
 | `METHOD.md` | Data formats, algorithms, validation, and known limits. |
 
 ## Study 1: early-morning operations, August 1 to 8, 2026
 
-Full report with an interactive timeline: [docs/index.html](docs/index.html). Question examined: during the voluntary quiet hours (10:00 pm to 7:00 am), who actually operates at the field, and how much early-morning aircraft noise is attributable to KTRK operations at all.
+Full report with an interactive timeline: **[micrui.github.io/truckee-flights](https://micrui.github.io/truckee-flights/)** (source in [docs/](docs/)). Question examined: during the voluntary quiet hours (10:00 pm to 7:00 am), who actually operates at the field, and how much early-morning aircraft noise is attributable to KTRK operations at all.
 
 Summary of what the data shows for those 8 mornings, 4:00 to 8:30 am PDT:
 
