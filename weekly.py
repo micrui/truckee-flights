@@ -32,7 +32,7 @@ def collect(dates, note=None, window="full"):
     datestrs = [d.isoformat() for d in dates]
     for ds in datestrs:
         run_day(ds, window=window)
-    events, airborne_early, aircraft = build(datestrs, window=window)
+    events, airborne_early, aircraft, overflights = build(datestrs, window=window)
     quiet = [e for e in events if e["pre7"]]
     week = {
         "start": datestrs[0], "end": datestrs[-1], "days": datestrs,
@@ -49,6 +49,7 @@ def collect(dates, note=None, window="full"):
         "note": note,
         "events": events,
         "airborne_quiet": airborne_early,
+        "overflights": overflights,
     }
     os.makedirs("data/weekly", exist_ok=True)
     path = f"data/weekly/{week['start']}_{week['end']}.json"
@@ -201,7 +202,7 @@ def render():
             if i < len(asc) - 1:
                 n = asc[i+1]; nav.append(f'<a href="{n["start"]}_{n["end"]}.html">{fmt_range(n)} &rarr;</a>')
             nav.append('<a href="../quiet-hours.html">all weeks</a>')
-            payload = {k: w.get(k) for k in ("days", "window_local", "events", "airborne_quiet")}
+            payload = {k: w.get(k) for k in ("days", "window_local", "events", "airborne_quiet", "overflights")}
             page_w = (tpl.replace("%%RANGE%%", rng)
                         .replace("%%SUBTITLE%%", sub)
                         .replace("%%PREVNEXT%%", " &middot; ".join(nav))

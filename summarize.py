@@ -26,6 +26,7 @@ def build(dates=None, window="morning"):
     (pre7) when it falls between 22:00 the prior evening and 07:00.
     """
     events, airborne_early, aircraft = [], [], {}
+    overflights = []
     opsfiles = sorted(glob.glob("days/*/ops.json"))
     if dates is not None:
         wanted = set(dates)
@@ -84,13 +85,25 @@ def build(dates=None, window="morning"):
                 airborne_early.append(dict(meta, first=t2s(earlypts[0][0]), last=t2s(earlypts[-1][0]),
                                            min_alt=min(p[3] for p in earlypts)))
 
+            # non-landing low presence across the whole window (overflights, tours, transits)
+            had_event = any(ev["date"] == datestr and ev["reg"] == rec["reg"] for ev in events)
+            if not had_event:
+                presence = [(p, hav_nm(p[1], p[2], *AIRPORT)) for p in allpts
+                            if W0 <= p[0] <= W1 and not p[4] and p[3] is not None and p[3] <= 13000]
+                presence = [(p, d) for p, d in presence if d <= 10]
+                if presence:
+                    dwell = int((presence[-1][0][0] - presence[0][0][0]) / 60)
+                    overflights.append(dict(meta, first=t2s(presence[0][0][0]), last=t2s(presence[-1][0][0]),
+                                            dwell_min=dwell, min_alt=min(p[3] for p, d in presence),
+                                            min_dist=round(min(d for p, d in presence), 1)))
+
     events.sort(key=lambda e: (e["date"], e["hm"]))
     aircraft_list = sorted(aircraft.values(), key=lambda a: (a["class"], a["reg"] or ""))
-    return events, airborne_early, aircraft_list
+    return events, airborne_early, aircraft_list, overflights
 
 
 if __name__ == "__main__":
-    events, airborne_early, aircraft_list = build()
+    events, airborne_early, aircraft_list, overflights = build()
     os.makedirs("data", exist_ok=True)
     json.dump({"events": events, "airborne_pre7": airborne_early},
               open("data/events.json", "w"), indent=1)
