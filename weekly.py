@@ -28,15 +28,15 @@ def last_complete_week():
     return [monday + datetime.timedelta(days=i) for i in range(7)]
 
 
-def collect(dates, note=None):
+def collect(dates, note=None, window="full"):
     datestrs = [d.isoformat() for d in dates]
     for ds in datestrs:
-        run_day(ds)
-    events, airborne_early, aircraft = build(datestrs)
+        run_day(ds, window=window)
+    events, airborne_early, aircraft = build(datestrs, window=window)
     quiet = [e for e in events if e["pre7"]]
     week = {
         "start": datestrs[0], "end": datestrs[-1], "days": datestrs,
-        "window_local": "04:00-08:30",
+        "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
         "total_ops": len(events),
         "unique_aircraft": len({e["reg"] for e in events}),
         "by_class": dict(Counter(e["cls"] for e in events)),
@@ -72,7 +72,8 @@ def render():
     for w in weeks:
         qc = w["quiet_hours_by_class"]
         qparts = ", ".join(f"{qc[c]} {c}" for c in CLASSES if qc.get(c)) or "none"
-        note = f' <span class="tag">{html.escape(w["note"])}</span>' if w.get("note") else ""
+        wtag = "" if w.get("window_local", "").startswith("22") else ' <span class="tag">mornings only</span>'
+        note = (f' <span class="tag">{html.escape(w["note"])}</span>' if w.get("note") else "") + wtag
         rows.append(
             f'<tr><td>{fmt_range(w)}{note}</td>'
             f'<td class="num">{w["total_ops"]}</td>'
@@ -149,9 +150,11 @@ def render():
   <h1>Quiet-hours flight log</h1>
   <p class="standfirst">
     Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
-    (4:00 to 8:30 am), collected weekly from public flight-tracking data. The monitored window
-    covers the final three hours of the airport's voluntary quiet time (which runs 10:00 pm to
-    7:00 am) plus the first 90 minutes after it ends. Quiet-hours activity is listed
+    (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
+    covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
+    first 90 minutes after they end. (Weeks tagged "mornings only" were collected before
+    evening coverage began and cover 4:00 to 8:30 am; for evening flights, the time shown
+    belongs to the night before the listed date.) Quiet-hours activity is listed
     flight by flight below; the record includes air ambulances and other flights most people
     would not question, and characterizes none of them.
   </p>
@@ -169,8 +172,7 @@ def render():
     <p>Updated Mondays by a scheduled job. Underlying per-flight data for each week is in
     <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>;
     method and limits in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>.
-    Aircraft without transponders do not appear. Late-evening quiet hours (10:00 pm to midnight)
-    are not yet monitored.</p>
+    Aircraft without transponders do not appear.</p>
   </div>
 </div>
 '''
@@ -183,6 +185,8 @@ if __name__ == "__main__":
     ap.add_argument("--dates", help="start,end inclusive (YYYY-MM-DD,YYYY-MM-DD)")
     ap.add_argument("--note", help="label for this entry (e.g. 'Study week')")
     ap.add_argument("--render-only", action="store_true")
+    ap.add_argument("--window", choices=["full", "morning"], default="full",
+                    help="full = 22:00-08:30 (default); morning = 04:00-08:30 (backfill compatibility)")
     args = ap.parse_args()
 
     if not args.render_only:
@@ -191,5 +195,5 @@ if __name__ == "__main__":
             dates = [s + datetime.timedelta(days=i) for i in range((e - s).days + 1)]
         else:
             dates = last_complete_week()
-        collect(dates, note=args.note)
+        collect(dates, note=args.note, window=args.window)
     render()

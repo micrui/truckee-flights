@@ -24,9 +24,17 @@ import concurrent.futures as cf
 AIRPORT = (39.3200, -120.1396)      # KTRK Truckee Tahoe
 FIELD_ELEV = 5904                   # ft MSL
 TZ = datetime.timezone(datetime.timedelta(hours=-7))   # PDT
-WINDOW = ((4, 0), (8, 30))          # local time window of interest
-SLOTS = range(22, 31)               # half-hour UTC slots covering the window
-                                    # (slot = UTC hour * 2; 22 -> 11:00 UTC -> 04:00 PDT)
+
+# Collection windows. "full" covers the evening portion of quiet hours plus the
+# morning: 22:00 local the prior evening through 08:30. That whole span maps to
+# one contiguous run of half-hour UTC slots on the MORNING's UTC date
+# (22:00 PDT prev day = 05:00 UTC = slot 10; 08:30 PDT = 15:30 UTC = slot 30).
+# "morning" is the original 04:00-08:30 window, kept for backfill consistency.
+WINDOWS = {
+    "full":    {"slots": range(10, 31), "start": (-1, 22, 0), "end": (0, 8, 30)},
+    "morning": {"slots": range(22, 31), "start": (0, 4, 0),  "end": (0, 8, 30)},
+}
+WINDOW = ((4, 0), (8, 30))          # legacy alias (morning); summarize imports it
 RADIUS_NM = 20                      # discovery radius
 CAND_NM, CAND_ALT = 13, 20000       # candidate filter: closer than / lower than
 BASE = "https://globe.adsbexchange.com"
@@ -115,11 +123,24 @@ def t2s(ts):
 
 # ---------------------------------------------------------------- per-day run
 
-def run_day(datestr):
+def window_bounds(datestr, window="morning"):
+    """Return (W0, W1) epoch bounds for the window ending on datestr's morning."""
+    y, m, d = map(int, datestr.split("-"))
+    base = datetime.date(y, m, d)
+    w = WINDOWS[window]
+    d0 = base + datetime.timedelta(days=w["start"][0])
+    d1 = base + datetime.timedelta(days=w["end"][0])
+    W0 = datetime.datetime(d0.year, d0.month, d0.day, w["start"][1], w["start"][2], tzinfo=TZ).timestamp()
+    W1 = datetime.datetime(d1.year, d1.month, d1.day, w["end"][1], w["end"][2], tzinfo=TZ).timestamp()
+    return W0, W1
+
+
+def run_day(datestr, window="morning"):
     y, m, d = datestr.split("-")
     daydir = f"days/{datestr}"
     os.makedirs(f"{daydir}/heatmap", exist_ok=True)
     os.makedirs(f"{daydir}/traces", exist_ok=True)
+    SLOTS = WINDOWS[window]["slots"]
 
     with cf.ThreadPoolExecutor(3) as ex:
         list(ex.map(lambda s: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/heatmap/{s}.bin.ttf",
@@ -156,8 +177,7 @@ def run_day(datestr):
         list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
                                     f"{daydir}/traces/{h}.json"), sel))
 
-    W0 = datetime.datetime(int(y), int(m), int(d), *WINDOW[0], tzinfo=TZ).timestamp()
-    W1 = datetime.datetime(int(y), int(m), int(d), *WINDOW[1], tzinfo=TZ).timestamp()
+    W0, W1 = window_bounds(datestr, window)
     out = []
     for h in sel:
         path = f"{daydir}/traces/{h}.json"
@@ -230,9 +250,11 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     os.makedirs("data", exist_ok=True)
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    window = "full" if "--full" in sys.argv else "morning"
     allops = []
-    for ds in sys.argv[1:]:
-        allops.extend(run_day(ds))
+    for ds in args:
+        allops.extend(run_day(ds, window=window))
     json.dump(allops, open("data/all_ops.json", "w"), indent=1)
     for r in allops:
         tt = " ".join(f"{k}={v}" for k, v in r["times"].items())

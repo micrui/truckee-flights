@@ -14,15 +14,16 @@ returns the structures instead of writing the study-wide files.
 """
 import json, glob, os, datetime
 from collections import Counter
-from pipeline import hav_nm, nearest_airport, AIRPORT, TZ, WINDOW, t2s
+from pipeline import hav_nm, nearest_airport, AIRPORT, TZ, window_bounds, t2s
 
-QUIET_END = (7, 0)   # local; KTRK voluntary Fly Quiet window ends 07:00
+QUIET_END = (7, 0)   # local; KTRK voluntary Fly Quiet runs 22:00 to 07:00
 
 
-def build(dates=None):
+def build(dates=None, window="morning"):
     """Extract events for the given dates (default: every day under days/).
 
-    Returns (events, airborne_early, aircraft_list).
+    Returns (events, airborne_early, aircraft_list). An event is flagged quiet
+    (pre7) when it falls between 22:00 the prior evening and 07:00.
     """
     events, airborne_early, aircraft = [], [], {}
     opsfiles = sorted(glob.glob("days/*/ops.json"))
@@ -33,8 +34,7 @@ def build(dates=None):
     for opsfile in opsfiles:
         datestr = opsfile.split("/")[1]
         y, m, d = map(int, datestr.split("-"))
-        W0 = datetime.datetime(y, m, d, *WINDOW[0], tzinfo=TZ).timestamp()
-        W1 = datetime.datetime(y, m, d, *WINDOW[1], tzinfo=TZ).timestamp()
+        W0, W1 = window_bounds(datestr, window)
         QE = datetime.datetime(y, m, d, *QUIET_END, tzinfo=TZ).timestamp()
         for rec in json.load(open(opsfile)):
             h = rec["hex"]
