@@ -21,6 +21,33 @@ from summarize import build, operator_role
 CLASSES = ["jet", "turboprop", "piston", "helicopter", "glider", "unknown"]
 
 
+def daily(window="full"):
+    """Add the most recent published night to its week and re-render.
+
+    ADS-B Exchange publishes each UTC day shortly after it ends, so the night
+    that finished at 08:30 this morning becomes available in the evening. The
+    target is always yesterday's UTC date; runs are idempotent, so a morning
+    fallback run picks up anything the evening run missed.
+    """
+    target = datetime.datetime.now(datetime.timezone.utc).date() - datetime.timedelta(days=1)
+    monday = target - datetime.timedelta(days=target.weekday())
+    sunday = monday + datetime.timedelta(days=6)
+    dates = [monday + datetime.timedelta(days=i)
+             for i in range((target - monday).days + 1)]
+    path = f"data/weekly/{monday.isoformat()}_{sunday.isoformat()}.json"
+    if os.path.exists(path):
+        have = json.load(open(path)).get("days", [])
+        if target.isoformat() in have:
+            print(f"{target} already collected; nothing to do")
+            return False
+    try:
+        collect(dates, window=window, frame=(monday, sunday))
+    except Exception as e:
+        print(f"collection failed (archive may not be published yet): {e}")
+        return False
+    return True
+
+
 def last_complete_week():
     today = datetime.datetime.now(TZ).date()
     last_sunday = today - datetime.timedelta(days=(today.weekday() + 1) % 7 or 7)
@@ -28,14 +55,19 @@ def last_complete_week():
     return [monday + datetime.timedelta(days=i) for i in range(7)]
 
 
-def collect(dates, note=None, window="full"):
+def collect(dates, note=None, window="full", frame=None):
+    """Collect the given dates. frame=(monday, sunday) pins the week file the
+    dates belong to, so a partial week accumulates in one file day by day."""
     datestrs = [d.isoformat() for d in dates]
     for ds in datestrs:
         run_day(ds, window=window)
     events, airborne_early, aircraft, overflights = build(datestrs, window=window)
     quiet = [e for e in events if e["pre7"]]
+    start = frame[0].isoformat() if frame else datestrs[0]
+    end = frame[1].isoformat() if frame else datestrs[-1]
     week = {
-        "start": datestrs[0], "end": datestrs[-1], "days": datestrs,
+        "start": start, "end": end, "days": datestrs,
+        "partial": bool(frame) and len(datestrs) < 7,
         "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
         "total_ops": len(events),
         "unique_aircraft": len({e["reg"] for e in events}),
@@ -75,6 +107,8 @@ def render():
         qc = w["quiet_hours_by_class"]
         qparts = ", ".join(f"{qc[c]} {c}" for c in CLASSES if qc.get(c)) or "none"
         wtag = "" if w.get("window_local", "").startswith("22") else ' <span class="tag">mornings only</span>'
+        if w.get("partial"):
+            wtag += f' <span class="tag">in progress: {len(w.get("days", []))} of 7 nights</span>'
         note = (f' <span class="tag">{html.escape(w["note"])}</span>' if w.get("note") else "") + wtag
         wk_href = f'weeks/{w["start"]}_{w["end"]}.html'
         rows.append(
@@ -446,6 +480,8 @@ def render_operators(weeks):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
+    ap.add_argument("--week", action="store_true",
+                    help="collect the last complete Mon-Sun week (the old weekly mode)")
     ap.add_argument("--dates", help="start,end inclusive (YYYY-MM-DD,YYYY-MM-DD)")
     ap.add_argument("--note", help="label for this entry (e.g. 'Study week')")
     ap.add_argument("--render-only", action="store_true")
@@ -457,7 +493,9 @@ if __name__ == "__main__":
         if args.dates:
             s, e = (datetime.date.fromisoformat(x) for x in args.dates.split(","))
             dates = [s + datetime.timedelta(days=i) for i in range((e - s).days + 1)]
+            collect(dates, note=args.note, window=args.window)
+        elif args.week:
+            collect(last_complete_week(), note=args.note, window=args.window)
         else:
-            dates = last_complete_week()
-        collect(dates, note=args.note, window=args.window)
+            daily(window=args.window)
     render()
