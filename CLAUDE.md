@@ -21,6 +21,10 @@ public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages
   (military, conquest, personified laws or records) that the subject itself did not supply.
   Transitions state the topic change plainly. Directness is not softening: state the hard
   fact concretely instead of decorating it or deleting it.
+- Narrative prose is drafted in a clean room: a fresh agent receives only the fact sheet
+  (from facts.json) and these style rules, never the working conversation. The session
+  verifies the draft against the registry and assembles it. Long-context drafting produces
+  ornament; clean-context drafting from facts does not.
 - No em-dashes anywhere, in site prose or repo docs. Use commas, colons, semicolons,
   parentheses, or a new sentence.
 - Comparisons to other activities (skiing, climbing) only with numbers and sources; otherwise drop.
