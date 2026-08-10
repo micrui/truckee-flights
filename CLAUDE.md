@@ -17,6 +17,10 @@ public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages
   If context risks reading as advocacy either way, quote a source or cut it.
 - No editorializing labels. LLC/trust registration is normal practice, never a wealth tell.
   FAA display-blocking (LADD/PIA) is reported factually: counts and operators, no adjectives.
+- No aphorisms and no imported frames. A sentence may not bring in an image or domain
+  (military, conquest, personified laws or records) that the subject itself did not supply.
+  Transitions state the topic change plainly. Directness is not softening: state the hard
+  fact concretely instead of decorating it or deleting it.
 - No em-dashes anywhere, in site prose or repo docs. Use commas, colons, semicolons,
   parentheses, or a new sentence.
 - Comparisons to other activities (skiing, climbing) only with numbers and sources; otherwise drop.
