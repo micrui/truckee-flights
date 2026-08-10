@@ -1,0 +1,1000 @@
+{
+  "updated": "2026-08-10",
+  "facts": [
+    {
+      "id": "fy2023-property-tax-revenue",
+      "claim": "TTAD received $9,213,945 in property tax revenue in FY2023, its largest revenue source.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "Share of total revenue stated as 43% on financials.html and 'about 44%' on history.html; both round from 9,213,945 / ~21.4M. Harmless rounding spread, flagged for consistency."
+    },
+    {
+      "id": "fy2023-operating-revenue",
+      "claim": "TTAD operating revenues (fuel, hangars, leases, fees) were $5,819,976 in FY2023, about 27% of revenue.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "fy2023-federal-grant-revenue",
+      "claim": "TTAD received $5,890,479 in federal grants (capital and operating) in FY2023, about 28% of revenue.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "fy2023-interest-other-and-total-revenue",
+      "claim": "TTAD interest and other revenue was about $438,000 in FY2023, bringing total revenue to approximately $21.4 million.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "derived",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "The $438,000 line aggregates three audit line items; the aggregation is the site's, as disclosed in the page footer."
+    },
+    {
+      "id": "operating-loss-before-depreciation-2021-2023",
+      "claim": "TTAD's operating loss before depreciation was $5,580,298 in 2021, $3,891,068 in 2022, and $4,437,240 in 2023.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "property-tax-revenue-2021-2022",
+      "claim": "TTAD property tax revenue was $7,723,805 in 2021 and $8,507,022 in 2022.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "fy2023-net-operating-loss-with-depreciation",
+      "claim": "Including depreciation, TTAD's 2023 net operating loss was $7.06 million.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "fy2023-community-benefit-within-opex",
+      "claim": "TTAD's audited operating expenses include roughly $1.5 million of community-benefit spending in 2023, so a portion of the operating loss is discretionary giving rather than aviation cost.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "Stated on the page as a fairness note qualifying the operating-loss figures."
+    },
+    {
+      "id": "property-tax-allocation-mechanism",
+      "claim": "TTAD's property tax is an automatic share of the countywide 1% levy under California's post-Proposition 13 allocation formulas: no separate line on a tax bill, not voted on since the district's 1958 formation, and no sunset.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/administration/finance",
+        "https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf",
+        "https://truckeetahoeairport.com/board_meetings/368/view_file?file=tab+09b+-+ttad+historic+and+approved+budget+summary+v3.pdf"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "budget-tax-receipts-trend-2020-2024",
+      "claim": "TTAD's budget summary shows property tax receipts of $7.3 million (2020 actual) rising to a $9.4 million forecast for 2024.",
+      "status": "sourced",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/368/view_file?file=tab+09b+-+ttad+historic+and+approved+budget+summary+v3.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "District budget summary figures; not among the audited lines re-checked in the August 2026 verification pass."
+    },
+    {
+      "id": "budget-2025-jet-fuel",
+      "claim": "TTAD's 2025 budget assumes 500,000 gallons of Jet A/SAF at an average $7.70 per gallon ($3,850,000 revenue) with a stated cost of goods of 72%.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "Revenue figure is gallons times stated average price, a multiplication disclosed as the site's own in the page footer."
+    },
+    {
+      "id": "budget-2025-avgas",
+      "claim": "TTAD's 2025 budget assumes 100,000 gallons of 100LL avgas at an average $6.64 per gallon ($664,000 revenue) with a stated cost of goods of 83%.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "jet-fuel-share-of-fuel-economics",
+      "claim": "By the district's own 2025 budget assumptions, jet fuel is about 85% of budgeted fuel revenue and, at the stated margins, about nine-tenths of fuel gross profit.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf"],
+      "method": "derived",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "Derived from the budget's gallons, prices, and cost-of-goods percentages: 3,850,000 / 4,514,000 = 85.3%; gross profit 1,078,000 of 1,190,880 = 90.5%."
+    },
+    {
+      "id": "faa-grants-2003-2023",
+      "claim": "Federal spending records show 29 FAA grants to TTAD totaling $29.75 million from 2003 through 2023, an average of about $1.4 million per year, with awards in 19 of the 21 years.",
+      "status": "verified",
+      "sources": ["https://www.usaspending.gov/"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "USASpending.gov award records for Truckee-Tahoe Airport District."
+    },
+    {
+      "id": "runway-2-20-grant-2023",
+      "claim": "The $6,300,961 FAA award in 2023 for the reconstruction of runway 2/20 is the district's largest federal grant on record.",
+      "status": "verified",
+      "sources": [
+        "https://www.usaspending.gov/",
+        "https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "financials.html rounds to $6.3 million; history.html carries the exact figure."
+    },
+    {
+      "id": "runway-2-20-closure-2023",
+      "claim": "Runway 2/20 was closed June 25 to November 16, 2023 for reconstruction.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf",
+        "https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "budget-2025-anticipated-federal-grants",
+      "claim": "TTAD's 2025 budget anticipates $300,000 in AIP funding plus $1,175,000 for the Apron A2 project, described in the budget as parking circles/ramp in front of Unicom.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "history.html states the combined figure as $1.475M in new federal grants."
+    },
+    {
+      "id": "grant-assurances-20-years",
+      "claim": "Each accepted FAA grant carries the standard grant assurances for 20 years from acceptance (longer for obligations tied to real property), including nondiscriminatory access for all aeronautical users, and on the current grant history those obligations extend into the 2040s.",
+      "status": "verified",
+      "sources": [
+        "https://www.faa.gov/airports/aip/grant_assurances",
+        "https://www.usaspending.gov/"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "The 2040s extension is arithmetic from the 2023 grant plus 20 years."
+    },
+    {
+      "id": "anca-1990-preemption",
+      "claim": "The Airport Noise and Capacity Act of 1990, together with FAA grant assurances, places most access restrictions including mandatory curfews outside the district's practical authority, which is why the quiet-hours curfew is voluntary.",
+      "status": "verified",
+      "sources": [
+        "https://www.faa.gov/airports/aip/grant_assurances",
+        "https://truckeetahoeairport.com/current-projects/fly-quiet"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/index.html", "docs/financials.html", "docs/study-2026-08-dawn.html"],
+      "notes": ""
+    },
+    {
+      "id": "fy2023-net-position-and-cash",
+      "claim": "TTAD's audited net position is $70.5 million, with $10.4 million in cash.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "excellent-financial-condition-quote",
+      "claim": "The management discussion and analysis inside TTAD's FY2023 audited statements describes the district as being in excellent financial condition.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "Direct quote; location confirmed in the Management's Discussion and Analysis section."
+    },
+    {
+      "id": "community-benefit-budget-2025",
+      "claim": "TTAD's 2025 Community Benefit budget totals $2,968,000: Strategic Initiatives $1,500,000, Non-Airport Expenses $400,000, Tahoe Truckee Community Foundation $250,000, Housing Joint Powers Authority $250,000, Fly Quiet / Fly Safe $150,000, Aviation/STEAM $100,000, Transportation $100,000, Pilot events $100,000, Boys & Girls Club $98,000, Airshow $20,000.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "Budget Reference Guide 2025, section 8. history.html rounds the total to $2.97M."
+    },
+    {
+      "id": "property-tax-fund-designation",
+      "claim": "The board designates 17% of the district's $13.6 million in unrestricted net assets as a Property Tax Fund for Community Benefit.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/board_meetings/378/view_file?file=tab+01a+-+budget+reference+guide+2025.pdf",
+        "https://truckeetahoeairport.com/documents/915-ttad_audit_report_2023-pdf"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": ""
+    },
+    {
+      "id": "library-match-2m",
+      "claim": "TTAD has pledged a $2 million match toward the new Truckee library, contingent on private fundraising.",
+      "status": "verified",
+      "sources": ["https://www.sierrasun.com/news/tahoe-truckee-airport-district-commits-2-million-in-funding-for-new-truckee-regional-library-through-matching-opportunity/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html", "docs/history.html"],
+      "notes": "The contingency on private fundraising is stated on history.html."
+    },
+    {
+      "id": "economic-impact-study-2018",
+      "claim": "The district's 2018 economic impact study estimates about $73 million per year in regional activity attributable to the airport, on 2017 data.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/documents/414-airport_economic_impact_study_-_final_-_sept_2018-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/financials.html"],
+      "notes": "Attributed on the page to the district's own study; the site does not endorse the estimate, only records it."
+    },
+    {
+      "id": "glacial-valley-setting",
+      "claim": "Glaciation left the flat, buildable valley floor beside the Donner crossing that the emigrant trail, railroad, telegraph, Interstate 80, and eventually the airport all occupy.",
+      "status": "sourced",
+      "sources": [
+        "https://pubs.usgs.gov/publication/70032219",
+        "https://truckeehistory.org/"
+      ],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "Scene-setting geology; low stakes, citations present."
+    },
+    {
+      "id": "first-seaplane-1919",
+      "claim": "The first seaplane landed on Lake Tahoe in 1919 and, unable to climb out of the thin air, left by truck; floatplanes served the lake for decades until valley runways took over.",
+      "status": "sourced",
+      "sources": ["https://www.tahoehistory.info/lifting-off-from-tahoe/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "airmail-field-site-16b",
+      "claim": "A Department of Commerce intermediate field, Site 16B on the San Francisco to Salt Lake airway, operated northeast of Truckee in the 1930s as an emergency airmail stop, was abandoned around 1954, and today's Overland Trail was formerly Old Truckee Airport Road.",
+      "status": "verified",
+      "sources": [
+        "https://www.airfields-freeman.com/CA/Airfields_CA_NE.htm",
+        "https://truckeetahoeairport.com/news/48-truckee-tahoe-airport-history-and-stats"
+      ],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The airport-relocation thread (old field abandoned, current field built a mile south in 1958) was checked in the August 2026 verification pass."
+    },
+    {
+      "id": "district-founded-1958",
+      "claim": "The Truckee Tahoe Airport District and its taxing authority were created in 1958 by a vote of the electorate, organized by a Chamber of Commerce described as eager to have a modern airport that would bring tourists to the area, and the district built a mile south of the dead airmail field.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/news/48-truckee-tahoe-airport-history-and-stats",
+        "https://www.truckee.com/special-district",
+        "https://www.olympics.com/en/news/squaw-valley-1960-how-it-all-began"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The tourism-charter quote is from the district's own history page. Squaw Valley had been awarded the 1960 Winter Olympics in 1955, three years before the vote."
+    },
+    {
+      "id": "martis-creek-dam-1972",
+      "claim": "The Army Corps of Engineers completed Martis Creek Dam in 1972; seepage keeps the pool 58 feet below design level, the dam carries the Corps' most urgent safety classification, and dam-site investigations revealed the previously unknown Polaris Fault.",
+      "status": "verified",
+      "sources": [
+        "https://www.spk.usace.army.mil/Missions/Recreation/Martis-Creek-Lake/",
+        "https://www.govinfo.gov/content/pkg/FR-2010-04-30/html/2010-10103.htm",
+        "https://pubs.geoscienceworld.org/aeg/eeg/article-abstract/24/1/111/528210/Discovering-the-Polaris-Fault-Martis-Creek-Dam"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": "safety.html dates the Polaris Fault identification to 2011-era investigations."
+    },
+    {
+      "id": "open-space-and-neighborhood-geometry",
+      "claim": "Federal dam lands and district-supported open space (Waddle Ranch, the Ponderosa Golf Course, Martis Creek parcels) wrap the airport's east and south against homebuilding, while the neighborhoods lie northwest along the runway centerline.",
+      "status": "verified",
+      "sources": ["https://www.nctc.ca.gov/documents/TTALUC/TTALUCP%20Final%20Adopted%2010-27-16/TTALUCP_Complete_revised12-20-16.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": ""
+    },
+    {
+      "id": "runway-29-jet-departures-96pct",
+      "claim": "The Truckee Tahoe Airport Land Use Compatibility Plan (adopted 2016) records residential areas to each side of the runway centerline within 1.0 mile of the runway end northwest of Runway 11, and that Runway 29 handles 96% of jet takeoffs, so most jet departures climb out toward the residential side.",
+      "status": "verified",
+      "sources": ["https://www.nctc.ca.gov/documents/TTALUC/TTALUCP%20Final%20Adopted%2010-27-16/TTALUCP_Complete_revised12-20-16.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html", "docs/history.html"],
+      "notes": "The 96% figure and the residential-areas language are quoted from the ALUCP."
+    },
+    {
+      "id": "early-2000s-master-plan-growth",
+      "claim": "CapRadio reported in June 2014 that a decade earlier the district had anticipated bigger planes and more of them, planned parallel runways, and that development around the airport was restricted.",
+      "status": "sourced",
+      "sources": ["https://www.capradio.org/articles/2014/06/23/new-truckee-tahoe-airport-master-plan-anticipates-less-growth/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "Direct quote from CapRadio, attributed on the page."
+    },
+    {
+      "id": "noise-calls-2004",
+      "claim": "The district processed 936 noise calls in 2004.",
+      "status": "verified",
+      "sources": ["http://web.archive.org/web/20050517005053/http://www.truckeetahoeairport.com:80/2004%20Annual%20Noise%20Report.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "From the archived 2004 Annual Noise Report; part of the Resolution 2004-03 timeline entry checked in August 2026."
+    },
+    {
+      "id": "resolution-2004-03",
+      "claim": "After a Town of Truckee legal memo, the TTAD board adopted Resolution 2004-03 in 2004, summarized in a 2015 staff memo as supporting the phase-out of Stage I and II jets and mitigation efforts when triggers are met, including when the portion of jets exceeds 15% of total operations.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The 15% trigger language is quoted from the staff memo's summary of the resolution, not the resolution text itself; the page attributes it accordingly."
+    },
+    {
+      "id": "community-investments-2003-2018",
+      "claim": "By its own accounting the district invested $17.48 million in non-aviation community projects from 2003 to 2018, including $3 million toward the Waddle Ranch purchase (2007) plus $3 million in forestry there, $2.77 million for the Ponderosa Golf Course (2008), $1.81 million for Martis Creek open space (2011), and $930,000 for the community pool (2015).",
+      "status": "sourced",
+      "sources": ["https://truckeetahoeairport.com/documents/404-ttad_community_partner_benefits_sept_2018-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "District self-accounting document; figures attributed on the page as the district's own."
+    },
+    {
+      "id": "surf-air-2014",
+      "claim": "Surf Air began scheduled Pilatus PC-12 membership service between San Carlos and Truckee in May 2014, with airport general manager Kevin Smith quoted saying any way to improve access to the area is a benefit to the community.",
+      "status": "sourced",
+      "sources": ["https://www.sierrasun.com/news/local/surf-air-expands-flight-service-to-truckee/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "jet-share-2014-trigger-crossing",
+      "claim": "Jet operations reached 15.1% of total operations in 2014 (3,448 of 22,764), crossing Resolution 2004-03's 15% trigger, and the district purchased the Vector noise and operations monitoring system that year.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf",
+        "https://truckeetahoeairport.com/news/26-ttad-chooses-new-noise-and-operations-monitoring-system"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "staff-memo-2015-reinterpretation",
+      "claim": "A January 28, 2015 staff memo states there is no debate that jet operations in 2014 are at or above 15%, argues the trigger should be read against 2004's higher operations estimates, and cites district work described as well beyond the scope of the Resolution, including reduced fuel and service hours and curfew incentives for hangar tenants.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/90/view_file?file=tab+15a+-+memo+on+resolution+2004-03+-+airport+master+plan.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The memo's reinterpretation of the trigger is presented on the page as the district's position, quoted directly."
+    },
+    {
+      "id": "master-plan-2015-managed-growth",
+      "claim": "The July 2015 Airport Master Plan is built around managed growth of aviation facilities: the proposed third runway is dropped, lower approach minimums are declined with the reasoning that TRK's challenging flight environment dissuades much of that activity, 25% of property tax is targeted to Annoyance Reduction and Community Outreach Projects, and the plan asks whether aircraft using the airport will get any larger and how that can be prevented.",
+      "status": "sourced",
+      "sources": ["https://truckeetahoeairport.com/documents/79-trk_amp_july_2015_final-completereport-pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": "Quotes are from the plan itself; safety.html also cites the plan weighing whether a deicing facility might incentivize all-weather activity."
+    },
+    {
+      "id": "jones-2015-figures",
+      "claim": "Board president John Jones reported in a September 2015 budget presentation that jet traffic was up 113% since 2009 and that 88% of survey respondents supported managing growth.",
+      "status": "sourced",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/121/view_file?file=tab+01+-+john+jones+ttad+budget+presentation+sept++2015+(2).pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "control-tower-2017",
+      "claim": "The district opened a control tower in 2017 (seasonal trial, year-round from December), contracting Midwest ATC at about $860,000 a year of district funds to enhance safety and mitigate community annoyance, with Class D airspace following in 2018.",
+      "status": "sourced",
+      "sources": [
+        "https://www.aopa.org/news-and-media/all-news/2017/december/19/seasonal-tower-operating-at-truckee-tahoe",
+        "https://truckeetahoeairport.com/board_meetings/217/view_file?file=tab+14+-+fy+2020+budget+narrative.pdf"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": "The purpose language is quoted from the FY2020 budget preface."
+    },
+    {
+      "id": "no-marketing-language-2018",
+      "claim": "The adopted FY2019 budget (November 2018) states the district does not market for or encourage increased flight operations but responds to the needs of the region it serves, the FY2021 budget says it traditionally does not market, and no earlier appearance of this language was found in district records.",
+      "status": "sourced",
+      "sources": [
+        "https://truckeetahoeairport.com/public_files/446-cy_2019_budget-pdf",
+        "https://truckeetahoeairport.com/documents/581-fy_2021_approved_budget-pdf"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The no-earlier-appearance clause is a negative claim from the site's own archival search of district records."
+    },
+    {
+      "id": "operations-peak-2019",
+      "claim": "Total operations peaked at 36,379 in 2019 and have not returned to that level since.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "ops-2020-shift",
+      "claim": "In 2020 total operations fell 8% while operations by jets over 12,500 lbs rose 23.7%, from 3,432 to 4,246.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "jet-ops-peak-2021",
+      "claim": "Jet operations peaked at 5,175 in 2021, up 74% from 2013.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "noise-comments-peak-2021",
+      "claim": "Noise comments peaked at 1,320 in 2021, submitted by 240 households.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "mission-statement-2021",
+      "claim": "In 2021 the board unanimously removed the word aviation from the district's mission statement.",
+      "status": "sourced",
+      "sources": ["https://www.moonshineink.com/tahoe-news/in-the-crosswinds/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "smith-community-giving-quote-2021",
+      "claim": "GM Kevin Smith, on community giving in 2021, said the district is flying airplanes and jets in and out and making noise and feels an obligation to see what it can do to provide benefit in the community at large.",
+      "status": "sourced",
+      "sources": ["https://www.moonshineink.com/tahoe-news/plane-and-clear/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "Condensed on the page from the Moonshine Ink interview quote."
+    },
+    {
+      "id": "heavy-jets-2024",
+      "claim": "Jets over 50,000 lbs flew 450 operations in 2024, the most on record and up 45% in a year, in a tracking category that did not exist before 2015.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "jet-comment-share-2024",
+      "claim": "In 2024 jets drew 44% of noise comments on about 15% of operations.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "community-benefit-2024-wildfire",
+      "claim": "Community Benefit spending reached $4.9 million in 2024, pivoting roughly $2 million a year to wildfire mitigation for local fire agencies.",
+      "status": "sourced",
+      "sources": [
+        "https://truckeetahoeairport.com/documents/944-tab_14a_-_2024_final_detail_operating_budget___reference_guide-pdf",
+        "https://www.ttcf.net/ttad-partnership-program/"
+      ],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": ""
+    },
+    {
+      "id": "ops-comments-table-2013-2024",
+      "claim": "District tracking reports give annual totals 2013-2024 for operations, jet operations, jets over 12,500 lbs, jets over 50,000 lbs, and noise comments, including total ops 21,618 (2013) to 30,536 (2024), heavy-jet ops of 227 (2015), 261 (2016), 307 (2017), 296 (2018), 270 (2019), 424 (2020), 179 (2021), 412 (2022), 310 (2023), 450 (2024), and 720 noise comments in 2024.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/documents/354-ops_comments_2013_to2017-pdf",
+        "https://truckeetahoeairport.com/documents/456-2014-2018_opscomment_tracking1-11-19-pdf",
+        "https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf",
+        "https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/study-2026-08-dawn.html"],
+      "notes": "Full table on history.html; the study standfirst cites the 720 noise comments (2024). The >50,000 lb category begins in 2015."
+    },
+    {
+      "id": "comment-method-changes",
+      "claim": "The district notes its complaint-counting methods changed in 2014, 2017, and 2018, so early and later comment counts are not strictly comparable.",
+      "status": "verified",
+      "sources": [
+        "https://truckeetahoeairport.com/board_meetings/351/view_file?file=tab+09c+-+2023+annual+operations+%26+comments+tracking+charts.pdf",
+        "https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The district's own comparability caveat, carried on the page next to the comment series."
+    },
+    {
+      "id": "faa-ops-figures-static-estimates",
+      "claim": "The FAA's public operations figures for this airport are static estimates that do not reflect measured traffic, making the district's tracking data the only measured series.",
+      "status": "held",
+      "sources": [],
+      "method": "derived",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html"],
+      "notes": "The page states this without a direct citation. Plausible (FAA 5010/TAF figures for non-towered-history GA fields are estimates) but needs a citable FAA source; until then the claim is held."
+    },
+    {
+      "id": "ntsb-record-totals",
+      "claim": "The NTSB has investigated 148 events at or near Truckee since its public records begin (1964): 146 accidents and 2 incidents, including 32 fatal accidents and 71 deaths.",
+      "status": "verified",
+      "sources": [
+        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://data.ntsb.gov/avdata"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html", "docs/index.html"],
+      "notes": "Scope: NTSB city designation Truckee; NTSB public records begin 1962, earliest Truckee event on file is 1964; area crashes filed under other towns excluded."
+    },
+    {
+      "id": "fatal-accidents-by-decade",
+      "claim": "Fatal accidents and deaths by decade: 1960s (from 1964) 4/7, 1970s 4/9, 1980s 9/17, 1990s 6/20, 2000s 2/3, 2010s 4/6, 2020s through mid-2026 3/9.",
+      "status": "verified",
+      "sources": [
+        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://data.ntsb.gov/avdata"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Decade fatal counts sum to 32 and deaths to 71, matching the totals fact."
+    },
+    {
+      "id": "fatal-accident-table-1964-2024",
+      "claim": "The 32 fatal accidents from 1964-06-25 (Grumman F7F air tanker) through 2024-03-30 (Daher TBM 960) are tabulated with date, aircraft, phase, deaths, and condensed NTSB probable-cause findings.",
+      "status": "verified",
+      "sources": [
+        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://data.ntsb.gov/avdata"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Per-row deaths sum to 71. The 2024 entry is from the NTSB preliminary; no probable cause yet, as the table states."
+    },
+    {
+      "id": "no-ground-injuries",
+      "claim": "In the sixty-year NTSB record, no person on the ground has been injured or killed by an aircraft accident at Truckee.",
+      "status": "verified",
+      "sources": [
+        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://data.ntsb.gov/avdata"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html", "docs/index.html"],
+      "notes": "Negative claim, bounded by the same scope as the record totals (NTSB city designation Truckee, 1964 onward)."
+    },
+    {
+      "id": "challenger-2021-crash",
+      "claim": "On July 26, 2021 a Bombardier Challenger 605 inbound from Coeur d'Alene crashed during an unstabilized circling approach to runway 11 flown at excessive speed, ending in an aerodynamic stall that killed all six aboard, coming to rest between a Ponderosa Golf Course fairway and a residential street about a mile west-northwest of the field.",
+      "status": "verified",
+      "sources": [
+        "https://www.ntsb.gov/news/press-releases/Pages/NR20230817.aspx",
+        "https://avweb.com/aviation-news/ntsb-cites-poor-decision-making-in-challenger-accident/",
+        "https://aviation-safety.net/wikibase/318959",
+        "https://cbsnews.com/amp/sacramento/news/truckee-plane-crash-investigation"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": "NTSB final: captain never visually identified the runway; stall warnings ignored. News reporting described it narrowly missing homes and a school bus (attributed as reporting, not NTSB)."
+    },
+    {
+      "id": "tbm-2024-crash",
+      "claim": "On March 30, 2024 a Daher TBM 960 came down about 3,200 feet from the runway 11 approach end near the Olympic Heights neighborhood during low maneuvering after a night go-around, killing two and striking no structures; the investigation has no final report yet.",
+      "status": "verified",
+      "sources": [
+        "https://aviation-safety.net/wikibase/378178",
+        "https://data.ntsb.gov/carol-main-public/basic-search"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/history.html", "docs/safety.html"],
+      "notes": "All statements about this accident are from the NTSB preliminary, as the pages state."
+    },
+    {
+      "id": "olympic-valley-2026-crash",
+      "claim": "A 2026 fatal crash near Olympic Valley, en route to Truckee, is additional to the Truckee-designated NTSB counts on the safety page.",
+      "status": "verified",
+      "sources": ["https://data.ntsb.gov/carol-main-public/basic-search"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Stated as a scope note under the decade table."
+    },
+    {
+      "id": "district-pilot-portal-setting",
+      "claim": "The district's pilot portal tells pilots they will land in a bowl of mountains at 5,901 MSL, that density altitudes commonly exceed 9,000 feet in summer, that its four wind socks can point four different directions, and that afternoon winds are typically gusty with common windshear.",
+      "status": "sourced",
+      "sources": ["https://pilots.truckeetahoeairport.com/pilot-essentials.html"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Direct quotes from the district's own pilot-facing material."
+    },
+    {
+      "id": "district-circling-statement",
+      "claim": "The district states that all serious IFR accidents at KTRK in the past 23 years were during circling maneuvers, which the site's accident table bears out for the 2005 Learjet, 2010 RV-8, and 2021 Challenger.",
+      "status": "sourced",
+      "sources": ["https://pilots.truckeetahoeairport.com/pilot-essentials.html"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "The 2024 accident, still under investigation, also occurred during low maneuvering after a night approach."
+    },
+    {
+      "id": "faa-airport-remarks",
+      "claim": "The FAA's official airport remarks for KTRK note mountainous terrain surrounding the airport and runways, expected windshear and downdrafts, summer afternoon density altitudes frequently above 9,000 feet, no deicing available, and required cold-temperature altimetry corrections.",
+      "status": "sourced",
+      "sources": ["https://www.airnav.com/airport/KTRK"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "FAA record read via AirNav."
+    },
+    {
+      "id": "instrument-approach-limits",
+      "claim": "KTRK has no precision approach; the best minimums require weather 582 feet above the runway with a mandatory missed-approach climb gradient, two of the three instrument approaches and circling to three of the four runway ends are not authorized at night, and the tower operates roughly 7 am to 6-8 pm seasonally with the field uncontrolled outside those hours.",
+      "status": "sourced",
+      "sources": [
+        "https://aeronav.faa.gov/d-tpp/2608/06021R11.PDF",
+        "https://aeronav.faa.gov/d-tpp/2608/06021R20.PDF",
+        "https://aeronav.faa.gov/d-tpp/2608/06021RA.PDF",
+        "https://www.airnav.com/airport/KTRK"
+      ],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Approach-plate figures are cycle-dated (2608 cycle); re-check when plates revise."
+    },
+    {
+      "id": "ntsb-sa-084-circling-alert",
+      "claim": "After the 2021 accident the NTSB issued national safety alert SA-084 on circling approaches, counting 10 circling accidents and 17 deaths since 2008.",
+      "status": "sourced",
+      "sources": ["https://www.ntsb.gov/news/press-releases/Pages/NR20230817.aspx"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": ""
+    },
+    {
+      "id": "fly-safe-2024",
+      "claim": "After the 2021 accident the district posted the FAA's safety alert on visual approaches, and in 2024 launched FLY SAFE, paying hangar credits and instructor reimbursements for recurrent pilot training.",
+      "status": "sourced",
+      "sources": ["https://truckeetahoeairport.com/current-projects/fly-safe"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": ""
+    },
+    {
+      "id": "ga-fatal-rate-trend",
+      "claim": "The national general aviation fatal accident rate has roughly halved since the early 1990s: about 1.8 per 100,000 flight hours then, roughly 1.0 by NTSB measures in 2019-2020, and 0.65-0.68 in 2022-2023 by the AOPA Air Safety Institute's accounting, with the remaining rate carried mostly by personal flying.",
+      "status": "sourced",
+      "sources": [
+        "https://www.ntsb.gov/safety/data/Pages/table10.aspx",
+        "https://www.aopa.org/news-and-media/all-news/2025/november/20/mcspadden-report-ga-accident-rate-down-in-2023",
+        "https://www.aopa.org/news-and-media/all-news/2025/april/17/ga-safer-than-ever-despite-recent-accidents"
+      ],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Mixed NTSB and AOPA ASI accounting; the page attributes each figure to its source."
+    },
+    {
+      "id": "caltrans-handbook-zones",
+      "claim": "California's Airport Land Use Planning Handbook found that for runways of Truckee's size its six safety zones capture about 85% of near-airport accident sites, with the highest concentration in the runway protection zones at the runway ends.",
+      "status": "sourced",
+      "sources": ["https://dot.ca.gov/-/media/dot-media/programs/aeronautics/documents/californiaairportlanduseplanninghandbook-a11y.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "2011 edition of the handbook."
+    },
+    {
+      "id": "alucp-zone-restrictions",
+      "claim": "Inside the mapped compatibility zones the 2016 ALUCP limits new residential density (zero dwellings in the runway protection zones, graduated limits outward) and prohibits new schools, day cares, and hospitals in the inner zones, but has no authority over existing homes.",
+      "status": "sourced",
+      "sources": ["https://www.nctc.ca.gov/documents/TTALUC/TTALUCP%20Final%20Adopted%2010-27-16/TTALUCP_Complete_revised12-20-16.pdf"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": ""
+    },
+    {
+      "id": "airport-proximity-disclosure-law",
+      "claim": "California law requires that residential sales within an airport influence area carry an airport-proximity disclosure, so recent buyers in the affected neighborhoods received formal notice at closing.",
+      "status": "sourced",
+      "sources": ["https://www.nctc.ca.gov/documents/TTALUC/TTALUCP%20Final%20Adopted%2010-27-16/TTALUCP_Complete_revised12-20-16.pdf"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "Page cites no statute directly; the requirement traces to Business & Professions Code 11010 / Civil Code 1103.4 (airport influence area disclosure). Worth adding the statute citation on a future pass."
+    },
+    {
+      "id": "ground-fatality-base-rate",
+      "claim": "Nationally over 2013-2022, NTSB records show 25 accidents in which someone on the ground was killed, two or three a year against roughly 28 million annual flight hours.",
+      "status": "sourced",
+      "sources": ["https://www.aopa.org/news-and-media/all-news/2025/april/17/ga-safer-than-ever-despite-recent-accidents"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "NTSB ground-fatality query as reported by AOPA."
+    },
+    {
+      "id": "operations-repeat-centerlines",
+      "claim": "Operations at KTRK repeat along the same two extended runway centerlines roughly thirty thousand times a year, which is why fixed safety zones matter despite a very low per-location risk.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/board_meetings/370/view_file?file=tab+10b+-+2024+annual+operations+and+comments+report.pdf"],
+      "method": "derived",
+      "checked": "2026-08-10",
+      "pages": ["docs/safety.html"],
+      "notes": "The thirty-thousand figure follows from the district ops table (30,140 in 2023; 30,536 in 2024)."
+    },
+    {
+      "id": "fly-quiet-voluntary-curfew",
+      "claim": "The airport's Fly Quiet program asks all aircraft not to fly between 10:00 pm and 7:00 am; the request is voluntary, backed by lease incentives rather than enforcement, and includes Shoulder Hour Protocols for flights needing the edges of the window.",
+      "status": "verified",
+      "sources": ["https://truckeetahoeairport.com/current-projects/fly-quiet"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/index.html", "docs/study-2026-08-dawn.html"],
+      "notes": ""
+    },
+    {
+      "id": "adsb-exchange-coverage",
+      "claim": "ADS-B Exchange displays effectively all transmitting aircraft, including those that have opted out of display on commercial trackers.",
+      "status": "sourced",
+      "sources": ["https://globe.adsbexchange.com/"],
+      "method": "secondary",
+      "checked": "2026-08-10",
+      "pages": ["docs/index.html"],
+      "notes": "ADS-B Exchange's stated policy of not honoring block requests; consistent with the site's own Study 1 observation of LADD-blocked aircraft appearing."
+    },
+    {
+      "id": "commercial-trackers-honor-ladd",
+      "claim": "FlightAware and Flightradar24 honor FAA LADD display-blocking requests, so some aircraft that use this airport will not appear on those sites, which is a limit of the sites and not proof a flight did not happen.",
+      "status": "sourced",
+      "sources": ["https://www.faa.gov/pilots/ladd"],
+      "method": "agency-record",
+      "checked": "2026-08-10",
+      "pages": ["docs/index.html"],
+      "notes": ""
+    },
+    {
+      "id": "planenoise-portal",
+      "claim": "The district's official channel for noise comments is a PlaneNoise portal, and comments become part of the district's own reporting to its board.",
+      "status": "sourced",
+      "sources": ["https://www.planenoise.com/ktrk/"],
+      "method": "primary-document",
+      "checked": "2026-08-10",
+      "pages": ["docs/index.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-total-ops",
+      "claim": "In Study 1 (August 1-8, 2026, 04:00-08:30 PDT), 122 takeoffs and landings occurred at KTRK across the eight mornings.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": "Derived from ADS-B Exchange historical replay via the repo pipeline; source data in data/ and data/weekly/, event list embedded in the page."
+    },
+    {
+      "id": "study1-pre7-ops",
+      "claim": "Twelve of the 122 Study 1 takeoffs and landings happened before 7:00 am, ten of them turboprops or an air-ambulance helicopter.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-single-jet-quiet-hours",
+      "claim": "The only jet operating during quiet hours in the Study 1 week was a Pilatus PC-24 registered through an owner trust (N281EB), which landed from Reno at 6:46 am on August 3 and took off again at 6:49 after a 3-minute stop, appearing 7 times that week between Truckee, Reno, and Palo Alto.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": "Two movements (one arrival, one departure), one aircraft."
+    },
+    {
+      "id": "study1-earliest-jet-times",
+      "claim": "Excluding the August 3 Pilatus stop, the earliest jet movement each Study 1 morning was 7:03, 7:12, 7:20, 7:29, 7:37, 7:41, 7:59, and 8:11, with 7:03 the earliest jet takeoff of the week outside that exception.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-jets-waiting-for-7",
+      "claim": "In Study 1, two jets started up early and waited on the ground for 7:00: a Global 7500 appeared on the tracker at 6:16 on August 7 and sat 97 minutes before a 7:53 takeoff, and a NetJets Citation started up at 6:41 on August 8 and took off at 7:41.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-jet-fleet-totals",
+      "claim": "Study 1 recorded 34 jet takeoffs and landings by 19 different jets across the eight mornings, including NetJets and Flexjet charters, a Gulfstream 650, a Global 7500, several Citations, and a Challenger.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-pre7-turboprops",
+      "claim": "Eight of the twelve pre-7:00 movements in Study 1 were turboprops, mostly Pilatus PC-12s, flying to and from San Carlos, Concord, Modesto, Scottsdale and beyond between 6:13 and 6:44 am.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": "The page notes the voluntary quiet hours cover turboprops the same as jets."
+    },
+    {
+      "id": "study1-local-flights",
+      "claim": "In Study 1, 47 flights in the window took off from Truckee and returned to Truckee (local recreational and training flying), and only five of the 47 left before 7:00 am all week.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": ""
+    },
+    {
+      "id": "study1-overflights",
+      "claim": "Across the eight Study 1 mornings, eleven aircraft crossed low over the area without ever landing at Truckee, as many as three in a single morning, at 2,400 to 4,500 feet above the valley floor.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": "Reno-bound airliner traffic and high-altitude enroute overflights excluded by method."
+    },
+    {
+      "id": "study1-ladd-enrollment",
+      "claim": "Seven of the 59 aircraft that operated at KTRK in the Study 1 week are enrolled in the FAA's LADD program, including two of the four aircraft with the most pre-7:00 operations that week, and none used the stronger PIA anonymized-registration program.",
+      "status": "verified",
+      "sources": [
+        "https://github.com/micrui/truckee-flights",
+        "https://www.faa.gov/pilots/ladd"
+      ],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": "index.html phrases the two-of-four as 'most quiet-hours operations that week'; same underlying tally. LADD/PIA enrollment read from per-aircraft ADS-B Exchange records."
+    },
+    {
+      "id": "study1-air-ambulance",
+      "claim": "An air-ambulance helicopter operated by the Regional Emergency Medical Services Authority arrived at KTRK at 5:12 am on August 8, 2026, the earliest movement recorded in Study 1.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": "The quiet-hours log records working flights including air ambulances, as index.html states."
+    },
+    {
+      "id": "study1-five-week-context",
+      "claim": "As of the August 9, 2026 update, the ongoing quiet-hours log covers five weeks and shows the Study 1 week had the fewest jet operations during quiet hours of any week recorded (2, against a five-week range of 1 to 5, including jet departures as early as 5:23 am in July).",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html", "docs/index.html"],
+      "notes": "This update note fences Study 1's findings to its week; the study window also began at 4:00 am, so overnight activity is absent from Study 1 but present in the log's full-window weeks."
+    },
+    {
+      "id": "study1-method-caveats",
+      "claim": "Study 1 is one summer week of ADS-B-only data: aircraft without transponders are invisible so piston counts are floors, departure times at the 8:30 window edge are clipped, 1-minute landing-takeoff pairs may be touch-and-goes or flag artifacts, and FAA registry ownership strings can obscure beneficial owners behind LLCs and trusts.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-08-10",
+      "pages": ["docs/study-2026-08-dawn.html"],
+      "notes": "Method: ADS-B Exchange replay slices (11:00-15:30 UTC), aircraft within 20 nm reduced to within 13 nm below 20,000 ft, full-day traces segmented into ground blocks."
+    }
+  ]
+}

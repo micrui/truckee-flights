@@ -46,6 +46,14 @@ public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages
 - Stdlib-only Python. No external dependencies, no build step; pages are hand-written HTML
   using the shared CSS token set (light/dark via `prefers-color-scheme` + `data-theme`).
 
+## The fact registry
+
+`facts.json` is the canonical record of every factual claim on the site: status
+(verified | sourced | contested | held), sources, method, check date, and the pages that
+state it. Pages must never claim what the registry does not hold; corrections fix both,
+together, in one commit. `python3 factcheck.py` validates the registry and flags facts
+unchecked for 180 days. The `/fact-vet` skill runs the full verification ritual.
+
 ## Siblings
 
 truckee-i80 (the freeway) and truckee-trains (the railroad) follow the same pattern and rules.
