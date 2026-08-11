@@ -128,10 +128,12 @@ def build(dates=None, window="morning"):
                 for s in sessions:
                     t0, t1 = s[0][0][0], s[-1][0][0]
                     quiet_min = max(0, int((min(t1, QE) - t0) / 60)) if t0 < QE else 0
+                    closest = min(s, key=lambda pd: pd[1])
                     overflights.append(dict(meta, first=t2s(t0), last=t2s(t1),
                                             dwell_min=int((t1 - t0) / 60), quiet_min=quiet_min,
                                             min_alt=min(p[3] for p, d in s),
-                                            min_dist=round(min(d for p, d in s), 1)))
+                                            min_dist=round(min(d for p, d in s), 1),
+                                            alt_at_closest=closest[0][3]))
 
     events.sort(key=lambda e: (e["date"], e["hm"]))
     aircraft_list = sorted(aircraft.values(), key=lambda a: (a["class"], a["reg"] or ""))

@@ -432,7 +432,7 @@ def render_operators(weeks):
         log_rows += [(f'{o["date"]} {o["first"]}',
                       f'<tr><td class="mono">{o["date"]}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
                       f'<td>Airborne nearby, no landing ({o["dwell_min"]} min)</td>'
-                      f'<td>min {o["min_alt"]:,.0f} ft, {o["min_dist"]} nm from field</td>'
+                      f'<td>{o.get("alt_at_closest") or o["min_alt"]:,.0f} ft at closest pass ({o["min_dist"]} nm)</td>'
                       f'<td>{QCHIP if o.get("quiet_min", 0) > 0 else ""}</td></tr>')
                      for o in a["ovf"]]
         log_rows.sort(key=lambda kv: kv[0])
