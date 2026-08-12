@@ -2,17 +2,18 @@
  "start": "2026-08-10",
  "end": "2026-08-16",
  "days": [
-  "2026-08-10"
+  "2026-08-10",
+  "2026-08-11"
  ],
  "partial": true,
  "window_local": "22:00-08:30",
- "total_ops": 21,
- "unique_aircraft": 9,
+ "total_ops": 35,
+ "unique_aircraft": 16,
  "by_class": {
-  "helicopter": 1,
-  "turboprop": 10,
-  "jet": 7,
-  "piston": 3
+  "helicopter": 4,
+  "turboprop": 11,
+  "jet": 9,
+  "piston": 11
  },
  "quiet_hours_ops": 7,
  "quiet_hours_by_class": {
@@ -113,11 +114,12 @@
    "pre7": true
   }
  ],
- "local_flights": 5,
+ "local_flights": 10,
  "ladd_operators": [
   "N107MY",
   "N628TS",
-  "N797GM"
+  "N797GM",
+  "N85SK"
  ],
  "note": null,
  "events": [
@@ -393,6 +395,188 @@
    "hm": "08:26",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N922ST",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "SAN TOMO INC",
+   "role": "",
+   "desc": "BELL 429 GlobalRanger",
+   "ev": "ARR",
+   "hm": "07:00",
+   "other": "8CA8 Lodi",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N922ST",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "SAN TOMO INC",
+   "role": "",
+   "desc": "BELL 429 GlobalRanger",
+   "ev": "DEP",
+   "hm": "07:02",
+   "other": "8CA8 Lodi",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:17",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "07:18",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N560FX",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "FLEXJET LLC, KANWAR RAHUL, EDGEWOOD PARTNERS INSURANCE CENTE",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "ARR",
+   "hm": "07:41",
+   "other": "KVNY Van Nuys",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N85SK",
+   "type": "EC30",
+   "cls": "helicopter",
+   "own": "EC 130 LLC, SWAN TRANSPORTATION LLC",
+   "role": "",
+   "desc": "AIRBUS HELICOPTERS EC-130",
+   "ev": "DEP",
+   "hm": "07:45",
+   "other": "KMFR Medford",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "07:51",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N1123V",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "LIZARRAGA TONY CLAUDE",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "ev": "DEP",
+   "hm": "07:52",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:53",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N560FX",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "FLEXJET LLC, KANWAR RAHUL, EDGEWOOD PARTNERS INSURANCE CENTE",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "DEP",
+   "hm": "07:54",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N42BG",
+   "type": "P46T",
+   "cls": "turboprop",
+   "own": "GTW AVIATION LLC",
+   "role": "",
+   "desc": "PIPER PA-46-500TP",
+   "ev": "ARR",
+   "hm": "08:20",
+   "other": "KSJC San Jose",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N107MY",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "TEATREE LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "08:21",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "ARR",
+   "hm": "08:24",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "08:27",
+   "other": "KTRK Truckee",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -503,6 +687,42 @@
    "first": "22:49",
    "last": "03:00",
    "min_alt": 5600
+  },
+  {
+   "date": "2026-08-11",
+   "reg": null,
+   "type": null,
+   "cls": "unknown",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "first": "00:03",
+   "last": "00:09",
+   "min_alt": 9200
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N99YZ",
+   "type": "T210",
+   "cls": "piston",
+   "own": "EDWAL AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "first": "06:52",
+   "last": "06:59",
+   "min_alt": 10325
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N922ST",
+   "type": "B429",
+   "cls": "helicopter",
+   "own": "SAN TOMO INC",
+   "role": "",
+   "desc": "BELL 429 GlobalRanger",
+   "first": "06:54",
+   "last": "06:59",
+   "min_alt": 5575
   }
  ],
  "overflights": [
@@ -519,7 +739,8 @@
    "dwell_min": 6,
    "quiet_min": 6,
    "min_alt": 9275,
-   "min_dist": 8.2
+   "min_dist": 8.2,
+   "alt_at_closest": 9275
   },
   {
    "date": "2026-08-10",
@@ -534,7 +755,8 @@
    "dwell_min": 6,
    "quiet_min": 6,
    "min_alt": 10350,
-   "min_dist": 0.8
+   "min_dist": 0.8,
+   "alt_at_closest": 10350
   },
   {
    "date": "2026-08-10",
@@ -549,7 +771,8 @@
    "dwell_min": 5,
    "quiet_min": 5,
    "min_alt": 9450,
-   "min_dist": 2.8
+   "min_dist": 2.8,
+   "alt_at_closest": 9450
   },
   {
    "date": "2026-08-10",
@@ -564,7 +787,8 @@
    "dwell_min": 2,
    "quiet_min": 0,
    "min_alt": 8250,
-   "min_dist": 9.3
+   "min_dist": 9.3,
+   "alt_at_closest": 8300
   },
   {
    "date": "2026-08-10",
@@ -579,7 +803,8 @@
    "dwell_min": 4,
    "quiet_min": 0,
    "min_alt": 9075,
-   "min_dist": 4.3
+   "min_dist": 4.3,
+   "alt_at_closest": 10450
   },
   {
    "date": "2026-08-10",
@@ -594,7 +819,8 @@
    "dwell_min": 8,
    "quiet_min": 0,
    "min_alt": 9025,
-   "min_dist": 5.6
+   "min_dist": 5.6,
+   "alt_at_closest": 10575
   },
   {
    "date": "2026-08-10",
@@ -609,7 +835,8 @@
    "dwell_min": 5,
    "quiet_min": 0,
    "min_alt": 9675,
-   "min_dist": 2.6
+   "min_dist": 2.6,
+   "alt_at_closest": 11050
   },
   {
    "date": "2026-08-10",
@@ -624,7 +851,8 @@
    "dwell_min": 0,
    "quiet_min": 0,
    "min_alt": 11650,
-   "min_dist": 9.4
+   "min_dist": 9.4,
+   "alt_at_closest": 11975
   },
   {
    "date": "2026-08-10",
@@ -639,7 +867,56 @@
    "dwell_min": 6,
    "quiet_min": 6,
    "min_alt": 8150,
-   "min_dist": 7.6
+   "min_dist": 7.6,
+   "alt_at_closest": 8350
+  },
+  {
+   "date": "2026-08-11",
+   "reg": null,
+   "type": null,
+   "cls": "unknown",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "first": "00:03",
+   "last": "00:09",
+   "dwell_min": 5,
+   "quiet_min": 5,
+   "min_alt": 9200,
+   "min_dist": 0.2,
+   "alt_at_closest": 10600
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N99YZ",
+   "type": "T210",
+   "cls": "piston",
+   "own": "EDWAL AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "first": "06:52",
+   "last": "07:00",
+   "dwell_min": 7,
+   "quiet_min": 7,
+   "min_alt": 10325,
+   "min_dist": 2.9,
+   "alt_at_closest": 10325
+  },
+  {
+   "date": "2026-08-11",
+   "reg": "N9911L",
+   "type": "PA24",
+   "cls": "piston",
+   "own": "RITTER TIMOTHY D",
+   "role": "",
+   "desc": "PIPER PA-24 Comanche",
+   "first": "08:07",
+   "last": "08:14",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 9125,
+   "min_dist": 1.6,
+   "alt_at_closest": 9600
   }
  ]
 }
