@@ -36,11 +36,18 @@ OPERATOR_ROLES = [
     ("FLEXJET", "fractional jet charter"),
 ]
 
-def operator_role(own):
+FIRE_TYPES = {"H47", "CH47"}  # Chinooks: fire work absent better information
+
+
+def operator_role(own, typecode=""):
     o = (own or "").upper()
     for needle, role in OPERATOR_ROLES:
         if needle in o:
             return role
+    if "FIRE" in o:
+        return "firefighting contractor"
+    if (typecode or "").upper() in FIRE_TYPES:
+        return "firefighting (assumed for Chinook)"
     return ""
 
 
@@ -74,7 +81,7 @@ def build(dates=None, window="morning"):
             flags = t.get("dbFlags", 0) or 0
             meta = dict(date=datestr, reg=rec["reg"], type=rec["type"],
                         cls=klass(rec.get("type")), own=(rec["own"] or "")[:60],
-                        role=operator_role(rec.get("own")), desc=(rec.get("desc") or "")[:60])
+                        role=operator_role(rec.get("own"), rec.get("type")), desc=(rec.get("desc") or "")[:60])
             a = aircraft.setdefault(rec["reg"] or h, {
                 "reg": rec["reg"], "hex": h, "type": rec["type"], "class": klass(rec.get("type")),
                 "desc": rec.get("desc"), "owner": rec["own"],

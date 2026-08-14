@@ -351,7 +351,7 @@ def notables(w):
 
 
 def role_tag(a):
-    r = operator_role(a.get("own"))
+    r = operator_role(a.get("own"), a.get("type"))
     return f' <span class="tag">{r}</span>' if r else ""
 
 
