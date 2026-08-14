@@ -117,21 +117,45 @@ def render():
             f'<td class="num">{w["local_flights"]}</td>'
             f'<td>{w["quiet_hours_ops"]} ({qparts})</td></tr>')
         if w["quiet_hours_events"]:
-            ev_rows = "".join(
-                f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
-                f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
-                f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
-                f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
-                f'<td>{html.escape(e["other"])}</td>'
-                f'<td>{html.escape(e["own"] or "")}</td></tr>'
-                for e in w["quiet_hours_events"])
+            def group_of(e):
+                r = (e.get("role") or "").lower()
+                if "fire" in r:
+                    return "fire"
+                if "ambulance" in r:
+                    return "medical"
+                return "other"
+
+            def ev_table(evs):
+                body = "".join(
+                    f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
+                    f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
+                    f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
+                    f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
+                    f'<td>{html.escape(e["other"])}</td>'
+                    f'<td>{html.escape(e["own"] or "")}</td></tr>'
+                    for e in evs)
+                return (f'<div class="table-scroll"><table>'
+                        f'<thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th>'
+                        f'<th>Type</th><th>Class</th><th>From / to</th><th>Registered owner</th></tr></thead>'
+                        f'<tbody>{body}</tbody></table></div>')
+
+            groups = {"other": [], "fire": [], "medical": []}
+            for e in w["quiet_hours_events"]:
+                groups[group_of(e)].append(e)
+            sections = []
+            for key, title in (("other", "Everyone else"),
+                               ("fire", "Fire operations"),
+                               ("medical", "Medical flights")):
+                if groups[key]:
+                    sections.append(f'<h3 class="grp">{title} ({len(groups[key])})</h3>'
+                                    + ev_table(groups[key]))
+            counts = ", ".join(f"{len(groups[k])} {lbl}" for k, lbl in
+                               (("other", "other"), ("fire", "fire"), ("medical", "medical"))
+                               if groups[k])
             details.append(f'''
   <details>
-    <summary>{fmt_range(w)}: {w["quiet_hours_ops"]} takeoffs/landings during quiet hours (<a href="{wk_href}">timeline</a>)</summary>
-    <div class="table-scroll"><table>
-      <thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th><th>Type</th><th>Class</th><th>From / to</th><th>Registered owner</th></tr></thead>
-      <tbody>{ev_rows}</tbody>
-    </table></div>
+    <summary>{fmt_range(w)}: {w["quiet_hours_ops"]} takeoffs/landings during quiet hours ({counts}) (<a href="{wk_href}">timeline</a>)</summary>
+    {"".join(sections)}
   </details>''')
 
     page = f'''<meta charset="utf-8">
@@ -168,6 +192,8 @@ def render():
   .eyebrow a {{ color: inherit; }}
   h1 {{ font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }}
   .standfirst {{ font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 28px; }}
+  h3.grp {{ font-size: 13px; font-weight: 650; color: var(--ink-2); margin: 16px 0 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }}
   table {{ border-collapse: collapse; width: 100%; font-size: 13.5px; }}
   th {{ text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
     font-weight: 600; padding: 6px 12px 6px 0; border-bottom: 1px solid var(--axis); }}
