@@ -99,12 +99,17 @@ def build(dates=None, window="morning"):
                 b0, b1 = b[0][0], b[-1][0]
                 before = [p for p in allpts if not p[4] and b0 - 7200 < p[0] < b0 - 30]
                 after = [p for p in allpts if not p[4] and b1 + 30 < p[0] < b1 + 7200]
-                if before and W0 <= b0 <= W1:
+                # A landing needs the aircraft airborne shortly before the block; a takeoff
+                # needs it airborne shortly after. Otherwise the block edge is transponder
+                # silence while parked, not a movement.
+                arrived = before and (b0 - before[-1][0]) <= 600
+                departed = after and (after[0][0] - b1) <= 600
+                if arrived and W0 <= b0 <= W1:
                     pre = [p for p in allpts if p[4] and p[0] < b0 - 600]
                     ref = pre[-1] if pre else before[0]
                     events.append(dict(meta, ev="ARR", hm=t2s(b0),
                                        other=nearest_airport(ref[1], ref[2]), pre7=b0 < QE))
-                if after and W0 <= b1 <= W1:
+                if departed and W0 <= b1 <= W1:
                     post = [p for p in allpts if p[4] and p[0] > b1 + 600]
                     ref = post[0] if post else after[-1]
                     oth = nearest_airport(ref[1], ref[2])

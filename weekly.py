@@ -126,17 +126,23 @@ def render():
                 return "other"
 
             def ev_table(evs):
+                def other_cell(e):
+                    o = e["other"] or ""
+                    if o.startswith("Local flight"):
+                        return "returned to Truckee"
+                    return html.escape(o)
                 body = "".join(
                     f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
                     f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                     f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
                     f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
-                    f'<td>{html.escape(e["other"])}</td>'
+                    f'<td>{other_cell(e) if e["ev"] == "ARR" else ""}</td>'
+                    f'<td>{other_cell(e) if e["ev"] == "DEP" else ""}</td>'
                     f'<td>{html.escape(e["own"] or "")}</td></tr>'
                     for e in evs)
                 return (f'<div class="table-scroll"><table>'
                         f'<thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th>'
-                        f'<th>Type</th><th>Class</th><th>From / to</th><th>Registered owner</th></tr></thead>'
+                        f'<th>Type</th><th>Class</th><th>From</th><th>To</th><th>Registered owner</th></tr></thead>'
                         f'<tbody>{body}</tbody></table></div>')
 
             groups = {"other": [], "fire": [], "medical": []}

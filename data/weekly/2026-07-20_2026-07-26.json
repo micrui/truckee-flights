@@ -12,20 +12,20 @@
  ],
  "partial": false,
  "window_local": "22:00-08:30",
- "total_ops": 96,
- "unique_aircraft": 56,
+ "total_ops": 75,
+ "unique_aircraft": 54,
  "by_class": {
-  "turboprop": 13,
-  "piston": 50,
-  "jet": 21,
-  "helicopter": 12
+  "turboprop": 10,
+  "piston": 41,
+  "jet": 17,
+  "helicopter": 7
  },
- "quiet_hours_ops": 22,
+ "quiet_hours_ops": 16,
  "quiet_hours_by_class": {
-  "turboprop": 5,
+  "turboprop": 2,
   "piston": 5,
-  "jet": 3,
-  "helicopter": 9
+  "jet": 2,
+  "helicopter": 7
  },
  "quiet_hours_events": [
   {
@@ -39,19 +39,6 @@
    "ev": "ARR",
    "hm": "05:24",
    "other": "KRNO Reno",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "DEP",
-   "hm": "05:26",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -78,32 +65,6 @@
    "ev": "ARR",
    "hm": "06:17",
    "other": "KSAT San Antonio",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N320QS",
-   "type": "C680",
-   "cls": "jet",
-   "own": "",
-   "role": "",
-   "desc": "CESSNA 680 Citation Sovereign",
-   "ev": "DEP",
-   "hm": "06:20",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "ARR",
-   "hm": "06:21",
-   "other": "KTRK Truckee",
    "pre7": true
   },
   {
@@ -180,47 +141,8 @@
    "role": "air ambulance",
    "desc": "AEROSPATIALE AS-350 Ecureuil",
    "ev": "DEP",
-   "hm": "23:05",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N901CF",
-   "type": "AS50",
-   "cls": "helicopter",
-   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
-   "role": "air ambulance",
-   "desc": "AEROSPATIALE AS-350 Ecureuil",
-   "ev": "ARR",
-   "hm": "23:55",
-   "other": "KTRK Truckee",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N901CF",
-   "type": "AS50",
-   "cls": "helicopter",
-   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
-   "role": "air ambulance",
-   "desc": "AEROSPATIALE AS-350 Ecureuil",
-   "ev": "DEP",
    "hm": "23:56",
    "other": "KMCC Sacramento",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-23",
-   "reg": "N460NG",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "NOVEMBER GOLF MANAGEMENT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:34",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -315,7 +237,7 @@
    "pre7": true
   }
  ],
- "local_flights": 30,
+ "local_flights": 15,
  "ladd_operators": [
   "N460NG",
   "N469JG",
@@ -336,19 +258,6 @@
    "ev": "ARR",
    "hm": "05:24",
    "other": "KRNO Reno",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "DEP",
-   "hm": "05:26",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -379,32 +288,6 @@
   },
   {
    "date": "2026-07-20",
-   "reg": "N320QS",
-   "type": "C680",
-   "cls": "jet",
-   "own": "",
-   "role": "",
-   "desc": "CESSNA 680 Citation Sovereign",
-   "ev": "DEP",
-   "hm": "06:20",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "ARR",
-   "hm": "06:21",
-   "other": "KTRK Truckee",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-20",
    "reg": "N714K",
    "type": "FA7X",
    "cls": "jet",
@@ -428,19 +311,6 @@
    "hm": "06:28",
    "other": "KDVO Novato",
    "pre7": true
-  },
-  {
-   "date": "2026-07-20",
-   "reg": "N320QS",
-   "type": "C680",
-   "cls": "jet",
-   "own": "",
-   "role": "",
-   "desc": "CESSNA 680 Citation Sovereign",
-   "ev": "ARR",
-   "hm": "07:27",
-   "other": "KTRK Truckee",
-   "pre7": false
   },
   {
    "date": "2026-07-20",
@@ -548,19 +418,6 @@
   },
   {
    "date": "2026-07-20",
-   "reg": "N781QS",
-   "type": "CL35",
-   "cls": "jet",
-   "own": "NETJETS SALES INC",
-   "role": "fractional jet charter",
-   "desc": "BOMBARDIER BD-100 Challenger 350",
-   "ev": "DEP",
-   "hm": "07:58",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-20",
    "reg": "N89GT",
    "type": "BE33",
    "cls": "piston",
@@ -600,19 +457,6 @@
   },
   {
    "date": "2026-07-21",
-   "reg": "N87AB",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "CIRRUS DESIGN CORP",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "07:23",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-21",
    "reg": "N3441F",
    "type": "C182",
    "cls": "piston",
@@ -622,19 +466,6 @@
    "ev": "ARR",
    "hm": "07:30",
    "other": "KTVL South Lake Tahoe",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-21",
-   "reg": "N3441F",
-   "type": "C182",
-   "cls": "piston",
-   "own": "LAWRENCE KAM M",
-   "role": "",
-   "desc": "CESSNA 182 Skylane",
-   "ev": "DEP",
-   "hm": "07:34",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -671,19 +502,6 @@
    "own": "CIRRUS DESIGN CORP",
    "role": "",
    "desc": "",
-   "ev": "ARR",
-   "hm": "07:44",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-21",
-   "reg": "N87AB",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "CIRRUS DESIGN CORP",
-   "role": "",
-   "desc": "",
    "ev": "DEP",
    "hm": "07:59",
    "other": "KDWA Davis/Woodland/Winters",
@@ -700,19 +518,6 @@
    "ev": "ARR",
    "hm": "08:00",
    "other": "KVNY Van Nuys",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-21",
-   "reg": "N620RJ",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "LIM FLT INC",
-   "role": "",
-   "desc": "CIRRUS SR-22T Turbo",
-   "ev": "DEP",
-   "hm": "08:00",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -791,32 +596,6 @@
    "ev": "DEP",
    "hm": "07:05",
    "other": "KSJC San Jose",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N307HY",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "WALLACE RICHARD RONALD",
-   "role": "",
-   "desc": "CIRRUS SR-22T Turbo",
-   "ev": "DEP",
-   "hm": "07:06",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N307HY",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "WALLACE RICHARD RONALD",
-   "role": "",
-   "desc": "CIRRUS SR-22T Turbo",
-   "ev": "DEP",
-   "hm": "07:23",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -932,47 +711,8 @@
    "role": "air ambulance",
    "desc": "AEROSPATIALE AS-350 Ecureuil",
    "ev": "DEP",
-   "hm": "23:05",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N901CF",
-   "type": "AS50",
-   "cls": "helicopter",
-   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
-   "role": "air ambulance",
-   "desc": "AEROSPATIALE AS-350 Ecureuil",
-   "ev": "ARR",
-   "hm": "23:55",
-   "other": "KTRK Truckee",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-22",
-   "reg": "N901CF",
-   "type": "AS50",
-   "cls": "helicopter",
-   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
-   "role": "air ambulance",
-   "desc": "AEROSPATIALE AS-350 Ecureuil",
-   "ev": "DEP",
    "hm": "23:56",
    "other": "KMCC Sacramento",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-23",
-   "reg": "N460NG",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "NOVEMBER GOLF MANAGEMENT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:34",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -1185,19 +925,6 @@
   },
   {
    "date": "2026-07-24",
-   "reg": "N271WM",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "FARM DOG HOLDINGS LLC",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "08:09",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-24",
    "reg": "N911HX",
    "type": "CC19",
    "cls": "piston",
@@ -1259,19 +986,6 @@
    "ev": "DEP",
    "hm": "08:26",
    "other": "KCRQ Carlsbad",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-24",
-   "reg": "N271WM",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "FARM DOG HOLDINGS LLC",
-   "role": "",
-   "desc": "",
-   "ev": "ARR",
-   "hm": "08:28",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -1393,19 +1107,6 @@
   },
   {
    "date": "2026-07-25",
-   "reg": "N270FX",
-   "type": "E545",
-   "cls": "jet",
-   "own": "FLEISCHER RUSSELL, MOUNTAINTIME AVIATION LLC, BLUE SKIES SUN",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "07:39",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-25",
    "reg": "N92MT",
    "type": "CC19",
    "cls": "piston",
@@ -1444,19 +1145,6 @@
    "pre7": false
   },
   {
-   "date": "2026-07-25",
-   "reg": "N1978J",
-   "type": "M20P",
-   "cls": "piston",
-   "own": "JASINSKI DAVID W TRUSTEE, JASINSKI AMY TRUSTEE",
-   "role": "",
-   "desc": "MOONEY M-20",
-   "ev": "DEP",
-   "hm": "08:16",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
    "date": "2026-07-26",
    "reg": "N546DH",
    "type": "CL60",
@@ -1484,19 +1172,6 @@
   },
   {
    "date": "2026-07-26",
-   "reg": "N517MB",
-   "type": "H60",
-   "cls": "helicopter",
-   "own": "MARIANI BROS AIR SUPPORT LLC",
-   "role": "",
-   "desc": "SIKORSKY UH-60 Black Hawk",
-   "ev": "DEP",
-   "hm": "07:54",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-26",
    "reg": "N748DC",
    "type": "S22T",
    "cls": "piston",
@@ -1510,19 +1185,6 @@
   },
   {
    "date": "2026-07-26",
-   "reg": "N517MB",
-   "type": "H60",
-   "cls": "helicopter",
-   "own": "MARIANI BROS AIR SUPPORT LLC",
-   "role": "",
-   "desc": "SIKORSKY UH-60 Black Hawk",
-   "ev": "ARR",
-   "hm": "08:09",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-26",
    "reg": "N741TX",
    "type": "EPIC",
    "cls": "turboprop",
@@ -1532,19 +1194,6 @@
    "ev": "ARR",
    "hm": "08:09",
    "other": "KSNA Santa Ana",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-26",
-   "reg": "N517MB",
-   "type": "H60",
-   "cls": "helicopter",
-   "own": "MARIANI BROS AIR SUPPORT LLC",
-   "role": "",
-   "desc": "SIKORSKY UH-60 Black Hawk",
-   "ev": "DEP",
-   "hm": "08:18",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -2740,6 +2389,38 @@
    "min_alt": 11250,
    "min_dist": 3.1,
    "alt_at_closest": 11475
+  },
+  {
+   "date": "2026-07-26",
+   "reg": "N517MB",
+   "type": "H60",
+   "cls": "helicopter",
+   "own": "MARIANI BROS AIR SUPPORT LLC",
+   "role": "",
+   "desc": "SIKORSKY UH-60 Black Hawk",
+   "first": "07:48",
+   "last": "07:48",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 5600,
+   "min_dist": 0.7,
+   "alt_at_closest": 5600
+  },
+  {
+   "date": "2026-07-26",
+   "reg": "N517MB",
+   "type": "H60",
+   "cls": "helicopter",
+   "own": "MARIANI BROS AIR SUPPORT LLC",
+   "role": "",
+   "desc": "SIKORSKY UH-60 Black Hawk",
+   "first": "08:09",
+   "last": "08:09",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 5600,
+   "min_dist": 0.7,
+   "alt_at_closest": 5600
   },
   {
    "date": "2026-07-26",

@@ -12,20 +12,20 @@
  ],
  "partial": false,
  "window_local": "22:00-08:30",
- "total_ops": 137,
- "unique_aircraft": 73,
+ "total_ops": 105,
+ "unique_aircraft": 69,
  "by_class": {
   "helicopter": 14,
-  "piston": 48,
-  "jet": 42,
-  "turboprop": 33
+  "piston": 36,
+  "jet": 33,
+  "turboprop": 22
  },
- "quiet_hours_ops": 24,
+ "quiet_hours_ops": 21,
  "quiet_hours_by_class": {
   "helicopter": 7,
   "piston": 5,
-  "jet": 5,
-  "turboprop": 7
+  "jet": 4,
+  "turboprop": 5
  },
  "quiet_hours_events": [
   {
@@ -69,19 +69,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N71MB",
-   "type": "C25B",
-   "cls": "jet",
-   "own": "BRETZ-AZTEC LLC",
-   "role": "",
-   "desc": "CESSNA 525B Citation CJ3",
-   "ev": "DEP",
-   "hm": "06:18",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N527DJ",
    "type": "PC12",
    "cls": "turboprop",
@@ -95,19 +82,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N527DJ",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "PILATUS AIRCRAFT USA LTD",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "06:35",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N797GM",
    "type": "PC12",
    "cls": "turboprop",
@@ -117,19 +91,6 @@
    "ev": "ARR",
    "hm": "06:35",
    "other": "KSQL San Carlos",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:36",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -341,7 +302,7 @@
    "pre7": true
   }
  ],
- "local_flights": 41,
+ "local_flights": 19,
  "ladd_operators": [
   "N1876T",
   "N232ST",
@@ -355,7 +316,6 @@
   "N790T",
   "N797GM",
   "N8101C",
-  "N884SW",
   "N900SS"
  ],
  "note": null,
@@ -401,19 +361,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N71MB",
-   "type": "C25B",
-   "cls": "jet",
-   "own": "BRETZ-AZTEC LLC",
-   "role": "",
-   "desc": "CESSNA 525B Citation CJ3",
-   "ev": "DEP",
-   "hm": "06:18",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N527DJ",
    "type": "PC12",
    "cls": "turboprop",
@@ -427,19 +374,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N527DJ",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "PILATUS AIRCRAFT USA LTD",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "06:35",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N797GM",
    "type": "PC12",
    "cls": "turboprop",
@@ -449,19 +383,6 @@
    "ev": "ARR",
    "hm": "06:35",
    "other": "KSQL San Carlos",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:36",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -492,32 +413,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N999FN",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "WING AIR LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "DEP",
-   "hm": "07:11",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N71MB",
-   "type": "C25B",
-   "cls": "jet",
-   "own": "BRETZ-AZTEC LLC",
-   "role": "",
-   "desc": "CESSNA 525B Citation CJ3",
-   "ev": "ARR",
-   "hm": "07:20",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N424U",
    "type": "F900",
    "cls": "jet",
@@ -527,19 +422,6 @@
    "ev": "DEP",
    "hm": "07:21",
    "other": "KDSM Des Moines",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "07:23",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -566,19 +448,6 @@
    "ev": "DEP",
    "hm": "07:24",
    "other": "KSQL San Carlos",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N527DJ",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "PILATUS AIRCRAFT USA LTD",
-   "role": "",
-   "desc": "",
-   "ev": "ARR",
-   "hm": "07:27",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -622,19 +491,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N831MP",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "D-FLAT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:34",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N71MB",
    "type": "C25B",
    "cls": "jet",
@@ -661,19 +517,6 @@
   },
   {
    "date": "2026-07-06",
-   "reg": "N1677C",
-   "type": "C180",
-   "cls": "piston",
-   "own": "DAVIS AERO LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "DEP",
-   "hm": "07:41",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
    "reg": "N9110H",
    "type": "C172",
    "cls": "piston",
@@ -696,32 +539,6 @@
    "ev": "DEP",
    "hm": "07:58",
    "other": "KBFI Seattle",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N831MP",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "D-FLAT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "08:02",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-06",
-   "reg": "N1677C",
-   "type": "C180",
-   "cls": "piston",
-   "own": "DAVIS AERO LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "ARR",
-   "hm": "08:09",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -843,19 +660,6 @@
   },
   {
    "date": "2026-07-07",
-   "reg": "N650FX",
-   "type": "GLF6",
-   "cls": "jet",
-   "own": "FLEXJET LLC, LKV AIR LLC, THG 4368 LLC, RET 5 INC, TVPX AIRC",
-   "role": "fractional jet charter",
-   "desc": "GULFSTREAM G650",
-   "ev": "DEP",
-   "hm": "07:22",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-07",
    "reg": "N8101C",
    "type": "BE33",
    "cls": "piston",
@@ -921,19 +725,6 @@
   },
   {
    "date": "2026-07-07",
-   "reg": "N460NG",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "NOVEMBER GOLF MANAGEMENT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:57",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-07",
    "reg": "N552QS",
    "type": "C68A",
    "cls": "jet",
@@ -973,19 +764,6 @@
   },
   {
    "date": "2026-07-07",
-   "reg": "N650FX",
-   "type": "GLF6",
-   "cls": "jet",
-   "own": "FLEXJET LLC, LKV AIR LLC, THG 4368 LLC, RET 5 INC, TVPX AIRC",
-   "role": "fractional jet charter",
-   "desc": "GULFSTREAM G650",
-   "ev": "ARR",
-   "hm": "08:12",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-07",
    "reg": "N556CB",
    "type": "SF50",
    "cls": "jet",
@@ -1008,19 +786,6 @@
    "ev": "DEP",
    "hm": "08:15",
    "other": "KPHX Phoenix",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-07",
-   "reg": "N460NG",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "NOVEMBER GOLF MANAGEMENT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "08:17",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -1060,19 +825,6 @@
    "ev": "ARR",
    "hm": "08:23",
    "other": "KSBP San Luis Obispo",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-07",
-   "reg": "N9110H",
-   "type": "C172",
-   "cls": "piston",
-   "own": "SIERRA AERO LLC",
-   "role": "flight school",
-   "desc": "CESSNA 172 Skyhawk",
-   "ev": "DEP",
-   "hm": "08:24",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1207,19 +959,6 @@
   },
   {
    "date": "2026-07-08",
-   "reg": "N601RV",
-   "type": "RV6",
-   "cls": "piston",
-   "own": "FLY RIGHT LLC",
-   "role": "",
-   "desc": "VANS RV-6",
-   "ev": "DEP",
-   "hm": "08:14",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-08",
    "reg": "N851DE",
    "type": "C182",
    "cls": "piston",
@@ -1229,19 +968,6 @@
    "ev": "DEP",
    "hm": "08:21",
    "other": "KWVI Watsonville",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-08",
-   "reg": "N601RV",
-   "type": "RV6",
-   "cls": "piston",
-   "own": "FLY RIGHT LLC",
-   "role": "",
-   "desc": "VANS RV-6",
-   "ev": "ARR",
-   "hm": "08:29",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -1298,19 +1024,6 @@
   },
   {
    "date": "2026-07-09",
-   "reg": "N900KP",
-   "type": "PC24",
-   "cls": "jet",
-   "own": "TOBARTHS LLC",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "07:27",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-09",
    "reg": "N74JS",
    "type": "C185",
    "cls": "piston",
@@ -1363,19 +1076,6 @@
   },
   {
    "date": "2026-07-09",
-   "reg": "N930MG",
-   "type": "C680",
-   "cls": "jet",
-   "own": "GONSALVES AND SANTUCCI INC",
-   "role": "",
-   "desc": "CESSNA 680 Citation Sovereign",
-   "ev": "DEP",
-   "hm": "08:13",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-09",
    "reg": "N411RC",
    "type": "S22T",
    "cls": "piston",
@@ -1411,19 +1111,6 @@
    "ev": "DEP",
    "hm": "08:20",
    "other": "KJAC Jackson",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-09",
-   "reg": "N9110H",
-   "type": "C172",
-   "cls": "piston",
-   "own": "SIERRA AERO LLC",
-   "role": "flight school",
-   "desc": "CESSNA 172 Skyhawk",
-   "ev": "DEP",
-   "hm": "08:22",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1545,19 +1232,6 @@
   },
   {
    "date": "2026-07-10",
-   "reg": "N705MJ",
-   "type": "C25C",
-   "cls": "jet",
-   "own": "DURKIN INC",
-   "role": "",
-   "desc": "CESSNA 525C Citation CJ4",
-   "ev": "DEP",
-   "hm": "07:36",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-10",
    "reg": "N582FX",
    "type": "CL35",
    "cls": "jet",
@@ -1636,32 +1310,6 @@
   },
   {
    "date": "2026-07-10",
-   "reg": "N884SW",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "MOUNTAIN LION AVIATION LLC",
-   "role": "",
-   "desc": "CIRRUS SR-22T Turbo",
-   "ev": "DEP",
-   "hm": "08:22",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-10",
-   "reg": "N705MJ",
-   "type": "C25C",
-   "cls": "jet",
-   "own": "DURKIN INC",
-   "role": "",
-   "desc": "CESSNA 525C Citation CJ4",
-   "ev": "ARR",
-   "hm": "08:26",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-10",
    "reg": "N122JM",
    "type": "PC12",
    "cls": "turboprop",
@@ -1714,19 +1362,6 @@
   },
   {
    "date": "2026-07-11",
-   "reg": "N7487Z",
-   "type": "PA25",
-   "cls": "piston",
-   "own": "TRUCKEE TAHOE SOARING ASSOC",
-   "role": "glider operation",
-   "desc": "PIPER PA-25 Pawnee",
-   "ev": "DEP",
-   "hm": "07:44",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
    "reg": "N62XS",
    "type": "RV6",
    "cls": "piston",
@@ -1762,19 +1397,6 @@
    "ev": "DEP",
    "hm": "07:51",
    "other": "KHDN Hayden",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
-   "reg": "N262FX",
-   "type": "E545",
-   "cls": "jet",
-   "own": "QUANTUM ENTERTAINMENT LLC, SUMMIT AVIATION INC, BJ400A LLC, ",
-   "role": "",
-   "desc": "EMBRAER EMB545 Praetor 500",
-   "ev": "DEP",
-   "hm": "07:53",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1844,32 +1466,6 @@
   },
   {
    "date": "2026-07-11",
-   "reg": "N124EV",
-   "type": "M20P",
-   "cls": "piston",
-   "own": "EL AERO SERVICES LLC",
-   "role": "",
-   "desc": "MOONEY M-20",
-   "ev": "DEP",
-   "hm": "08:05",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
-   "reg": "N7487Z",
-   "type": "PA25",
-   "cls": "piston",
-   "own": "TRUCKEE TAHOE SOARING ASSOC",
-   "role": "glider operation",
-   "desc": "PIPER PA-25 Pawnee",
-   "ev": "ARR",
-   "hm": "08:07",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
    "reg": "N232ST",
    "type": "PC12",
    "cls": "turboprop",
@@ -1883,19 +1479,6 @@
   },
   {
    "date": "2026-07-11",
-   "reg": "N232ST",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SIERRA TANGO MANAGEMENT LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "08:10",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
    "reg": "N26179",
    "type": "AA5",
    "cls": "piston",
@@ -1905,19 +1488,6 @@
    "ev": "ARR",
    "hm": "08:14",
    "other": "KCXP Carson City",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-11",
-   "reg": "N26179",
-   "type": "AA5",
-   "cls": "piston",
-   "own": "RICHARDSON JAMES D II",
-   "role": "",
-   "desc": "AMERICAN AA-5 Tiger",
-   "ev": "DEP",
-   "hm": "08:16",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -2065,19 +1635,6 @@
   },
   {
    "date": "2026-07-12",
-   "reg": "N995AF",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "FIRST BANK, WILMINGTON TRUST CO TRUSTEE, BRAND REAL ESTATE S",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:51",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-12",
    "reg": "N475HL",
    "type": "S22T",
    "cls": "piston",
@@ -2126,19 +1683,6 @@
    "ev": "ARR",
    "hm": "08:14",
    "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-12",
-   "reg": "N9110H",
-   "type": "C172",
-   "cls": "piston",
-   "own": "SIERRA AERO LLC",
-   "role": "flight school",
-   "desc": "CESSNA 172 Skyhawk",
-   "ev": "DEP",
-   "hm": "08:27",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   }
  ],
@@ -3091,6 +2635,38 @@
   },
   {
    "date": "2026-07-11",
+   "reg": "N7487Z",
+   "type": "PA25",
+   "cls": "piston",
+   "own": "TRUCKEE TAHOE SOARING ASSOC",
+   "role": "glider operation",
+   "desc": "PIPER PA-25 Pawnee",
+   "first": "07:40",
+   "last": "07:43",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 5500,
+   "min_dist": 0.1,
+   "alt_at_closest": 5700
+  },
+  {
+   "date": "2026-07-11",
+   "reg": "N7487Z",
+   "type": "PA25",
+   "cls": "piston",
+   "own": "TRUCKEE TAHOE SOARING ASSOC",
+   "role": "glider operation",
+   "desc": "PIPER PA-25 Pawnee",
+   "first": "08:09",
+   "last": "08:26",
+   "dwell_min": 17,
+   "quiet_min": 0,
+   "min_alt": 5500,
+   "min_dist": 0.1,
+   "alt_at_closest": 5500
+  },
+  {
+   "date": "2026-07-11",
    "reg": "N301JC",
    "type": "C82S",
    "cls": "piston",
@@ -3184,6 +2760,22 @@
    "min_alt": 7750,
    "min_dist": 1.6,
    "alt_at_closest": 8375
+  },
+  {
+   "date": "2026-07-12",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:47",
+   "last": "08:24",
+   "dwell_min": 37,
+   "quiet_min": 0,
+   "min_alt": 5525,
+   "min_dist": 0.0,
+   "alt_at_closest": 5600
   },
   {
    "date": "2026-07-12",

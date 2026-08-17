@@ -12,18 +12,18 @@
  ],
  "partial": false,
  "window_local": "22:00-08:30",
- "total_ops": 149,
- "unique_aircraft": 72,
+ "total_ops": 116,
+ "unique_aircraft": 71,
  "by_class": {
-  "turboprop": 36,
-  "piston": 80,
-  "jet": 29,
+  "turboprop": 22,
+  "piston": 65,
+  "jet": 25,
   "helicopter": 4
  },
- "quiet_hours_ops": 21,
+ "quiet_hours_ops": 17,
  "quiet_hours_by_class": {
-  "turboprop": 7,
-  "piston": 7,
+  "turboprop": 5,
+  "piston": 5,
   "jet": 5,
   "helicopter": 2
  },
@@ -39,19 +39,6 @@
    "ev": "ARR",
    "hm": "06:09",
    "other": "KSQL San Carlos",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:11",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -82,19 +69,6 @@
   },
   {
    "date": "2026-07-29",
-   "reg": "N55JA",
-   "type": "BN2P",
-   "cls": "piston",
-   "own": "OBERMAN MARK, OBERMAN JANIE",
-   "role": "",
-   "desc": "BRITTEN-NORMAN BN-2 Islander",
-   "ev": "DEP",
-   "hm": "06:28",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
    "reg": "N285JS",
    "type": "C172",
    "cls": "piston",
@@ -103,19 +77,6 @@
    "desc": "CESSNA 172 Skyhawk",
    "ev": "DEP",
    "hm": "06:29",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N57180",
-   "type": "C180",
-   "cls": "piston",
-   "own": "HOMO HOLDINGS LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "DEP",
-   "hm": "06:36",
    "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
@@ -130,19 +91,6 @@
    "ev": "ARR",
    "hm": "06:37",
    "other": "KRNO Reno",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "DEP",
-   "hm": "06:40",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -302,7 +250,7 @@
    "pre7": true
   }
  ],
- "local_flights": 51,
+ "local_flights": 27,
  "ladd_operators": [
   "N107MY",
   "N1989F",
@@ -311,7 +259,6 @@
   "N358VJ",
   "N3880",
   "N452CF",
-  "N469JG",
   "N57180",
   "N68885",
   "N797GM"
@@ -329,19 +276,6 @@
    "ev": "ARR",
    "hm": "06:09",
    "other": "KSQL San Carlos",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "06:11",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -368,32 +302,6 @@
    "ev": "ARR",
    "hm": "07:03",
    "other": "KO32 Reedley",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N797GM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "SWISS MISS LLC, SWISS MADE LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "07:05",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N271WM",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "FARM DOG HOLDINGS LLC",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "07:05",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -433,19 +341,6 @@
    "ev": "DEP",
    "hm": "07:20",
    "other": "KSQL San Carlos",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N271WM",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "FARM DOG HOLDINGS LLC",
-   "role": "",
-   "desc": "",
-   "ev": "ARR",
-   "hm": "07:28",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -515,19 +410,6 @@
   },
   {
    "date": "2026-07-27",
-   "reg": "N830CA",
-   "type": "SR22",
-   "cls": "piston",
-   "own": "VALIAIR LC TRUSTEE",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "07:49",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
    "reg": "N88917",
    "type": "S22T",
    "cls": "piston",
@@ -580,19 +462,6 @@
   },
   {
    "date": "2026-07-27",
-   "reg": "N469JG",
-   "type": "S22T",
-   "cls": "piston",
-   "own": "JG AVIATION LLC",
-   "role": "",
-   "desc": "CIRRUS SR-22T Turbo",
-   "ev": "DEP",
-   "hm": "08:02",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
    "reg": "N861JT",
    "type": "RV12",
    "cls": "piston",
@@ -601,32 +470,6 @@
    "desc": "",
    "ev": "DEP",
    "hm": "08:03",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N830CA",
-   "type": "SR22",
-   "cls": "piston",
-   "own": "VALIAIR LC TRUSTEE",
-   "role": "",
-   "desc": "",
-   "ev": "ARR",
-   "hm": "08:09",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N830CA",
-   "type": "SR22",
-   "cls": "piston",
-   "own": "VALIAIR LC TRUSTEE",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "08:10",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
@@ -641,19 +484,6 @@
    "ev": "ARR",
    "hm": "08:12",
    "other": "KMRY Monterey",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-27",
-   "reg": "N3880",
-   "type": "GA7C",
-   "cls": "piston",
-   "own": "A7P TRUST COMPANY INC TRUSTEE",
-   "role": "",
-   "desc": "GULFSTREAM G700",
-   "ev": "DEP",
-   "hm": "08:16",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -745,19 +575,6 @@
    "ev": "DEP",
    "hm": "07:35",
    "other": "KSJC San Jose",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-28",
-   "reg": "N1677C",
-   "type": "C180",
-   "cls": "piston",
-   "own": "DAVIS AERO LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "DEP",
-   "hm": "07:36",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -879,19 +696,6 @@
   },
   {
    "date": "2026-07-28",
-   "reg": "N4586S",
-   "type": "BE35",
-   "cls": "piston",
-   "own": "EJH TETON PROPERTIES LLC",
-   "role": "",
-   "desc": "BEECH 35 Bonanza",
-   "ev": "DEP",
-   "hm": "08:04",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-28",
    "reg": "N124EV",
    "type": "M20P",
    "cls": "piston",
@@ -940,32 +744,6 @@
    "ev": "ARR",
    "hm": "08:19",
    "other": "KMOD Modesto",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-28",
-   "reg": "N506QS",
-   "type": "C68A",
-   "cls": "jet",
-   "own": "",
-   "role": "",
-   "desc": "CESSNA 680 Citation Latitude",
-   "ev": "DEP",
-   "hm": "08:20",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-28",
-   "reg": "N871DG",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "YC POWDER LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "08:21",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1035,19 +813,6 @@
   },
   {
    "date": "2026-07-29",
-   "reg": "N55JA",
-   "type": "BN2P",
-   "cls": "piston",
-   "own": "OBERMAN MARK, OBERMAN JANIE",
-   "role": "",
-   "desc": "BRITTEN-NORMAN BN-2 Islander",
-   "ev": "DEP",
-   "hm": "06:28",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
    "reg": "N285JS",
    "type": "C172",
    "cls": "piston",
@@ -1056,19 +821,6 @@
    "desc": "CESSNA 172 Skyhawk",
    "ev": "DEP",
    "hm": "06:29",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N57180",
-   "type": "C180",
-   "cls": "piston",
-   "own": "HOMO HOLDINGS LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "DEP",
-   "hm": "06:36",
    "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
@@ -1083,19 +835,6 @@
    "ev": "ARR",
    "hm": "06:37",
    "other": "KRNO Reno",
-   "pre7": true
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "DEP",
-   "hm": "06:40",
-   "other": "Local flight (returned to KTRK)",
    "pre7": true
   },
   {
@@ -1122,19 +861,6 @@
    "ev": "ARR",
    "hm": "07:00",
    "other": "KSUN Hailey",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N374PM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "MCLEAN AIR LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:02",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1178,19 +904,6 @@
   },
   {
    "date": "2026-07-29",
-   "reg": "N13GX",
-   "type": "EPIC",
-   "cls": "turboprop",
-   "own": "EPIC II LLC",
-   "role": "",
-   "desc": "EPIC AIRCRAFT Epic LT",
-   "ev": "ARR",
-   "hm": "07:20",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-29",
    "reg": "N77VF",
    "type": "P46T",
    "cls": "turboprop",
@@ -1226,19 +939,6 @@
    "ev": "DEP",
    "hm": "07:40",
    "other": "KSQL San Carlos",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-29",
-   "reg": "N374PM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "MCLEAN AIR LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "07:41",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -1399,19 +1099,6 @@
   },
   {
    "date": "2026-07-30",
-   "reg": "N221RC",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BTFD LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:47",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-30",
    "reg": "N374PM",
    "type": "PC12",
    "cls": "turboprop",
@@ -1421,19 +1108,6 @@
    "ev": "ARR",
    "hm": "07:49",
    "other": "KMHR Sacramento",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-30",
-   "reg": "N374PM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "MCLEAN AIR LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:51",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1477,19 +1151,6 @@
   },
   {
    "date": "2026-07-30",
-   "reg": "N122JM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BUESSLI AVIATION LLC, BELLEVUE CONSULTING LLC, VEBLEN HOLDIN",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "08:06",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-30",
    "reg": "N861JT",
    "type": "RV12",
    "cls": "piston",
@@ -1499,19 +1160,6 @@
    "ev": "DEP",
    "hm": "08:09",
    "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-30",
-   "reg": "N221RC",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BTFD LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "08:11",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
@@ -1580,32 +1228,6 @@
    "pre7": false
   },
   {
-   "date": "2026-07-30",
-   "reg": "N249QS",
-   "type": "CL60",
-   "cls": "jet",
-   "own": "",
-   "role": "",
-   "desc": "",
-   "ev": "DEP",
-   "hm": "08:22",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-30",
-   "reg": "N122JM",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BUESSLI AVIATION LLC, BELLEVUE CONSULTING LLC, VEBLEN HOLDIN",
-   "role": "",
-   "desc": "",
-   "ev": "ARR",
-   "hm": "08:24",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
    "date": "2026-07-31",
    "reg": "N566KB",
    "type": "C560",
@@ -1642,19 +1264,6 @@
    "ev": "ARR",
    "hm": "07:28",
    "other": "KHHR Hawthorne",
-   "pre7": false
-  },
-  {
-   "date": "2026-07-31",
-   "reg": "N1677C",
-   "type": "C180",
-   "cls": "piston",
-   "own": "DAVIS AERO LLC",
-   "role": "",
-   "desc": "CESSNA  180 Skywagon",
-   "ev": "DEP",
-   "hm": "07:33",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1789,19 +1398,6 @@
   },
   {
    "date": "2026-08-01",
-   "reg": "N310LP",
-   "type": "C310",
-   "cls": "piston",
-   "own": "ISAACS W BRADFORD",
-   "role": "",
-   "desc": "CESSNA 310",
-   "ev": "DEP",
-   "hm": "07:39",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-01",
    "reg": "N338DK",
    "type": "S22T",
    "cls": "piston",
@@ -1828,19 +1424,6 @@
   },
   {
    "date": "2026-08-01",
-   "reg": "N70977",
-   "type": "C182",
-   "cls": "piston",
-   "own": "SORAN PATRICK DAVID",
-   "role": "",
-   "desc": "CESSNA 182 Skylane",
-   "ev": "DEP",
-   "hm": "07:59",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-01",
    "reg": "N68885",
    "type": "GLF6",
    "cls": "jet",
@@ -1850,19 +1433,6 @@
    "ev": "ARR",
    "hm": "07:59",
    "other": "KMRY Monterey",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-01",
-   "reg": "N68885",
-   "type": "GLF6",
-   "cls": "jet",
-   "own": "A7P TRUST CO INC TRUSTEE",
-   "role": "",
-   "desc": "GULFSTREAM G650",
-   "ev": "DEP",
-   "hm": "08:01",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -1919,19 +1489,6 @@
   },
   {
    "date": "2026-08-01",
-   "reg": "N70977",
-   "type": "C182",
-   "cls": "piston",
-   "own": "SORAN PATRICK DAVID",
-   "role": "",
-   "desc": "CESSNA 182 Skylane",
-   "ev": "ARR",
-   "hm": "08:17",
-   "other": "KTRK Truckee",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-01",
    "reg": "N861JT",
    "type": "RV12",
    "cls": "piston",
@@ -1967,19 +1524,6 @@
    "ev": "DEP",
    "hm": "08:22",
    "other": "KABR Aberdeen",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-01",
-   "reg": "N953PC",
-   "type": "C56X",
-   "cls": "jet",
-   "own": "PACIFIC COAST JET CHARTER INC",
-   "role": "",
-   "desc": "CESSNA 560XL Citation XLS",
-   "ev": "DEP",
-   "hm": "08:23",
-   "other": "Local flight (returned to KTRK)",
    "pre7": false
   },
   {
@@ -2127,19 +1671,6 @@
   },
   {
    "date": "2026-08-02",
-   "reg": "N221RC",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BTFD LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "DEP",
-   "hm": "07:54",
-   "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-02",
    "reg": "N726BA",
    "type": "B58T",
    "cls": "piston",
@@ -2175,19 +1706,6 @@
    "ev": "DEP",
    "hm": "08:14",
    "other": "Local flight (returned to KTRK)",
-   "pre7": false
-  },
-  {
-   "date": "2026-08-02",
-   "reg": "N221RC",
-   "type": "PC12",
-   "cls": "turboprop",
-   "own": "BTFD LLC",
-   "role": "",
-   "desc": "PILATUS PC-12",
-   "ev": "ARR",
-   "hm": "08:15",
-   "other": "KTRK Truckee",
    "pre7": false
   },
   {
