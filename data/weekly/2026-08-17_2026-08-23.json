@@ -2,16 +2,17 @@
  "start": "2026-08-17",
  "end": "2026-08-23",
  "days": [
-  "2026-08-17"
+  "2026-08-17",
+  "2026-08-18"
  ],
  "partial": true,
  "window_local": "22:00-08:30",
- "total_ops": 11,
- "unique_aircraft": 9,
+ "total_ops": 15,
+ "unique_aircraft": 13,
  "by_class": {
-  "turboprop": 3,
+  "turboprop": 5,
   "jet": 4,
-  "piston": 3,
+  "piston": 5,
   "helicopter": 1
  },
  "quiet_hours_ops": 2,
@@ -47,7 +48,7 @@
    "pre7": true
   }
  ],
- "local_flights": 2,
+ "local_flights": 3,
  "ladd_operators": [
   "N281EB",
   "N797GM"
@@ -196,6 +197,58 @@
    "hm": "22:15",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N199WF",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "YETI AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:08",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N900CX",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "JD HAALAND CONSTRUCTION INC",
+   "role": "",
+   "desc": "SOCATA TBM-900/910/930/940",
+   "ev": "DEP",
+   "hm": "07:29",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N805FA",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "FETCH AIR LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "08:08",
+   "other": "KCMA Camarillo",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:18",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -340,6 +393,70 @@
    "min_alt": 10225,
    "min_dist": 8.4,
    "alt_at_closest": 10225
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N567W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+   "role": "",
+   "desc": "BEECH 90 King Air",
+   "first": "07:16",
+   "last": "07:21",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 12250,
+   "min_dist": 1.4,
+   "alt_at_closest": 12425
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N232K",
+   "type": "GLF6",
+   "cls": "jet",
+   "own": "N232K LLC",
+   "role": "",
+   "desc": "GULFSTREAM G650",
+   "first": "07:40",
+   "last": "07:40",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 10650,
+   "min_dist": 9.1,
+   "alt_at_closest": 10650
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N7309S",
+   "type": "C182",
+   "cls": "piston",
+   "own": "BRUNO VINCENT P, MARYMEE JAMES P, BURGESS ALAN S, NEW LEADER",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:52",
+   "last": "08:06",
+   "dwell_min": 14,
+   "quiet_min": 0,
+   "min_alt": 5500,
+   "min_dist": 0.1,
+   "alt_at_closest": 5600
+  },
+  {
+   "date": "2026-08-18",
+   "reg": "N61WA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "WACOUTA AIRCRAFT LEASING LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "08:09",
+   "last": "08:17",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 9125,
+   "min_dist": 3.2,
+   "alt_at_closest": 9750
   }
  ]
 }
