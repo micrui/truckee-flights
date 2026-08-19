@@ -5,27 +5,27 @@
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #c2278f; --curfew: #0b0b0b; --accent: #2a78d6;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
       --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
       --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --curfew: #ffffff; --accent: #3987e5;
+      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #e04fb0; --curfew: #ffffff; --accent: #3987e5;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
     --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
     --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --curfew: #ffffff; --accent: #3987e5;
+    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #e04fb0; --curfew: #ffffff; --accent: #3987e5;
   }
   :root[data-theme="light"] {
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #c2278f; --curfew: #0b0b0b; --accent: #2a78d6;
   }
   body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     line-height: 1.55; margin: 0; padding: 40px 20px 64px; }
@@ -68,6 +68,7 @@
       <span class="item"><span class="sw" style="background:var(--jetc)"></span>Jet</span>
       <span class="item"><span class="sw" style="background:var(--tprop)"></span>Turboprop</span>
       <span class="item"><span class="sw" style="background:var(--light-ac)"></span>Light aircraft</span>
+      <span class="item"><span class="sw" style="background:var(--quiet)"></span>Takeoff or landing during quiet hours (22:00 to 07:00) by a jet, turboprop, or light aircraft</span>
       <span class="item"><span class="sw" style="background:var(--muted)"></span>Landing (circle)</span>
       <span class="item"><span class="sw tri" style="border-bottom:10px solid var(--muted)"></span>Takeoff (triangle)</span>
       <span class="item"><span class="sw ring"></span>Airborne nearby, no landing (line spans time on scene)</span>
@@ -88,7 +89,15 @@ function catOf(e) {
   if (e.cls === "turboprop") return "turboprop";
   return "light";
 }
-const colorOf = e => CAT_COLORS[catOf(e)];
+// Quiet-hours movements (22:00 to 07:00) by aircraft that are not fire or medical draw in
+// one distinct color regardless of class, so the lane still says what kind of aircraft and
+// the color says it moved during the voluntary quiet hours.
+const inQuiet = e => { const [h] = e.hm.split(":").map(Number); return h >= 22 || h < 7; };
+const colorOf = e => {
+  const c = catOf(e);
+  if (c !== "fire" && c !== "medical" && (e.ev === "ARR" || e.ev === "DEP") && inQuiet(e)) return "var(--quiet)";
+  return CAT_COLORS[c];
+};
 const LANES = { fire: 0, medical: 1, jet: 2, turboprop: 3, light: 4 };
 const N_LANES = 5;
 const DAYS = W_DATA.days;
