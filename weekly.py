@@ -136,8 +136,8 @@ def render():
                     f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                     f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
                     f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
-                    f'<td>{other_cell(e) if e["ev"] == "ARR" else ""}</td>'
-                    f'<td>{other_cell(e) if e["ev"] == "DEP" else ""}</td>'
+                    f'<td>{other_cell(e) if e["ev"] == "ARR" else "KTRK Truckee"}</td>'
+                    f'<td>{other_cell(e) if e["ev"] == "DEP" else "KTRK Truckee"}</td>'
                     f'<td>{html.escape(e["own"] or "")}</td></tr>'
                     for e in evs)
                 return (f'<div class="table-scroll"><table>'
