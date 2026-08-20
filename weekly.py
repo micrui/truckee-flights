@@ -155,6 +155,23 @@ def render():
                 if groups[key]:
                     sections.append(f'<h3 class="grp">{title} ({len(groups[key])})</h3>'
                                     + ev_table(groups[key]))
+            quiet_ovf = [o for o in w.get("overflights", []) if o.get("quiet_min", 0) > 0]
+            if quiet_ovf:
+                ovf_body = "".join(
+                    f'<tr><td class="mono">{o["date"][5:]}</td>'
+                    f'<td class="mono num">{o["first"]}–{o["last"]}</td>'
+                    f'<td class="mono">{html.escape(o["reg"] or "?")}</td>'
+                    f'<td class="mono">{type_link(o["type"], o.get("desc"))}</td><td>{o["cls"]}</td>'
+                    f'<td class="num">{(o.get("alt_at_closest") or o["min_alt"]):,} ft at {o["min_dist"]} nm</td>'
+                    f'<td class="num">{o["quiet_min"]}</td>'
+                    f'<td>{html.escape(o.get("own") or "")}</td></tr>'
+                    for o in quiet_ovf)
+                sections.append(
+                    f'<h3 class="grp">Airborne nearby, no landing ({len(quiet_ovf)})</h3>'
+                    f'<div class="table-scroll"><table>'
+                    f'<thead><tr><th>Date</th><th>On scene</th><th>Tail #</th><th>Type</th>'
+                    f'<th>Class</th><th>Closest pass</th><th>Quiet-hours min.</th><th>Registered owner</th></tr></thead>'
+                    f'<tbody>{ovf_body}</tbody></table></div>')
             counts = ", ".join(f"{len(groups[k])} {lbl}" for k, lbl in
                                (("other", "other"), ("fire", "fire"), ("medical", "medical"))
                                if groups[k])
@@ -198,6 +215,9 @@ def render():
   .eyebrow a {{ color: inherit; }}
   h1 {{ font-size: clamp(26px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 14px; }}
   .standfirst {{ font-size: 15.5px; color: var(--ink-2); max-width: 66ch; margin: 0 0 28px; }}
+  details.howto {{ margin: -12px 0 24px; max-width: 74ch; }}
+  details.howto summary {{ cursor: pointer; font-size: 13.5px; color: var(--accent); }}
+  details.howto p {{ font-size: 13.5px; color: var(--ink-2); margin: 8px 0 0; }}
   h3.grp {{ font-size: 13px; font-weight: 650; color: var(--ink-2); margin: 16px 0 4px;
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }}
   table {{ border-collapse: collapse; width: 100%; font-size: 13.5px; }}
@@ -229,6 +249,15 @@ def render():
     number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
     flight by flight below, air ambulances and other working flights included.
   </p>
+  <details class="howto">
+    <summary>Heard something? How to look up a moment</summary>
+    <p>Find the week below, open its timeline, and hover the marks near your time; each night
+    runs 22:00 to 08:30, left to right. Each night's data is posted the following evening, so
+    this morning's noise appears tonight. To see the actual sky at an exact moment, use
+    ADS-B Exchange's replay: <span class="mono">globe.adsbexchange.com/?replay=YYYY-MM-DD-HH:MM&amp;lat=39.32&amp;lon=-120.14&amp;zoom=11.5</span>
+    with the time in UTC (Pacific time plus 7 hours in summer). Aircraft flying more than
+    10 nautical miles out, or with location blocked at the source, are not in this log.</p>
+  </details>
   <div class="table-scroll"><table>
     <thead><tr><th>Week</th><th>Takeoffs + landings</th><th>Local departures</th><th>During quiet hours (before 7:00 am)</th></tr></thead>
     <tbody>

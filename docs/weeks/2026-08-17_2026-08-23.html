@@ -132,6 +132,15 @@ function el(name, attrs, parent) {
   (parent || svg).appendChild(e);
   return e;
 }
+// alternating day bands and solid boundaries so rows read as separate nights
+for (let i = 0; i < DAYS.length; i++) {
+  if (i % 2 === 1)
+    el("rect", { x: M.l, y: M.t + i * rowH, width: plotW, height: rowH,
+                 fill: "var(--grid)", opacity: 0.28 });
+  if (i > 0)
+    el("line", { x1: M.l, y1: M.t + i * rowH, x2: M.l + plotW, y2: M.t + i * rowH,
+                 stroke: "var(--axis)", "stroke-width": 1, opacity: 0.8 });
+}
 for (let t = 0; t <= SPAN; t += 30) {
   const x = M.l + t / SPAN * plotW;
   el("line", { x1: x, y1: M.t, x2: x, y2: M.t + plotH, stroke: "var(--grid)", "stroke-width": 1 });
