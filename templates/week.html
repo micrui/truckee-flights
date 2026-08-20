@@ -5,27 +5,27 @@
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #c2278f; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --curfew: #0b0b0b; --accent: #2a78d6;
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
       --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
       --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #e04fb0; --curfew: #ffffff; --accent: #3987e5;
+      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --curfew: #ffffff; --accent: #3987e5;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
     --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
     --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #e04fb0; --curfew: #ffffff; --accent: #3987e5;
+    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --curfew: #ffffff; --accent: #3987e5;
   }
   :root[data-theme="light"] {
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #c2278f; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --curfew: #0b0b0b; --accent: #2a78d6;
   }
   body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     line-height: 1.55; margin: 0; padding: 40px 20px 64px; }
@@ -63,8 +63,8 @@
   <div class="panel">
     <div class="chart-scroll"><svg id="chart" width="920" height="750" viewBox="0 0 920 750" role="img" aria-label="Timeline of operations for %%RANGE%%"></svg></div>
     <div class="legend">
-      <span class="item"><span class="sw" style="background:var(--fire)"></span>Fire operations</span>
-      <span class="item"><span class="sw" style="background:var(--medical)"></span>Medical</span>
+      <span class="item"><span class="sw" style="background:var(--fire);opacity:.45"></span>Fire operations (dimmed: working traffic)</span>
+      <span class="item"><span class="sw" style="background:var(--medical);opacity:.45"></span>Medical (dimmed: working traffic)</span>
       <span class="item"><span class="sw" style="background:var(--jetc)"></span>Jet</span>
       <span class="item"><span class="sw" style="background:var(--tprop)"></span>Turboprop</span>
       <span class="item"><span class="sw" style="background:var(--light-ac)"></span>Light aircraft</span>
@@ -93,6 +93,7 @@ function catOf(e) {
 // one distinct color regardless of class, so the lane still says what kind of aircraft and
 // the color says it moved during the voluntary quiet hours.
 const inQuiet = e => { const [h] = e.hm.split(":").map(Number); return h >= 22 || h < 7; };
+const dimOf = e => { const c = catOf(e); return (c === "fire" || c === "medical") ? 0.45 : 1; };
 const colorOf = e => {
   const c = catOf(e);
   if (c !== "fire" && c !== "medical" && (e.ev === "ARR" || e.ev === "DEP") && inQuiet(e)) return "var(--quiet)";
@@ -208,9 +209,10 @@ for (const key in byReg) {
       const dt = relMin(b.e.hm) - relMin(a.e.hm);
       if (dt > 0 && dt <= 45) {
         const g = el("g", {});
-        el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: colorOf(a.e),
-                     "stroke-width": 2.5, opacity: 0.55 }, g);
-        el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: "transparent", "stroke-width": 12 }, g);
+        const laneY = M.t + a.day * rowH + (a.lane + 0.5) * laneH;
+        el("line", { x1: a.x, y1: laneY, x2: b.x, y2: laneY, stroke: colorOf(a.e),
+                     "stroke-width": 1.2, opacity: 0.5 * dimOf(a.e) }, g);
+        el("line", { x1: a.x, y1: laneY, x2: b.x, y2: laneY, stroke: "transparent", "stroke-width": 12 }, g);
         const html2 = `<div class="t1">${a.e.reg} · ${dt}-minute stop</div>
           ${a.e.desc ? `<div class="t2">${a.e.desc}</div>` : ""}
           <div class="t2">landed ${a.e.hm} from ${a.e.other} · took off ${b.e.hm} to ${b.e.other}</div>
@@ -223,7 +225,7 @@ for (const key in byReg) {
   }
 }
 for (const m of marks) {
-  const g = el("g", { cursor: "default" });
+  const g = el("g", { cursor: "default", opacity: dimOf(m.e) });
   if (m.kind === "OVF") {
     if (m.x2 - m.x > 4) {
       el("line", { x1: m.x + 3, y1: m.y, x2: m.x2 - 3, y2: m.y, stroke: colorOf(m.e), "stroke-width": 1.4, opacity: 0.7 }, g);
