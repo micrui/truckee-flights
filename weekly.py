@@ -128,8 +128,8 @@ def render():
             def ev_table(evs):
                 def other_cell(e):
                     o = e["other"] or ""
-                    if o.startswith("Local flight"):
-                        return "returned to Truckee"
+                    if o.startswith("Local flight") or o.startswith("KTRK"):
+                        return "local flight"
                     return html.escape(o)
                 body = "".join(
                     f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
