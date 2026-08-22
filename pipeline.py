@@ -182,6 +182,12 @@ def run_day(datestr, window="morning"):
             c[1] = min(c[1], alt)
     sel = [h for h, (dd, alt) in cand.items() if dd <= CAND_NM and alt <= CAND_ALT]
     print(f"{datestr}: {len(cand)} aircraft in {RADIUS_NM}nm, {len(sel)} candidates", file=sys.stderr)
+    if not cand:
+        # Zero aircraft within 20nm over the whole window never happens for real;
+        # it means the heatmap fetches failed (archive missing, or the source is
+        # blocking this network). Refuse to record it as a quiet night.
+        raise RuntimeError(f"{datestr}: heatmap yielded zero aircraft; "
+                           "fetch blocked or archive not published")
 
     with cf.ThreadPoolExecutor(4) as ex:
         list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",

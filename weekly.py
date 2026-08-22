@@ -13,7 +13,7 @@ week. This is what the scheduled GitHub Action runs every Monday.
 
 Standard library only.
 """
-import argparse, datetime, glob, html, json, os
+import argparse, datetime, glob, html, json, os, sys
 from collections import Counter
 from pipeline import run_day, TZ
 from summarize import build, operator_role
@@ -39,7 +39,7 @@ def daily(window="full"):
         have = json.load(open(path)).get("days", [])
         if target.isoformat() in have:
             print(f"{target} already collected; nothing to do")
-            return False
+            return None
     try:
         collect(dates, window=window, frame=(monday, sunday))
     except Exception as e:
@@ -550,6 +550,7 @@ if __name__ == "__main__":
                     help="full = 22:00-08:30 (default); morning = 04:00-08:30 (backfill compatibility)")
     args = ap.parse_args()
 
+    failed = False
     if not args.render_only:
         if args.dates:
             s, e = (datetime.date.fromisoformat(x) for x in args.dates.split(","))
@@ -558,5 +559,8 @@ if __name__ == "__main__":
         elif args.week:
             collect(last_complete_week(), note=args.note, window=args.window)
         else:
-            daily(window=args.window)
+            # None = already collected (idle, fine); False = collection failed
+            failed = daily(window=args.window) is False
     render()
+    if failed:
+        sys.exit(1)
