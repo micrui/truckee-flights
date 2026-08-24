@@ -21,30 +21,60 @@ from summarize import build, operator_role
 CLASSES = ["jet", "turboprop", "piston", "helicopter", "glider", "unknown"]
 
 
-def daily(window="full"):
-    """Add the most recent published night to its week and re-render.
+def daily(window="full", date=None):
+    """Add one night to its week file and re-render, fetching only that night.
 
     ADS-B Exchange publishes each UTC day shortly after it ends, so the night
     that finished at 08:30 this morning becomes available in the evening. The
-    target is always yesterday's UTC date; runs are idempotent, so a morning
-    fallback run picks up anything the evening run missed.
+    default target is yesterday's UTC date; pass date for a backfill. Only the
+    target day is fetched (about 46 requests); the rest of the week is merged
+    from the existing week file, which keeps a cacheless CI runner far below
+    the archive's rate limit. Runs are idempotent.
     """
-    target = datetime.datetime.now(datetime.timezone.utc).date() - datetime.timedelta(days=1)
+    target = date or (datetime.datetime.now(datetime.timezone.utc).date()
+                      - datetime.timedelta(days=1))
     monday = target - datetime.timedelta(days=target.weekday())
     sunday = monday + datetime.timedelta(days=6)
-    dates = [monday + datetime.timedelta(days=i)
-             for i in range((target - monday).days + 1)]
+    ds = target.isoformat()
     path = f"data/weekly/{monday.isoformat()}_{sunday.isoformat()}.json"
-    if os.path.exists(path):
-        have = json.load(open(path)).get("days", [])
-        if target.isoformat() in have:
-            print(f"{target} already collected; nothing to do")
-            return None
+    week = json.load(open(path)) if os.path.exists(path) else None
+    if week and ds in week.get("days", []):
+        print(f"{target} already collected; nothing to do")
+        return None
     try:
-        collect(dates, window=window, frame=(monday, sunday))
+        run_day(ds, window=window)
+        events, airborne_early, aircraft, overflights = build([ds], window=window)
     except Exception as e:
         print(f"collection failed (archive may not be published yet): {e}")
         return False
+    if week is None:
+        week = {"start": monday.isoformat(), "end": sunday.isoformat(), "days": [],
+                "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
+                "note": None, "events": [], "airborne_quiet": [], "overflights": [],
+                "ladd_operators": []}
+    week["days"] = sorted(set(week["days"]) | {ds})
+    week["partial"] = len(week["days"]) < 7
+    for key, new in (("events", events), ("airborne_quiet", airborne_early),
+                     ("overflights", overflights)):
+        merged = [e for e in week.get(key, []) if e["date"] != ds] + new
+        merged.sort(key=lambda e: (e["date"], e.get("hm") or e.get("first") or ""))
+        week[key] = merged
+    ev = week["events"]
+    quiet = [e for e in ev if e["pre7"]]
+    week["total_ops"] = len(ev)
+    week["unique_aircraft"] = len({e["reg"] for e in ev})
+    week["by_class"] = dict(Counter(e["cls"] for e in ev))
+    week["quiet_hours_ops"] = len(quiet)
+    week["quiet_hours_by_class"] = dict(Counter(e["cls"] for e in quiet))
+    week["quiet_hours_events"] = quiet
+    week["local_flights"] = sum(1 for e in ev if e["other"].startswith("Local flight"))
+    new_ladd = {a["reg"] for a in aircraft
+                if a["ladd"] and a["reg"] in {e["reg"] for e in events}}
+    week["ladd_operators"] = sorted(set(week.get("ladd_operators", [])) | new_ladd)
+    os.makedirs("data/weekly", exist_ok=True)
+    json.dump(week, open(path, "w"), indent=1)
+    print(f"wrote {path}: added {ds}; {week['total_ops']} ops, "
+          f"{week['quiet_hours_ops']} during quiet hours")
     return True
 
 
@@ -544,6 +574,7 @@ if __name__ == "__main__":
     ap.add_argument("--week", action="store_true",
                     help="collect the last complete Mon-Sun week (the old weekly mode)")
     ap.add_argument("--dates", help="start,end inclusive (YYYY-MM-DD,YYYY-MM-DD)")
+    ap.add_argument("--date", help="backfill one night (YYYY-MM-DD) into its week")
     ap.add_argument("--note", help="label for this entry (e.g. 'Study week')")
     ap.add_argument("--render-only", action="store_true")
     ap.add_argument("--window", choices=["full", "morning"], default="full",
@@ -560,7 +591,8 @@ if __name__ == "__main__":
             collect(last_complete_week(), note=args.note, window=args.window)
         else:
             # None = already collected (idle, fine); False = collection failed
-            failed = daily(window=args.window) is False
+            date = datetime.date.fromisoformat(args.date) if args.date else None
+            failed = daily(window=args.window, date=date) is False
     render()
     if failed:
         sys.exit(1)

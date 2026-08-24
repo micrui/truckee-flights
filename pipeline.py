@@ -128,7 +128,10 @@ def fetch(url, path):
             if attempt == 3:
                 print(f"  fetch FAILED {url}", file=sys.stderr)
                 return None
-            time.sleep(3 * (attempt + 1) + random.random() * 2)
+            if getattr(e, "code", None) == 429:
+                time.sleep(30 * (attempt + 1))  # rate limited: back off hard
+            else:
+                time.sleep(3 * (attempt + 1) + random.random() * 2)
 
 def t2s(ts):
     return datetime.datetime.fromtimestamp(ts, TZ).strftime("%H:%M")
