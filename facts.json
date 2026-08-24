@@ -285,13 +285,13 @@
     },
     {
       "id": "first-seaplane-1919",
-      "claim": "The first seaplane landed on Lake Tahoe in 1919 and, unable to climb out of the thin air, left by truck; floatplanes served the lake for decades until valley runways took over.",
+      "claim": "The first seaplane landed on Lake Tahoe in 1919; after days of failed takeoffs from the glassy, high-altitude water it was disassembled and trucked out. Floatplanes served the lake for decades until valley runways took over.",
       "status": "sourced",
-      "sources": ["https://www.tahoehistory.info/lifting-off-from-tahoe/"],
+      "sources": ["https://www.tahoemagazine.com/by-land-and-water-a-handful-of-enthusiasts-continue-the-tradition-of-floatplanes-at-lake-tahoe/"],
       "method": "secondary",
-      "checked": "2026-08-10",
+      "checked": "2026-08-24",
       "pages": ["docs/history.html"],
-      "notes": ""
+      "notes": "Original source domain (tahoehistory.info) lapsed by Aug 2026; replaced with Tahoe Magazine account citing historian Carol Van Etten. Claim reworded to the source's stated cause (glassy-surface suction at altitude)."
     },
     {
       "id": "airmail-field-site-16b",
