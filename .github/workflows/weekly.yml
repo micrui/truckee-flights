@@ -9,6 +9,13 @@ on:
     # the page is current for morning readers.
     - cron: "45 15 * * *"
   workflow_dispatch:
+    inputs:
+      probe_date:
+        description: >-
+          Fetch-only diagnostic: pull this UTC date (YYYY-MM-DD) from the
+          archive and print slice/trace counts; writes nothing to the repo.
+        required: false
+        default: ""
 
 jobs:
   collect:
@@ -22,10 +29,19 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Probe the archive (manual diagnostic only)
+        if: github.event.inputs.probe_date != ''
+        run: >
+          python3 -c "from pipeline import run_day;
+          r = run_day('${{ github.event.inputs.probe_date }}', window='full');
+          print('records:', len(r))"
+
       - name: Add the latest night and rebuild the quiet-hours log
+        if: github.event.inputs.probe_date == ''
         run: python3 weekly.py
 
       - name: Commit results
+        if: github.event.inputs.probe_date == ''
         run: |
           git config user.name "truckee-flights weekly job"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

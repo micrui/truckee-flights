@@ -123,8 +123,10 @@ def fetch(url, path):
             open(path, "wb").write(data)
             return path
         except Exception as e:
+            print(f"  fetch attempt {attempt + 1}/4 {url.rsplit('/', 1)[-1]}: {e}",
+                  file=sys.stderr)
             if attempt == 3:
-                print(f"  fetch fail {url}: {e}", file=sys.stderr)
+                print(f"  fetch FAILED {url}", file=sys.stderr)
                 return None
             time.sleep(3 * (attempt + 1) + random.random() * 2)
 
@@ -153,8 +155,10 @@ def run_day(datestr, window="morning"):
     SLOTS = WINDOWS[window]["slots"]
 
     with cf.ThreadPoolExecutor(3) as ex:
-        list(ex.map(lambda s: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/heatmap/{s}.bin.ttf",
-                                    f"{daydir}/heatmap/{s}.bin"), SLOTS))
+        got = list(ex.map(lambda s: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/heatmap/{s}.bin.ttf",
+                                          f"{daydir}/heatmap/{s}.bin"), SLOTS))
+    print(f"{datestr}: heatmap slices {sum(1 for g in got if g)}/{len(SLOTS)}",
+          file=sys.stderr)
 
     # Parse heatmap slices. Entry format (16 bytes LE): int32 hex, int32 lat*1e6,
     # int32 lon*1e6, int16 alt/25, int16 gs*10. hex 0x0e7f7c9d is a timestamp
@@ -190,8 +194,9 @@ def run_day(datestr, window="morning"):
                            "fetch blocked or archive not published")
 
     with cf.ThreadPoolExecutor(4) as ex:
-        list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
-                                    f"{daydir}/traces/{h}.json"), sel))
+        got = list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
+                                          f"{daydir}/traces/{h}.json"), sel))
+    print(f"{datestr}: traces {sum(1 for g in got if g)}/{len(sel)}", file=sys.stderr)
 
     W0, W1 = window_bounds(datestr, window)
     out = []
