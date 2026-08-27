@@ -2,7 +2,8 @@
  "start": "2026-08-24",
  "end": "2026-08-30",
  "days": [
-  "2026-08-24"
+  "2026-08-24",
+  "2026-08-26"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -240,6 +241,110 @@
    "hm": "23:18",
    "other": "KMCC Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "07:08",
+   "other": "KMOD Modesto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:34",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "DEP",
+   "hm": "07:51",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N997R",
+   "type": "T210",
+   "cls": "piston",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "ev": "DEP",
+   "hm": "08:00",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "08:01",
+   "other": "KWMC Winnemucca",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N263FX",
+   "type": "E545",
+   "cls": "jet",
+   "own": "LEAP AIR LLC, FOUR HANDS LLC, SAFE-GUARD PRODUCTS INTERNATIO",
+   "role": "",
+   "desc": "EMBRAER EMB545 Praetor 500",
+   "ev": "DEP",
+   "hm": "08:05",
+   "other": "KASG Springdale",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:18",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "ARR",
+   "hm": "08:22",
+   "other": "KTRK Truckee",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -350,6 +455,42 @@
    "first": "23:01",
    "last": "23:08",
    "min_alt": 8025
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N527DJ",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "DLJ NEVADA LLC",
+   "role": "",
+   "desc": "",
+   "first": "06:22",
+   "last": "06:26",
+   "min_alt": 11350
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N2291C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FORTY FOUR FIFTEEN LLC, SERIES N2291C",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:41",
+   "last": "06:52",
+   "min_alt": 8625
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:22",
+   "last": "22:25",
+   "min_alt": 5500
   }
  ],
  "overflights": [
@@ -480,21 +621,134 @@
    "min_alt": 8025,
    "min_dist": 7.6,
    "alt_at_closest": 8575
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N527DJ",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "DLJ NEVADA LLC",
+   "role": "",
+   "desc": "",
+   "first": "06:22",
+   "last": "06:26",
+   "dwell_min": 4,
+   "quiet_min": 4,
+   "min_alt": 11350,
+   "min_dist": 5.7,
+   "alt_at_closest": 12200
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N2291C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FORTY FOUR FIFTEEN LLC, SERIES N2291C",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:41",
+   "last": "06:52",
+   "dwell_min": 10,
+   "quiet_min": 10,
+   "min_alt": 8625,
+   "min_dist": 7.0,
+   "alt_at_closest": 10300
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N567W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+   "role": "",
+   "desc": "BEECH 90 King Air",
+   "first": "07:16",
+   "last": "07:19",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 12225,
+   "min_dist": 7.8,
+   "alt_at_closest": 12250
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N7208M",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "TAHOE AVIATION LLC",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "first": "07:28",
+   "last": "07:32",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 10900,
+   "min_dist": 8.7,
+   "alt_at_closest": 10900
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N99YZ",
+   "type": "T210",
+   "cls": "piston",
+   "own": "EDWAL AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "first": "07:56",
+   "last": "08:00",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 8125,
+   "min_dist": 8.3,
+   "alt_at_closest": 8150
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N2291C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FORTY FOUR FIFTEEN LLC, SERIES N2291C",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "08:00",
+   "last": "08:06",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 10800,
+   "min_dist": 7.2,
+   "alt_at_closest": 11275
+  },
+  {
+   "date": "2026-08-26",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:22",
+   "last": "22:25",
+   "dwell_min": 3,
+   "quiet_min": 3,
+   "min_alt": 5500,
+   "min_dist": 0.1,
+   "alt_at_closest": 5600
   }
  ],
  "ladd_operators": [
   "N107MY",
   "N414WJ",
-  "N797GM"
+  "N797GM",
+  "N884SW"
  ],
  "partial": true,
- "total_ops": 18,
- "unique_aircraft": 15,
+ "total_ops": 26,
+ "unique_aircraft": 20,
  "by_class": {
   "helicopter": 5,
-  "turboprop": 2,
-  "jet": 1,
-  "piston": 10
+  "turboprop": 4,
+  "jet": 2,
+  "piston": 15
  },
  "quiet_hours_ops": 6,
  "quiet_hours_by_class": {
@@ -581,5 +835,5 @@
    "pre7": true
   }
  ],
- "local_flights": 1
+ "local_flights": 3
 }
