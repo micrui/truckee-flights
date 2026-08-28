@@ -3,7 +3,8 @@
  "end": "2026-08-30",
  "days": [
   "2026-08-24",
-  "2026-08-26"
+  "2026-08-26",
+  "2026-08-27"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -345,6 +346,110 @@
    "hm": "08:22",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N681QS",
+   "type": "C68A",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA 680 Citation Latitude",
+   "ev": "DEP",
+   "hm": "07:20",
+   "other": "KNUQ Mountain View",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "07:22",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:29",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:44",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N3003B",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "EHRLICH DAVID, GRIGG JESSE, GRIGG JOSH",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "ev": "DEP",
+   "hm": "07:52",
+   "other": "KMOD Modesto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:08",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N35BA",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "C90 AIR INC",
+   "role": "",
+   "desc": "BEECH 90 King Air",
+   "ev": "ARR",
+   "hm": "08:10",
+   "other": "92CA Stratford",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N97398",
+   "type": "C182",
+   "cls": "piston",
+   "own": "DBAT FLYING CLUB LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "DEP",
+   "hm": "08:13",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -491,6 +596,30 @@
    "first": "22:22",
    "last": "22:25",
    "min_alt": 5500
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N5802C",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "RACKHAM ALAN SCOTT",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "06:02",
+   "last": "06:10",
+   "min_alt": 11475
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N1071Y",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "BREAUX JOHN JR",
+   "role": "",
+   "desc": "",
+   "first": "06:39",
+   "last": "06:47",
+   "min_alt": 8200
   }
  ],
  "overflights": [
@@ -733,6 +862,134 @@
    "min_alt": 5500,
    "min_dist": 0.1,
    "alt_at_closest": 5600
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N5802C",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "RACKHAM ALAN SCOTT",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "06:02",
+   "last": "06:10",
+   "dwell_min": 7,
+   "quiet_min": 7,
+   "min_alt": 11475,
+   "min_dist": 0.2,
+   "alt_at_closest": 11575
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N1071Y",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "BREAUX JOHN JR",
+   "role": "",
+   "desc": "",
+   "first": "06:39",
+   "last": "06:47",
+   "dwell_min": 7,
+   "quiet_min": 7,
+   "min_alt": 8200,
+   "min_dist": 0.6,
+   "alt_at_closest": 8200
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N7142F",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "MARBLE JERE D",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "first": "07:22",
+   "last": "07:34",
+   "dwell_min": 12,
+   "quiet_min": 0,
+   "min_alt": 8900,
+   "min_dist": 0.7,
+   "alt_at_closest": 10200
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N97BS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIDEWINDER SERVICES LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:29",
+   "last": "07:40",
+   "dwell_min": 10,
+   "quiet_min": 0,
+   "min_alt": 10275,
+   "min_dist": 7.3,
+   "alt_at_closest": 11950
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N1150G",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "GINOCCHIO JOHN A, GINOCCHIO LISA A",
+   "role": "",
+   "desc": "",
+   "first": "07:29",
+   "last": "07:38",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 9250,
+   "min_dist": 1.0,
+   "alt_at_closest": 9275
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N135CD",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "REGISTRATION PENDING",
+   "role": "",
+   "desc": "",
+   "first": "07:49",
+   "last": "07:54",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 8600,
+   "min_dist": 3.5,
+   "alt_at_closest": 9700
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N905LB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "LIMA BRAVO AVIATION LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:54",
+   "last": "07:56",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 11775,
+   "min_dist": 3.6,
+   "alt_at_closest": 11850
+  },
+  {
+   "date": "2026-08-27",
+   "reg": "N6716V",
+   "type": "BE24",
+   "cls": "piston",
+   "own": "BAY RICHARD G",
+   "role": "",
+   "desc": "BEECH 24 Sierra",
+   "first": "08:25",
+   "last": "08:29",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 7900,
+   "min_dist": 4.7,
+   "alt_at_closest": 9700
   }
  ],
  "ladd_operators": [
@@ -742,13 +999,13 @@
   "N884SW"
  ],
  "partial": true,
- "total_ops": 26,
- "unique_aircraft": 20,
+ "total_ops": 34,
+ "unique_aircraft": 25,
  "by_class": {
   "helicopter": 5,
-  "turboprop": 4,
-  "jet": 2,
-  "piston": 15
+  "turboprop": 7,
+  "jet": 3,
+  "piston": 19
  },
  "quiet_hours_ops": 6,
  "quiet_hours_by_class": {
@@ -835,5 +1092,5 @@
    "pre7": true
   }
  ],
- "local_flights": 3
+ "local_flights": 6
 }
