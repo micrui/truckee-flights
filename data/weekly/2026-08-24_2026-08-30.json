@@ -4,7 +4,8 @@
  "days": [
   "2026-08-24",
   "2026-08-26",
-  "2026-08-27"
+  "2026-08-27",
+  "2026-08-28"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -450,6 +451,84 @@
    "hm": "08:13",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N3C",
+   "type": "CC19",
+   "cls": "piston",
+   "own": "UPLAND AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:21",
+   "other": "KMFR Medford",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N930MG",
+   "type": "C680",
+   "cls": "jet",
+   "own": "GONSALVES AND SANTUCCI INC",
+   "role": "",
+   "desc": "CESSNA 680 Citation Sovereign",
+   "ev": "ARR",
+   "hm": "07:31",
+   "other": "KCCR Concord",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N444DN",
+   "type": "C68A",
+   "cls": "jet",
+   "own": "DAN NEWLIN JET AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA 680 Citation Latitude",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "KIAD Dulles",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N930MG",
+   "type": "C680",
+   "cls": "jet",
+   "own": "GONSALVES AND SANTUCCI INC",
+   "role": "",
+   "desc": "CESSNA 680 Citation Sovereign",
+   "ev": "DEP",
+   "hm": "08:05",
+   "other": "KCCR Concord",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N422FX",
+   "type": "E545",
+   "cls": "jet",
+   "own": "FLEXJET LLC, BLANDING ROBERT, BLANDING GAY-LYNN, ALTORFER DO",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB545 Praetor 500",
+   "ev": "DEP",
+   "hm": "08:11",
+   "other": "KLAS Las Vegas",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:16",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -620,6 +699,30 @@
    "first": "06:39",
    "last": "06:47",
    "min_alt": 8200
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N40RF",
+   "type": "C172",
+   "cls": "piston",
+   "own": "GAMMA FLIGHT LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:41",
+   "last": "06:53",
+   "min_alt": 7750
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N32MB",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "MARIN AIRMEN INC",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "first": "06:59",
+   "last": "06:59",
+   "min_alt": 11525
   }
  ],
  "overflights": [
@@ -990,22 +1093,105 @@
    "min_alt": 7900,
    "min_dist": 4.7,
    "alt_at_closest": 9700
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N40RF",
+   "type": "C172",
+   "cls": "piston",
+   "own": "GAMMA FLIGHT LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:41",
+   "last": "06:53",
+   "dwell_min": 11,
+   "quiet_min": 11,
+   "min_alt": 7750,
+   "min_dist": 5.6,
+   "alt_at_closest": 9375
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N32MB",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "MARIN AIRMEN INC",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "first": "06:59",
+   "last": "06:59",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 11525,
+   "min_dist": 9.9,
+   "alt_at_closest": 11550
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N217AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "COPTER LEASE LLC TRUSTEE",
+   "role": "",
+   "desc": "BELL 212",
+   "first": "07:04",
+   "last": "07:11",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 7800,
+   "min_dist": 6.1,
+   "alt_at_closest": 8000
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N40RF",
+   "type": "C172",
+   "cls": "piston",
+   "own": "GAMMA FLIGHT LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:35",
+   "last": "07:43",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 8900,
+   "min_dist": 5.2,
+   "alt_at_closest": 9425
+  },
+  {
+   "date": "2026-08-28",
+   "reg": "N6489X",
+   "type": "C180",
+   "cls": "piston",
+   "own": "BARGAINNIER DEVIN T",
+   "role": "",
+   "desc": "CESSNA  180 Skywagon",
+   "first": "07:44",
+   "last": "07:52",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 8575,
+   "min_dist": 5.8,
+   "alt_at_closest": 8825
   }
  ],
  "ladd_operators": [
   "N107MY",
+  "N3C",
   "N414WJ",
+  "N444DN",
   "N797GM",
-  "N884SW"
+  "N884SW",
+  "N930MG"
  ],
  "partial": true,
- "total_ops": 34,
- "unique_aircraft": 25,
+ "total_ops": 40,
+ "unique_aircraft": 29,
  "by_class": {
   "helicopter": 5,
   "turboprop": 7,
-  "jet": 3,
-  "piston": 19
+  "jet": 7,
+  "piston": 21
  },
  "quiet_hours_ops": 6,
  "quiet_hours_by_class": {
@@ -1092,5 +1278,5 @@
    "pre7": true
   }
  ],
- "local_flights": 6
+ "local_flights": 7
 }
