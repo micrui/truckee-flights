@@ -5,7 +5,8 @@
   "2026-08-24",
   "2026-08-26",
   "2026-08-27",
-  "2026-08-28"
+  "2026-08-28",
+  "2026-08-29"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -529,6 +530,84 @@
    "hm": "08:16",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N935R",
+   "type": "GLF4",
+   "cls": "jet",
+   "own": "WELCOME GROVE LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "06:37",
+   "other": "KMCC Sacramento",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "06:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N935R",
+   "type": "GLF4",
+   "cls": "jet",
+   "own": "WELCOME GROVE LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:23",
+   "other": "KTEB Teterboro",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N953PC",
+   "type": "C56X",
+   "cls": "jet",
+   "own": "PACIFIC COAST JET CHARTER INC",
+   "role": "",
+   "desc": "CESSNA 560XL Citation XLS",
+   "ev": "DEP",
+   "hm": "07:46",
+   "other": "KSAN San Diego",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "ARR",
+   "hm": "08:00",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:01",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -723,6 +802,42 @@
    "first": "06:59",
    "last": "06:59",
    "min_alt": 11525
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N935R",
+   "type": "GLF4",
+   "cls": "jet",
+   "own": "WELCOME GROVE LLC",
+   "role": "",
+   "desc": "",
+   "first": "06:33",
+   "last": "06:37",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "06:46",
+   "last": "06:58",
+   "min_alt": 9850
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "first": "06:57",
+   "last": "06:59",
+   "min_alt": 5650
   }
  ],
  "overflights": [
@@ -1173,6 +1288,86 @@
    "min_alt": 8575,
    "min_dist": 5.8,
    "alt_at_closest": 8825
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "06:46",
+   "last": "06:58",
+   "dwell_min": 11,
+   "quiet_min": 11,
+   "min_alt": 9850,
+   "min_dist": 3.7,
+   "alt_at_closest": 11750
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "first": "07:30",
+   "last": "07:36",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 11250,
+   "min_dist": 4.9,
+   "alt_at_closest": 11325
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N301JC",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "GARDNER JEFFREY",
+   "role": "",
+   "desc": "",
+   "first": "07:32",
+   "last": "07:43",
+   "dwell_min": 11,
+   "quiet_min": 0,
+   "min_alt": 5700,
+   "min_dist": 0.1,
+   "alt_at_closest": 5800
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N408AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A & P HELICOPTERS INC",
+   "role": "fire/utility contractor",
+   "desc": "BELL 407",
+   "first": "07:39",
+   "last": "07:47",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 5900,
+   "min_dist": 2.6,
+   "alt_at_closest": 6000
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N54GB",
+   "type": "GB1",
+   "cls": "piston",
+   "own": "JPM HOLDINGS NV LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:19",
+   "last": "08:23",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 8100,
+   "min_dist": 7.2,
+   "alt_at_closest": 8325
   }
  ],
  "ladd_operators": [
@@ -1185,18 +1380,20 @@
   "N930MG"
  ],
  "partial": true,
- "total_ops": 40,
- "unique_aircraft": 29,
+ "total_ops": 46,
+ "unique_aircraft": 31,
  "by_class": {
   "helicopter": 5,
   "turboprop": 7,
-  "jet": 7,
-  "piston": 21
+  "jet": 10,
+  "piston": 24
  },
- "quiet_hours_ops": 6,
+ "quiet_hours_ops": 8,
  "quiet_hours_by_class": {
   "helicopter": 5,
-  "turboprop": 1
+  "turboprop": 1,
+  "jet": 1,
+  "piston": 1
  },
  "quiet_hours_events": [
   {
@@ -1276,7 +1473,33 @@
    "hm": "23:18",
    "other": "KMCC Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N935R",
+   "type": "GLF4",
+   "cls": "jet",
+   "own": "WELCOME GROVE LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "06:37",
+   "other": "KMCC Sacramento",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-29",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "06:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
   }
  ],
- "local_flights": 7
+ "local_flights": 9
 }
