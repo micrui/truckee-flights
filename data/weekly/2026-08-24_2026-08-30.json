@@ -6,7 +6,8 @@
   "2026-08-26",
   "2026-08-27",
   "2026-08-28",
-  "2026-08-29"
+  "2026-08-29",
+  "2026-08-30"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -608,6 +609,45 @@
    "hm": "08:01",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N892KC",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "DYL CHRISTOPHER",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:19",
+   "other": "KRDM Redmond",
+   "pre7": true
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "07:18",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N852QS",
+   "type": "C700",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA 700 Citation Longitude",
+   "ev": "ARR",
+   "hm": "08:11",
+   "other": "KOAK Oakland",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -838,6 +878,42 @@
    "first": "06:57",
    "last": "06:59",
    "min_alt": 5650
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N892KC",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "DYL CHRISTOPHER",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "06:19",
+   "last": "06:23",
+   "min_alt": 5650
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "22:08",
+   "last": "22:14",
+   "min_alt": 10200
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N41ZM",
+   "type": "PA34",
+   "cls": "piston",
+   "own": "MINDWINDER INC",
+   "role": "",
+   "desc": "PIPER PA-34 Seneca",
+   "first": "23:55",
+   "last": "00:01",
+   "min_alt": 9350
   }
  ],
  "overflights": [
@@ -1368,6 +1444,134 @@
    "min_alt": 8100,
    "min_dist": 7.2,
    "alt_at_closest": 8325
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N40RF",
+   "type": "C172",
+   "cls": "piston",
+   "own": "GAMMA FLIGHT LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:22",
+   "last": "07:36",
+   "dwell_min": 13,
+   "quiet_min": 0,
+   "min_alt": 12025,
+   "min_dist": 0.6,
+   "alt_at_closest": 12750
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N704RA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RYAN AIR INC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "07:25",
+   "last": "07:28",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 10300,
+   "min_dist": 9.3,
+   "alt_at_closest": 10325
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N786WW",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "WESTWIND AVIATION INC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "07:38",
+   "last": "07:43",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 10200,
+   "min_dist": 7.6,
+   "alt_at_closest": 10300
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N666EP",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "MURPHY MICHAEL E",
+   "role": "",
+   "desc": "VANS RV-12",
+   "first": "08:13",
+   "last": "08:20",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 9275,
+   "min_dist": 4.4,
+   "alt_at_closest": 9300
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N370CS",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "first": "08:20",
+   "last": "08:23",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 11800,
+   "min_dist": 1.4,
+   "alt_at_closest": 12800
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N785WW",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "ACE AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "08:27",
+   "last": "08:29",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 9800,
+   "min_dist": 4.4,
+   "alt_at_closest": 10500
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "22:08",
+   "last": "22:14",
+   "dwell_min": 6,
+   "quiet_min": 6,
+   "min_alt": 10200,
+   "min_dist": 2.6,
+   "alt_at_closest": 11300
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N41ZM",
+   "type": "PA34",
+   "cls": "piston",
+   "own": "MINDWINDER INC",
+   "role": "",
+   "desc": "PIPER PA-34 Seneca",
+   "first": "23:55",
+   "last": "00:01",
+   "dwell_min": 6,
+   "quiet_min": 6,
+   "min_alt": 9350,
+   "min_dist": 2.3,
+   "alt_at_closest": 11325
   }
  ],
  "ladd_operators": [
@@ -1380,20 +1584,20 @@
   "N930MG"
  ],
  "partial": true,
- "total_ops": 46,
- "unique_aircraft": 31,
+ "total_ops": 49,
+ "unique_aircraft": 33,
  "by_class": {
   "helicopter": 5,
   "turboprop": 7,
-  "jet": 10,
-  "piston": 24
+  "jet": 11,
+  "piston": 26
  },
- "quiet_hours_ops": 8,
+ "quiet_hours_ops": 9,
  "quiet_hours_by_class": {
   "helicopter": 5,
   "turboprop": 1,
   "jet": 1,
-  "piston": 1
+  "piston": 2
  },
  "quiet_hours_events": [
   {
@@ -1499,7 +1703,20 @@
    "hm": "06:57",
    "other": "Local flight (returned to KTRK)",
    "pre7": true
+  },
+  {
+   "date": "2026-08-30",
+   "reg": "N892KC",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "DYL CHRISTOPHER",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:19",
+   "other": "KRDM Redmond",
+   "pre7": true
   }
  ],
- "local_flights": 9
+ "local_flights": 10
 }
