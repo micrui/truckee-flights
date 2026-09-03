@@ -3,7 +3,8 @@
  "end": "2026-09-06",
  "days": [
   "2026-08-31",
-  "2026-09-01"
+  "2026-09-01",
+  "2026-09-02"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -306,6 +307,58 @@
    "hm": "23:43",
    "other": "KAAT Alturas",
    "pre7": true
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N97398",
+   "type": "C182",
+   "cls": "piston",
+   "own": "DBAT FLYING CLUB LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "DEP",
+   "hm": "07:47",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N483QS",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:10",
+   "other": "KLVK Livermore",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N97398",
+   "type": "C182",
+   "cls": "piston",
+   "own": "DBAT FLYING CLUB LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "ARR",
+   "hm": "08:19",
+   "other": "KTRK Truckee",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -626,6 +679,38 @@
    "min_alt": 8825,
    "min_dist": 0.5,
    "alt_at_closest": 8825
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N786WW",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "WESTWIND AVIATION INC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "08:12",
+   "last": "08:21",
+   "dwell_min": 9,
+   "quiet_min": 0,
+   "min_alt": 10300,
+   "min_dist": 4.1,
+   "alt_at_closest": 10400
+  },
+  {
+   "date": "2026-09-02",
+   "reg": "N61AP",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "TREWHITT JAMIE MCMAHAN",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "first": "08:19",
+   "last": "08:22",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 12850,
+   "min_dist": 1.4,
+   "alt_at_closest": 12875
   }
  ],
  "ladd_operators": [
@@ -633,12 +718,12 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 23,
- "unique_aircraft": 17,
+ "total_ops": 27,
+ "unique_aircraft": 19,
  "by_class": {
   "helicopter": 3,
-  "jet": 4,
-  "piston": 14,
+  "jet": 5,
+  "piston": 17,
   "turboprop": 2
  },
  "quiet_hours_ops": 3,
@@ -686,5 +771,5 @@
    "pre7": true
   }
  ],
- "local_flights": 4
+ "local_flights": 6
 }
