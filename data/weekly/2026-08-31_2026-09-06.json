@@ -4,7 +4,8 @@
  "days": [
   "2026-08-31",
   "2026-09-01",
-  "2026-09-02"
+  "2026-09-02",
+  "2026-09-03"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -359,6 +360,71 @@
    "hm": "08:19",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N320FX",
+   "type": "E545",
+   "cls": "jet",
+   "own": "FLEXJET LLC",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB545 Praetor 500",
+   "ev": "ARR",
+   "hm": "07:12",
+   "other": "KAPA Denver",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N97398",
+   "type": "C182",
+   "cls": "piston",
+   "own": "DBAT FLYING CLUB LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "DEP",
+   "hm": "07:32",
+   "other": "KE45 Groveland",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N320FX",
+   "type": "E545",
+   "cls": "jet",
+   "own": "FLEXJET LLC",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB545 Praetor 500",
+   "ev": "DEP",
+   "hm": "08:01",
+   "other": "KSJC San Jose",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:09",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:34",
+   "other": "KSCK Stockton",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -421,6 +487,18 @@
    "first": "23:37",
    "last": "23:43",
    "min_alt": 5800
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:28",
+   "last": "23:34",
+   "min_alt": 5700
   }
  ],
  "overflights": [
@@ -711,6 +789,70 @@
    "min_alt": 12850,
    "min_dist": 1.4,
    "alt_at_closest": 12875
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N232ST",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SIERRA TANGO MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:14",
+   "last": "07:20",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 10200,
+   "min_dist": 1.2,
+   "alt_at_closest": 10350
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N771RT",
+   "type": "K100",
+   "cls": "piston",
+   "own": "REDTAIL PARTNERS LLC",
+   "role": "",
+   "desc": "DAHER Kodiak 100",
+   "first": "07:44",
+   "last": "07:46",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 10575,
+   "min_dist": 8.9,
+   "alt_at_closest": 10600
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N704RA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RYAN AIR INC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "08:03",
+   "last": "08:03",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 13000,
+   "min_dist": 9.9,
+   "alt_at_closest": 13000
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N192KQ",
+   "type": "K100",
+   "cls": "piston",
+   "own": "SHORT FIELD PARTNERS LLC",
+   "role": "",
+   "desc": "DAHER Kodiak 100",
+   "first": "08:08",
+   "last": "08:15",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 11500,
+   "min_dist": 1.1,
+   "alt_at_closest": 12850
   }
  ],
  "ladd_operators": [
@@ -718,17 +860,17 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 27,
- "unique_aircraft": 19,
+ "total_ops": 32,
+ "unique_aircraft": 20,
  "by_class": {
-  "helicopter": 3,
-  "jet": 5,
-  "piston": 17,
+  "helicopter": 4,
+  "jet": 7,
+  "piston": 19,
   "turboprop": 2
  },
- "quiet_hours_ops": 3,
+ "quiet_hours_ops": 4,
  "quiet_hours_by_class": {
-  "helicopter": 3
+  "helicopter": 4
  },
  "quiet_hours_events": [
   {
@@ -769,7 +911,20 @@
    "hm": "23:43",
    "other": "KAAT Alturas",
    "pre7": true
+  },
+  {
+   "date": "2026-09-03",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:34",
+   "other": "KSCK Stockton",
+   "pre7": true
   }
  ],
- "local_flights": 6
+ "local_flights": 7
 }
