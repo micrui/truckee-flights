@@ -5,7 +5,8 @@
   "2026-08-31",
   "2026-09-01",
   "2026-09-02",
-  "2026-09-03"
+  "2026-09-03",
+  "2026-09-04"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -425,6 +426,19 @@
    "hm": "23:34",
    "other": "KSCK Stockton",
    "pre7": true
+  },
+  {
+   "date": "2026-09-04",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:50",
+   "other": "KDVO Novato",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -853,6 +867,22 @@
    "min_alt": 11500,
    "min_dist": 1.1,
    "alt_at_closest": 12850
+  },
+  {
+   "date": "2026-09-04",
+   "reg": "N8582Z",
+   "type": "B738",
+   "cls": "airliner",
+   "own": "BANK OF UTAH TRUSTEE",
+   "role": "",
+   "desc": "BOEING 737-800",
+   "first": "08:01",
+   "last": "08:01",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 12400,
+   "min_dist": 8.5,
+   "alt_at_closest": 13000
   }
  ],
  "ladd_operators": [
@@ -860,13 +890,13 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 32,
+ "total_ops": 33,
  "unique_aircraft": 20,
  "by_class": {
   "helicopter": 4,
   "jet": 7,
   "piston": 19,
-  "turboprop": 2
+  "turboprop": 3
  },
  "quiet_hours_ops": 4,
  "quiet_hours_by_class": {
