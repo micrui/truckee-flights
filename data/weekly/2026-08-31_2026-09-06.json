@@ -6,7 +6,8 @@
   "2026-09-01",
   "2026-09-02",
   "2026-09-03",
-  "2026-09-04"
+  "2026-09-04",
+  "2026-09-05"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -439,6 +440,84 @@
    "hm": "07:50",
    "other": "KDVO Novato",
    "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N369GX",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "FLYEPIC INC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:31",
+   "other": "KCCR Concord",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:43",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:04",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N900CX",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "JD HAALAND CONSTRUCTION INC",
+   "role": "",
+   "desc": "SOCATA TBM-900/910/930/940",
+   "ev": "DEP",
+   "hm": "08:20",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:23",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N915NX",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "P4 MANAGEMENT PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "08:23",
+   "other": "KIZA Santa Ynez",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -513,6 +592,18 @@
    "first": "23:28",
    "last": "23:34",
    "min_alt": 5700
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N37JA",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYING START AERO SERVICES LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:55",
+   "last": "06:59",
+   "min_alt": 9000
   }
  ],
  "overflights": [
@@ -883,20 +974,101 @@
    "min_alt": 12400,
    "min_dist": 8.5,
    "alt_at_closest": 13000
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N37JA",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYING START AERO SERVICES LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:55",
+   "last": "07:01",
+   "dwell_min": 5,
+   "quiet_min": 4,
+   "min_alt": 9000,
+   "min_dist": 8.0,
+   "alt_at_closest": 9200
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N1724P",
+   "type": "C172",
+   "cls": "piston",
+   "own": "NIGHTHAWK N8231G LLC",
+   "role": "",
+   "desc": "",
+   "first": "07:41",
+   "last": "07:49",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 11850,
+   "min_dist": 6.5,
+   "alt_at_closest": 11875
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N2291C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FORTY FOUR FIFTEEN LLC, SERIES N2291C",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:55",
+   "last": "07:58",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 8750,
+   "min_dist": 9.0,
+   "alt_at_closest": 9250
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N734BN",
+   "type": "C172",
+   "cls": "piston",
+   "own": "ALAMEDA AERO CLUB",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "08:02",
+   "last": "08:14",
+   "dwell_min": 11,
+   "quiet_min": 0,
+   "min_alt": 10950,
+   "min_dist": 4.9,
+   "alt_at_closest": 10975
+  },
+  {
+   "date": "2026-09-05",
+   "reg": "N219PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "E2R LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "08:16",
+   "last": "08:22",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 11975,
+   "min_dist": 0.5,
+   "alt_at_closest": 12375
   }
  ],
  "ladd_operators": [
   "N360MC",
+  "N915NX",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 33,
- "unique_aircraft": 20,
+ "total_ops": 39,
+ "unique_aircraft": 22,
  "by_class": {
   "helicopter": 4,
   "jet": 7,
-  "piston": 19,
-  "turboprop": 3
+  "piston": 22,
+  "turboprop": 6
  },
  "quiet_hours_ops": 4,
  "quiet_hours_by_class": {
@@ -956,5 +1128,5 @@
    "pre7": true
   }
  ],
- "local_flights": 7
+ "local_flights": 10
 }
