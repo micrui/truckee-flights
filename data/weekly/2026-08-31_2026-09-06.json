@@ -7,7 +7,8 @@
   "2026-09-02",
   "2026-09-03",
   "2026-09-04",
-  "2026-09-05"
+  "2026-09-05",
+  "2026-09-06"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -518,6 +519,58 @@
    "hm": "08:23",
    "other": "KIZA Santa Ynez",
    "pre7": false
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "06:02",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N521H",
+   "type": "B505",
+   "cls": "helicopter",
+   "own": "ONE ALPHA ALPHA LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:27",
+   "other": "88NV Gerlach",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N2164X",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "BROWN LAWRENCE M, AVILLA LORETTA C",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "DEP",
+   "hm": "07:35",
+   "other": "KRHV San Jose",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:43",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -604,6 +657,30 @@
    "first": "06:55",
    "last": "06:59",
    "min_alt": 9000
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "06:02",
+   "last": "06:07",
+   "min_alt": 5800
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N610SF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:19",
+   "last": "04:22",
+   "min_alt": 7400
   }
  ],
  "overflights": [
@@ -1054,6 +1131,86 @@
    "min_alt": 11975,
    "min_dist": 0.5,
    "alt_at_closest": 12375
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N610SF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "04:13",
+   "last": "04:22",
+   "dwell_min": 8,
+   "quiet_min": 8,
+   "min_alt": 7600,
+   "min_dist": 0.9,
+   "alt_at_closest": 8100
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N1724P",
+   "type": "C172",
+   "cls": "piston",
+   "own": "NIGHTHAWK N8231G LLC",
+   "role": "",
+   "desc": "",
+   "first": "07:23",
+   "last": "07:26",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 12825,
+   "min_dist": 6.5,
+   "alt_at_closest": 12900
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N4718K",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MAYES JOHN",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:36",
+   "last": "07:39",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 10400,
+   "min_dist": 8.1,
+   "alt_at_closest": 10700
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N446LA",
+   "type": "DA50",
+   "cls": "piston",
+   "own": "BPR AERO LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:22",
+   "last": "08:24",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 9375,
+   "min_dist": 8.2,
+   "alt_at_closest": 9400
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N610SF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:19",
+   "last": "23:33",
+   "dwell_min": 14,
+   "quiet_min": 14,
+   "min_alt": 7400,
+   "min_dist": 0.8,
+   "alt_at_closest": 7700
   }
  ],
  "ladd_operators": [
@@ -1061,18 +1218,18 @@
   "N915NX",
   "N922PB"
  ],
- "partial": true,
- "total_ops": 39,
- "unique_aircraft": 22,
+ "partial": false,
+ "total_ops": 43,
+ "unique_aircraft": 23,
  "by_class": {
-  "helicopter": 4,
+  "helicopter": 6,
   "jet": 7,
-  "piston": 22,
+  "piston": 24,
   "turboprop": 6
  },
- "quiet_hours_ops": 4,
+ "quiet_hours_ops": 5,
  "quiet_hours_by_class": {
-  "helicopter": 4
+  "helicopter": 5
  },
  "quiet_hours_events": [
   {
@@ -1126,7 +1283,20 @@
    "hm": "23:34",
    "other": "KSCK Stockton",
    "pre7": true
+  },
+  {
+   "date": "2026-09-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "06:02",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
   }
  ],
- "local_flights": 10
+ "local_flights": 12
 }
