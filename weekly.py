@@ -395,7 +395,7 @@ def notables(w):
     byreg = {}
     for e in w.get("events", []):
         byreg.setdefault((e["date"], e["reg"]), []).append(e)
-    for (date, reg), evs in sorted(byreg.items()):
+    for (date, reg), evs in sorted(byreg.items(), key=lambda kv: (kv[0][0], kv[0][1] or "")):
         evs.sort(key=lambda e: _rel_min(e["hm"]))
         for i in range(len(evs) - 1):
             a, b = evs[i], evs[i+1]

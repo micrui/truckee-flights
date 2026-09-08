@@ -3,6 +3,7 @@
  "end": "2026-08-30",
  "days": [
   "2026-08-24",
+  "2026-08-25",
   "2026-08-26",
   "2026-08-27",
   "2026-08-28",
@@ -245,6 +246,188 @@
    "hm": "23:18",
    "other": "KMCC Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "07:03",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N199WF",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "YETI AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:07",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "07:09",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "ARR",
+   "hm": "07:23",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": null,
+   "type": null,
+   "cls": "unknown",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "07:28",
+   "other": "KFAT Fresno",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "07:39",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:49",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "KMHR Sacramento",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N2164X",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "BROWN LAWRENCE M, AVILLA LORETTA C",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "KRHV San Jose",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "08:08",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N726DR",
+   "type": "GALX",
+   "cls": "piston",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "GULFSTREAM G200",
+   "ev": "ARR",
+   "hm": "08:11",
+   "other": "KAPA Denver",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N375FX",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "FLEXJET LLC, KIVI TALO HOLDINGS LLC, LEADER LENNERT J, RAIDE",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB-505 Phenom 300",
+   "ev": "DEP",
+   "hm": "08:16",
+   "other": "KNUQ Mountain View",
+   "pre7": false
+  },
+  {
+   "date": "2026-08-25",
+   "reg": null,
+   "type": null,
+   "cls": "unknown",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:23",
+   "other": "KNUQ Mountain View",
+   "pre7": false
   },
   {
    "date": "2026-08-26",
@@ -760,6 +943,18 @@
    "min_alt": 8025
   },
   {
+   "date": "2026-08-25",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:31",
+   "last": "06:34",
+   "min_alt": 12225
+  },
+  {
    "date": "2026-08-26",
    "reg": "N527DJ",
    "type": "PC12",
@@ -1044,6 +1239,22 @@
    "min_alt": 8025,
    "min_dist": 7.6,
    "alt_at_closest": 8575
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:31",
+   "last": "06:34",
+   "dwell_min": 3,
+   "quiet_min": 3,
+   "min_alt": 12225,
+   "min_dist": 6.9,
+   "alt_at_closest": 12225
   },
   {
    "date": "2026-08-26",
@@ -1579,18 +1790,21 @@
   "N3C",
   "N414WJ",
   "N444DN",
+  "N726DR",
   "N797GM",
   "N884SW",
+  "N922PB",
   "N930MG"
  ],
- "partial": true,
- "total_ops": 49,
- "unique_aircraft": 33,
+ "partial": false,
+ "total_ops": 63,
+ "unique_aircraft": 39,
  "by_class": {
-  "helicopter": 5,
-  "turboprop": 7,
-  "jet": 11,
-  "piston": 26
+  "helicopter": 7,
+  "turboprop": 8,
+  "jet": 12,
+  "piston": 34,
+  "unknown": 2
  },
  "quiet_hours_ops": 9,
  "quiet_hours_by_class": {
@@ -1718,5 +1932,5 @@
    "pre7": true
   }
  ],
- "local_flights": 10
+ "local_flights": 14
 }

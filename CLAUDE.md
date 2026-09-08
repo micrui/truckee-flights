@@ -40,7 +40,10 @@ public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages
 - `weekly.py`: `collect()` writes `data/weekly/*.json`; `render()` writes `docs/quiet-hours.html`,
   per-week pages in `docs/weeks/`, and `docs/operators.html`. Aircraft class is re-derived at
   render time via `klass()`; never trust cached class fields.
-- `.github/workflows/weekly.yml` runs Mondays 18:00 UTC, full window, commits results.
+- `.github/workflows/weekly.yml` runs nightly 04:15 UTC and again 15:45 UTC as a late-archive
+  fallback, full window, adds the night that just closed and commits results. A render that
+  crashes fails the job before the commit step, so that night is lost until someone backfills
+  it with `python3 weekly.py --date YYYY-MM-DD`.
 - Chart semantics (`templates/week.html`): five lanes: fire (light red), medical (blue),
   jet (ink/black), turboprop (orange), light aircraft (green). Dwell spans are
   circle–line–circle; quick-turn connectors join arrival→departure under 45 minutes.
