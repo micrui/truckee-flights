@@ -44,9 +44,14 @@ public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages
   fallback, full window, adds the night that just closed and commits results. A render that
   crashes fails the job before the commit step, so that night is lost until someone backfills
   it with `python3 weekly.py --date YYYY-MM-DD`.
-- Chart semantics (`templates/week.html`): five lanes: fire (light red), medical (blue),
-  jet (ink/black), turboprop (orange), light aircraft (green). Dwell spans are
-  circle–line–circle; quick-turn connectors join arrival→departure under 45 minutes.
+- Chart semantics (`templates/week.html`): one strip per night on a single time scale, every
+  night of the week listed whether collected or not (today's strip is labeled and tinted in the
+  browser; uncollected nights read "not yet"). Color is aircraft class: fire (light red), medical
+  (blue), jet (ink/black), turboprop (orange), light aircraft (green); fire and medical are dimmed.
+  Shape is the event: filled circle landing, triangle takeoff, hollow ring airborne nearby with a
+  line spanning the time nearby. A magenta halo marks a takeoff or landing during quiet hours.
+  Marks close in time stack above and below the strip's center; quick-turn connectors join
+  arrival to departure under 45 minutes. Legend color keys are pen strokes, never circles.
 - `data/airports.csv`: OurAirports public-domain dump for origin/destination naming.
 
 ## Working discipline

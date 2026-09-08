@@ -5,27 +5,31 @@
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --accent: #2a78d6;
+    --today: rgba(42,120,214,0.07);
   }
   @media (prefers-color-scheme: dark) {
     :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
       --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
       --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --curfew: #ffffff; --accent: #3987e5;
+      --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --accent: #3987e5;
+      --today: rgba(57,135,229,0.12);
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
     --page: #0c0e11; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
     --muted: #898781; --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --curfew: #ffffff; --accent: #3987e5;
+    --fire: #e66767; --medical: #3987e5; --light-ac: #199e70; --jetc: #f2f2f2; --tprop: #d95926; --quiet: #ff4fc0; --accent: #3987e5;
+    --today: rgba(57,135,229,0.12);
   }
   :root[data-theme="light"] {
     color-scheme: light;
     --page: #f6f7f9; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
     --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --curfew: #0b0b0b; --accent: #2a78d6;
+    --fire: #e05252; --medical: #2a78d6; --light-ac: #1baf7a; --jetc: #0b0b0b; --tprop: #eb6834; --quiet: #d61f9e; --accent: #2a78d6;
+    --today: rgba(42,120,214,0.07);
   }
   body { background: var(--page); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     line-height: 1.55; margin: 0; padding: 40px 20px 64px; }
@@ -39,10 +43,15 @@
   .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 18px 18px 12px; }
   .chart-scroll { overflow-x: auto; }
   #chart { display: block; }
-  .legend { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 10px 2px 4px; font-size: 12.5px; color: var(--ink-2); }
+  .legend { display: flex; flex-direction: column; gap: 8px; margin: 12px 2px 4px; font-size: 12.5px; color: var(--ink-2); }
+  .legend .row { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 12px; align-items: start; }
+  .legend .lbl { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+  .legend .items { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
   .legend .item { display: inline-flex; align-items: center; gap: 6px; }
-  .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .sw.tri { width: 0; height: 0; border-radius: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; }
+  .legend svg { display: block; }
+  .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background: var(--muted); }
+  .sw.tri { width: 0; height: 0; border-radius: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 10px solid var(--muted); background: none; }
   .sw.ring { background: transparent; border: 2px solid var(--muted); width: 7px; height: 7px; }
   #tip { position: fixed; pointer-events: none; z-index: 10; display: none;
     background: var(--surface); color: var(--ink); border: 1px solid var(--border);
@@ -54,24 +63,28 @@
 </style>
 <div class="wrap">
   <p class="eyebrow"><a href="../">truckee-flights</a> · <a href="../quiet-hours.html">quiet-hours log</a> · week of Sep 7 to 13, 2026</p>
-  <h1>Sep 7 to 13, 2026: every takeoff and landing, one row per day</h1>
-  <p class="standfirst">Window: 10:00 pm through 8:30 am. Solid marks are takeoffs and landings at the Truckee airport. Hollow rings are
-  aircraft that flew low nearby during quiet hours without landing. Times left of the dashed line are during the
-  voluntary quiet hours; marks left of midnight belong to the evening before the row's date. Within each day&rsquo;s row, flights hold fixed lanes top to bottom: fire, medical, jet,
-  turboprop, light aircraft &mdash; so a category always sits at the same height and patterns line up
-  across days. Hover any mark for details; click it for that aircraft&rsquo;s full log.</p>
+  <h1>Sep 7 to 13, 2026: every takeoff and landing, one strip per night</h1>
+  <p class="standfirst">Window: 10:00 pm through 8:30 am. Each night is one strip on a single time scale; the tinted span is the voluntary
+  quiet hours. Flights close together in time stack above and below the strip's center. Color is the kind of
+  aircraft, shape is takeoff or landing. Marks left of midnight belong to the evening before the row's date.
+  Each night's data is posted the following evening, so this morning's flights appear tonight. Hover any mark for
+  details; click it for that aircraft's full log.</p>
   <div class="panel">
-    <div class="chart-scroll"><svg id="chart" width="920" height="750" viewBox="0 0 920 750" role="img" aria-label="Timeline of operations for Sep 7 to 13, 2026"></svg></div>
+    <div class="chart-scroll"><svg id="chart" width="920" height="732" viewBox="0 0 920 732" role="img" aria-label="Timeline of flights for Sep 7 to 13, 2026"></svg></div>
     <div class="legend">
-      <span class="item"><span class="sw" style="background:var(--fire);opacity:.45"></span>Fire operations (dimmed: working traffic)</span>
-      <span class="item"><span class="sw" style="background:var(--medical);opacity:.45"></span>Medical (dimmed: working traffic)</span>
-      <span class="item"><span class="sw" style="background:var(--jetc)"></span>Jet</span>
-      <span class="item"><span class="sw" style="background:var(--tprop)"></span>Turboprop</span>
-      <span class="item"><span class="sw" style="background:var(--light-ac)"></span>Light aircraft</span>
-      <span class="item"><span class="sw" style="background:var(--quiet)"></span>Takeoff or landing during quiet hours (22:00 to 07:00) by a jet, turboprop, or light aircraft</span>
-      <span class="item"><span class="sw" style="background:var(--muted)"></span>Landing (circle)</span>
-      <span class="item"><span class="sw tri" style="border-bottom:10px solid var(--muted)"></span>Takeoff (triangle)</span>
-      <span class="item"><span class="sw ring"></span>Airborne nearby, no landing (line spans time on scene)</span>
+      <div class="row"><span class="lbl">shape</span><div class="items">
+        <span class="item"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.5" fill="var(--muted)"/><circle cx="8" cy="8" r="7" fill="none" stroke="var(--quiet)" stroke-width="1.5"/></svg>halo: took off or landed during quiet hours</span>
+        <span class="item"><span class="sw"></span>landing</span>
+        <span class="item"><span class="sw tri"></span>takeoff</span>
+        <span class="item"><span class="sw ring"></span>airborne nearby, no landing; the line spans the time nearby</span>
+      </div></div>
+      <div class="row"><span class="lbl">color</span><div class="items">
+        <span class="item"><svg width="24" height="12" viewBox="0 0 24 12"><path d="M2.5 8.5 C 7 3, 13 10, 21.5 3.5" fill="none" stroke="var(--fire)" stroke-width="4" stroke-linecap="round" opacity="0.45"/></svg>fire</span>
+        <span class="item"><svg width="24" height="12" viewBox="0 0 24 12"><path d="M2.5 8.5 C 7 3, 13 10, 21.5 3.5" fill="none" stroke="var(--medical)" stroke-width="4" stroke-linecap="round" opacity="0.45"/></svg>medical</span>
+        <span class="item"><svg width="24" height="12" viewBox="0 0 24 12"><path d="M2.5 8.5 C 7 3, 13 10, 21.5 3.5" fill="none" stroke="var(--jetc)" stroke-width="4" stroke-linecap="round"/></svg>jet</span>
+        <span class="item"><svg width="24" height="12" viewBox="0 0 24 12"><path d="M2.5 8.5 C 7 3, 13 10, 21.5 3.5" fill="none" stroke="var(--tprop)" stroke-width="4" stroke-linecap="round"/></svg>turboprop</span>
+        <span class="item"><svg width="24" height="12" viewBox="0 0 24 12"><path d="M2.5 8.5 C 7 3, 13 10, 21.5 3.5" fill="none" stroke="var(--light-ac)" stroke-width="4" stroke-linecap="round"/></svg>light aircraft</span>
+      </div></div>
     </div>
   </div>
   
@@ -79,7 +92,7 @@
 </div>
 <div id="tip"></div>
 <script>
-const W_DATA = {"days":["2026-09-07"],"window_local":"22:00-08:30","events":[{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","ev":"ARR","hm":"07:01","other":"KMOD Modesto","pre7":false},{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","ev":"DEP","hm":"07:14","other":"KPAO Palo Alto","pre7":false},{"date":"2026-09-07","reg":"N901CF","type":"AS50","cls":"helicopter","own":"REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY","role":"air ambulance","desc":"AEROSPATIALE AS-350 Ecureuil","ev":"DEP","hm":"07:17","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N111H","type":"RV7","cls":"piston","own":"HARVEY MUSHMAN LLC","role":"","desc":"VANS RV-7","ev":"ARR","hm":"07:38","other":"KCXP Carson City","pre7":false},{"date":"2026-09-07","reg":"N9110H","type":"C172","cls":"piston","own":"SIERRA AERO LLC","role":"flight school","desc":"CESSNA 172 Skyhawk","ev":"DEP","hm":"07:41","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N900KP","type":"PC24","cls":"jet","own":"TOBARTHS LLC","role":"","desc":"","ev":"DEP","hm":"08:04","other":"KPVF Placerville","pre7":false},{"date":"2026-09-07","reg":"N1677C","type":"C180","cls":"piston","own":"DAVIS AERO LLC","role":"","desc":"CESSNA  180 Skywagon","ev":"DEP","hm":"08:05","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N217SW","type":"SR20","cls":"piston","own":"MOUNTAIN LION AVIATION LLC","role":"","desc":"","ev":"DEP","hm":"08:08","other":"KMEV Minden","pre7":false},{"date":"2026-09-07","reg":"N226AF","type":"PC12","cls":"turboprop","own":"TAYLOR-SMARTT LLC, SIRPOS II LLC, BEATY KEITH D, PINK SANDS ","role":"","desc":"PILATUS PC-12","ev":"DEP","hm":"08:09","other":"KDVO Novato","pre7":false},{"date":"2026-09-07","reg":"N518TD","type":"S22T","cls":"piston","own":"SHASTA WAY LLC","role":"","desc":"CIRRUS SR-22T Turbo","ev":"DEP","hm":"08:19","other":"KDVO Novato","pre7":false},{"date":"2026-09-07","reg":"N111H","type":"RV7","cls":"piston","own":"HARVEY MUSHMAN LLC","role":"","desc":"VANS RV-7","ev":"DEP","hm":"08:26","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N8647W","type":"P28B","cls":"piston","own":"CHASE DAN","role":"","desc":"PIPER PA-28-201T/235/236","ev":"DEP","hm":"08:29","other":"Local flight (returned to KTRK)","pre7":false}],"airborne_quiet":[{"date":"2026-09-07","reg":"N79893","type":"C172","cls":"piston","own":"PANJAB AVIATION","role":"","desc":"CESSNA 172 Skyhawk","first":"06:15","last":"06:25","min_alt":11300},{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","first":"06:57","last":"06:59","min_alt":8525}],"overflights":[{"date":"2026-09-07","reg":"N79893","type":"C172","cls":"piston","own":"PANJAB AVIATION","role":"","desc":"CESSNA 172 Skyhawk","first":"06:15","last":"06:25","dwell_min":9,"quiet_min":9,"min_alt":11300,"min_dist":0.2,"alt_at_closest":11300},{"date":"2026-09-07","reg":"N401MT","type":"RV7","cls":"piston","own":"MUELLER PETER","role":"","desc":"VANS RV-7","first":"08:05","last":"08:29","dwell_min":24,"quiet_min":0,"min_alt":8825,"min_dist":3.0,"alt_at_closest":9775},{"date":"2026-09-07","reg":"N71KF","type":"C182","cls":"piston","own":"FOSTER KENNETH B","role":"","desc":"CESSNA 182 Skylane","first":"08:05","last":"08:19","dwell_min":13,"quiet_min":0,"min_alt":5600,"min_dist":0.1,"alt_at_closest":5800}]};
+const W_DATA = {"start":"2026-09-07","end":"2026-09-13","days":["2026-09-07"],"window_local":"22:00-08:30","events":[{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","ev":"ARR","hm":"07:01","other":"KMOD Modesto","pre7":false},{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","ev":"DEP","hm":"07:14","other":"KPAO Palo Alto","pre7":false},{"date":"2026-09-07","reg":"N901CF","type":"AS50","cls":"helicopter","own":"REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY","role":"air ambulance","desc":"AEROSPATIALE AS-350 Ecureuil","ev":"DEP","hm":"07:17","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N111H","type":"RV7","cls":"piston","own":"HARVEY MUSHMAN LLC","role":"","desc":"VANS RV-7","ev":"ARR","hm":"07:38","other":"KCXP Carson City","pre7":false},{"date":"2026-09-07","reg":"N9110H","type":"C172","cls":"piston","own":"SIERRA AERO LLC","role":"flight school","desc":"CESSNA 172 Skyhawk","ev":"DEP","hm":"07:41","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N900KP","type":"PC24","cls":"jet","own":"TOBARTHS LLC","role":"","desc":"","ev":"DEP","hm":"08:04","other":"KPVF Placerville","pre7":false},{"date":"2026-09-07","reg":"N1677C","type":"C180","cls":"piston","own":"DAVIS AERO LLC","role":"","desc":"CESSNA  180 Skywagon","ev":"DEP","hm":"08:05","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N217SW","type":"SR20","cls":"piston","own":"MOUNTAIN LION AVIATION LLC","role":"","desc":"","ev":"DEP","hm":"08:08","other":"KMEV Minden","pre7":false},{"date":"2026-09-07","reg":"N226AF","type":"PC12","cls":"turboprop","own":"TAYLOR-SMARTT LLC, SIRPOS II LLC, BEATY KEITH D, PINK SANDS ","role":"","desc":"PILATUS PC-12","ev":"DEP","hm":"08:09","other":"KDVO Novato","pre7":false},{"date":"2026-09-07","reg":"N518TD","type":"S22T","cls":"piston","own":"SHASTA WAY LLC","role":"","desc":"CIRRUS SR-22T Turbo","ev":"DEP","hm":"08:19","other":"KDVO Novato","pre7":false},{"date":"2026-09-07","reg":"N111H","type":"RV7","cls":"piston","own":"HARVEY MUSHMAN LLC","role":"","desc":"VANS RV-7","ev":"DEP","hm":"08:26","other":"Local flight (returned to KTRK)","pre7":false},{"date":"2026-09-07","reg":"N8647W","type":"P28B","cls":"piston","own":"CHASE DAN","role":"","desc":"PIPER PA-28-201T/235/236","ev":"DEP","hm":"08:29","other":"Local flight (returned to KTRK)","pre7":false}],"airborne_quiet":[{"date":"2026-09-07","reg":"N79893","type":"C172","cls":"piston","own":"PANJAB AVIATION","role":"","desc":"CESSNA 172 Skyhawk","first":"06:15","last":"06:25","min_alt":11300},{"date":"2026-09-07","reg":"N628SR","type":"PC12","cls":"turboprop","own":"KING AIR PARTNERS LLC","role":"","desc":"PILATUS PC-12","first":"06:57","last":"06:59","min_alt":8525}],"overflights":[{"date":"2026-09-07","reg":"N79893","type":"C172","cls":"piston","own":"PANJAB AVIATION","role":"","desc":"CESSNA 172 Skyhawk","first":"06:15","last":"06:25","dwell_min":9,"quiet_min":9,"min_alt":11300,"min_dist":0.2,"alt_at_closest":11300},{"date":"2026-09-07","reg":"N401MT","type":"RV7","cls":"piston","own":"MUELLER PETER","role":"","desc":"VANS RV-7","first":"08:05","last":"08:29","dwell_min":24,"quiet_min":0,"min_alt":8825,"min_dist":3.0,"alt_at_closest":9775},{"date":"2026-09-07","reg":"N71KF","type":"C182","cls":"piston","own":"FOSTER KENNETH B","role":"","desc":"CESSNA 182 Skylane","first":"08:05","last":"08:19","dwell_min":13,"quiet_min":0,"min_alt":5600,"min_dist":0.1,"alt_at_closest":5800}]};
 const CAT_COLORS = { fire: "var(--fire)", medical: "var(--medical)", jet: "var(--jetc)", turboprop: "var(--tprop)", light: "var(--light-ac)" };
 function catOf(e) {
   const r = (e.role || "").toLowerCase();
@@ -89,22 +102,28 @@ function catOf(e) {
   if (e.cls === "turboprop") return "turboprop";
   return "light";
 }
-// Quiet-hours movements (22:00 to 07:00) by aircraft that are not fire or medical draw in
-// one distinct color regardless of class, so the lane still says what kind of aircraft and
-// the color says it moved during the voluntary quiet hours.
+// Working traffic (fire, medical) is dimmed. Takeoffs and landings by other aircraft
+// during the quiet hours keep their class color and gain a halo, so color always means
+// the kind of aircraft and the halo says it moved during the voluntary quiet hours.
 const inQuiet = e => { const [h] = e.hm.split(":").map(Number); return h >= 22 || h < 7; };
 const dimOf = e => { const c = catOf(e); return (c === "fire" || c === "medical") ? 0.45 : 1; };
-const colorOf = e => {
-  const c = catOf(e);
-  if (c !== "fire" && c !== "medical" && (e.ev === "ARR" || e.ev === "DEP") && inQuiet(e)) return "var(--quiet)";
-  return CAT_COLORS[c];
-};
-const LANES = { fire: 0, medical: 1, jet: 2, turboprop: 3, light: 4 };
-const N_LANES = 5;
-const DAYS = W_DATA.days;
+const colorOf = e => CAT_COLORS[catOf(e)];
+const haloOf = e => { const c = catOf(e); return c !== "fire" && c !== "medical" && (e.ev === "ARR" || e.ev === "DEP") && inQuiet(e); };
+
+// Every night of the week gets a strip, collected or not; W_DATA.days lists the collected ones.
+function isoDate(d) { return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+const COLLECTED = new Set(W_DATA.days || []);
+const DAYS = [];
+if (W_DATA.start && W_DATA.end) {
+  for (let d = new Date(W_DATA.start + "T12:00:00"); isoDate(d) <= W_DATA.end; d.setDate(d.getDate() + 1)) DAYS.push(isoDate(d));
+} else {
+  DAYS.push(...(W_DATA.days || []));
+}
+const TODAY = isoDate(new Date());
 const DAYLBL = DAYS.map(d => {
   const dt = new Date(d + "T12:00:00");
-  return dt.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  const lbl = dt.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  return d === TODAY ? "Today (" + lbl + ")" : lbl;
 });
 const [wStart, wEnd] = W_DATA.window_local.split("-");
 const smin = (s => parseInt(s.slice(0,2))*60 + parseInt(s.slice(3)))(wStart);
@@ -112,68 +131,64 @@ const emin = (s => parseInt(s.slice(0,2))*60 + parseInt(s.slice(3)))(wEnd);
 const SPAN = smin > emin ? (1440 - smin) + emin : emin - smin;
 const rel = m => (smin > emin && m < smin) ? m + 1440 - smin : m - smin;
 
-const M = { l: 92, r: 18, t: 26, b: 34 };
-const W = 920, H = 750;
-const plotW = W - M.l - M.r, plotH = H - M.t - M.b;
-const rowH = plotH / DAYS.length;
+const M = { l: 132, r: 18, t: 30, b: 30 };
+const COUNTCOL = 110;
+const W = 920, rowH = 96;
+const H = M.t + rowH * DAYS.length + M.b;
+const plotX0 = M.l, plotX1 = W - M.r - COUNTCOL, plotW = plotX1 - plotX0;
 function xOf(hm) {
   const m = parseInt(hm.slice(0,2))*60 + parseInt(hm.slice(3));
-  return M.l + rel(m) / SPAN * plotW;
+  return plotX0 + rel(m) / SPAN * plotW;
 }
-const yOf = di => M.t + di * rowH + rowH / 2;
-const laneH = rowH / N_LANES;
-const yLane = (di, e) => M.t + di * rowH + (LANES[catOf(e)] + 0.5) * laneH;
+const yMid = di => M.t + di * rowH + rowH / 2;
 
 const svg = document.getElementById("chart");
+svg.setAttribute("height", H); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
 const NS = "http://www.w3.org/2000/svg";
+const MONO = "ui-monospace, SF Mono, Menlo, monospace";
 function el(name, attrs, parent) {
   const e = document.createElementNS(NS, name);
   for (const k in attrs) e.setAttribute(k, attrs[k]);
   (parent || svg).appendChild(e);
   return e;
 }
-// alternating day bands and solid boundaries so rows read as separate nights
-for (let i = 0; i < DAYS.length; i++) {
-  if (i % 2 === 1)
-    el("rect", { x: M.l, y: M.t + i * rowH, width: plotW, height: rowH,
-                 fill: "var(--grid)", opacity: 0.28 });
-  if (i > 0)
-    el("line", { x1: M.l, y1: M.t + i * rowH, x2: M.l + plotW, y2: M.t + i * rowH,
-                 stroke: "var(--axis)", "stroke-width": 1, opacity: 0.8 });
-}
-for (let t = 0; t <= SPAN; t += 30) {
-  const x = M.l + t / SPAN * plotW;
-  el("line", { x1: x, y1: M.t, x2: x, y2: M.t + plotH, stroke: "var(--grid)", "stroke-width": 1 });
+// quiet-hours tint across every strip, then row separators and today's band
+const qx = xOf("07:00");
+if (qx > plotX0)
+  el("rect", { x: plotX0, y: M.t, width: qx - plotX0, height: rowH * DAYS.length, fill: "var(--quiet)", opacity: 0.045 });
+DAYS.forEach((d, i) => {
+  const y = M.t + i * rowH;
+  if (d === TODAY) el("rect", { x: 0, y, width: W, height: rowH, fill: "var(--today)" });
+  if (i > 0) el("line", { x1: plotX0, y1: y, x2: plotX1, y2: y, stroke: "var(--axis)", "stroke-width": 1, opacity: 0.8 });
+});
+for (let t = 0; t <= SPAN; t += 60) {
+  const x = plotX0 + t / SPAN * plotW;
+  el("line", { x1: x, y1: M.t, x2: x, y2: M.t + rowH * DAYS.length, stroke: "var(--grid)", "stroke-width": 1 });
   const abs = (smin + t) % 1440;
-  if (abs % 60 === 0) {
-    el("text", { x, y: H - 12, "text-anchor": "middle", fill: "var(--muted)", "font-size": 11,
-      "font-family": "ui-monospace, SF Mono, Menlo, monospace" }).textContent =
-      String(Math.floor(abs / 60)).padStart(2, "0") + ":00";
-  }
+  el("text", { x, y: H - 10, "text-anchor": "middle", fill: "var(--muted)", "font-size": 11, "font-family": MONO }).textContent =
+    String(Math.floor(abs / 60)).padStart(2, "0") + ":00";
 }
 DAYS.forEach((d, i) => {
-  if (i > 0) el("line", { x1: M.l, y1: M.t + i * rowH, x2: M.l + plotW, y2: M.t + i * rowH, stroke: "var(--grid)", "stroke-width": 1, "stroke-dasharray": "1 3" });
-  el("text", { x: M.l - 10, y: yOf(i) + 4, "text-anchor": "end", fill: "var(--ink-2)", "font-size": 12 }).textContent = DAYLBL[i];
+  const collected = COLLECTED.has(d), today = d === TODAY;
+  const lbl = el("text", { x: M.l - 10, y: yMid(i) + 4, "text-anchor": "end", "font-size": 12,
+    fill: today ? "var(--ink)" : (collected ? "var(--ink-2)" : "var(--muted)") });
+  if (today) lbl.setAttribute("font-weight", 650);
+  lbl.textContent = DAYLBL[i];
+  const cx = plotX1 + 14;
+  if (collected) {
+    const evs = (W_DATA.events || []).filter(e => e.date === d);
+    const quiet = evs.filter(e => e.pre7).length;
+    el("text", { x: cx, y: yMid(i) + 4, fill: "var(--ink-2)", "font-size": 12.5, "font-family": MONO }).textContent = `${evs.length} · ${quiet}`;
+  } else {
+    el("text", { x: cx, y: yMid(i) + 4, fill: "var(--muted)", "font-size": 11, "font-style": "italic" }).textContent =
+      today ? "posts this evening" : "not yet";
+  }
 });
-el("line", { x1: M.l, y1: M.t + plotH, x2: M.l + plotW, y2: M.t + plotH, stroke: "var(--axis)", "stroke-width": 1 });
-const cx = xOf("07:00");
-el("line", { x1: cx, y1: M.t - 6, x2: cx, y2: M.t + plotH, stroke: "var(--curfew)", "stroke-width": 1.5, "stroke-dasharray": "5 4" });
-el("text", { x: cx, y: M.t - 12, "text-anchor": "middle", fill: "var(--ink)", "font-size": 11.5, "font-weight": 650 }).textContent = "quiet hours end 07:00";
+el("text", { x: plotX1 + 14, y: M.t - 8, fill: "var(--muted)", "font-size": 9.5, "font-family": MONO, "letter-spacing": "0.08em" }).textContent = "ALL · QUIET";
+el("line", { x1: plotX0, y1: M.t + rowH * DAYS.length, x2: plotX1, y2: M.t + rowH * DAYS.length, stroke: "var(--axis)", "stroke-width": 1 });
+el("line", { x1: qx, y1: M.t - 6, x2: qx, y2: M.t + rowH * DAYS.length, stroke: "var(--quiet)", "stroke-width": 1.5 });
+el("text", { x: qx, y: M.t - 12, "text-anchor": "middle", fill: "var(--ink)", "font-size": 11, "font-weight": 650 }).textContent = "quiet hours end 07:00";
 
-function layout(items) {
-  const placed = [];
-  items.sort((a, b) => a.x - b.x);
-  for (const it of items) {
-    let slot = 0;
-    const taken = new Set(placed.filter(p => Math.abs(p.x - it.x) < 9).map(p => p.slot));
-    while (taken.has(slot)) slot++;
-    it.slot = slot; placed.push(it);
-  }
-  for (const it of items) {
-    const dir = it.slot % 2 === 1 ? 1 : -1;
-    it.y += dir * Math.ceil(it.slot / 2) * 6;
-  }
-}
 const tip = document.getElementById("tip");
 function showTip(evn, html) {
   tip.innerHTML = html; tip.style.display = "block";
@@ -190,18 +205,28 @@ const marks = [];
 for (const e of (W_DATA.events || [])) {
   const di = DAYS.indexOf(e.date);
   if (di < 0) continue;
-  marks.push({ x: xOf(e.hm), y: yLane(di, e), day: di, lane: LANES[catOf(e)], kind: e.ev, e });
+  marks.push({ x: xOf(e.hm), day: di, kind: e.ev, e });
 }
 const ovf = W_DATA.overflights || (W_DATA.airborne_quiet || []).filter(a =>
   !(W_DATA.events || []).some(e => e.date === a.date && e.reg === a.reg));
 for (const a of ovf) {
   const di = DAYS.indexOf(a.date);
   if (di < 0) continue;
-  marks.push({ x: xOf(a.first), y: yLane(di, a), day: di, lane: LANES[catOf(a)], kind: "OVF", e: a, x2: xOf(a.last) });
+  marks.push({ x: xOf(a.first), day: di, kind: "OVF", e: a, x2: xOf(a.last) });
 }
-for (let i = 0; i < DAYS.length; i++)
-  for (let l = 0; l < N_LANES; l++)
-    layout(marks.filter(m => m.day === i && m.lane === l));
+// stack marks that fall close together in time above and below each strip's center line
+for (let i = 0; i < DAYS.length; i++) {
+  const items = marks.filter(m => m.day === i).sort((a, b) => a.x - b.x);
+  const placed = [];
+  for (const m of items) {
+    m.slot = 0;
+    for (const s of [0, -1, 1, -2, 2, -3, 3]) {
+      if (!placed.some(p => Math.abs(p.x - m.x) < 12 && p.slot === s)) { m.slot = s; break; }
+    }
+    m.y = yMid(i) + m.slot * 12.5;
+    placed.push(m);
+  }
+}
 
 // pair quick turns: ARR then DEP by the same aircraft within 45 minutes reads as one stop
 const relMin = hm => { const m = parseInt(hm.slice(0,2))*60 + parseInt(hm.slice(3)); return (smin > emin && m < smin) ? m + 1440 - smin : m - smin; };
@@ -218,47 +243,46 @@ for (const key in byReg) {
       const dt = relMin(b.e.hm) - relMin(a.e.hm);
       if (dt > 0 && dt <= 45) {
         const g = el("g", {});
-        const laneY = M.t + a.day * rowH + (a.lane + 0.5) * laneH;
-        el("line", { x1: a.x, y1: laneY, x2: b.x, y2: laneY, stroke: colorOf(a.e),
-                     "stroke-width": 1.2, opacity: 0.5 * dimOf(a.e) }, g);
-        el("line", { x1: a.x, y1: laneY, x2: b.x, y2: laneY, stroke: "transparent", "stroke-width": 12 }, g);
+        el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: colorOf(a.e), "stroke-width": 1.2, opacity: 0.5 * dimOf(a.e) }, g);
+        el("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: "transparent", "stroke-width": 12 }, g);
         const html2 = `<div class="t1">${a.e.reg} · ${dt}-minute stop</div>
           ${a.e.desc ? `<div class="t2">${a.e.desc}</div>` : ""}
           <div class="t2">landed ${a.e.hm} from ${a.e.other} · took off ${b.e.hm} to ${b.e.other}</div>
           <div class="t3">${a.e.own || ""}${a.e.role ? " · " + a.e.role.toUpperCase() : ""}</div>`;
         g.addEventListener("pointermove", ev => showTip(ev, html2));
         g.addEventListener("pointerleave", hideTip);
-        svg.insertBefore(g, svg.querySelector("g"));
       }
     }
   }
 }
 for (const m of marks) {
   const g = el("g", { cursor: "default", opacity: dimOf(m.e) });
+  const c = colorOf(m.e);
   if (m.kind === "OVF") {
     if (m.x2 - m.x > 4) {
-      el("line", { x1: m.x + 3, y1: m.y, x2: m.x2 - 3, y2: m.y, stroke: colorOf(m.e), "stroke-width": 1.4, opacity: 0.7 }, g);
-      el("circle", { cx: m.x2, cy: m.y, r: 3.5, fill: "none", stroke: colorOf(m.e), "stroke-width": 1.6 }, g);
+      el("line", { x1: m.x + 4, y1: m.y, x2: m.x2 - 4, y2: m.y, stroke: c, "stroke-width": 1.4, opacity: 0.7 }, g);
+      el("circle", { cx: m.x2, cy: m.y, r: 4, fill: "none", stroke: c, "stroke-width": 1.6 }, g);
       el("rect", { x: m.x - 6, y: m.y - 8, width: (m.x2 - m.x) + 12, height: 16, fill: "transparent" }, g);
     }
-    el("circle", { cx: m.x, cy: m.y, r: 3.5, fill: "none", stroke: colorOf(m.e), "stroke-width": 1.6 }, g);
+    el("circle", { cx: m.x, cy: m.y, r: 4, fill: "none", stroke: c, "stroke-width": 1.6 }, g);
   } else if (m.kind === "ARR") {
-    el("circle", { cx: m.x, cy: m.y, r: 5, fill: colorOf(m.e), stroke: "var(--surface)", "stroke-width": 2 }, g);
+    el("circle", { cx: m.x, cy: m.y, r: 5.5, fill: c, stroke: "var(--surface)", "stroke-width": 2 }, g);
   } else {
-    const s = 6;
+    const s = 6.5;
     el("path", { d: `M ${m.x} ${m.y - s} L ${m.x + s * 0.9} ${m.y + s * 0.75} L ${m.x - s * 0.9} ${m.y + s * 0.75} Z`,
-      fill: colorOf(m.e), stroke: "var(--surface)", "stroke-width": 2 }, g);
+      fill: c, stroke: "var(--surface)", "stroke-width": 2 }, g);
   }
+  if (haloOf(m.e)) el("circle", { cx: m.x, cy: m.y, r: 9.5, fill: "none", stroke: "var(--quiet)", "stroke-width": 1.5 }, g);
   el("circle", { cx: m.x, cy: m.y, r: 11, fill: "transparent" }, g);
   const e = m.e;
   const html = m.kind === "OVF"
     ? `<div class="t1">${e.reg} · ${e.type} · ${e.cls || ""}</div>
        ${e.desc ? `<div class="t2">${e.desc}</div>` : ""}
-       <div class="t2">airborne nearby ${e.first}–${e.last}${e.dwell_min ? ` (${e.dwell_min} min)` : ""}, no landing · ${(e.alt_at_closest||e.min_alt||0).toLocaleString()} ft above sea level at closest pass</div>
+       <div class="t2">airborne nearby ${e.first} to ${e.last}${e.dwell_min ? ` (${e.dwell_min} min)` : ""}, no landing · ${(e.alt_at_closest||e.min_alt||0).toLocaleString()} ft above sea level at closest pass</div>
        <div class="t3">${e.own || ""}${e.role ? " · " + e.role.toUpperCase() : ""}</div>`
     : `<div class="t1">${e.reg} · ${e.type} · ${e.cls}</div>
        ${e.desc ? `<div class="t2">${e.desc}</div>` : ""}
-       <div class="t2">${e.ev === "ARR" ? "landed" : "took off"} ${e.hm} · ${e.ev === "ARR" ? "from" : "to"} ${e.other}</div>
+       <div class="t2">${e.ev === "ARR" ? "landed" : "took off"} ${e.hm} · ${e.ev === "ARR" ? "from" : "to"} ${e.other}${haloOf(e) ? " · during quiet hours" : ""}</div>
        <div class="t3">${e.own || ""}${e.role ? " · " + e.role.toUpperCase() : ""}</div>`;
   g.addEventListener("pointermove", ev => showTip(ev, html));
   g.addEventListener("pointerleave", hideTip);

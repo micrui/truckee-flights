@@ -327,7 +327,7 @@ def render():
             if i < len(asc) - 1:
                 n = asc[i+1]; nav.append(f'<a href="{n["start"]}_{n["end"]}.html">{fmt_range(n)} &rarr;</a>')
             nav.append('<a href="../quiet-hours.html">all weeks</a>')
-            payload = {k: w.get(k) for k in ("days", "window_local", "events", "airborne_quiet", "overflights")}
+            payload = {k: w.get(k) for k in ("start", "end", "days", "window_local", "events", "airborne_quiet", "overflights")}
             page_w = (tpl.replace("%%RANGE%%", rng)
                         .replace("%%SUBTITLE%%", sub)
                         .replace("%%NOTABLES%%", notables(w))
