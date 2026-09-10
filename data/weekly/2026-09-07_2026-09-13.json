@@ -3,7 +3,8 @@
  "end": "2026-09-13",
  "days": [
   "2026-09-07",
-  "2026-09-08"
+  "2026-09-08",
+  "2026-09-09"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -358,6 +359,136 @@
    "hm": "08:27",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N3003B",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "EHRLICH DAVID, GRIGG JESSE, GRIGG JOSH",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "ev": "DEP",
+   "hm": "06:46",
+   "other": "KMHR Sacramento",
+   "pre7": true
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N4724B",
+   "type": "C180",
+   "cls": "piston",
+   "own": "SCHLINK RICHARD L",
+   "role": "",
+   "desc": "CESSNA  180 Skywagon",
+   "ev": "ARR",
+   "hm": "07:26",
+   "other": "O22 Columbia",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N124EV",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "EL AERO SERVICES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "DEP",
+   "hm": "07:40",
+   "other": "KCXP Carson City",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N219RS",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "CASTLE PEAK LEASING LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:45",
+   "other": "KMOD Modesto",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N4724B",
+   "type": "C180",
+   "cls": "piston",
+   "own": "SCHLINK RICHARD L",
+   "role": "",
+   "desc": "CESSNA  180 Skywagon",
+   "ev": "DEP",
+   "hm": "07:46",
+   "other": "(42.77,-116.31)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:50",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N198X",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "KENMORE CREW LEASING INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-24",
+   "ev": "ARR",
+   "hm": "08:07",
+   "other": "KSNA Santa Ana",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:09",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:18",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N55209",
+   "type": "PA32",
+   "cls": "piston",
+   "own": "DE CUIR DENNIS W, GOOD TAYLOR H",
+   "role": "",
+   "desc": "PIPER PA-32",
+   "ev": "DEP",
+   "hm": "08:29",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -384,6 +515,42 @@
    "first": "06:57",
    "last": "06:59",
    "min_alt": 8525
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N3003B",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "EHRLICH DAVID, GRIGG JESSE, GRIGG JOSH",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "first": "06:46",
+   "last": "06:59",
+   "min_alt": 4800
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "06:54",
+   "last": "06:59",
+   "min_alt": 9225
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N370CS",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "first": "23:35",
+   "last": "23:38",
+   "min_alt": 12650
   }
  ],
  "overflights": [
@@ -482,25 +649,138 @@
    "min_alt": 11400,
    "min_dist": 1.5,
    "alt_at_closest": 11400
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "06:54",
+   "last": "07:03",
+   "dwell_min": 9,
+   "quiet_min": 5,
+   "min_alt": 9225,
+   "min_dist": 3.6,
+   "alt_at_closest": 9225
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N855GJ",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "TERRA AQUA INC",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "first": "07:10",
+   "last": "07:16",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 8925,
+   "min_dist": 4.7,
+   "alt_at_closest": 10400
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N431DC",
+   "type": "B350",
+   "cls": "turboprop",
+   "own": "DIESEL ACQUISITIONS LLC",
+   "role": "",
+   "desc": "",
+   "first": "07:43",
+   "last": "07:47",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 9250,
+   "min_dist": 0.7,
+   "alt_at_closest": 11225
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N6847U",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "FOLKERTS THOMAS A, FOLKERTS KAREN N",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "first": "07:48",
+   "last": "07:54",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 11100,
+   "min_dist": 5.0,
+   "alt_at_closest": 11250
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N997JB",
+   "type": "C82R",
+   "cls": "piston",
+   "own": "BRANNAN BRENDON KYLE",
+   "role": "",
+   "desc": "CESSNA R182 Skylane RG",
+   "first": "07:58",
+   "last": "08:06",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 10100,
+   "min_dist": 2.7,
+   "alt_at_closest": 10200
+  },
+  {
+   "date": "2026-09-09",
+   "reg": "N370CS",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "REACH AIR MEDICAL SERVICES LLC",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "first": "23:35",
+   "last": "23:38",
+   "dwell_min": 2,
+   "quiet_min": 2,
+   "min_alt": 12650,
+   "min_dist": 7.8,
+   "alt_at_closest": 12650
   }
  ],
  "ladd_operators": [
   "N107MY",
   "N111H",
   "N281EB",
+  "N4724B",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 27,
- "unique_aircraft": 21,
+ "total_ops": 37,
+ "unique_aircraft": 27,
  "by_class": {
   "turboprop": 6,
   "helicopter": 1,
-  "piston": 15,
-  "jet": 5
+  "piston": 24,
+  "jet": 6
  },
- "quiet_hours_ops": 0,
- "quiet_hours_by_class": {},
- "quiet_hours_events": [],
- "local_flights": 9
+ "quiet_hours_ops": 1,
+ "quiet_hours_by_class": {
+  "piston": 1
+ },
+ "quiet_hours_events": [
+  {
+   "date": "2026-09-09",
+   "reg": "N3003B",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "EHRLICH DAVID, GRIGG JESSE, GRIGG JOSH",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "ev": "DEP",
+   "hm": "06:46",
+   "other": "KMHR Sacramento",
+   "pre7": true
+  }
+ ],
+ "local_flights": 13
 }
