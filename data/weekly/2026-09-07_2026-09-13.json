@@ -4,7 +4,8 @@
  "days": [
   "2026-09-07",
   "2026-09-08",
-  "2026-09-09"
+  "2026-09-09",
+  "2026-09-10"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -489,6 +490,123 @@
    "hm": "08:29",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:14",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N42SH",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "LEJORAN LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:15",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N469JG",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "JG AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:38",
+   "other": "KSBA Santa Barbara",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N555WE",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "RFS EQUIPMENT LLC",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "ev": "ARR",
+   "hm": "08:06",
+   "other": "KSNA Santa Ana",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "08:09",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N278JM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "JLM AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:10",
+   "other": "KOTH North Bend",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N107MY",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "TEATREE LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "08:13",
+   "other": "KDVO Novato",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N92291",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "ARR",
+   "hm": "08:19",
+   "other": "KCXP Carson City",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:25",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -551,6 +669,18 @@
    "first": "23:35",
    "last": "23:38",
    "min_alt": 12650
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N391SH",
+   "type": "H60",
+   "cls": "helicopter",
+   "own": "LEGGACY HELICOPTER OPERATIONS LLC",
+   "role": "",
+   "desc": "SIKORSKY UH-60 Black Hawk",
+   "first": "06:48",
+   "last": "06:59",
+   "min_alt": 7025
   }
  ],
  "overflights": [
@@ -745,22 +875,55 @@
    "min_alt": 12650,
    "min_dist": 7.8,
    "alt_at_closest": 12650
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N391SH",
+   "type": "H60",
+   "cls": "helicopter",
+   "own": "LEGGACY HELICOPTER OPERATIONS LLC",
+   "role": "",
+   "desc": "SIKORSKY UH-60 Black Hawk",
+   "first": "06:48",
+   "last": "07:20",
+   "dwell_min": 31,
+   "quiet_min": 11,
+   "min_alt": 6975,
+   "min_dist": 4.6,
+   "alt_at_closest": 7525
+  },
+  {
+   "date": "2026-09-10",
+   "reg": "N7309S",
+   "type": "C182",
+   "cls": "piston",
+   "own": "REGISTRATION PENDING",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:57",
+   "last": "08:05",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 5500,
+   "min_dist": 0.2,
+   "alt_at_closest": 5500
   }
  ],
  "ladd_operators": [
   "N107MY",
   "N111H",
   "N281EB",
+  "N469JG",
   "N4724B",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 37,
- "unique_aircraft": 27,
+ "total_ops": 46,
+ "unique_aircraft": 32,
  "by_class": {
-  "turboprop": 6,
+  "turboprop": 8,
   "helicopter": 1,
-  "piston": 24,
+  "piston": 31,
   "jet": 6
  },
  "quiet_hours_ops": 1,
@@ -782,5 +945,5 @@
    "pre7": true
   }
  ],
- "local_flights": 13
+ "local_flights": 16
 }
