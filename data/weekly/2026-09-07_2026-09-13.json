@@ -5,7 +5,8 @@
   "2026-09-07",
   "2026-09-08",
   "2026-09-09",
-  "2026-09-10"
+  "2026-09-10",
+  "2026-09-11"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -607,6 +608,97 @@
    "hm": "08:25",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N555WE",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "RFS EQUIPMENT LLC",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "ev": "DEP",
+   "hm": "07:21",
+   "other": "KSNA Santa Ana",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N361QS",
+   "type": "C680",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA 680 Citation Sovereign",
+   "ev": "ARR",
+   "hm": "07:40",
+   "other": "KLAS Las Vegas",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:42",
+   "other": "KDVO Novato",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:58",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N1677C",
+   "type": "C180",
+   "cls": "piston",
+   "own": "DAVIS AERO LLC",
+   "role": "",
+   "desc": "CESSNA  180 Skywagon",
+   "ev": "DEP",
+   "hm": "08:00",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N124EV",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "EL AERO SERVICES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "DEP",
+   "hm": "08:03",
+   "other": "KSCK Stockton",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:23",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -681,6 +773,30 @@
    "first": "06:48",
    "last": "06:59",
    "min_alt": 7025
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N868BR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "GAVOHA AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "04:08",
+   "last": "04:14",
+   "min_alt": 11925
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N521NG",
+   "type": "SLG2",
+   "cls": "piston",
+   "own": "ULTIMATE FLIGHT LLC",
+   "role": "",
+   "desc": "AIRPLANE FACTORY Sling 2",
+   "first": "06:50",
+   "last": "06:59",
+   "min_alt": 10275
   }
  ],
  "overflights": [
@@ -907,6 +1023,118 @@
    "min_alt": 5500,
    "min_dist": 0.2,
    "alt_at_closest": 5500
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N868BR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "GAVOHA AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "04:08",
+   "last": "04:14",
+   "dwell_min": 5,
+   "quiet_min": 5,
+   "min_alt": 11925,
+   "min_dist": 3.1,
+   "alt_at_closest": 12850
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N521NG",
+   "type": "SLG2",
+   "cls": "piston",
+   "own": "ULTIMATE FLIGHT LLC",
+   "role": "",
+   "desc": "AIRPLANE FACTORY Sling 2",
+   "first": "06:50",
+   "last": "07:04",
+   "dwell_min": 13,
+   "quiet_min": 9,
+   "min_alt": 10200,
+   "min_dist": 2.7,
+   "alt_at_closest": 10275
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N7265S",
+   "type": "C182",
+   "cls": "piston",
+   "own": "RIVER CITY FLYING CLUB INC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:02",
+   "last": "07:10",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 11325,
+   "min_dist": 1.5,
+   "alt_at_closest": 11325
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N2266S",
+   "type": "T210",
+   "cls": "piston",
+   "own": "WEEKEND AIR LLC",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "first": "07:09",
+   "last": "07:24",
+   "dwell_min": 15,
+   "quiet_min": 0,
+   "min_alt": 5000,
+   "min_dist": 0.1,
+   "alt_at_closest": 5500
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N135CD",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "REGISTRATION PENDING",
+   "role": "",
+   "desc": "",
+   "first": "07:47",
+   "last": "07:54",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 8500,
+   "min_dist": 1.6,
+   "alt_at_closest": 9550
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N71595",
+   "type": "C182",
+   "cls": "piston",
+   "own": "REGISTRATION PENDING",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "08:18",
+   "last": "08:25",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 11325,
+   "min_dist": 5.2,
+   "alt_at_closest": 11350
+  },
+  {
+   "date": "2026-09-11",
+   "reg": "N7142F",
+   "type": "P28A",
+   "cls": "piston",
+   "own": "MARBLE JERE D",
+   "role": "",
+   "desc": "PIPER PA-28-140/150/160/180",
+   "first": "08:19",
+   "last": "08:29",
+   "dwell_min": 9,
+   "quiet_min": 0,
+   "min_alt": 8400,
+   "min_dist": 3.9,
+   "alt_at_closest": 8600
   }
  ],
  "ladd_operators": [
@@ -918,13 +1146,13 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 46,
- "unique_aircraft": 32,
+ "total_ops": 53,
+ "unique_aircraft": 33,
  "by_class": {
-  "turboprop": 8,
+  "turboprop": 10,
   "helicopter": 1,
-  "piston": 31,
-  "jet": 6
+  "piston": 35,
+  "jet": 7
  },
  "quiet_hours_ops": 1,
  "quiet_hours_by_class": {
@@ -945,5 +1173,5 @@
    "pre7": true
   }
  ],
- "local_flights": 16
+ "local_flights": 19
 }
