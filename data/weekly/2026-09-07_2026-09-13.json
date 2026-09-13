@@ -6,7 +6,8 @@
   "2026-09-08",
   "2026-09-09",
   "2026-09-10",
-  "2026-09-11"
+  "2026-09-11",
+  "2026-09-12"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -699,6 +700,58 @@
    "hm": "08:23",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N988TX",
+   "type": "C750",
+   "cls": "jet",
+   "own": "RYAN AIR LLC",
+   "role": "",
+   "desc": "CESSNA 750 Citation 10",
+   "ev": "ARR",
+   "hm": "07:59",
+   "other": "KASE Aspen",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N662QS",
+   "type": "C68A",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA 680 Citation Latitude",
+   "ev": "DEP",
+   "hm": "08:10",
+   "other": "KVCB Vacaville",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:23",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:24",
+   "other": "NV58 Reno (heliport)",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -797,6 +850,30 @@
    "first": "06:50",
    "last": "06:59",
    "min_alt": 10275
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:27",
+   "last": "23:24",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "22:58",
+   "last": "23:11",
+   "min_alt": 10600
   }
  ],
  "overflights": [
@@ -1135,6 +1212,86 @@
    "min_alt": 8400,
    "min_dist": 3.9,
    "alt_at_closest": 8600
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N440L",
+   "type": "RV4",
+   "cls": "piston",
+   "own": "SAUNDERS PERRY J",
+   "role": "",
+   "desc": "VANS RV-4",
+   "first": "07:04",
+   "last": "07:08",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 7225,
+   "min_dist": 7.1,
+   "alt_at_closest": 7225
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N40RF",
+   "type": "C172",
+   "cls": "piston",
+   "own": "GAMMA FLIGHT LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "08:04",
+   "last": "08:11",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 11900,
+   "min_dist": 7.9,
+   "alt_at_closest": 11900
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N228LR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "PATROSE LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:07",
+   "last": "08:10",
+   "dwell_min": 2,
+   "quiet_min": 0,
+   "min_alt": 9100,
+   "min_dist": 7.6,
+   "alt_at_closest": 9400
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N687HR",
+   "type": "HROC",
+   "cls": "piston",
+   "own": "SCHROEDER SCOTT M",
+   "role": "",
+   "desc": "HARMON Rocket",
+   "first": "08:24",
+   "last": "08:29",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 5650,
+   "min_dist": 0.2,
+   "alt_at_closest": 5650
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "22:58",
+   "last": "23:11",
+   "dwell_min": 12,
+   "quiet_min": 12,
+   "min_alt": 10600,
+   "min_dist": 2.3,
+   "alt_at_closest": 12150
   }
  ],
  "ladd_operators": [
@@ -1146,17 +1303,18 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 53,
- "unique_aircraft": 33,
+ "total_ops": 57,
+ "unique_aircraft": 35,
  "by_class": {
   "turboprop": 10,
-  "helicopter": 1,
-  "piston": 35,
-  "jet": 7
+  "helicopter": 2,
+  "piston": 36,
+  "jet": 9
  },
- "quiet_hours_ops": 1,
+ "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
-  "piston": 1
+  "piston": 1,
+  "helicopter": 1
  },
  "quiet_hours_events": [
   {
@@ -1171,7 +1329,20 @@
    "hm": "06:46",
    "other": "KMHR Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-09-12",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:24",
+   "other": "NV58 Reno (heliport)",
+   "pre7": true
   }
  ],
- "local_flights": 19
+ "local_flights": 20
 }
