@@ -7,7 +7,8 @@
   "2026-09-09",
   "2026-09-10",
   "2026-09-11",
-  "2026-09-12"
+  "2026-09-12",
+  "2026-09-13"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -752,6 +753,19 @@
    "hm": "23:24",
    "other": "NV58 Reno (heliport)",
    "pre7": true
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N376AF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "BIGELOW LLC, DELANEY JOAN B, ELIZABETH ENGLISH INTERIOIRS LL",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:18",
+   "other": "KMRY Monterey",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -874,6 +888,18 @@
    "first": "22:58",
    "last": "23:11",
    "min_alt": 10600
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N260HS",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "04:24",
+   "last": "04:25",
+   "min_alt": 12000
   }
  ],
  "overflights": [
@@ -1292,6 +1318,70 @@
    "min_alt": 10600,
    "min_dist": 2.3,
    "alt_at_closest": 12150
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N260HS",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "04:24",
+   "last": "04:25",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 12000,
+   "min_dist": 4.2,
+   "alt_at_closest": 12900
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N216AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "role": "fire/utility contractor",
+   "desc": "BELL 212",
+   "first": "07:51",
+   "last": "08:22",
+   "dwell_min": 30,
+   "quiet_min": 0,
+   "min_alt": 6700,
+   "min_dist": 6.7,
+   "alt_at_closest": 6700
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:12",
+   "last": "08:29",
+   "dwell_min": 17,
+   "quiet_min": 0,
+   "min_alt": 5700,
+   "min_dist": 0.1,
+   "alt_at_closest": 5725
+  },
+  {
+   "date": "2026-09-13",
+   "reg": "N714VL",
+   "type": "C152",
+   "cls": "piston",
+   "own": "ODONATA LLC",
+   "role": "",
+   "desc": "CESSNA 152",
+   "first": "08:29",
+   "last": "08:29",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 8525,
+   "min_dist": 9.4,
+   "alt_at_closest": 8525
   }
  ],
  "ladd_operators": [
@@ -1302,11 +1392,11 @@
   "N4724B",
   "N922PB"
  ],
- "partial": true,
- "total_ops": 57,
- "unique_aircraft": 35,
+ "partial": false,
+ "total_ops": 58,
+ "unique_aircraft": 36,
  "by_class": {
-  "turboprop": 10,
+  "turboprop": 11,
   "helicopter": 2,
   "piston": 36,
   "jet": 9
