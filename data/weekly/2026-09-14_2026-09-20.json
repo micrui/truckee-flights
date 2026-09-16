@@ -2,7 +2,8 @@
  "start": "2026-09-14",
  "end": "2026-09-20",
  "days": [
-  "2026-09-14"
+  "2026-09-14",
+  "2026-09-15"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -149,6 +150,84 @@
    "hm": "22:10",
    "other": "KOAK Oakland",
    "pre7": true
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N567FX",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "FLEXJET LLC, STAIR LLC, PROLOGIS LOGISTICS SERVICES INC, RDK",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "ARR",
+   "hm": "07:32",
+   "other": "KSDL Scottsdale",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N761XE",
+   "type": "T210",
+   "cls": "piston",
+   "own": "GORDON BRUCE S TRUSTEE",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N9549G",
+   "type": "T206",
+   "cls": "piston",
+   "own": "MACICA STEPHEN J DBA, PROSPECT ENGINEERING",
+   "role": "",
+   "desc": "CESSNA T206 Turbo Stationair",
+   "ev": "ARR",
+   "hm": "08:10",
+   "other": "US-3637 Calpine",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:24",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N900KP",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "TOBARTHS LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "08:27",
+   "other": "KMRY Monterey",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -163,6 +242,18 @@
    "first": "22:05",
    "last": "22:10",
    "min_alt": 5650
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N2774T",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "OLSON ELECTRICAL SERVICES",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "05:50",
+   "last": "05:58",
+   "min_alt": 10000
   }
  ],
  "overflights": [
@@ -309,17 +400,65 @@
    "min_alt": 9425,
    "min_dist": 6.5,
    "alt_at_closest": 10275
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N2774T",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "OLSON ELECTRICAL SERVICES",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "05:50",
+   "last": "05:58",
+   "dwell_min": 7,
+   "quiet_min": 7,
+   "min_alt": 10000,
+   "min_dist": 2.7,
+   "alt_at_closest": 10400
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N733CE",
+   "type": "C172",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "role": "",
+   "desc": "",
+   "first": "07:20",
+   "last": "07:33",
+   "dwell_min": 12,
+   "quiet_min": 0,
+   "min_alt": 9425,
+   "min_dist": 2.5,
+   "alt_at_closest": 10300
+  },
+  {
+   "date": "2026-09-15",
+   "reg": "N6SR",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "BLACKHAWK AVIATION II LLC",
+   "role": "",
+   "desc": "EPIC AIRCRAFT Epic LT",
+   "first": "08:28",
+   "last": "08:29",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 10175,
+   "min_dist": 4.2,
+   "alt_at_closest": 12750
   }
  ],
  "ladd_operators": [
   "N469JG"
  ],
  "partial": true,
- "total_ops": 11,
- "unique_aircraft": 9,
+ "total_ops": 17,
+ "unique_aircraft": 14,
  "by_class": {
-  "jet": 3,
-  "piston": 7,
+  "jet": 5,
+  "piston": 11,
   "turboprop": 1
  },
  "quiet_hours_ops": 1,
@@ -341,5 +480,5 @@
    "pre7": true
   }
  ],
- "local_flights": 3
+ "local_flights": 6
 }
