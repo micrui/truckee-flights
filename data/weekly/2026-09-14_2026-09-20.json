@@ -3,7 +3,8 @@
  "end": "2026-09-20",
  "days": [
   "2026-09-14",
-  "2026-09-15"
+  "2026-09-15",
+  "2026-09-16"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -228,6 +229,136 @@
    "hm": "08:27",
    "other": "KMRY Monterey",
    "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N3215D",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "SCHLUND JAMES F",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "ev": "ARR",
+   "hm": "06:45",
+   "other": "KCIC Chico",
+   "pre7": true
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N7468Y",
+   "type": "PA30",
+   "cls": "piston",
+   "own": "THYS EDOUARD B",
+   "role": "",
+   "desc": "PIPER PA-30 Twin Comanche",
+   "ev": "DEP",
+   "hm": "07:07",
+   "other": "KAUN Auburn",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N900KP",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "TOBARTHS LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:30",
+   "other": "KPVF Placerville",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N137JT",
+   "type": "HDJT",
+   "cls": "jet",
+   "own": "BBME VENTURES LLC, TANGIER LOGISTICS LLC",
+   "role": "",
+   "desc": "HONDA HondaJet",
+   "ev": "DEP",
+   "hm": "07:31",
+   "other": "KMHR Sacramento",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N228LR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "PATROSE LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "08:03",
+   "other": "KMEV Minden",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N1022G",
+   "type": "C25M",
+   "cls": "jet",
+   "own": "WELCOME GROVE LLC",
+   "role": "",
+   "desc": "CESSNA 525 Citation M2",
+   "ev": "ARR",
+   "hm": "08:22",
+   "other": "KMCC Sacramento",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N7468Y",
+   "type": "PA30",
+   "cls": "piston",
+   "own": "THYS EDOUARD B",
+   "role": "",
+   "desc": "PIPER PA-30 Twin Comanche",
+   "ev": "ARR",
+   "hm": "08:25",
+   "other": "KAUN Auburn",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N228LR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "PATROSE LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:27",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N219RS",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "CASTLE PEAK LEASING LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "08:29",
+   "other": "KCCR Concord",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -254,6 +385,42 @@
    "first": "05:50",
    "last": "05:58",
    "min_alt": 10000
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N3215D",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "SCHLUND JAMES F",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "first": "06:40",
+   "last": "06:45",
+   "min_alt": 5750
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N7468Y",
+   "type": "PA30",
+   "cls": "piston",
+   "own": "THYS EDOUARD B",
+   "role": "",
+   "desc": "PIPER PA-30 Twin Comanche",
+   "first": "06:56",
+   "last": "06:56",
+   "min_alt": 5775
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N1968F",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "23:51",
+   "last": "00:00",
+   "min_alt": 11400
   }
  ],
  "overflights": [
@@ -448,22 +615,118 @@
    "min_alt": 10175,
    "min_dist": 4.2,
    "alt_at_closest": 12750
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N8136M",
+   "type": "C182",
+   "cls": "piston",
+   "own": "TAKEAIR LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:05",
+   "last": "07:26",
+   "dwell_min": 20,
+   "quiet_min": 0,
+   "min_alt": 5725,
+   "min_dist": 0.1,
+   "alt_at_closest": 5750
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:06",
+   "last": "07:15",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 10900,
+   "min_dist": 0.3,
+   "alt_at_closest": 11475
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N111H",
+   "type": "RV7",
+   "cls": "piston",
+   "own": "HARVEY MUSHMAN LLC",
+   "role": "",
+   "desc": "VANS RV-7",
+   "first": "07:45",
+   "last": "07:48",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 9975,
+   "min_dist": 8.0,
+   "alt_at_closest": 10400
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N8136M",
+   "type": "C182",
+   "cls": "piston",
+   "own": "TAKEAIR LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "08:08",
+   "last": "08:21",
+   "dwell_min": 12,
+   "quiet_min": 0,
+   "min_alt": 5725,
+   "min_dist": 0.0,
+   "alt_at_closest": 6275
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "08:22",
+   "last": "08:29",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 11900,
+   "min_dist": 5.6,
+   "alt_at_closest": 12100
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N1968F",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "23:51",
+   "last": "00:00",
+   "dwell_min": 8,
+   "quiet_min": 8,
+   "min_alt": 11400,
+   "min_dist": 2.2,
+   "alt_at_closest": 11600
   }
  ],
  "ladd_operators": [
   "N469JG"
  ],
  "partial": true,
- "total_ops": 17,
- "unique_aircraft": 14,
+ "total_ops": 27,
+ "unique_aircraft": 19,
  "by_class": {
-  "jet": 5,
-  "piston": 11,
+  "jet": 8,
+  "piston": 18,
   "turboprop": 1
  },
- "quiet_hours_ops": 1,
+ "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
-  "piston": 1
+  "piston": 2
  },
  "quiet_hours_events": [
   {
@@ -478,7 +741,20 @@
    "hm": "22:10",
    "other": "KOAK Oakland",
    "pre7": true
+  },
+  {
+   "date": "2026-09-16",
+   "reg": "N3215D",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "SCHLUND JAMES F",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "ev": "ARR",
+   "hm": "06:45",
+   "other": "KCIC Chico",
+   "pre7": true
   }
  ],
- "local_flights": 6
+ "local_flights": 8
 }
