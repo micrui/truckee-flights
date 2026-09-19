@@ -5,7 +5,8 @@
   "2026-09-14",
   "2026-09-15",
   "2026-09-16",
-  "2026-09-17"
+  "2026-09-17",
+  "2026-09-18"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -581,6 +582,110 @@
    "hm": "23:21",
    "other": "KMOD Modesto",
    "pre7": true
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N469JG",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "JG AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:45",
+   "other": "KRNO Reno",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:47",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:04",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "08:19",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "08:22",
+   "other": "KRNO Reno",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N5479N",
+   "type": "C182",
+   "cls": "piston",
+   "own": "TAHOE FLYING CLUB INC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "ev": "DEP",
+   "hm": "08:26",
+   "other": "KMEV Minden",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "ARR",
+   "hm": "08:27",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "08:29",
+   "other": "KSQL San Carlos",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -703,6 +808,30 @@
    "first": "23:07",
    "last": "23:26",
    "min_alt": 5700
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N30GT",
+   "type": "BE9T",
+   "cls": "turboprop",
+   "own": "CAL ASSET HOLDING LLC",
+   "role": "",
+   "desc": "BEECH F90 King Air",
+   "first": "06:54",
+   "last": "06:56",
+   "min_alt": 11200
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:58",
+   "last": "06:59",
+   "min_alt": 11300
   }
  ],
  "overflights": [
@@ -1025,6 +1154,86 @@
    "min_alt": 5625,
    "min_dist": 0.2,
    "alt_at_closest": 5775
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N30GT",
+   "type": "BE9T",
+   "cls": "turboprop",
+   "own": "CAL ASSET HOLDING LLC",
+   "role": "",
+   "desc": "BEECH F90 King Air",
+   "first": "06:54",
+   "last": "06:56",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 11200,
+   "min_dist": 3.7,
+   "alt_at_closest": 12925
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N1306C",
+   "type": "C172",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "06:58",
+   "last": "07:08",
+   "dwell_min": 10,
+   "quiet_min": 1,
+   "min_alt": 10675,
+   "min_dist": 1.4,
+   "alt_at_closest": 11150
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N888DF",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASLIN WESLEY KEITH, ASLIN TIMOTHY HARLAN",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "first": "07:55",
+   "last": "08:02",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 9400,
+   "min_dist": 2.1,
+   "alt_at_closest": 9500
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N4838T",
+   "type": "C82T",
+   "cls": "piston",
+   "own": "SNOW LEOPARD LTD",
+   "role": "",
+   "desc": "CESSNA TR182 Turbo Skylane RG",
+   "first": "08:23",
+   "last": "08:29",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 5550,
+   "min_dist": 0.1,
+   "alt_at_closest": 5550
+  },
+  {
+   "date": "2026-09-18",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "08:24",
+   "last": "08:29",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 6225,
+   "min_dist": 0.6,
+   "alt_at_closest": 7025
   }
  ],
  "ladd_operators": [
@@ -1034,13 +1243,13 @@
   "N8101C"
  ],
  "partial": true,
- "total_ops": 44,
- "unique_aircraft": 32,
+ "total_ops": 52,
+ "unique_aircraft": 34,
  "by_class": {
   "jet": 11,
-  "piston": 23,
-  "turboprop": 3,
-  "helicopter": 7
+  "piston": 28,
+  "turboprop": 5,
+  "helicopter": 8
  },
  "quiet_hours_ops": 10,
  "quiet_hours_by_class": {
@@ -1180,5 +1389,5 @@
    "pre7": true
   }
  ],
- "local_flights": 9
+ "local_flights": 11
 }
