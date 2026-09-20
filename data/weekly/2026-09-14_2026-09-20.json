@@ -6,7 +6,8 @@
   "2026-09-15",
   "2026-09-16",
   "2026-09-17",
-  "2026-09-18"
+  "2026-09-18",
+  "2026-09-19"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -686,6 +687,97 @@
    "hm": "08:29",
    "other": "KSQL San Carlos",
    "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N250SR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "BACKCOUNTRYAVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:52",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N250SR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "BACKCOUNTRYAVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "08:11",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:17",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N107MY",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "TEATREE LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "ARR",
+   "hm": "08:21",
+   "other": "KRNO Reno",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N713WL",
+   "type": "C560",
+   "cls": "jet",
+   "own": "OX AVIATION LLC",
+   "role": "",
+   "desc": "CESSNA 560 Citation Ultra",
+   "ev": "DEP",
+   "hm": "08:28",
+   "other": "KIXD New Century",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N301EB",
+   "type": "T210",
+   "cls": "piston",
+   "own": "QUESNEL WILLIAM G",
+   "role": "",
+   "desc": "CESSNA T210 Turbo Centurion",
+   "ev": "DEP",
+   "hm": "08:28",
+   "other": "(41.23,-120.03)",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "22:47",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -832,6 +924,30 @@
    "first": "06:58",
    "last": "06:59",
    "min_alt": 11300
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:41",
+   "last": "22:46",
+   "min_alt": 5500
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:47",
+   "last": "23:54",
+   "min_alt": 9725
   }
  ],
  "overflights": [
@@ -1234,27 +1350,124 @@
    "min_alt": 6225,
    "min_dist": 0.6,
    "alt_at_closest": 7025
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N217AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "COPTER LEASE LLC TRUSTEE",
+   "role": "",
+   "desc": "BELL 212",
+   "first": "07:30",
+   "last": "07:37",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 8700,
+   "min_dist": 6.6,
+   "alt_at_closest": 10300
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N338ME",
+   "type": "C182",
+   "cls": "piston",
+   "own": "BOULANT MICHAEL LEE CHARLES, BOULANT TIFFANY CHRISTINE",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:42",
+   "last": "07:51",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 8900,
+   "min_dist": 0.7,
+   "alt_at_closest": 10200
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "first": "07:53",
+   "last": "08:02",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 10175,
+   "min_dist": 0.1,
+   "alt_at_closest": 10175
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N921KS",
+   "type": "T206",
+   "cls": "piston",
+   "own": "WILLIAMS SCOTT THOMAS, GLAZE GLYN MICHAEL",
+   "role": "",
+   "desc": "CESSNA T206 Turbo Stationair",
+   "first": "08:10",
+   "last": "08:18",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 10150,
+   "min_dist": 1.0,
+   "alt_at_closest": 10200
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N97196",
+   "type": "C182",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "08:22",
+   "last": "08:26",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 10200,
+   "min_dist": 8.0,
+   "alt_at_closest": 10300
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:47",
+   "last": "23:54",
+   "dwell_min": 7,
+   "quiet_min": 7,
+   "min_alt": 9725,
+   "min_dist": 6.5,
+   "alt_at_closest": 9750
   }
  ],
  "ladd_operators": [
+  "N107MY",
   "N238PJ",
   "N429HR",
   "N469JG",
   "N8101C"
  ],
  "partial": true,
- "total_ops": 52,
- "unique_aircraft": 34,
+ "total_ops": 59,
+ "unique_aircraft": 37,
  "by_class": {
-  "jet": 11,
-  "piston": 28,
+  "jet": 12,
+  "piston": 33,
   "turboprop": 5,
-  "helicopter": 8
+  "helicopter": 9
  },
- "quiet_hours_ops": 10,
+ "quiet_hours_ops": 11,
  "quiet_hours_by_class": {
   "piston": 2,
-  "helicopter": 6,
+  "helicopter": 7,
   "turboprop": 2
  },
  "quiet_hours_events": [
@@ -1387,7 +1600,20 @@
    "hm": "23:21",
    "other": "KMOD Modesto",
    "pre7": true
+  },
+  {
+   "date": "2026-09-19",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "22:47",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
- "local_flights": 11
+ "local_flights": 13
 }
