@@ -5,7 +5,8 @@
   "2026-09-21",
   "2026-09-22",
   "2026-09-23",
-  "2026-09-24"
+  "2026-09-24",
+  "2026-09-25"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -347,6 +348,45 @@
    "hm": "22:37",
    "other": "KCMA Camarillo",
    "pre7": true
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N219ST",
+   "type": "R44",
+   "cls": "helicopter",
+   "own": "LTI LLC",
+   "role": "",
+   "desc": "ROBINSON R-44 Raven",
+   "ev": "DEP",
+   "hm": "07:16",
+   "other": "KPVU Provo",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N9600M",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASTRUP AVIATION ENTERPRISES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "ARR",
+   "hm": "07:18",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N42SH",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "LEJORAN LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:39",
+   "other": "KTRM Palm Springs",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -469,6 +509,18 @@
    "first": "22:31",
    "last": "22:37",
    "min_alt": 5600
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N407RW",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "SACREMENTO EXECUTIVE HELICOPTERS INC",
+   "role": "",
+   "desc": "BELL 407",
+   "first": "06:59",
+   "last": "06:59",
+   "min_alt": 8600
   }
  ],
  "overflights": [
@@ -903,6 +955,86 @@
    "min_alt": 5950,
    "min_dist": 2.6,
    "alt_at_closest": 6100
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N407RW",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "SACREMENTO EXECUTIVE HELICOPTERS INC",
+   "role": "",
+   "desc": "BELL 407",
+   "first": "06:59",
+   "last": "07:07",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 7750,
+   "min_dist": 4.9,
+   "alt_at_closest": 8350
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N430QS",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "EMBRAER EXECUTIVE AIRCRAFT INC",
+   "role": "",
+   "desc": "",
+   "first": "07:22",
+   "last": "07:23",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 11450,
+   "min_dist": 8.0,
+   "alt_at_closest": 12400
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N231BA",
+   "type": "M20T",
+   "cls": "piston",
+   "own": "DYKSTRA DARREN J",
+   "role": "",
+   "desc": "MOONEY M-20T",
+   "first": "08:12",
+   "last": "08:22",
+   "dwell_min": 9,
+   "quiet_min": 0,
+   "min_alt": 10400,
+   "min_dist": 2.2,
+   "alt_at_closest": 10425
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N369FC",
+   "type": "H500",
+   "cls": "helicopter",
+   "own": "FERGUSON AND SONS CONSTRUCTION LLC",
+   "role": "",
+   "desc": "HUGHES 500",
+   "first": "08:14",
+   "last": "08:19",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 6000,
+   "min_dist": 2.6,
+   "alt_at_closest": 6150
+  },
+  {
+   "date": "2026-09-25",
+   "reg": "N673PH",
+   "type": "RV10",
+   "cls": "piston",
+   "own": "N673PH LLC",
+   "role": "",
+   "desc": "VANS RV-10",
+   "first": "08:29",
+   "last": "08:29",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 11900,
+   "min_dist": 9.9,
+   "alt_at_closest": 11900
   }
  ],
  "ladd_operators": [
@@ -910,13 +1042,13 @@
   "N469JG"
  ],
  "partial": true,
- "total_ops": 26,
- "unique_aircraft": 22,
+ "total_ops": 29,
+ "unique_aircraft": 25,
  "by_class": {
   "turboprop": 3,
   "jet": 4,
-  "piston": 17,
-  "helicopter": 2
+  "piston": 19,
+  "helicopter": 3
  },
  "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
