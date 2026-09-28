@@ -7,7 +7,8 @@
   "2026-09-23",
   "2026-09-24",
   "2026-09-25",
-  "2026-09-26"
+  "2026-09-26",
+  "2026-09-27"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -401,6 +402,58 @@
    "hm": "07:16",
    "other": "KBFI Seattle",
    "pre7": false
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N752QS",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "NETJETS SALES INC",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "ARR",
+   "hm": "07:05",
+   "other": "KVNY Van Nuys",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N512HW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "KD AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:01",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N241FR",
+   "type": "C240",
+   "cls": "piston",
+   "own": "TRAILSIDE INC",
+   "role": "",
+   "desc": "CESSNA 240 Corvalis TTx",
+   "ev": "ARR",
+   "hm": "08:05",
+   "other": "KAUN Auburn",
+   "pre7": false
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N752QS",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "NETJETS SALES INC",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "DEP",
+   "hm": "08:28",
+   "other": "KEAT Wenatchee",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -571,6 +624,18 @@
    "first": "06:55",
    "last": "06:59",
    "min_alt": 9125
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N752QS",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "NETJETS SALES INC",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "first": "06:59",
+   "last": "06:59",
+   "min_alt": 11350
   }
  ],
  "overflights": [
@@ -1181,19 +1246,35 @@
    "min_alt": 5675,
    "min_dist": 0.2,
    "alt_at_closest": 5675
+  },
+  {
+   "date": "2026-09-27",
+   "reg": "N57PA",
+   "type": "BE20",
+   "cls": "turboprop",
+   "own": "SPIEKER WARREN E JR",
+   "role": "",
+   "desc": "BEECH 200 Super King Air",
+   "first": "07:48",
+   "last": "07:50",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 10875,
+   "min_dist": 8.5,
+   "alt_at_closest": 10875
   }
  ],
  "ladd_operators": [
   "N31MC",
   "N469JG"
  ],
- "partial": true,
- "total_ops": 30,
- "unique_aircraft": 26,
+ "partial": false,
+ "total_ops": 34,
+ "unique_aircraft": 29,
  "by_class": {
   "turboprop": 4,
-  "jet": 4,
-  "piston": 19,
+  "jet": 6,
+  "piston": 21,
   "helicopter": 3
  },
  "quiet_hours_ops": 2,
