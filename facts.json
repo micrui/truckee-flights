@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10",
+  "updated": "2026-10-01",
   "facts": [
     {
       "id": "fy2023-property-tax-revenue",
@@ -609,52 +609,52 @@
       "claim": "The NTSB has investigated 148 events at or near Truckee since its public records begin (1964): 146 accidents and 2 incidents, including 32 fatal accidents and 71 deaths.",
       "status": "verified",
       "sources": [
-        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://my.ntsb.gov/basic",
         "https://data.ntsb.gov/avdata"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/safety.html", "docs/index.html"],
-      "notes": "Scope: NTSB city designation Truckee; NTSB public records begin 1962, earliest Truckee event on file is 1964; area crashes filed under other towns excluded."
+      "notes": "Scope: NTSB city designation Truckee; NTSB public records begin 1962, earliest Truckee event on file is 1964; area crashes filed under other towns excluded. Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "fatal-accidents-by-decade",
       "claim": "Fatal accidents and deaths by decade: 1960s (from 1964) 4/7, 1970s 4/9, 1980s 9/17, 1990s 6/20, 2000s 2/3, 2010s 4/6, 2020s through mid-2026 3/9.",
       "status": "verified",
       "sources": [
-        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://my.ntsb.gov/basic",
         "https://data.ntsb.gov/avdata"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/safety.html"],
-      "notes": "Decade fatal counts sum to 32 and deaths to 71, matching the totals fact."
+      "notes": "Decade fatal counts sum to 32 and deaths to 71, matching the totals fact. Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "fatal-accident-table-1964-2024",
       "claim": "The 32 fatal accidents from 1964-06-25 (Grumman F7F air tanker) through 2024-03-30 (Daher TBM 960) are tabulated with date, aircraft, phase, deaths, and condensed NTSB probable-cause findings.",
       "status": "verified",
       "sources": [
-        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://my.ntsb.gov/basic",
         "https://data.ntsb.gov/avdata"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/safety.html"],
-      "notes": "Per-row deaths sum to 71. The 2024 entry is from the NTSB preliminary; no probable cause yet, as the table states."
+      "notes": "Per-row deaths sum to 71. The 2024 entry is from the NTSB preliminary; no probable cause yet, as the table states. Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "no-ground-injuries",
       "claim": "In the sixty-year NTSB record, no person on the ground has been injured or killed by an aircraft accident at Truckee.",
       "status": "verified",
       "sources": [
-        "https://data.ntsb.gov/carol-main-public/basic-search",
+        "https://my.ntsb.gov/basic",
         "https://data.ntsb.gov/avdata"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/safety.html", "docs/index.html"],
-      "notes": "Negative claim, bounded by the same scope as the record totals (NTSB city designation Truckee, 1964 onward)."
+      "notes": "Negative claim, bounded by the same scope as the record totals (NTSB city designation Truckee, 1964 onward). Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "challenger-2021-crash",
@@ -677,22 +677,22 @@
       "status": "verified",
       "sources": [
         "https://aviation-safety.net/wikibase/378178",
-        "https://data.ntsb.gov/carol-main-public/basic-search"
+        "https://my.ntsb.gov/basic"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/history.html", "docs/safety.html"],
-      "notes": "All statements about this accident are from the NTSB preliminary, as the pages state."
+      "notes": "All statements about this accident are from the NTSB preliminary, as the pages state. Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "olympic-valley-2026-crash",
       "claim": "A 2026 fatal crash near Olympic Valley, en route to Truckee, is additional to the Truckee-designated NTSB counts on the safety page.",
       "status": "verified",
-      "sources": ["https://data.ntsb.gov/carol-main-public/basic-search"],
+      "sources": ["https://my.ntsb.gov/basic"],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-10-01",
       "pages": ["docs/safety.html"],
-      "notes": "Stated as a scope note under the decade table."
+      "notes": "Stated as a scope note under the decade table. Source URL updated 2026-10-01: NTSB moved CAROL basic search from data.ntsb.gov/carol-main-public/basic-search (now a permanent redirect) to my.ntsb.gov/basic."
     },
     {
       "id": "district-pilot-portal-setting",
