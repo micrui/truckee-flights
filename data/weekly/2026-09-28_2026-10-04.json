@@ -4,7 +4,8 @@
  "days": [
   "2026-09-28",
   "2026-09-29",
-  "2026-09-30"
+  "2026-09-30",
+  "2026-10-01"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -280,6 +281,97 @@
    "ev": "ARR",
    "hm": "08:21",
    "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "role": "",
+   "desc": "TEAM ROCKET F-1",
+   "ev": "DEP",
+   "hm": "07:19",
+   "other": "KHMT Hemet",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N788K",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "ev": "DEP",
+   "hm": "07:31",
+   "other": "KRTS Reno",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N404AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A & P HELICOPTERS INC",
+   "role": "fire/utility contractor",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:43",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N137JT",
+   "type": "HDJT",
+   "cls": "jet",
+   "own": "BBME VENTURES LLC, TANGIER LOGISTICS LLC",
+   "role": "",
+   "desc": "HONDA HondaJet",
+   "ev": "DEP",
+   "hm": "07:45",
+   "other": "KODO Odessa",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N42SH",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "LEJORAN LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:50",
+   "other": "KRNO Reno",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N7609Q",
+   "type": "C185",
+   "cls": "piston",
+   "own": "PIERSON JANICE R TRUSTEE, STEVENSON GEORGE G TRUSTEE",
+   "role": "",
+   "desc": "CESSNA 185 Skywagon",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:16",
+   "other": "Local flight (returned to KTRK)",
    "pre7": false
   }
  ],
@@ -749,18 +841,82 @@
    "min_alt": 6100,
    "min_dist": 6.6,
    "alt_at_closest": 6500
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N828G",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "FRANCIS RICK TRUSTEE, FRANCIS ZOE TRUSTEE",
+   "role": "",
+   "desc": "",
+   "first": "07:14",
+   "last": "07:19",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 12800,
+   "min_dist": 3.1,
+   "alt_at_closest": 12800
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N79893",
+   "type": "C172",
+   "cls": "piston",
+   "own": "PANJAB AVIATION",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "07:29",
+   "last": "07:37",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 10500,
+   "min_dist": 4.9,
+   "alt_at_closest": 11700
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N92291",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "08:09",
+   "last": "08:19",
+   "dwell_min": 9,
+   "quiet_min": 0,
+   "min_alt": 10225,
+   "min_dist": 3.2,
+   "alt_at_closest": 10225
+  },
+  {
+   "date": "2026-10-01",
+   "reg": "N41WT",
+   "type": "C421",
+   "cls": "piston",
+   "own": "PREMIERE AVIATION INC",
+   "role": "",
+   "desc": "CESSNA 421 Executive Commuter",
+   "first": "08:26",
+   "last": "08:29",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 10200,
+   "min_dist": 1.5,
+   "alt_at_closest": 12500
   }
  ],
  "ladd_operators": [],
  "partial": true,
- "total_ops": 21,
- "unique_aircraft": 13,
+ "total_ops": 28,
+ "unique_aircraft": 19,
  "by_class": {
-  "piston": 9,
+  "piston": 14,
   "unknown": 1,
   "turboprop": 5,
-  "jet": 1,
-  "helicopter": 5
+  "jet": 2,
+  "helicopter": 6
  },
  "quiet_hours_ops": 5,
  "quiet_hours_by_class": {
@@ -833,5 +989,5 @@
    "pre7": true
   }
  ],
- "local_flights": 6
+ "local_flights": 9
 }
