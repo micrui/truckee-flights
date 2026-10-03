@@ -5,7 +5,8 @@
   "2026-09-28",
   "2026-09-29",
   "2026-09-30",
-  "2026-10-01"
+  "2026-10-01",
+  "2026-10-02"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -373,6 +374,123 @@
    "hm": "08:16",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "01:11",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "03:11",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "06:41",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N410HP",
+   "type": "P46T",
+   "cls": "turboprop",
+   "own": "S&W AIR LLC, FLY TRUCKEE TAHOE",
+   "role": "",
+   "desc": "PIPER PA-46-500TP",
+   "ev": "DEP",
+   "hm": "07:15",
+   "other": "KSCK Stockton",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N9600M",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASTRUP AVIATION ENTERPRISES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "ARR",
+   "hm": "07:20",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N488AM",
+   "type": "H25B",
+   "cls": "jet",
+   "own": "BYTE ME TRANSPORTATION INC",
+   "role": "",
+   "desc": "HAWKER BEECHCRAFT Hawker 750/850",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "KCOE Coeur d'Alene",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N926CW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "VALLEY FLYWAY LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "ARR",
+   "hm": "08:00",
+   "other": "KMCE Merced",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N7609Q",
+   "type": "C185",
+   "cls": "piston",
+   "own": "PIERSON JANICE R TRUSTEE, STEVENSON GEORGE G TRUSTEE",
+   "role": "",
+   "desc": "CESSNA 185 Skywagon",
+   "ev": "DEP",
+   "hm": "08:14",
+   "other": "OG28 Scio",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N8101C",
+   "type": "BE33",
+   "cls": "piston",
+   "own": "ZACHARY DAVID K",
+   "role": "",
+   "desc": "BEECH 33 Bonanza",
+   "ev": "DEP",
+   "hm": "08:28",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -471,6 +589,30 @@
    "first": "06:51",
    "last": "06:59",
    "min_alt": 8800
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "01:03",
+   "last": "03:11",
+   "min_alt": 5600
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "first": "06:41",
+   "last": "06:50",
+   "min_alt": 5575
   }
  ],
  "overflights": [
@@ -905,22 +1047,57 @@
    "min_alt": 10200,
    "min_dist": 1.5,
    "alt_at_closest": 12500
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N205RH",
+   "type": "UH1",
+   "cls": "helicopter",
+   "own": "SACRAMENTO EXECUTIVE HELICOPTERS INC",
+   "role": "",
+   "desc": "BELL UH-1 Huey",
+   "first": "07:18",
+   "last": "07:26",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 7350,
+   "min_dist": 0.8,
+   "alt_at_closest": 7350
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N911HZ",
+   "type": "HIGH",
+   "cls": "piston",
+   "own": "SIMMONS AND ASSOCIATES INC",
+   "role": "",
+   "desc": "JUST JA20 Highlander",
+   "first": "07:26",
+   "last": "07:42",
+   "dwell_min": 16,
+   "quiet_min": 0,
+   "min_alt": 7675,
+   "min_dist": 4.3,
+   "alt_at_closest": 8325
   }
  ],
- "ladd_operators": [],
+ "ladd_operators": [
+  "N8101C"
+ ],
  "partial": true,
- "total_ops": 28,
- "unique_aircraft": 19,
+ "total_ops": 37,
+ "unique_aircraft": 24,
  "by_class": {
-  "piston": 14,
+  "piston": 19,
   "unknown": 1,
-  "turboprop": 5,
-  "jet": 2,
-  "helicopter": 6
+  "turboprop": 6,
+  "jet": 3,
+  "helicopter": 8
  },
- "quiet_hours_ops": 5,
+ "quiet_hours_ops": 8,
  "quiet_hours_by_class": {
-  "helicopter": 5
+  "helicopter": 7,
+  "piston": 1
  },
  "quiet_hours_events": [
   {
@@ -987,7 +1164,46 @@
    "hm": "06:09",
    "other": "KTRK Truckee",
    "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "01:11",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "03:11",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-02",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "06:41",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
   }
  ],
- "local_flights": 9
+ "local_flights": 12
 }
