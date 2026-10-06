@@ -1,0 +1,224 @@
+{
+ "start": "2026-10-05",
+ "end": "2026-10-11",
+ "days": [
+  "2026-10-05"
+ ],
+ "window_local": "22:00-08:30",
+ "note": null,
+ "events": [
+  {
+   "date": "2026-10-05",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "06:50",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N9600M",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASTRUP AVIATION ENTERPRISES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "ARR",
+   "hm": "07:21",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N8101C",
+   "type": "BE33",
+   "cls": "piston",
+   "own": "ZACHARY DAVID K",
+   "role": "",
+   "desc": "BEECH 33 Bonanza",
+   "ev": "DEP",
+   "hm": "07:49",
+   "other": "KCRQ Carlsbad",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "DEP",
+   "hm": "07:55",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N77VF",
+   "type": "P46T",
+   "cls": "turboprop",
+   "own": "ORIONS VICTOR FOXTROT LLC, LEAD LEFT LLC",
+   "role": "",
+   "desc": "PIPER PA-46-500TP",
+   "ev": "DEP",
+   "hm": "07:59",
+   "other": "KLVK Livermore",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:00",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "08:16",
+   "other": "KVGT Las Vegas",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "08:20",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "ARR",
+   "hm": "08:23",
+   "other": "KTRK Truckee",
+   "pre7": false
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-10-05",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "06:44",
+   "last": "06:50",
+   "min_alt": 5500
+  }
+ ],
+ "overflights": [
+  {
+   "date": "2026-10-05",
+   "reg": "N232ST",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "SIERRA TANGO MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:20",
+   "last": "07:25",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 10225,
+   "min_dist": 1.0,
+   "alt_at_closest": 10500
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N932PW",
+   "type": "GLST",
+   "cls": "piston",
+   "own": "WERNER THOMAS M",
+   "role": "",
+   "desc": "GLASAIR SH-4 GlaStar",
+   "first": "07:33",
+   "last": "07:42",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 9325,
+   "min_dist": 4.2,
+   "alt_at_closest": 9350
+  },
+  {
+   "date": "2026-10-05",
+   "reg": "N709TA",
+   "type": "F5",
+   "cls": "piston",
+   "own": "TACTICAL AIR SUPPORT INC",
+   "role": "",
+   "desc": "",
+   "first": "08:17",
+   "last": "08:19",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 11200,
+   "min_dist": 8.1,
+   "alt_at_closest": 11650
+  }
+ ],
+ "ladd_operators": [
+  "N8101C",
+  "N922PB"
+ ],
+ "partial": true,
+ "total_ops": 9,
+ "unique_aircraft": 7,
+ "by_class": {
+  "helicopter": 1,
+  "piston": 6,
+  "turboprop": 2
+ },
+ "quiet_hours_ops": 1,
+ "quiet_hours_by_class": {
+  "helicopter": 1
+ },
+ "quiet_hours_events": [
+  {
+   "date": "2026-10-05",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "06:50",
+   "other": "KTRK Truckee",
+   "pre7": true
+  }
+ ],
+ "local_flights": 2
+}
