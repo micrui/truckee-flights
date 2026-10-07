@@ -1,6 +1,0 @@
-# Links that could not be verified from a cloud session (bot challenge did not
-# clear; the sandbox egress proxy re-terminates TLS, so Cloudflare-class checks
-# never auto-pass there). Recheck from a local session with
-# .claude/skills/browser-linkcheck/probe.js, record the outcome as a dated
-# addendum in the current data/health report, and remove cleared lines.
-https://aviation-safety.net/wikibase/378178
