@@ -62,3 +62,12 @@ disabling TLS verification. Local sessions need none of this.
 - This is session tooling for link verification only. It is JavaScript and
   uses Playwright; the repo's stdlib-only rule covers the data pipeline, and
   nothing here ships to the published site or the scheduled workflows.
+
+## Recheck queue
+
+A sweep running in a cloud session appends each URL whose challenge did not
+clear to data/health/recheck-queue.txt (one URL per line, # for comments)
+instead of calling it unverifiable. A local session or the maintainer burns
+the queue down: run the probe on those URLs from a residential connection,
+record the outcome as a dated addendum in the current data/health report,
+and remove the cleared lines. An absent or empty queue means nothing waits.
