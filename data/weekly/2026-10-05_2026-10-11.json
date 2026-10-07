@@ -2,7 +2,8 @@
  "start": "2026-10-05",
  "end": "2026-10-11",
  "days": [
-  "2026-10-05"
+  "2026-10-05",
+  "2026-10-06"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -123,6 +124,110 @@
    "hm": "08:23",
    "other": "KTRK Truckee",
    "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:18",
+   "other": "KRNO Reno",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N9600M",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASTRUP AVIATION ENTERPRISES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "ARR",
+   "hm": "07:13",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N467QS",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "07:15",
+   "other": "KMRY Monterey",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N199WF",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "YETI AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "07:17",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N217SW",
+   "type": "SR20",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:41",
+   "other": "KSJC San Jose",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:52",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N467QS",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "KOAK Oakland",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "08:17",
+   "other": "KMCC Sacramento",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -137,6 +242,30 @@
    "first": "06:44",
    "last": "06:50",
    "min_alt": 5500
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N8488M",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC, FIGUEROA JAMES",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "05:03",
+   "last": "05:13",
+   "min_alt": 10950
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "06:18",
+   "last": "06:23",
+   "min_alt": 5550
   }
  ],
  "overflights": [
@@ -187,23 +316,74 @@
    "min_alt": 11200,
    "min_dist": 8.1,
    "alt_at_closest": 11650
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N8488M",
+   "type": "C182",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC, FIGUEROA JAMES",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "05:03",
+   "last": "05:13",
+   "dwell_min": 10,
+   "quiet_min": 10,
+   "min_alt": 10950,
+   "min_dist": 0.5,
+   "alt_at_closest": 11625
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N768AZ",
+   "type": "RV8",
+   "cls": "piston",
+   "own": "STINKER AIR LLC",
+   "role": "",
+   "desc": "VANS RV-8",
+   "first": "08:08",
+   "last": "08:15",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 10125,
+   "min_dist": 2.5,
+   "alt_at_closest": 10125
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N6SR",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "BLACKHAWK AVIATION II LLC",
+   "role": "",
+   "desc": "EPIC AIRCRAFT Epic LT",
+   "first": "08:09",
+   "last": "08:10",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 11200,
+   "min_dist": 5.6,
+   "alt_at_closest": 12875
   }
  ],
  "ladd_operators": [
   "N8101C",
+  "N884SW",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 9,
- "unique_aircraft": 7,
+ "total_ops": 17,
+ "unique_aircraft": 11,
  "by_class": {
-  "helicopter": 1,
-  "piston": 6,
-  "turboprop": 2
+  "helicopter": 2,
+  "piston": 11,
+  "turboprop": 2,
+  "jet": 2
  },
- "quiet_hours_ops": 1,
+ "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
-  "helicopter": 1
+  "helicopter": 1,
+  "piston": 1
  },
  "quiet_hours_events": [
   {
@@ -218,7 +398,20 @@
    "hm": "06:50",
    "other": "KTRK Truckee",
    "pre7": true
+  },
+  {
+   "date": "2026-10-06",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:18",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
- "local_flights": 2
+ "local_flights": 3
 }
