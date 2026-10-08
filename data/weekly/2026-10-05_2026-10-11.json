@@ -3,7 +3,8 @@
  "end": "2026-10-11",
  "days": [
   "2026-10-05",
-  "2026-10-06"
+  "2026-10-06",
+  "2026-10-07"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -228,6 +229,123 @@
    "hm": "08:17",
    "other": "KMCC Sacramento",
    "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:56",
+   "other": "KRNO Reno",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N9600M",
+   "type": "M20P",
+   "cls": "piston",
+   "own": "ASTRUP AVIATION ENTERPRISES LLC",
+   "role": "",
+   "desc": "MOONEY M-20",
+   "ev": "ARR",
+   "hm": "07:12",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N628SR",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "KING AIR PARTNERS LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "07:38",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N685VM",
+   "type": "C680",
+   "cls": "jet",
+   "own": "TTX HOLDINGS LLC",
+   "role": "",
+   "desc": "CESSNA 680 Citation Sovereign",
+   "ev": "DEP",
+   "hm": "07:44",
+   "other": "KNUQ Mountain View",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:46",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:57",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N650MC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "N650MC LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "08:14",
+   "other": "KWVI Watsonville",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "08:22",
+   "other": "NV57 Reno (heliport)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "08:29",
+   "other": "KPVF Placerville",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -266,6 +384,18 @@
    "first": "06:18",
    "last": "06:23",
    "min_alt": 5550
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "00:50",
+   "last": "00:56",
+   "min_alt": 5600
   }
  ],
  "overflights": [
@@ -367,22 +497,23 @@
   }
  ],
  "ladd_operators": [
+  "N650MC",
   "N8101C",
   "N884SW",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 17,
- "unique_aircraft": 11,
+ "total_ops": 26,
+ "unique_aircraft": 16,
  "by_class": {
-  "helicopter": 2,
-  "piston": 11,
-  "turboprop": 2,
-  "jet": 2
+  "helicopter": 5,
+  "piston": 14,
+  "turboprop": 4,
+  "jet": 3
  },
- "quiet_hours_ops": 2,
+ "quiet_hours_ops": 3,
  "quiet_hours_by_class": {
-  "helicopter": 1,
+  "helicopter": 2,
   "piston": 1
  },
  "quiet_hours_events": [
@@ -411,7 +542,20 @@
    "hm": "06:18",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-10-07",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:56",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
- "local_flights": 3
+ "local_flights": 5
 }
