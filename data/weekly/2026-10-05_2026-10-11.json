@@ -5,7 +5,8 @@
   "2026-10-05",
   "2026-10-06",
   "2026-10-07",
-  "2026-10-08"
+  "2026-10-08",
+  "2026-10-09"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -438,6 +439,110 @@
    "hm": "08:28",
    "other": "KPVF Placerville",
    "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "03:31",
+   "other": "KRDD Redding",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N918AF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "RIGI INC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "06:17",
+   "other": "KDVO Novato",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "07:45",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "07:54",
+   "other": "KRDD Redding",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:55",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N250SR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "BACKCOUNTRYAVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:08",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "ev": "ARR",
+   "hm": "08:22",
+   "other": "KTVL South Lake Tahoe",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "ev": "DEP",
+   "hm": "08:26",
+   "other": "KTVL South Lake Tahoe",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -488,6 +593,66 @@
    "first": "00:50",
    "last": "00:56",
    "min_alt": 5600
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "03:07",
+   "last": "03:18",
+   "min_alt": 8675
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "03:31",
+   "last": "03:37",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N918AF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "RIGI INC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:17",
+   "last": "06:22",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N30MZ",
+   "type": "GALX",
+   "cls": "piston",
+   "own": "WILDWOOD YONDER LLC",
+   "role": "",
+   "desc": "GULFSTREAM G200",
+   "first": "22:10",
+   "last": "22:11",
+   "min_alt": 11475
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N5197R",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "",
+   "first": "22:26",
+   "last": "22:38",
+   "min_alt": 9375
   }
  ],
  "overflights": [
@@ -714,27 +879,125 @@
    "min_alt": 5525,
    "min_dist": 0.2,
    "alt_at_closest": 5525
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "03:07",
+   "last": "03:18",
+   "dwell_min": 11,
+   "quiet_min": 11,
+   "min_alt": 8675,
+   "min_dist": 0.3,
+   "alt_at_closest": 8900
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N406AP",
+   "type": "B407",
+   "cls": "helicopter",
+   "own": "A&P HELICOPTERS INC",
+   "role": "fire/utility contractor",
+   "desc": "BELL 407",
+   "first": "07:45",
+   "last": "07:53",
+   "dwell_min": 8,
+   "quiet_min": 0,
+   "min_alt": 8100,
+   "min_dist": 3.2,
+   "alt_at_closest": 9200
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N1677C",
+   "type": "C180",
+   "cls": "piston",
+   "own": "DAVIS AERO LLC",
+   "role": "",
+   "desc": "CESSNA  180 Skywagon",
+   "first": "08:08",
+   "last": "08:08",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 5700,
+   "min_dist": 0.3,
+   "alt_at_closest": 5700
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N82NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "VCPC12 LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "08:20",
+   "last": "08:21",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 12350,
+   "min_dist": 7.3,
+   "alt_at_closest": 13000
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N30MZ",
+   "type": "GALX",
+   "cls": "piston",
+   "own": "WILDWOOD YONDER LLC",
+   "role": "",
+   "desc": "GULFSTREAM G200",
+   "first": "22:10",
+   "last": "22:11",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 11475,
+   "min_dist": 7.0,
+   "alt_at_closest": 12925
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N5197R",
+   "type": "C172",
+   "cls": "piston",
+   "own": "MEDIA STEW LLC",
+   "role": "",
+   "desc": "",
+   "first": "22:26",
+   "last": "22:38",
+   "dwell_min": 11,
+   "quiet_min": 11,
+   "min_alt": 9375,
+   "min_dist": 0.8,
+   "alt_at_closest": 9400
   }
  ],
  "ladd_operators": [
   "N650MC",
   "N8101C",
   "N884SW",
+  "N912VM",
   "N922PB"
  ],
  "partial": true,
- "total_ops": 33,
- "unique_aircraft": 22,
+ "total_ops": 41,
+ "unique_aircraft": 25,
  "by_class": {
-  "helicopter": 5,
-  "piston": 17,
-  "turboprop": 5,
+  "helicopter": 7,
+  "piston": 22,
+  "turboprop": 6,
   "jet": 6
  },
- "quiet_hours_ops": 3,
+ "quiet_hours_ops": 5,
  "quiet_hours_by_class": {
-  "helicopter": 2,
-  "piston": 1
+  "helicopter": 3,
+  "piston": 1,
+  "turboprop": 1
  },
  "quiet_hours_events": [
   {
@@ -775,7 +1038,33 @@
    "hm": "00:56",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "03:31",
+   "other": "KRDD Redding",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-09",
+   "reg": "N918AF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "RIGI INC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "06:17",
+   "other": "KDVO Novato",
+   "pre7": true
   }
  ],
- "local_flights": 5
+ "local_flights": 7
 }
