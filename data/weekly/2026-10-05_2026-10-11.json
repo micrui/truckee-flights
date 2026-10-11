@@ -6,7 +6,8 @@
   "2026-10-06",
   "2026-10-07",
   "2026-10-08",
-  "2026-10-09"
+  "2026-10-09",
+  "2026-10-10"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -543,6 +544,45 @@
    "hm": "08:26",
    "other": "KTVL South Lake Tahoe",
    "pre7": false
+  },
+  {
+   "date": "2026-10-10",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "07:26",
+   "other": "KDVO Novato",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-10",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "role": "",
+   "desc": "TEAM ROCKET F-1",
+   "ev": "DEP",
+   "hm": "08:11",
+   "other": "KPRB Paso Robles",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-10",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:43",
+   "other": "KTRK Truckee",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -653,6 +693,18 @@
    "first": "22:26",
    "last": "22:38",
    "min_alt": 9375
+  },
+  {
+   "date": "2026-10-10",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:36",
+   "last": "23:43",
+   "min_alt": 5900
   }
  ],
  "overflights": [
@@ -985,17 +1037,17 @@
   "N922PB"
  ],
  "partial": true,
- "total_ops": 41,
- "unique_aircraft": 25,
+ "total_ops": 44,
+ "unique_aircraft": 26,
  "by_class": {
-  "helicopter": 7,
-  "piston": 22,
-  "turboprop": 6,
+  "helicopter": 8,
+  "piston": 23,
+  "turboprop": 7,
   "jet": 6
  },
- "quiet_hours_ops": 5,
+ "quiet_hours_ops": 6,
  "quiet_hours_by_class": {
-  "helicopter": 3,
+  "helicopter": 4,
   "piston": 1,
   "turboprop": 1
  },
@@ -1063,6 +1115,19 @@
    "ev": "DEP",
    "hm": "06:17",
    "other": "KDVO Novato",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-10",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:43",
+   "other": "KTRK Truckee",
    "pre7": true
   }
  ],
