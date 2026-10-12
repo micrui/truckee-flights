@@ -7,7 +7,8 @@
   "2026-10-07",
   "2026-10-08",
   "2026-10-09",
-  "2026-10-10"
+  "2026-10-10",
+  "2026-10-11"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -1036,7 +1037,7 @@
   "N912VM",
   "N922PB"
  ],
- "partial": true,
+ "partial": false,
  "total_ops": 44,
  "unique_aircraft": 26,
  "by_class": {
