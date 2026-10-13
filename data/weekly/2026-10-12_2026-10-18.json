@@ -1,0 +1,97 @@
+{
+ "start": "2026-10-12",
+ "end": "2026-10-18",
+ "days": [
+  "2026-10-12"
+ ],
+ "window_local": "22:00-08:30",
+ "note": null,
+ "events": [
+  {
+   "date": "2026-10-12",
+   "reg": "N900QS",
+   "type": "C68A",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "CESSNA 680 Citation Latitude",
+   "ev": "ARR",
+   "hm": "07:15",
+   "other": "KCMA Camarillo",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-12",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:04",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-10-12",
+   "reg": "N668LF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "LIFE FLIGHT NETWORK LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:23",
+   "last": "22:25",
+   "min_alt": 12125
+  }
+ ],
+ "overflights": [
+  {
+   "date": "2026-10-12",
+   "reg": "N217AP",
+   "type": "B212",
+   "cls": "helicopter",
+   "own": "COPTER LEASE LLC TRUSTEE",
+   "role": "",
+   "desc": "BELL 212",
+   "first": "07:53",
+   "last": "07:55",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 8200,
+   "min_dist": 9.1,
+   "alt_at_closest": 8300
+  },
+  {
+   "date": "2026-10-12",
+   "reg": "N668LF",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "LIFE FLIGHT NETWORK LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:23",
+   "last": "22:25",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 12125,
+   "min_dist": 7.3,
+   "alt_at_closest": 12825
+  }
+ ],
+ "ladd_operators": [],
+ "partial": true,
+ "total_ops": 2,
+ "unique_aircraft": 2,
+ "by_class": {
+  "jet": 1,
+  "piston": 1
+ },
+ "quiet_hours_ops": 0,
+ "quiet_hours_by_class": {},
+ "quiet_hours_events": [],
+ "local_flights": 1
+}
