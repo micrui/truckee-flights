@@ -2,7 +2,8 @@
  "start": "2026-10-12",
  "end": "2026-10-18",
  "days": [
-  "2026-10-12"
+  "2026-10-12",
+  "2026-10-13"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -32,6 +33,58 @@
    "hm": "08:04",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:38",
+   "other": "KCIC Chico",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:25",
+   "other": "KCIC Chico",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:11",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N219RS",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "CASTLE PEAK LEASING LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "08:29",
+   "other": "KCCR Concord",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -46,6 +99,42 @@
    "first": "22:23",
    "last": "22:25",
    "min_alt": 12125
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "00:32",
+   "last": "00:38",
+   "min_alt": 5800
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:09",
+   "last": "06:12",
+   "min_alt": 11825
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "first": "06:25",
+   "last": "06:30",
+   "min_alt": 5700
   }
  ],
  "overflights": [
@@ -80,18 +169,83 @@
    "min_alt": 12125,
    "min_dist": 7.3,
    "alt_at_closest": 12825
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:09",
+   "last": "06:12",
+   "dwell_min": 2,
+   "quiet_min": 2,
+   "min_alt": 11825,
+   "min_dist": 4.1,
+   "alt_at_closest": 12900
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N200AA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RAD RUNNER LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "07:28",
+   "last": "07:31",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 11775,
+   "min_dist": 7.4,
+   "alt_at_closest": 11800
   }
  ],
- "ladd_operators": [],
+ "ladd_operators": [
+  "N884SW"
+ ],
  "partial": true,
- "total_ops": 2,
- "unique_aircraft": 2,
+ "total_ops": 6,
+ "unique_aircraft": 6,
  "by_class": {
   "jet": 1,
+  "piston": 4,
+  "helicopter": 1
+ },
+ "quiet_hours_ops": 2,
+ "quiet_hours_by_class": {
+  "helicopter": 1,
   "piston": 1
  },
- "quiet_hours_ops": 0,
- "quiet_hours_by_class": {},
- "quiet_hours_events": [],
- "local_flights": 1
+ "quiet_hours_events": [
+  {
+   "date": "2026-10-13",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:38",
+   "other": "KCIC Chico",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-13",
+   "reg": "N884SW",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "MOUNTAIN LION AVIATION LLC",
+   "role": "",
+   "desc": "CIRRUS SR-22T Turbo",
+   "ev": "DEP",
+   "hm": "06:25",
+   "other": "KCIC Chico",
+   "pre7": true
+  }
+ ],
+ "local_flights": 2
 }
