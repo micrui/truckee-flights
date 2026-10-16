@@ -4,7 +4,8 @@
  "days": [
   "2026-10-12",
   "2026-10-13",
-  "2026-10-14"
+  "2026-10-14",
+  "2026-10-15"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -203,6 +204,58 @@
    "hm": "22:49",
    "other": "KSDL Scottsdale",
    "pre7": true
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N368FX",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "FLEXJET LLC",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB-505 Phenom 300",
+   "ev": "ARR",
+   "hm": "07:35",
+   "other": "KLVK Livermore",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N250SR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "BACKCOUNTRYAVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:50",
+   "other": "KSMO Santa Monica",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N861JT",
+   "type": "RV12",
+   "cls": "piston",
+   "own": "RV SQUARED LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:02",
+   "other": "KCCR Concord",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:24",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -301,6 +354,18 @@
    "first": "22:37",
    "last": "22:49",
    "min_alt": 5525
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "23:13",
+   "last": "23:24",
+   "min_alt": 5400
   }
  ],
  "overflights": [
@@ -463,22 +528,54 @@
    "min_alt": 11425,
    "min_dist": 7.2,
    "alt_at_closest": 12550
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N9930T",
+   "type": "C182",
+   "cls": "piston",
+   "own": "WATERACTIVE43 LLC",
+   "role": "",
+   "desc": "CESSNA 182 Skylane",
+   "first": "07:07",
+   "last": "07:17",
+   "dwell_min": 10,
+   "quiet_min": 0,
+   "min_alt": 10900,
+   "min_dist": 5.4,
+   "alt_at_closest": 11400
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:29",
+   "last": "07:30",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 11350,
+   "min_dist": 7.6,
+   "alt_at_closest": 12800
   }
  ],
  "ladd_operators": [
   "N884SW"
  ],
  "partial": true,
- "total_ops": 15,
- "unique_aircraft": 10,
+ "total_ops": 19,
+ "unique_aircraft": 13,
  "by_class": {
-  "jet": 3,
-  "piston": 9,
-  "helicopter": 3
+  "jet": 4,
+  "piston": 11,
+  "helicopter": 4
  },
- "quiet_hours_ops": 5,
+ "quiet_hours_ops": 6,
  "quiet_hours_by_class": {
-  "helicopter": 3,
+  "helicopter": 4,
   "piston": 2
  },
  "quiet_hours_events": [
@@ -545,6 +642,19 @@
    "ev": "ARR",
    "hm": "22:49",
    "other": "KSDL Scottsdale",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-15",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "23:24",
+   "other": "KRNO Reno",
    "pre7": true
   }
  ],
