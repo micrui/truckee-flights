@@ -5,7 +5,8 @@
   "2026-10-12",
   "2026-10-13",
   "2026-10-14",
-  "2026-10-15"
+  "2026-10-15",
+  "2026-10-16"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -256,6 +257,110 @@
    "hm": "23:24",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "02:49",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "05:33",
+   "other": "KTRK Truckee",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "ev": "ARR",
+   "hm": "07:04",
+   "other": "KTVL South Lake Tahoe",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N2AK",
+   "type": "SF50",
+   "cls": "jet",
+   "own": "TANGIER SERVICES LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:26",
+   "other": "KLHM Lincoln",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N221FX",
+   "type": "CL35",
+   "cls": "jet",
+   "own": "FLEXJET LLC",
+   "role": "fractional jet charter",
+   "desc": "BOMBARDIER BD-100 Challenger 350",
+   "ev": "DEP",
+   "hm": "07:47",
+   "other": "KSFO San Francisco",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:04",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N1123V",
+   "type": "BE36",
+   "cls": "piston",
+   "own": "LIZARRAGA TONY CLAUDE",
+   "role": "",
+   "desc": "BEECH 36 Bonanza",
+   "ev": "DEP",
+   "hm": "08:10",
+   "other": "KLVK Livermore",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:21",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -366,6 +471,54 @@
    "first": "23:13",
    "last": "23:24",
    "min_alt": 5400
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "02:49",
+   "last": "05:33",
+   "min_alt": 5400
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N912VM",
+   "type": "C82S",
+   "cls": "piston",
+   "own": "ABOVE STANDARD AVIATION INC",
+   "role": "",
+   "desc": "CESSNA T182 Turbo Skylane",
+   "first": "06:58",
+   "last": "06:59",
+   "min_alt": 8325
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:06",
+   "last": "22:06",
+   "min_alt": 12250
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:28",
+   "last": "22:34",
+   "min_alt": 8175
   }
  ],
  "overflights": [
@@ -560,22 +713,71 @@
    "min_alt": 11350,
    "min_dist": 7.6,
    "alt_at_closest": 12800
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N461RA",
+   "type": "B06",
+   "cls": "helicopter",
+   "own": "RANGER AVIATION LEASING LLC",
+   "role": "",
+   "desc": "BELL 206 JetRanger",
+   "first": "08:09",
+   "last": "08:17",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 8700,
+   "min_dist": 3.2,
+   "alt_at_closest": 9800
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:06",
+   "last": "22:06",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 12250,
+   "min_dist": 8.2,
+   "alt_at_closest": 12850
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:28",
+   "last": "22:34",
+   "dwell_min": 5,
+   "quiet_min": 5,
+   "min_alt": 8175,
+   "min_dist": 6.0,
+   "alt_at_closest": 8525
   }
  ],
  "ladd_operators": [
-  "N884SW"
+  "N884SW",
+  "N912VM"
  ],
  "partial": true,
- "total_ops": 19,
- "unique_aircraft": 13,
+ "total_ops": 27,
+ "unique_aircraft": 17,
  "by_class": {
-  "jet": 4,
-  "piston": 11,
-  "helicopter": 4
+  "jet": 6,
+  "piston": 15,
+  "helicopter": 6
  },
- "quiet_hours_ops": 6,
+ "quiet_hours_ops": 8,
  "quiet_hours_by_class": {
-  "helicopter": 4,
+  "helicopter": 6,
   "piston": 2
  },
  "quiet_hours_events": [
@@ -656,7 +858,33 @@
    "hm": "23:24",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "02:49",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-16",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "05:33",
+   "other": "KTRK Truckee",
+   "pre7": true
   }
  ],
- "local_flights": 4
+ "local_flights": 7
 }
