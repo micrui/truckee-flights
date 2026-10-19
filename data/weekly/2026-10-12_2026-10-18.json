@@ -7,7 +7,8 @@
   "2026-10-14",
   "2026-10-15",
   "2026-10-16",
-  "2026-10-17"
+  "2026-10-17",
+  "2026-10-18"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -453,6 +454,58 @@
    "hm": "22:52",
    "other": "KTRK Truckee",
    "pre7": true
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:41",
+   "other": "KMCC Sacramento",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "07:22",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "ARR",
+   "hm": "07:44",
+   "other": "KTRK Truckee",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:02",
+   "other": "KRTS Reno",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -635,6 +688,18 @@
    "first": "22:46",
    "last": "22:52",
    "min_alt": 5500
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "00:36",
+   "last": "00:41",
+   "min_alt": 5600
   }
  ],
  "overflights": [
@@ -989,6 +1054,54 @@
    "min_alt": 9375,
    "min_dist": 3.2,
    "alt_at_closest": 10125
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:47",
+   "last": "07:50",
+   "dwell_min": 3,
+   "quiet_min": 0,
+   "min_alt": 12175,
+   "min_dist": 2.0,
+   "alt_at_closest": 12875
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N435KR",
+   "type": "RV9",
+   "cls": "piston",
+   "own": "HAUG WILLIAM C TRUSTEE, HAUG SUSAN V TRUSTEE",
+   "role": "",
+   "desc": "VANS RV-9",
+   "first": "08:19",
+   "last": "08:27",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 10225,
+   "min_dist": 2.0,
+   "alt_at_closest": 10250
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N228LR",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "PATROSE LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:28",
+   "last": "08:29",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 9550,
+   "min_dist": 7.5,
+   "alt_at_closest": 9550
   }
  ],
  "ladd_operators": [
@@ -996,18 +1109,18 @@
   "N912VM",
   "N922PB"
  ],
- "partial": true,
- "total_ops": 34,
- "unique_aircraft": 20,
+ "partial": false,
+ "total_ops": 38,
+ "unique_aircraft": 21,
  "by_class": {
   "jet": 6,
-  "piston": 20,
-  "helicopter": 7,
+  "piston": 23,
+  "helicopter": 8,
   "turboprop": 1
  },
- "quiet_hours_ops": 9,
+ "quiet_hours_ops": 10,
  "quiet_hours_by_class": {
-  "helicopter": 7,
+  "helicopter": 8,
   "piston": 2
  },
  "quiet_hours_events": [
@@ -1127,7 +1240,20 @@
    "hm": "22:52",
    "other": "KTRK Truckee",
    "pre7": true
+  },
+  {
+   "date": "2026-10-18",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "00:41",
+   "other": "KMCC Sacramento",
+   "pre7": true
   }
  ],
- "local_flights": 9
+ "local_flights": 10
 }
