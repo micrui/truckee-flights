@@ -1,0 +1,195 @@
+{
+ "start": "2026-10-19",
+ "end": "2026-10-25",
+ "days": [
+  "2026-10-19"
+ ],
+ "window_local": "22:00-08:30",
+ "note": null,
+ "events": [
+  {
+   "date": "2026-10-19",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "06:36",
+   "other": "KSQL San Carlos",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N22PB",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "GREAT BASIN ADVISORS LLC",
+   "role": "",
+   "desc": "PILATUS PC-24",
+   "ev": "DEP",
+   "hm": "07:11",
+   "other": "KCMA Camarillo",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "DEP",
+   "hm": "08:13",
+   "other": "NV57 Reno (heliport)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N900CX",
+   "type": "TBM9",
+   "cls": "turboprop",
+   "own": "JD HAALAND CONSTRUCTION INC",
+   "role": "",
+   "desc": "SOCATA TBM-900/910/930/940",
+   "ev": "DEP",
+   "hm": "08:20",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "08:21",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-10-19",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:36",
+   "last": "06:40",
+   "min_alt": 5725
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:38",
+   "last": "06:42",
+   "min_alt": 12900
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "22:00",
+   "last": "22:08",
+   "min_alt": 11200
+  }
+ ],
+ "overflights": [
+  {
+   "date": "2026-10-19",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "06:38",
+   "last": "06:42",
+   "dwell_min": 3,
+   "quiet_min": 3,
+   "min_alt": 12900,
+   "min_dist": 4.2,
+   "alt_at_closest": 12925
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N29BB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "PC-12 KWRU LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "07:41",
+   "last": "07:42",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 11475,
+   "min_dist": 6.9,
+   "alt_at_closest": 12825
+  },
+  {
+   "date": "2026-10-19",
+   "reg": "N1957T",
+   "type": "P28R",
+   "cls": "piston",
+   "own": "PIPERS ARE STILL BETTER LLC",
+   "role": "",
+   "desc": "PIPER PA-28R-180/200/201",
+   "first": "22:00",
+   "last": "22:08",
+   "dwell_min": 8,
+   "quiet_min": 8,
+   "min_alt": 11200,
+   "min_dist": 0.1,
+   "alt_at_closest": 11300
+  }
+ ],
+ "ladd_operators": [
+  "N922PB"
+ ],
+ "partial": true,
+ "total_ops": 5,
+ "unique_aircraft": 4,
+ "by_class": {
+  "turboprop": 3,
+  "jet": 1,
+  "helicopter": 1
+ },
+ "quiet_hours_ops": 1,
+ "quiet_hours_by_class": {
+  "turboprop": 1
+ },
+ "quiet_hours_events": [
+  {
+   "date": "2026-10-19",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "06:36",
+   "other": "KSQL San Carlos",
+   "pre7": true
+  }
+ ],
+ "local_flights": 0
+}
