@@ -2,7 +2,8 @@
  "start": "2026-10-19",
  "end": "2026-10-25",
  "days": [
-  "2026-10-19"
+  "2026-10-19",
+  "2026-10-20"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -71,6 +72,84 @@
    "hm": "08:21",
    "other": "KSQL San Carlos",
    "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N412FF",
+   "type": "EPIC",
+   "cls": "turboprop",
+   "own": "412 AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:02",
+   "other": "KSQL San Carlos",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N514PZ",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "BIG RED AVIATION LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "07:03",
+   "other": "KPAO Palo Alto",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N360FX",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "FLEXJET LLC, EDWARDSON JOHN, GEORGICA ADVISORS LLC, GRIMES M",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB-505 Phenom 300",
+   "ev": "ARR",
+   "hm": "07:18",
+   "other": "KLVK Livermore",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N1076",
+   "type": "PA18",
+   "cls": "piston",
+   "own": "WEAVER YVON",
+   "role": "",
+   "desc": "PIPER PA-18 Super Cub",
+   "ev": "ARR",
+   "hm": "08:06",
+   "other": "CN19 Knightsen",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N285JS",
+   "type": "C172",
+   "cls": "piston",
+   "own": "FLYTRUCKEETAHOE INC",
+   "role": "",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "08:15",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N360FX",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "FLEXJET LLC, EDWARDSON JOHN, GEORGICA ADVISORS LLC, GRIMES M",
+   "role": "fractional jet charter",
+   "desc": "EMBRAER EMB-505 Phenom 300",
+   "ev": "DEP",
+   "hm": "08:18",
+   "other": "KNUQ Mountain View",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -109,6 +188,30 @@
    "first": "22:00",
    "last": "22:08",
    "min_alt": 11200
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "02:50",
+   "last": "02:51",
+   "min_alt": 12975
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N200AA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RAD RUNNER LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "06:59",
+   "last": "06:59",
+   "min_alt": 12950
   }
  ],
  "overflights": [
@@ -159,18 +262,67 @@
    "min_alt": 11200,
    "min_dist": 0.1,
    "alt_at_closest": 11300
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "02:50",
+   "last": "02:51",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 12975,
+   "min_dist": 3.3,
+   "alt_at_closest": 13000
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N200AA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RAD RUNNER LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "06:59",
+   "last": "07:06",
+   "dwell_min": 7,
+   "quiet_min": 0,
+   "min_alt": 12950,
+   "min_dist": 5.2,
+   "alt_at_closest": 12950
+  },
+  {
+   "date": "2026-10-20",
+   "reg": "N428QS",
+   "type": "E55P",
+   "cls": "jet",
+   "own": "",
+   "role": "",
+   "desc": "EMBRAER EMB-505 Phenom 300",
+   "first": "08:00",
+   "last": "08:02",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 12875,
+   "min_dist": 7.9,
+   "alt_at_closest": 12900
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
  "partial": true,
- "total_ops": 5,
- "unique_aircraft": 4,
+ "total_ops": 11,
+ "unique_aircraft": 9,
  "by_class": {
-  "turboprop": 3,
-  "jet": 1,
-  "helicopter": 1
+  "turboprop": 4,
+  "jet": 3,
+  "helicopter": 1,
+  "piston": 3
  },
  "quiet_hours_ops": 1,
  "quiet_hours_by_class": {
@@ -191,5 +343,5 @@
    "pre7": true
   }
  ],
- "local_flights": 0
+ "local_flights": 1
 }
