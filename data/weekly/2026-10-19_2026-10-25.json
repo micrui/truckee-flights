@@ -3,7 +3,8 @@
  "end": "2026-10-25",
  "days": [
   "2026-10-19",
-  "2026-10-20"
+  "2026-10-20",
+  "2026-10-21"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -150,6 +151,32 @@
    "hm": "08:18",
    "other": "KNUQ Mountain View",
    "pre7": false
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N665CC",
+   "type": "CC11",
+   "cls": "piston",
+   "own": "43KB LLC",
+   "role": "",
+   "desc": "CUB CRAFTERS CC-11 Carbon Cub",
+   "ev": "DEP",
+   "hm": "08:26",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "22:08",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -211,6 +238,42 @@
    "desc": "CESSNA 208 Caravan",
    "first": "06:59",
    "last": "06:59",
+   "min_alt": 12950
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "03:21",
+   "last": "03:23",
+   "min_alt": 10100
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "22:03",
+   "last": "22:08",
+   "min_alt": 5700
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N196X",
+   "type": "GALX",
+   "cls": "piston",
+   "own": "DOLLAR AIR LLC",
+   "role": "",
+   "desc": "G200",
+   "first": "22:30",
+   "last": "22:30",
    "min_alt": 12950
   }
  ],
@@ -310,23 +373,104 @@
    "min_alt": 12875,
    "min_dist": 7.9,
    "alt_at_closest": 12900
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N557PC",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "03:21",
+   "last": "03:23",
+   "dwell_min": 2,
+   "quiet_min": 2,
+   "min_alt": 10100,
+   "min_dist": 2.7,
+   "alt_at_closest": 12975
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N567W",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "REFRIGERATION SUPPLIES DISTRIBUTOR",
+   "role": "",
+   "desc": "BEECH 90 King Air",
+   "first": "07:20",
+   "last": "07:25",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 12075,
+   "min_dist": 3.2,
+   "alt_at_closest": 12375
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N27666",
+   "type": "PA31",
+   "cls": "piston",
+   "own": "LEE STEPHAN J",
+   "role": "",
+   "desc": "PIPER PA-31-300/310/325/350/425",
+   "first": "07:42",
+   "last": "07:47",
+   "dwell_min": 4,
+   "quiet_min": 0,
+   "min_alt": 10750,
+   "min_dist": 8.2,
+   "alt_at_closest": 11000
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N9366Y",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "MOSS DOUGLAS M TRUSTEE",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "07:46",
+   "last": "07:51",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 9200,
+   "min_dist": 5.3,
+   "alt_at_closest": 9300
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N196X",
+   "type": "GALX",
+   "cls": "piston",
+   "own": "DOLLAR AIR LLC",
+   "role": "",
+   "desc": "G200",
+   "first": "22:30",
+   "last": "22:30",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 12950,
+   "min_dist": 9.8,
+   "alt_at_closest": 12950
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
  "partial": true,
- "total_ops": 11,
- "unique_aircraft": 9,
+ "total_ops": 13,
+ "unique_aircraft": 10,
  "by_class": {
   "turboprop": 4,
   "jet": 3,
-  "helicopter": 1,
-  "piston": 3
+  "helicopter": 2,
+  "piston": 4
  },
- "quiet_hours_ops": 1,
+ "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
-  "turboprop": 1
+  "turboprop": 1,
+  "helicopter": 1
  },
  "quiet_hours_events": [
   {
@@ -341,7 +485,20 @@
    "hm": "06:36",
    "other": "KSQL San Carlos",
    "pre7": true
+  },
+  {
+   "date": "2026-10-21",
+   "reg": "N901CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "ev": "ARR",
+   "hm": "22:08",
+   "other": "KRNO Reno",
+   "pre7": true
   }
  ],
- "local_flights": 1
+ "local_flights": 2
 }
