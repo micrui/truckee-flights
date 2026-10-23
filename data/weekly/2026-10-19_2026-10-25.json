@@ -4,7 +4,8 @@
  "days": [
   "2026-10-19",
   "2026-10-20",
-  "2026-10-21"
+  "2026-10-21",
+  "2026-10-22"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -177,6 +178,19 @@
    "hm": "22:08",
    "other": "KRNO Reno",
    "pre7": true
+  },
+  {
+   "date": "2026-10-22",
+   "reg": "N42SH",
+   "type": "S22T",
+   "cls": "piston",
+   "own": "LEJORAN LLC",
+   "role": "",
+   "desc": "",
+   "ev": "DEP",
+   "hm": "08:12",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -453,19 +467,35 @@
    "min_alt": 12950,
    "min_dist": 9.8,
    "alt_at_closest": 12950
+  },
+  {
+   "date": "2026-10-22",
+   "reg": "N515RA",
+   "type": "GLF4",
+   "cls": "jet",
+   "own": "A & E HAWKER LP",
+   "role": "",
+   "desc": "GULFSTREAM 4",
+   "first": "07:54",
+   "last": "07:55",
+   "dwell_min": 0,
+   "quiet_min": 0,
+   "min_alt": 11625,
+   "min_dist": 7.1,
+   "alt_at_closest": 12950
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
  "partial": true,
- "total_ops": 13,
- "unique_aircraft": 10,
+ "total_ops": 14,
+ "unique_aircraft": 11,
  "by_class": {
   "turboprop": 4,
   "jet": 3,
   "helicopter": 2,
-  "piston": 4
+  "piston": 5
  },
  "quiet_hours_ops": 2,
  "quiet_hours_by_class": {
@@ -500,5 +530,5 @@
    "pre7": true
   }
  ],
- "local_flights": 2
+ "local_flights": 3
 }
