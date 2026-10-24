@@ -5,7 +5,8 @@
   "2026-10-19",
   "2026-10-20",
   "2026-10-21",
-  "2026-10-22"
+  "2026-10-22",
+  "2026-10-23"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -191,6 +192,32 @@
    "hm": "08:12",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N137JT",
+   "type": "HDJT",
+   "cls": "jet",
+   "own": "BBME VENTURES LLC, TANGIER LOGISTICS LLC",
+   "role": "",
+   "desc": "HONDA HondaJet",
+   "ev": "ARR",
+   "hm": "08:08",
+   "other": "KHWD Hayward",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "22:13",
+   "other": "KSMF Sacramento",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -289,6 +316,30 @@
    "first": "22:30",
    "last": "22:30",
    "min_alt": 12950
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:09",
+   "last": "22:13",
+   "min_alt": 5825
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N318MT",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:13",
+   "last": "22:14",
+   "min_alt": 13000
   }
  ],
  "overflights": [
@@ -483,23 +534,39 @@
    "min_alt": 11625,
    "min_dist": 7.1,
    "alt_at_closest": 12950
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N318MT",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "22:13",
+   "last": "22:14",
+   "dwell_min": 1,
+   "quiet_min": 1,
+   "min_alt": 13000,
+   "min_dist": 7.3,
+   "alt_at_closest": 13000
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
  "partial": true,
- "total_ops": 14,
- "unique_aircraft": 11,
+ "total_ops": 16,
+ "unique_aircraft": 12,
  "by_class": {
-  "turboprop": 4,
-  "jet": 3,
+  "turboprop": 5,
+  "jet": 4,
   "helicopter": 2,
   "piston": 5
  },
- "quiet_hours_ops": 2,
+ "quiet_hours_ops": 3,
  "quiet_hours_by_class": {
-  "turboprop": 1,
+  "turboprop": 2,
   "helicopter": 1
  },
  "quiet_hours_events": [
@@ -527,6 +594,19 @@
    "ev": "ARR",
    "hm": "22:08",
    "other": "KRNO Reno",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-23",
+   "reg": "N922PB",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "GREAT BASIN ADVISORS LLC, WEST SHORE IRON LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "22:13",
+   "other": "KSMF Sacramento",
    "pre7": true
   }
  ],
