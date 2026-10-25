@@ -6,7 +6,8 @@
   "2026-10-20",
   "2026-10-21",
   "2026-10-22",
-  "2026-10-23"
+  "2026-10-23",
+  "2026-10-24"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -218,6 +219,32 @@
    "hm": "22:13",
    "other": "KSMF Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "role": "",
+   "desc": "TEAM ROCKET F-1",
+   "ev": "DEP",
+   "hm": "06:56",
+   "other": "KRNM Ramona",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "07:56",
+   "other": "Local flight (returned to KTRK)",
+   "pre7": false
   }
  ],
  "airborne_quiet": [
@@ -340,6 +367,30 @@
    "first": "22:13",
    "last": "22:14",
    "min_alt": 13000
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "00:32",
+   "last": "06:07",
+   "min_alt": 7450
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "role": "",
+   "desc": "TEAM ROCKET F-1",
+   "first": "06:56",
+   "last": "06:59",
+   "min_alt": 5625
   }
  ],
  "overflights": [
@@ -550,24 +601,57 @@
    "min_alt": 13000,
    "min_dist": 7.3,
    "alt_at_closest": 13000
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "00:32",
+   "last": "00:41",
+   "dwell_min": 8,
+   "quiet_min": 8,
+   "min_alt": 9475,
+   "min_dist": 2.7,
+   "alt_at_closest": 9500
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N902CF",
+   "type": "AS50",
+   "cls": "helicopter",
+   "own": "REGIONAL EMERGENCY MEDICAL SERVICES AUTHORITY, REMSA",
+   "role": "air ambulance",
+   "desc": "AEROSPATIALE AS-350 Ecureuil",
+   "first": "05:58",
+   "last": "06:07",
+   "dwell_min": 8,
+   "quiet_min": 8,
+   "min_alt": 7450,
+   "min_dist": 3.4,
+   "alt_at_closest": 7875
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
  "partial": true,
- "total_ops": 16,
- "unique_aircraft": 12,
+ "total_ops": 18,
+ "unique_aircraft": 14,
  "by_class": {
   "turboprop": 5,
   "jet": 4,
   "helicopter": 2,
-  "piston": 5
+  "piston": 7
  },
- "quiet_hours_ops": 3,
+ "quiet_hours_ops": 4,
  "quiet_hours_by_class": {
   "turboprop": 2,
-  "helicopter": 1
+  "helicopter": 1,
+  "piston": 1
  },
  "quiet_hours_events": [
   {
@@ -608,7 +692,20 @@
    "hm": "22:13",
    "other": "KSMF Sacramento",
    "pre7": true
+  },
+  {
+   "date": "2026-10-24",
+   "reg": "N40PZ",
+   "type": "TRF1",
+   "cls": "piston",
+   "own": "HAAGENSON TREVOR, HAAGENSON JEFFERY",
+   "role": "",
+   "desc": "TEAM ROCKET F-1",
+   "ev": "DEP",
+   "hm": "06:56",
+   "other": "KRNM Ramona",
+   "pre7": true
   }
  ],
- "local_flights": 3
+ "local_flights": 4
 }
