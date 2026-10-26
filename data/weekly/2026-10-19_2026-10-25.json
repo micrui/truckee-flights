@@ -7,7 +7,8 @@
   "2026-10-21",
   "2026-10-22",
   "2026-10-23",
-  "2026-10-24"
+  "2026-10-24",
+  "2026-10-25"
  ],
  "window_local": "22:00-08:30",
  "note": null,
@@ -245,6 +246,19 @@
    "hm": "07:56",
    "other": "Local flight (returned to KTRK)",
    "pre7": false
+  },
+  {
+   "date": "2026-10-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "22:32",
+   "other": "KTRK Truckee",
+   "pre7": true
   }
  ],
  "airborne_quiet": [
@@ -391,6 +405,18 @@
    "first": "06:56",
    "last": "06:59",
    "min_alt": 5625
+  },
+  {
+   "date": "2026-10-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "first": "22:22",
+   "last": "22:32",
+   "min_alt": 5550
   }
  ],
  "overflights": [
@@ -633,25 +659,41 @@
    "min_alt": 7450,
    "min_dist": 3.4,
    "alt_at_closest": 7875
+  },
+  {
+   "date": "2026-10-25",
+   "reg": "N4586S",
+   "type": "BE35",
+   "cls": "piston",
+   "own": "EJH TETON PROPERTIES LLC",
+   "role": "",
+   "desc": "BEECH 35 Bonanza",
+   "first": "08:28",
+   "last": "08:29",
+   "dwell_min": 1,
+   "quiet_min": 0,
+   "min_alt": 11500,
+   "min_dist": 5.1,
+   "alt_at_closest": 11500
   }
  ],
  "ladd_operators": [
   "N922PB"
  ],
- "partial": true,
- "total_ops": 18,
+ "partial": false,
+ "total_ops": 19,
  "unique_aircraft": 14,
  "by_class": {
   "turboprop": 5,
   "jet": 4,
   "helicopter": 2,
-  "piston": 7
+  "piston": 8
  },
- "quiet_hours_ops": 4,
+ "quiet_hours_ops": 5,
  "quiet_hours_by_class": {
   "turboprop": 2,
   "helicopter": 1,
-  "piston": 1
+  "piston": 2
  },
  "quiet_hours_events": [
   {
@@ -704,6 +746,19 @@
    "ev": "DEP",
    "hm": "06:56",
    "other": "KRNM Ramona",
+   "pre7": true
+  },
+  {
+   "date": "2026-10-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "22:32",
+   "other": "KTRK Truckee",
    "pre7": true
   }
  ],
