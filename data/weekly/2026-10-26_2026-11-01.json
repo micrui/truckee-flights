@@ -1,0 +1,81 @@
+{
+ "start": "2026-10-26",
+ "end": "2026-11-01",
+ "days": [
+  "2026-10-26"
+ ],
+ "window_local": "22:00-08:30",
+ "note": null,
+ "events": [
+  {
+   "date": "2026-10-26",
+   "reg": "N900KP",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "TOBARTHS LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "07:12",
+   "other": "KMRY Monterey",
+   "pre7": false
+  },
+  {
+   "date": "2026-10-26",
+   "reg": "N6155R",
+   "type": "C210",
+   "cls": "piston",
+   "own": "PLANE + SIMPLE LLC",
+   "role": "",
+   "desc": "CESSNA 201 Centurion",
+   "ev": "DEP",
+   "hm": "08:19",
+   "other": "KVGT Las Vegas",
+   "pre7": false
+  }
+ ],
+ "airborne_quiet": [
+  {
+   "date": "2026-10-26",
+   "reg": "N271SM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "23:56",
+   "last": "00:00",
+   "min_alt": 12800
+  }
+ ],
+ "overflights": [
+  {
+   "date": "2026-10-26",
+   "reg": "N271SM",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "TVPX AIRCRAFT SOLUTIONS INC TRUSTEE",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "first": "23:56",
+   "last": "00:00",
+   "dwell_min": 3,
+   "quiet_min": 3,
+   "min_alt": 12800,
+   "min_dist": 3.2,
+   "alt_at_closest": 12800
+  }
+ ],
+ "ladd_operators": [],
+ "partial": true,
+ "total_ops": 2,
+ "unique_aircraft": 2,
+ "by_class": {
+  "jet": 1,
+  "piston": 1
+ },
+ "quiet_hours_ops": 0,
+ "quiet_hours_by_class": {},
+ "quiet_hours_events": [],
+ "local_flights": 0
+}
