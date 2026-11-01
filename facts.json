@@ -729,15 +729,15 @@
       "claim": "KTRK has no precision approach; the best minimums require weather 582 feet above the runway with a mandatory missed-approach climb gradient, two of the three instrument approaches and circling to three of the four runway ends are not authorized at night, and the tower operates roughly 7 am to 6-8 pm seasonally with the field uncontrolled outside those hours.",
       "status": "sourced",
       "sources": [
-        "https://aeronav.faa.gov/d-tpp/2608/06021R11.PDF",
-        "https://aeronav.faa.gov/d-tpp/2608/06021R20.PDF",
-        "https://aeronav.faa.gov/d-tpp/2608/06021RA.PDF",
+        "https://aeronav.faa.gov/d-tpp/2611/06021R11.PDF",
+        "https://aeronav.faa.gov/d-tpp/2611/06021R20.PDF",
+        "https://aeronav.faa.gov/d-tpp/2611/06021RA.PDF",
         "https://www.airnav.com/airport/KTRK"
       ],
       "method": "agency-record",
-      "checked": "2026-08-10",
+      "checked": "2026-11-01",
       "pages": ["docs/safety.html"],
-      "notes": "Approach-plate figures are cycle-dated (2608 cycle); re-check when plates revise."
+      "notes": "Approach-plate figures are cycle-dated; re-check when plates revise. 2026-11-01: the 2608-cycle PDFs went 404 when that cycle expired, replaced with the current 2611-cycle PDFs after confirming they still show the 582-foot minimums and the night restrictions. These URLs die every 28-day chart cycle; expect this swap again."
     },
     {
       "id": "ntsb-sa-084-circling-alert",
