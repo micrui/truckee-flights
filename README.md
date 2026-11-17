@@ -14,12 +14,12 @@ Aircraft broadcast their positions publicly over ADS-B, so most factual claims a
 | `summarize.py` | Reduces pipeline output to discrete arrival and departure events and per-aircraft records, including FAA privacy-program flags. |
 | `weekly.py` | Collects the most recent complete week and rebuilds the quiet-hours flight log. Runs every Monday via GitHub Actions (`.github/workflows/weekly.yml`); can also be run by hand. |
 | `data/` | Derived datasets for completed studies, committed so findings are checkable without rerunning anything. |
-| `docs/` | The public site, served at [micrui.github.io/truckee-flights](https://micrui.github.io/truckee-flights/): landing page, [quiet-hours flight log](https://micrui.github.io/truckee-flights/quiet-hours.html), and study reports. |
+| `docs/` | The public site, served at [micrui.net/truckee/flights](https://micrui.net/truckee/flights/): landing page, [quiet-hours flight log](https://micrui.net/truckee/flights/quiet-hours.html), and study reports. |
 | `METHOD.md` | Data formats, algorithms, validation, and known limits. |
 
 ## Study 1: early-morning operations, August 1 to 8, 2026
 
-Full report with an interactive timeline: **[micrui.github.io/truckee-flights/study-2026-08-dawn.html](https://micrui.github.io/truckee-flights/study-2026-08-dawn.html)** (source in [docs/](docs/)). Question examined: during the voluntary quiet hours (10:00 pm to 7:00 am), who actually operates at the field, and how much early-morning aircraft noise is attributable to KTRK operations at all.
+Full report with an interactive timeline: **[micrui.net/truckee/flights/study-2026-08-dawn.html](https://micrui.net/truckee/flights/study-2026-08-dawn.html)** (source in [docs/](docs/)). Question examined: during the voluntary quiet hours (10:00 pm to 7:00 am), who actually operates at the field, and how much early-morning aircraft noise is attributable to KTRK operations at all.
 
 Summary of what the data shows for those 8 mornings, 4:00 to 8:30 am PDT:
 
@@ -35,11 +35,11 @@ Scope notes: one summer week; ADS-B-equipped aircraft only, so light-aircraft co
 
 ## Reference: airport finances
 
-[How the airport is funded](https://micrui.github.io/truckee-flights/financials.html): district revenue by source (43% property tax, 27% operating, 28% federal grants in audited 2023), the multimillion-dollar annual operating loss that taxes cover, fuel revenue by aircraft type (jet fuel is 85% of budgeted fuel revenue), the 2003-2023 federal grant history ($29.75M across 29 grants) with the 20-year grant-assurance mechanism explained, and the district's $2.97M Community Benefit budget. Every line sourced to district or federal documents.
+[How the airport is funded](https://micrui.net/truckee/flights/financials.html): district revenue by source (43% property tax, 27% operating, 28% federal grants in audited 2023), the multimillion-dollar annual operating loss that taxes cover, fuel revenue by aircraft type (jet fuel is 85% of budgeted fuel revenue), the 2003-2023 federal grant history ($29.75M across 29 grants) with the 20-year grant-assurance mechanism explained, and the district's $2.97M Community Benefit budget. Every line sourced to district or federal documents.
 
 ## Ongoing: quiet-hours flight log
 
-A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [quiet-hours flight log](https://micrui.github.io/truckee-flights/quiet-hours.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). From the week of August 10, 2026, the monitored window covers the full voluntary quiet hours plus the morning after (10:00 pm to 8:30 am); earlier weeks, tagged "mornings only," cover 4:00 to 8:30 am.
+A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [quiet-hours flight log](https://micrui.net/truckee/flights/quiet-hours.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). From the week of August 10, 2026, the monitored window covers the full voluntary quiet hours plus the morning after (10:00 pm to 8:30 am); earlier weeks, tagged "mornings only," cover 4:00 to 8:30 am.
 
 ## Reproducing
 

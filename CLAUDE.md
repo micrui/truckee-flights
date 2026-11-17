@@ -1,7 +1,8 @@
 # CLAUDE.md: truckee-flights
 
 Public record of flight activity at Truckee Tahoe Airport (KTRK), built from ADS-B Exchange
-public replay data. Site: https://micrui.github.io/truckee-flights (GitHub Pages from `/docs`).
+public replay data. Site: https://micrui.net/truckee/flights (GitHub Pages publishes `/docs`;
+micrui.net serves the pages from there, so GitHub Pages stays on).
 
 ## Voice and editorial rules (non-negotiable)
 
