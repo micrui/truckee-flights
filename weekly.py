@@ -367,6 +367,7 @@ OP_CSS = """
   .tag { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
     font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
   .table-scroll { overflow-x: auto; }
+  tr.gap td { color: var(--muted); font-size: 12px; padding: 3px 10px 3px 14px; border-left: 2px solid var(--axis); }
   a { color: var(--accent); }
   .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
 """
@@ -441,6 +442,17 @@ def notables(w):
             f'<ul style="font-size:13.5px;padding-left:18px;margin:0;">{lis}</ul></div>')
 
 
+def real_time(date, hm):
+    """When a log entry happened. A night is filed under the date of its morning, so an
+    entry from the evening part of the window (10:00 pm to midnight) happened on the
+    day before the date it carries."""
+    d = datetime.date.fromisoformat(date)
+    h, m = (int(x) for x in hm.split(":"))
+    if h >= 12:
+        d -= datetime.timedelta(days=1)
+    return datetime.datetime(d.year, d.month, d.day, h, m)
+
+
 def role_tag(a):
     r = operator_role(a.get("own"), a.get("type"))
     return f' <span class="tag">{r}</span>' if r else ""
@@ -479,8 +491,8 @@ def render_operators(weeks):
                                             "events": [], "ovf": []})
         a["ovf"].append(o)
     for a in ac.values():
-        a["events"].sort(key=lambda e: (e["date"], e["hm"]))
-        a["ovf"].sort(key=lambda o: (o["date"], o["first"]))
+        a["events"].sort(key=lambda e: real_time(e["date"], e["hm"]))
+        a["ovf"].sort(key=lambda o: real_time(o["date"], o["first"]))
         a["quiet"] = sum(1 for e in a["events"] if e["pre7"])
         a["qdates"] = sorted({e["date"][5:] for e in a["events"] if e["pre7"]})
         a["q_ovf_min"] = sum(o.get("quiet_min", 0) for o in a["ovf"])
@@ -511,30 +523,48 @@ def render_operators(weeks):
                        f'<td class="mono">{", ".join(a["q_ovf_dates"])}</td>'
                        f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')
 
-    sections = []
+    sections, gaps = [], 0
     for a in ranked:
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
-        log_rows = [(f'{e["date"]} {e["hm"]}',
+        log_rows = [(real_time(e["date"], e["hm"]), e,
                      f'<tr><td class="mono">{e["date"]}</td><td class="mono">{e["hm"]}</td>'
                      f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                      f'<td>{html.escape(e["other"])}</td>'
                      f'<td>{QCHIP if e["pre7"] else ""}</td></tr>')
                     for e in a["events"]]
-        log_rows += [(f'{o["date"]} {o["first"]}',
+        log_rows += [(real_time(o["date"], o["first"]), None,
                       f'<tr><td class="mono">{o["date"]}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
                       f'<td>Airborne nearby, no landing ({o["dwell_min"]} min)</td>'
                       f'<td>{o.get("alt_at_closest") or o["min_alt"]:,.0f} ft at closest pass ({o["min_dist"]} nm)</td>'
                       f'<td>{QCHIP if o.get("quiet_min", 0) > 0 else ""}</td></tr>')
                      for o in a["ovf"]]
         log_rows.sort(key=lambda kv: kv[0])
-        ev_rows = "".join(r for k, r in log_rows)
+        # Two takeoffs in a row, or two landings in a row, get a row between them saying what
+        # the log lacks. Two entries filed under one date are in one recorded night; otherwise
+        # hours the log does not record lie between them.
+        out_rows, prev = [], None
+        for when, e, row in log_rows:
+            if e is not None:
+                if prev is not None and prev["ev"] == e["ev"]:
+                    missing = "landing" if e["ev"] == "DEP" else "takeoff"
+                    if prev["date"] == e["date"]:
+                        kind = "takeoffs" if e["ev"] == "DEP" else "landings"
+                        note = f"No {missing} recorded between these two {kind}"
+                    else:
+                        note = f"No {missing} recorded between these. 8:30 am to 10:00 pm not recorded."
+                    out_rows.append(f'<tr class="gap"><td colspan="5">{note}</td></tr>')
+                    gaps += 1
+                prev = e
+            out_rows.append(row)
+        ev_rows = "".join(out_rows)
         sections.append(
             f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {type_link(a["type"], a.get("desc"))} · {a["cls"]}{badge}'
             f' <span class="own">{html.escape(a.get("desc") or "")}{" · " if a.get("desc") and a.get("own") else ""}{html.escape(a["own"] or "")}</span>{role_tag(a)}</h3>'
             f'<div class="table-scroll"><table><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
             f'<tbody>{ev_rows}</tbody></table></div>')
 
-    span = f'{min(w["start"] for w in weeks)} to {max(w["end"] for w in weeks)}' if weeks else ""
+    nights = sorted({d for w in weeks for d in w.get("days", [])})
+    span = f"{nights[0]} to {nights[-1]}" if nights else ""
     page = f"""<meta charset="utf-8">
 <title>truckee-flights: operators</title>
 <style>{OP_CSS}</style>
@@ -542,9 +572,14 @@ def render_operators(weeks):
   <p class="eyebrow"><a href="./">truckee-flights</a> · <a href="quiet-hours.html">quiet-hours log</a> · operators</p>
   <h1>Operators, by quiet-hours activity</h1>
   <p class="standfirst">
-    Every aircraft recorded taking off or landing at the field ({span}), tallied by operations during the
-    voluntary quiet hours (10:00 pm to 7:00 am) and listed with its full recorded log below, air
-    ambulances and other working flights included. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
+    This page lists every aircraft recorded taking off or landing at the airport ({span}), including air
+    ambulances and other working flights, and tallies each aircraft's takeoffs and landings during the
+    airport's voluntary quiet hours, 10:00 pm to 7:00 am. The log records takeoffs and landings between
+    10:00 pm and 8:30 am; those between 8:30 am and 10:00 pm are not recorded. For evening flights
+    (10:00 pm to midnight), the time shown belongs to the night before the listed date. One aircraft's
+    list can show two takeoffs in a row with no landing between them, or two landings in a row with no
+    takeoff between them: the takeoff or landing in between is not recorded, and the log does not show
+    when it happened. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
   </p>
   <div class="table-scroll"><table>
     <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
@@ -562,11 +597,19 @@ def render_operators(weeks):
   {"".join(sections)}
   <div class="foot"><p>Generated from the weekly log data in
   <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>; overlapping
-  weeks are de-duplicated. Aircraft identity and ownership as recorded in the FAA registry.</p></div>
+  weeks are de-duplicated. Aircraft identity and ownership as recorded in the FAA registry.</p>
+  <p>Corrected 2026-11-16: each night is listed under the date of its morning, so a takeoff or landing
+  between 10:00 pm and midnight is listed under the following day's date. Before this date the page did
+  not say so, and it placed those entries after that date's morning entries, out of time order. The 82
+  takeoffs and landings and 45 "airborne nearby" entries affected are now placed before that date's
+  morning entries, in time order, and the introductory paragraph states the rule. Before this date the
+  page also gave the period covered as ending 2026-11-01; the last night recorded is the night ending
+  2026-10-27.</p></div>
 </div>
 """
     open("docs/operators.html", "w").write(page)
-    print(f"rendered docs/operators.html: {len(ranked)} aircraft, {len(all_events)} events")
+    print(f"rendered docs/operators.html: {len(ranked)} aircraft, {len(all_events)} events, "
+          f"{gaps} rows marking a takeoff or landing the log lacks")
 
 
 if __name__ == "__main__":

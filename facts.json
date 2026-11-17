@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01",
+  "updated": "2026-11-16",
   "facts": [
     {
       "id": "fy2023-property-tax-revenue",
@@ -995,6 +995,46 @@
       "checked": "2026-08-10",
       "pages": ["docs/study-2026-08-dawn.html"],
       "notes": "Method: ADS-B Exchange replay slices (11:00-15:30 UTC), aircraft within 20 nm reduced to within 13 nm below 20,000 ft, full-day traces segmented into ground blocks."
+    },
+    {
+      "id": "log-recorded-hours",
+      "claim": "The quiet-hours log records takeoffs and landings at KTRK between 10:00 pm and 8:30 am Pacific time. Takeoffs and landings between 8:30 am and 10:00 pm are not recorded.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-16",
+      "pages": ["docs/operators.html", "docs/quiet-hours.html"],
+      "notes": "The window is set in pipeline.py (WINDOWS, 'full': 22:00 the evening before to 08:30) and applied in summarize.py. All 1,013 de-duplicated takeoffs and landings in data/weekly/ through the night ending 2026-10-27 fall inside it; none has a time from 09:00 to 21:59."
+    },
+    {
+      "id": "log-night-date-rule",
+      "claim": "Each night in the log is listed under the date of its morning, so a takeoff or landing between 10:00 pm and midnight is listed under the following day's date.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-16",
+      "pages": ["docs/operators.html", "docs/quiet-hours.html"],
+      "notes": "pipeline.py window_bounds() returns the window ending on the morning of the date an entry carries. docs/quiet-hours.html states the rule; docs/operators.html states it from 2026-11-16."
+    },
+    {
+      "id": "log-gaps-between-recorded-hours",
+      "claim": "An aircraft's list on the operators page can show two takeoffs in a row with no landing between them, or two landings in a row with no takeoff between them. The takeoff or landing in between is not recorded, and the log does not show when it happened.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-16",
+      "pages": ["docs/operators.html"],
+      "notes": "Counted from data/weekly/ on 2026-11-16 in time order per aircraft: 290 takeoffs are followed by another takeoff and 53 landings by another landing. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The page marks each case with a row."
+    },
+    {
+      "id": "operators-page-correction-2026-11-16",
+      "claim": "Before 2026-11-16 the operators page placed entries between 10:00 pm and midnight after the same date's morning entries, out of time order, and did not state that a night is listed under the date of its morning; 82 takeoffs and landings and 45 airborne-nearby entries were affected. It also gave the period covered as ending 2026-11-01; the last night recorded is the night ending 2026-10-27.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-16",
+      "pages": ["docs/operators.html"],
+      "notes": "Counts are of de-duplicated entries in data/weekly/ with a time of 22:00 or later: 82 of 1,013 takeoffs and landings, 45 of 639 airborne-nearby entries. The old order came from sorting on the listed date and time in weekly.py; the old period came from the calendar weeks' end dates. Corrected in weekly.py and stated in a dated note at the foot of the page."
     }
   ]
 }

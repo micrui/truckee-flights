@@ -41,6 +41,11 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
 - `weekly.py`: `collect()` writes `data/weekly/*.json`; `render()` writes `docs/quiet-hours.html`,
   per-week pages in `docs/weeks/`, and `docs/operators.html`. Aircraft class is re-derived at
   render time via `klass()`; never trust cached class fields.
+- The operators page (`render_operators()` in `weekly.py`) lists each aircraft's entries in the
+  order they happened. A night is filed under the date of its morning, so `real_time()` puts a
+  10:00 pm to midnight entry on the evening before the date it carries. Where two takeoffs or
+  two landings follow each other, the page inserts a row saying what the log lacks: only
+  10:00 pm to 8:30 am is recorded, so the takeoff or landing in between usually is not.
 - `.github/workflows/weekly.yml` runs nightly 04:15 UTC and again 15:45 UTC as a late-archive
   fallback, full window, adds the night that just closed and commits results. A render that
   crashes fails the job before the commit step, so that night is lost until someone backfills
