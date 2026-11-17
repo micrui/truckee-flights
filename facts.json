@@ -1035,6 +1035,20 @@
       "checked": "2026-11-16",
       "pages": ["docs/operators.html"],
       "notes": "Counts are of de-duplicated entries in data/weekly/ with a time of 22:00 or later: 82 of 1,013 takeoffs and landings, 45 of 639 airborne-nearby entries. The old order came from sorting on the listed date and time in weekly.py; the old period came from the calendar weeks' end dates. Corrected in weekly.py and stated in a dated note at the foot of the page."
+    },
+    {
+      "id": "quiet-hours-page-correction-2026-11-16",
+      "claim": "Before 2026-11-16 the quiet-hours page placed entries timed between 10:00 pm and midnight after the morning entries that carry the same date, within each week's tables; 36 takeoffs and landings and 31 airborne-nearby entries were listed after an entry that happened later. From 2026-11-16 every table is in time order. The dates shown did not change.",
+      "status": "verified",
+      "sources": [
+        "https://github.com/micrui/truckee-flights"
+      ],
+      "method": "own-data",
+      "checked": "2026-11-16",
+      "pages": [
+        "docs/quiet-hours.html"
+      ],
+      "notes": "Counted from data/weekly/ on 2026-11-16, through the night ending 2026-10-27, table by table as render() in weekly.py builds them: the three groups of quiet-hours takeoffs and landings in each week, and each week's airborne-nearby table. An entry counts when an entry listed before it in the old order happened later; when things happened is real_time() in weekly.py. The old order was by listed date, then time. 365 rows in all; the set of rows is unchanged."
     }
   ]
 }

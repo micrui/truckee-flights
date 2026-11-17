@@ -155,6 +155,8 @@ def render():
                     return "medical"
                 return "other"
 
+            # Rows go in the order things happened. A night is filed under the date of its
+            # morning, so a 10:00 pm to midnight row comes before that date's morning rows.
             def ev_table(evs):
                 def other_cell(e):
                     o = e["other"] or ""
@@ -169,7 +171,7 @@ def render():
                     f'<td>{other_cell(e) if e["ev"] == "ARR" else "KTRK Truckee"}</td>'
                     f'<td>{other_cell(e) if e["ev"] == "DEP" else "KTRK Truckee"}</td>'
                     f'<td>{html.escape(e["own"] or "")}</td></tr>'
-                    for e in evs)
+                    for e in sorted(evs, key=lambda e: real_time(e["date"], e["hm"])))
                 return (f'<div class="table-scroll"><table>'
                         f'<thead><tr><th>Date</th><th>Time</th><th>What</th><th>Tail #</th>'
                         f'<th>Type</th><th>Class</th><th>From</th><th>To</th><th>Registered owner</th></tr></thead>'
@@ -195,7 +197,7 @@ def render():
                     f'<td class="num">{(o.get("alt_at_closest") or o["min_alt"]):,} ft at {o["min_dist"]} nm</td>'
                     f'<td class="num">{o["quiet_min"]}</td>'
                     f'<td>{html.escape(o.get("own") or "")}</td></tr>'
-                    for o in quiet_ovf)
+                    for o in sorted(quiet_ovf, key=lambda o: real_time(o["date"], o["first"])))
                 sections.append(
                     f'<h3 class="grp">Airborne nearby, no landing ({len(quiet_ovf)})</h3>'
                     f'<div class="table-scroll"><table>'
@@ -303,6 +305,12 @@ def render():
     <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>;
     method and limits in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>.
     Aircraft without transponders do not appear.</p>
+    <p>Corrected 2026-11-16: before this date, within each week's tables, entries timed between 10:00 pm
+    and midnight came after the morning entries that carry the same date, so 36 takeoffs and landings and
+    31 "airborne nearby" entries were listed after an entry that happened later. Every table is now in time
+    order: an entry timed between 10:00 pm and midnight comes before the morning entries that carry the same
+    date. Only the order of rows changed; the dates shown did not, and each night is still listed under the
+    date of its morning.</p>
   </div>
 </div>
 '''
