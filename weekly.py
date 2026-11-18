@@ -21,7 +21,7 @@ from summarize import build, operator_role
 CLASSES = ["jet", "turboprop", "piston", "helicopter", "glider", "unknown"]
 
 
-def daily(window="full", date=None):
+def daily(window="full", date=None, allow_loss=False):
     """Add one night to its week file and re-render, fetching only that night.
 
     ADS-B Exchange publishes each UTC day shortly after it ends, so the night
@@ -37,23 +37,36 @@ def daily(window="full", date=None):
     sunday = monday + datetime.timedelta(days=6)
     ds = target.isoformat()
     path = f"data/weekly/{monday.isoformat()}_{sunday.isoformat()}.json"
-    week = json.load(open(path)) if os.path.exists(path) else None
-    if week and ds in week.get("days", []):
+    week = json.load(open(path)) if os.path.exists(path) else new_week(monday, sunday, window)
+    if ds in week["days"]:
         print(f"{target} already collected; nothing to do")
         return None
     try:
-        run_day(ds, window=window)
-        events, airborne_early, aircraft, overflights, outside = build([ds], window=window)
+        add_night(week, ds, window)
     except Exception as e:
         print(f"collection failed (archive may not be published yet): {e}")
         return False
-    if week is None:
-        week = {"start": monday.isoformat(), "end": sunday.isoformat(), "days": [],
-                "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
-                "note": None, "events": [], "airborne_quiet": [], "overflights": [],
-                "ladd_operators": []}
+    save_week(path, week, allow_loss)
+    print(f"wrote {path}: added {ds}; {week['total_ops']} ops, "
+          f"{week['quiet_hours_ops']} during quiet hours")
+    return True
+
+
+def new_week(start, end, window, note=None):
+    return {"start": start.isoformat(), "end": end.isoformat(), "days": [], "partial": True,
+            "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
+            "note": note, "events": [], "airborne_quiet": [], "overflights": [],
+            "outside_events": [], "ladd_operators": []}
+
+
+def add_night(week, ds, window):
+    """Fetch one night and put it into the week, replacing that night's entries if stored.
+    daily() and collect() both use it. Nothing is written here; see save_week()."""
+    run_day(ds, window=window)
+    events, airborne_early, aircraft, overflights, outside = build([ds], window=window)
     week["days"] = sorted(set(week["days"]) | {ds})
-    week["partial"] = len(week["days"]) < 7
+    span = (datetime.date.fromisoformat(week["end"]) - datetime.date.fromisoformat(week["start"])).days + 1
+    week["partial"] = len(week["days"]) < span
     for key, new in (("events", events), ("airborne_quiet", airborne_early),
                      ("overflights", overflights), ("outside_events", outside)):
         merged = [e for e in week.get(key, []) if e["date"] != ds] + new
@@ -61,11 +74,29 @@ def daily(window="full", date=None):
         week[key] = merged
     week.update(tally(week["events"], set(week.get("ladd_operators", []))
                       | {a["reg"] for a in aircraft if a["ladd"]}))
-    os.makedirs("data/weekly", exist_ok=True)
-    json.dump(week, open(path, "w"), indent=1)
-    print(f"wrote {path}: added {ds}; {week['total_ops']} ops, "
-          f"{week['quiet_hours_ops']} during quiet hours")
-    return True
+
+
+def save_week(path, week, allow_loss=False):
+    """The one way a week file is written. Unless allow_loss, every night already stored must
+    keep at least as many takeoffs and landings and as many "airborne nearby" entries as
+    before; otherwise RuntimeError, and nothing is written. On 2026-08-17 a collection run
+    replaced three good nights with an incomplete download; this makes that impossible."""
+    if os.path.exists(path):
+        old = json.load(open(path))
+        lost = []
+        for d in old.get("days", []):
+            counts = [sum(1 for e in w.get(k, []) if e["date"] == d)
+                      for w in (old, week) for k in ("events", "overflights")]
+            if d not in week.get("days", []) or counts[2] < counts[0] or counts[3] < counts[1]:
+                lost.append(f"night {d}: takeoffs and landings {counts[0]} -> {counts[2]}, "
+                            f"airborne nearby {counts[1]} -> {counts[3]}")
+        if lost and not allow_loss:
+            raise RuntimeError(f"{path}: not written, it would lose stored entries: " + "; ".join(lost))
+        for line in lost:
+            print(f"{path}: losing, as allowed: {line}")
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(week, f, indent=1)
 
 
 def entry_key(e):
@@ -99,6 +130,7 @@ def reread():
     today = datetime.date.today().isoformat()
     for path in sorted(glob.glob("data/weekly/*.json")):
         week = json.load(open(path))
+        stored_week = json.loads(json.dumps(week))
         ladd = set(week.get("ladd_operators", []))
         stored = tally(week["events"], ladd)
         assert all(week[k] == v for k, v in stored.items()), f"{path}: tally() differs from stored figures"
@@ -113,8 +145,12 @@ def reread():
             merged.sort(key=entry_key)
             week[key] = merged
         week.update(tally(week["events"], ladd | {a["reg"] for a in aircraft if a["ladd"]}))
-        week["reread"] = {"nights": raw, "on": today, "rule": REREAD_RULE}
-        json.dump(week, open(path, "w"), indent=1)
+        stored_on = (stored_week.get("reread") or {}).get("on")
+        week["reread"] = {"nights": raw, "on": stored_on, "rule": REREAD_RULE}
+        if week == stored_week:
+            continue   # nothing changed since the last re-read: keep its date, write nothing
+        week["reread"]["on"] = today
+        save_week(path, week, allow_loss=True)   # the deliberate path: it removes false entries
         print(f"re-read {path}: {len(raw)} nights from raw files; {week['total_ops']} ops, "
               f"{week['quiet_hours_ops']} during quiet hours, {len(outside)} outside the recorded hours")
 
@@ -126,27 +162,24 @@ def last_complete_week():
     return [monday + datetime.timedelta(days=i) for i in range(7)]
 
 
-def collect(dates, note=None, window="full", frame=None):
-    """Collect the given dates. frame=(monday, sunday) pins the week file the
-    dates belong to, so a partial week accumulates in one file day by day."""
+def collect(dates, note=None, window="full", frame=None, recollect=False, allow_loss=False):
+    """Collect the given dates into their week file. frame=(monday, sunday) pins the week
+    file the dates belong to. An existing week file is merged into, not replaced: nights
+    already stored are neither fetched nor replaced unless recollect, and note (unless a new
+    one is given) and reread are kept. The write goes through save_week()."""
     datestrs = [d.isoformat() for d in dates]
-    for ds in datestrs:
-        run_day(ds, window=window)
-    events, airborne_early, aircraft, overflights, outside = build(datestrs, window=window)
-    start = frame[0].isoformat() if frame else datestrs[0]
-    end = frame[1].isoformat() if frame else datestrs[-1]
-    week = {
-        "start": start, "end": end, "days": datestrs,
-        "partial": bool(frame) and len(datestrs) < 7,
-        "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
-    }
-    week.update(tally(events, {a["reg"] for a in aircraft if a["ladd"]}))
-    week.update({"note": note, "events": events, "airborne_quiet": airborne_early,
-                 "overflights": overflights, "outside_events": outside})
-    os.makedirs("data/weekly", exist_ok=True)
-    path = f"data/weekly/{week['start']}_{week['end']}.json"
-    json.dump(week, open(path, "w"), indent=1)
-    print(f"wrote {path}: {week['total_ops']} ops, {week['quiet_hours_ops']} during quiet hours")
+    start = frame[0] if frame else dates[0]
+    end = frame[1] if frame else dates[-1]
+    path = f"data/weekly/{start.isoformat()}_{end.isoformat()}.json"
+    week = json.load(open(path)) if os.path.exists(path) else new_week(start, end, window)
+    todo = [ds for ds in datestrs if recollect or ds not in week["days"]]
+    for ds in todo:
+        add_night(week, ds, window)
+    if note is not None:
+        week["note"] = note
+    save_week(path, week, allow_loss)
+    print(f"wrote {path}: fetched {len(todo)} of {len(datestrs)} nights; "
+          f"{week['total_ops']} ops, {week['quiet_hours_ops']} during quiet hours")
     return week
 
 
@@ -302,7 +335,7 @@ def render():
   <h1>Quiet-hours flight log</h1>
   <p class="standfirst">
     Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
-    (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
+    (10:00 pm to 8:30 am), collected from public flight-tracking data. The monitored window
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
     first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
     for flights that need the edges of the quiet window. Every entry (a takeoff, a landing or an "airborne nearby"
@@ -313,11 +346,14 @@ def render():
     number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
     flight by flight below, air ambulances and other working flights included.
   </p>
+  <p class="standfirst" style="margin-top:-14px;"><b>Collection stopped:</b> the last night in the log is the
+  night ending 2026-10-27, and no later night is in it. The log is built from ADS-B Exchange\'s public
+  archive of aircraft position reports. Since 2026-10-29 that archive has refused every request from the
+  job that collects each night (the answer is HTTP 403). The nightly collection was paused on 2026-11-18.</p>
   <details class="howto">
     <summary>Heard something? How to look up a moment</summary>
     <p>Find the week below, open its timeline, and hover the marks near your time; each night
-    runs 22:00 to 08:30, left to right. Each night's data is posted the following evening, so
-    this morning's noise appears tonight. To see the actual sky at an exact moment, use
+    runs 22:00 to 08:30, left to right. To see the actual sky at an exact moment, use
     ADS-B Exchange's replay: <span class="mono">globe.adsbexchange.com/?replay=YYYY-MM-DD-HH:MM&amp;lat=39.32&amp;lon=-120.14&amp;zoom=11.5</span>
     with the time in UTC (Pacific time plus 7 hours in summer). Aircraft flying more than
     10 nautical miles out, or with location blocked at the source, are not in this log.</p>
@@ -333,7 +369,7 @@ def render():
   {"".join(details) if details else "<p>No quiet-hours activity recorded yet.</p>"}
 
   <div class="foot">
-    <p>Updated Mondays by a scheduled job. Underlying per-flight data for each week is in
+    <p>Underlying per-flight data for each week is in
     <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>;
     method and limits in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>.
     Aircraft without transponders do not appear.</p>
@@ -428,7 +464,8 @@ OP_CSS = """
   .tag { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
     font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
   .table-scroll { overflow-x: auto; }
-  tr.gap td { color: var(--muted); font-size: 12px; padding: 3px 10px 3px 14px; border-left: 2px solid var(--axis); }
+  .inferred { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  table.log td:not(:nth-child(4)) { white-space: nowrap; }   /* only From / to wraps */
   tr.outside td { color: var(--muted); }
   a { color: var(--accent); }
   .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
@@ -525,11 +562,19 @@ def role_tag(a):
     return f' <span class="tag">{r}</span>' if r else ""
 
 
-GAP_ONE_NIGHT = "No {missing} recorded between these two {kind}"
-GAP_UNRECORDED = "No {missing} recorded between these. 8:30 am to 10:00 pm not recorded."
-GAP_REREAD = ("No {missing} recorded between these. The raw files kept for this aircraft do not "
-              "show one, and they do not cover every hour in between.")
-GAP_UNLISTED = "Other takeoffs and landings outside recorded hours lie between these and are not listed."
+# Where two takeoffs or two landings follow each other, the earlier row says what the log
+# lacks. {when} is the later row's real date and time.
+GAP_DEP_UNRECORDED = "Return not recorded: 8:30 am to 10:00 pm is not recorded. It came before the next takeoff, {when}."
+GAP_DEP_REREAD = ("Return not in the raw files kept, which do not cover every hour. "
+                  "It came before the next takeoff, {when}.")
+GAP_DEP_ONE_NIGHT = "Return not recorded in this night's data. It came before the next takeoff, {when}."
+GAP_ARR_UNRECORDED = ("Next takeoff not recorded: 8:30 am to 10:00 pm is not recorded. "
+                      "It came before the landing on {when}.")
+GAP_ARR_REREAD = ("Next takeoff not in the raw files kept, which do not cover every hour. "
+                  "It came before the landing on {when}.")
+GAP_ARR_ONE_NIGHT = "Next takeoff not recorded in this night's data. It came before the landing on {when}."
+GAP_UNLISTED = "Other takeoffs and landings outside recorded hours follow before {when} and are not listed."
+NOTE_SLOT = "\x00note\x00"   # where an inferred note goes in an event row's From / to cell
 # An outside-hours entry closes a recorded one only within this many hours of it: a day file
 # and its neighbour give continuous coverage inside 24 hours, and none beyond.
 OUTSIDE_MAX_H = 24
@@ -641,18 +686,18 @@ def render_operators(weeks):
                 a["out"].append((when, e))
         shown_out += len(a["out"])
 
-    sections, gaps = [], 0
+    sections, gaps = [], {}
     for a in ranked:
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
         log_rows = [(real_time(e["date"], e["hm"]), e,
                      f'<tr><td class="mono">{real_date(e["date"], e["hm"])}</td><td class="mono">{e["hm"]}</td>'
                      f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
-                     f'<td>{html.escape(e["other"])}</td>'
+                     f'<td>{html.escape(e["other"])}{NOTE_SLOT}</td>'
                      f'<td>{QCHIP if e["pre7"] else ""}</td></tr>')
                     for e in a["events"]]
         log_rows += [(when, e,
                       f'<tr class="outside"><td class="mono">{e["day"]}</td><td class="mono">{e["hm"]}</td>'
-                      f'<td>{OUTSIDE_WHAT[e["ev"]]}</td><td>{html.escape(e["other"])}</td><td></td></tr>')
+                      f'<td>{OUTSIDE_WHAT[e["ev"]]}</td><td>{html.escape(e["other"])}{NOTE_SLOT}</td><td></td></tr>')
                      for when, e in a["out"]]
         log_rows += [(real_time(o["date"], o["first"]), None,
                       f'<tr><td class="mono">{real_date(o["date"], o["first"])}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
@@ -661,36 +706,38 @@ def render_operators(weeks):
                       f'<td>{QCHIP if o.get("quiet_min", 0) > 0 else ""}</td></tr>')
                      for o in a["ovf"]]
         log_rows.sort(key=lambda kv: kv[0])
-        # Two takeoffs in a row, or two landings in a row, get a row between them saying what
-        # the log lacks. Two entries filed under one night key are in one recorded night (their
-        # printed dates can differ across midnight); otherwise hours the log does not record
-        # lie between them. Where outside-hours entries of the missing kind lie between them
-        # (not listed, as they close nothing), the row says so; otherwise, where either night
-        # was re-read from raw files, the row says the files do not show one.
-        out_rows, prev, prev_when = [], None, None
+        # Two takeoffs in a row, or two landings in a row: the earlier row gets a note saying
+        # what the log lacks. Two entries filed under one night key are in one recorded night
+        # (their printed dates can differ across midnight); otherwise hours the log does not
+        # record lie between them. Where outside-hours entries of the missing kind lie between
+        # them (not listed, as they close nothing), the note says so; otherwise, where either
+        # night was re-read from raw files, it says the files do not show one.
+        out_rows, prev, prev_when, prev_i = [], None, None, None
         unlisted = [(outside_time(x), x["ev"]) for x in out_by_reg.get(a["reg"], [])]
         for when, e, row in log_rows:
             if e is not None:
                 if prev is not None and prev["ev"] == e["ev"]:
-                    missing = "landing" if e["ev"] == "DEP" else "takeoff"
+                    dep = e["ev"] == "DEP"
                     if any(prev_when < t < when and ev != e["ev"] for t, ev in unlisted):
-                        note = GAP_UNLISTED
+                        text, name = GAP_UNLISTED, "unlisted"
                     elif prev["date"] in reread_nights or e["date"] in reread_nights:
-                        note = GAP_REREAD.format(missing=missing)
+                        text, name = (GAP_DEP_REREAD if dep else GAP_ARR_REREAD), "re-read"
                     elif prev["date"] == e["date"]:
-                        kind = "takeoffs" if e["ev"] == "DEP" else "landings"
-                        note = GAP_ONE_NIGHT.format(missing=missing, kind=kind)
+                        text, name = (GAP_DEP_ONE_NIGHT if dep else GAP_ARR_ONE_NIGHT), "one night"
                     else:
-                        note = GAP_UNRECORDED.format(missing=missing)
-                    out_rows.append(f'<tr class="gap"><td colspan="5">{note}</td></tr>')
-                    gaps += 1
-                prev, prev_when = e, when
+                        text, name = (GAP_DEP_UNRECORDED if dep else GAP_ARR_UNRECORDED), "not recorded"
+                    note = text.format(when=when.strftime("%Y-%m-%d %H:%M"))
+                    out_rows[prev_i] = out_rows[prev_i].replace(
+                        NOTE_SLOT, f'<span class="inferred">{html.escape(note)}</span>')
+                    gaps[(name, e["ev"])] = gaps.get((name, e["ev"]), 0) + 1
+                prev, prev_when, prev_i = e, when, len(out_rows)
             out_rows.append(row)
+        out_rows = [r.replace(NOTE_SLOT, "") for r in out_rows]
         ev_rows = "".join(out_rows)
         sections.append(
             f'<h3 id="{html.escape(a["reg"])}" class="mono">{html.escape(a["reg"])} · {type_link(a["type"], a.get("desc"))} · {a["cls"]}{badge}'
             f' <span class="own">{html.escape(a.get("desc") or "")}{" · " if a.get("desc") and a.get("own") else ""}{html.escape(a["own"] or "")}</span>{role_tag(a)}</h3>'
-            f'<div class="table-scroll"><table><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
+            f'<div class="table-scroll"><table class="log"><thead><tr><th>Date</th><th>Time</th><th>What</th><th>From / to</th><th></th></tr></thead>'
             f'<tbody>{ev_rows}</tbody></table></div>')
 
     nights = sorted({d for w in weeks for d in w.get("days", [])})
@@ -709,8 +756,9 @@ def render_operators(weeks):
     dates. On the 48 of the 114 recorded nights whose raw position files were kept, a grey row marked
     "outside recorded hours" shows the landing after a recorded takeoff, or the takeoff before a recorded
     landing, if the aircraft's file shows it within 24 hours. These rows are not counted. Other takeoffs and
-    landings between 8:30 am and 10:00 pm are not listed. Where an aircraft has two takeoffs or two landings
-    in a row, a row between says what is missing. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
+    landings between 8:30 am and 10:00 pm are not listed. Where an aircraft's list shows two takeoffs in a row,
+    or two landings in a row, the earlier entry carries a note: the landing or takeoff in between is not
+    recorded, and the note gives the date and time before which it happened. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
   </p>
   <div class="table-scroll"><table>
     <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
@@ -759,16 +807,21 @@ def render_operators(weeks):
   and 659. New: 205 rows marked "outside recorded hours" (176 landings, 29 takeoffs), not counted. 101 of
   the landings follow a takeoff labelled "Local flight". Rows marking a missing takeoff or landing fell
   from 343 to 228. The two notes above give counts from before this re-read. <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a> has the method and
-  the check of the new ground test.</p></div>
+  the check of the new ground test.</p>
+  <p>Changed 2026-11-18: until this date the page had 228 separate rows, each placed between two takeoffs
+  in a row or two landings in a row, saying that a landing or takeoff was missing. Those rows are gone. The
+  same statement is now a note in the earlier of the two entries, with the date and time of the later
+  entry. No entry, count or time changed on 2026-11-18.</p></div>
 </div>
 """
     open("docs/operators.html", "w").write(page)
     print(f"rendered docs/operators.html: {len(ranked)} aircraft, {len(all_events)} events, "
-          f"{gaps} rows marking a takeoff or landing the log lacks, "
+          f"{sum(gaps.values())} notes on a takeoff or landing the log lacks "
+          f"({', '.join(f'{n} {k} {ev}' for (k, ev), n in sorted(gaps.items()))}), "
           f"{shown_out} outside-hours rows shown")
 
 
-if __name__ == "__main__":
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--week", action="store_true",
                     help="collect the last complete Mon-Sun week (the old weekly mode)")
@@ -778,24 +831,39 @@ if __name__ == "__main__":
     ap.add_argument("--render-only", action="store_true")
     ap.add_argument("--reread", action="store_true",
                     help="rebuild stored nights from the raw files under days/ (no network), then render")
+    ap.add_argument("--recollect", action="store_true",
+                    help="with --dates or --week: fetch stored nights again too (still refused if it loses entries)")
+    ap.add_argument("--force", action="store_true",
+                    help="write even if stored entries are lost; prints what is lost")
     ap.add_argument("--window", choices=["full", "morning"], default="full",
                     help="full = 22:00-08:30 (default); morning = 04:00-08:30 (backfill compatibility)")
-    args = ap.parse_args()
+    args = ap.parse_args(argv)
 
     failed = False
-    if args.reread:
-        reread()
-    elif not args.render_only:
-        if args.dates:
-            s, e = (datetime.date.fromisoformat(x) for x in args.dates.split(","))
-            dates = [s + datetime.timedelta(days=i) for i in range((e - s).days + 1)]
-            collect(dates, note=args.note, window=args.window)
-        elif args.week:
-            collect(last_complete_week(), note=args.note, window=args.window)
-        else:
-            # None = already collected (idle, fine); False = collection failed
-            date = datetime.date.fromisoformat(args.date) if args.date else None
-            failed = daily(window=args.window, date=date) is False
+    try:
+        if args.reread:
+            reread()
+        elif not args.render_only:
+            if args.dates:
+                s, e = (datetime.date.fromisoformat(x) for x in args.dates.split(","))
+                dates = [s + datetime.timedelta(days=i) for i in range((e - s).days + 1)]
+                collect(dates, note=args.note, window=args.window,
+                        recollect=args.recollect, allow_loss=args.force)
+            elif args.week:
+                collect(last_complete_week(), note=args.note, window=args.window,
+                        recollect=args.recollect, allow_loss=args.force)
+            else:
+                # None = already collected (idle, fine); False = collection failed
+                date = datetime.date.fromisoformat(args.date) if args.date else None
+                failed = daily(window=args.window, date=date, allow_loss=args.force) is False
+    except RuntimeError as e:
+        # A refused write or an incomplete download: stop non-zero so the workflow commits nothing.
+        print(f"refused: {e}", file=sys.stderr)
+        sys.exit(2)
     render()
     if failed:
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

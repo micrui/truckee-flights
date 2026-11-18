@@ -108,8 +108,12 @@ def klass(t):
     if t in GLIDER: return "glider"
     return "piston"
 
+FAILED = {}   # path -> why its last fetch failed: the HTTP status code, or the error text
+
+
 def fetch(url, path):
-    """Download url to path with retry/backoff; cached if path already exists."""
+    """Download url to path with retry/backoff; cached if path already exists.
+    On failure returns None and records the reason in FAILED[path]."""
     if os.path.exists(path) and os.path.getsize(path) > 0:
         return path
     for attempt in range(4):
@@ -121,12 +125,17 @@ def fetch(url, path):
                     import gzip
                     data = gzip.decompress(data)
             open(path, "wb").write(data)
+            FAILED.pop(path, None)
             return path
         except Exception as e:
+            if getattr(e, "code", None) == 404:   # not in the archive; retrying will not help
+                FAILED[path] = 404
+                return None
             print(f"  fetch attempt {attempt + 1}/4 {url.rsplit('/', 1)[-1]}: {e}",
                   file=sys.stderr)
             if attempt == 3:
                 print(f"  fetch FAILED {url}", file=sys.stderr)
+                FAILED[path] = getattr(e, "code", None) or str(e)
                 return None
             if getattr(e, "code", None) == 429:
                 time.sleep(30 * (attempt + 1))  # rate limited: back off hard
@@ -162,6 +171,10 @@ def run_day(datestr, window="morning"):
                                           f"{daydir}/heatmap/{s}.bin"), SLOTS))
     print(f"{datestr}: heatmap slices {sum(1 for g in got if g)}/{len(SLOTS)}",
           file=sys.stderr)
+    # An incomplete download must not be stored as a night: refuse it (weekly.py exits non-zero).
+    missing = [s for s, g in zip(SLOTS, got) if not g]
+    if missing:
+        raise RuntimeError(f"{datestr}: heatmap slices missing: {missing}; nothing stored")
 
     # Parse heatmap slices. Entry format (16 bytes LE): int32 hex, int32 lat*1e6,
     # int32 lon*1e6, int16 alt/25, int16 gs*10. hex 0x0e7f7c9d is a timestamp
@@ -200,6 +213,14 @@ def run_day(datestr, window="morning"):
         got = list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
                                           f"{daydir}/traces/{h}.json"), sel))
     print(f"{datestr}: traces {sum(1 for g in got if g)}/{len(sel)}", file=sys.stderr)
+    failed = [(h, FAILED.get(f"{daydir}/traces/{h}.json")) for h, g in zip(sel, got) if not g]
+    not_found = [h for h, why in failed if why == 404]
+    if not_found:
+        print(f"{datestr}: {len(not_found)} traces not in the archive (HTTP 404), skipped: "
+              f"{', '.join(not_found)}", file=sys.stderr)
+    others = [f"{h} ({why})" for h, why in failed if why != 404]
+    if others:
+        raise RuntimeError(f"{datestr}: trace downloads failed: {', '.join(others)}; nothing stored")
 
     W0, W1 = window_bounds(datestr, window)
     out = []

@@ -56,7 +56,7 @@
   <h1>Quiet-hours flight log</h1>
   <p class="standfirst">
     Every takeoff and landing at Truckee Tahoe Airport in the early-morning window
-    (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
+    (10:00 pm to 8:30 am), collected from public flight-tracking data. The monitored window
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
     first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
     for flights that need the edges of the quiet window. Every entry (a takeoff, a landing or an "airborne nearby"
@@ -67,11 +67,14 @@
     number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
     flight by flight below, air ambulances and other working flights included.
   </p>
+  <p class="standfirst" style="margin-top:-14px;"><b>Collection stopped:</b> the last night in the log is the
+  night ending 2026-10-27, and no later night is in it. The log is built from ADS-B Exchange's public
+  archive of aircraft position reports. Since 2026-10-29 that archive has refused every request from the
+  job that collects each night (the answer is HTTP 403). The nightly collection was paused on 2026-11-18.</p>
   <details class="howto">
     <summary>Heard something? How to look up a moment</summary>
     <p>Find the week below, open its timeline, and hover the marks near your time; each night
-    runs 22:00 to 08:30, left to right. Each night's data is posted the following evening, so
-    this morning's noise appears tonight. To see the actual sky at an exact moment, use
+    runs 22:00 to 08:30, left to right. To see the actual sky at an exact moment, use
     ADS-B Exchange's replay: <span class="mono">globe.adsbexchange.com/?replay=YYYY-MM-DD-HH:MM&amp;lat=39.32&amp;lon=-120.14&amp;zoom=11.5</span>
     with the time in UTC (Pacific time plus 7 hours in summer). Aircraft flying more than
     10 nautical miles out, or with location blocked at the source, are not in this log.</p>
@@ -151,7 +154,7 @@
   </details>
 
   <div class="foot">
-    <p>Updated Mondays by a scheduled job. Underlying per-flight data for each week is in
+    <p>Underlying per-flight data for each week is in
     <a href="https://github.com/micrui/truckee-flights/tree/main/data/weekly">data/weekly/</a>;
     method and limits in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>.
     Aircraft without transponders do not appear.</p>

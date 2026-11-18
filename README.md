@@ -39,7 +39,7 @@ Scope notes: one summer week; ADS-B-equipped aircraft only, so light-aircraft co
 
 ## Ongoing: quiet-hours flight log
 
-A scheduled job collects the most recent complete Monday-to-Sunday week every Monday and publishes it to the [quiet-hours flight log](https://micrui.net/truckee/flights/quiet-hours.html): total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). From the week of August 10, 2026, the monitored window covers the full voluntary quiet hours plus the morning after (10:00 pm to 8:30 am); earlier weeks, tagged "mornings only," cover 4:00 to 8:30 am.
+A scheduled job added each night to the [quiet-hours flight log](https://micrui.net/truckee/flights/quiet-hours.html) until the night ending 2026-10-27. The source archive has refused requests since 2026-10-29 (`data/health/2026-11.md`), and the schedule is paused since 2026-11-18. The log gives, for each week: total early-morning takeoffs and landings, local round trips, and a flight-by-flight list of everything that moved during the voluntary quiet hours. Per-week data lands in [`data/weekly/`](data/weekly/). From the week of August 10, 2026, the monitored window covers the full voluntary quiet hours plus the morning after (10:00 pm to 8:30 am); earlier weeks, tagged "mornings only," cover 4:00 to 8:30 am.
 
 ## Reproducing
 

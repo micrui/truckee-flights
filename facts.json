@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "facts": [
     {
       "id": "fy2023-property-tax-revenue",
@@ -1022,9 +1022,9 @@
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pages": ["docs/operators.html"],
-      "notes": "Counted from data/weekly/ on 2026-11-17, after 48 nights were re-read from raw files, in time order per aircraft with the outside-hours rows the page shows: 176 takeoffs are followed by another takeoff and 52 landings by another landing. Before the re-read the count was 290 and 53. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The page marks each case with a row. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
+      "notes": "Counted from data/weekly/ on 2026-11-17, after 48 nights were re-read from raw files, in time order per aircraft with the outside-hours rows the page shows: 176 takeoffs are followed by another takeoff and 52 landings by another landing. Before the re-read the count was 290 and 53. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The earlier of the two entries carries a muted note saying what is missing and that it came before the later entry's date and time: 228 notes, 147 saying 8:30 am to 10:00 pm is not recorded, 57 saying the raw files kept do not show it, 24 saying outside-hours takeoffs and landings lie between that are not listed. Until 2026-11-18 each case was a row between the two entries. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
     },
     {
       "id": "operators-page-correction-2026-11-16",
@@ -1117,13 +1117,28 @@
     },
     {
       "id": "gaps-remaining-2026-11-17",
-      "claim": "After the re-read, 228 rows on the operators page mark a missing takeoff or landing (176 missing landings, 52 missing takeoffs), against 343 before. In 24 the kept files show outside-hours takeoffs and landings between the two that are not listed, and the row says so. In 57 more one of the two nights was re-read, and the row says the raw files kept for the aircraft do not show the missing takeoff or landing and do not cover every hour in between. 147 keep the older text.",
+      "claim": "After the re-read, 228 entries on the operators page lack the takeoff or landing that followed them (176 a landing, 52 a takeoff), against 343 before. The earlier of the two entries carries a note saying so, and that it came before the later entry's date and time. In 24 the kept files show outside-hours takeoffs and landings between the two that are not listed, and the note says so (21 after a landing, 3 after a takeoff). In 57 one of the two nights was re-read, and the note says the raw files kept do not show it and do not cover every hour (51 returns, 6 next takeoffs). 147 say 8:30 am to 10:00 pm is not recorded (125 returns, 22 next takeoffs).",
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
-      "checked": "2026-11-17",
+      "checked": "2026-11-18",
       "pages": ["docs/operators.html"],
-      "notes": "Counted from docs/operators.html as rendered on 2026-11-17. In the analysis of the 48 nights, the gaps the files could not close were mostly aircraft that landed at another airport and came back after their file ended (37 of 49), or had no file for the following night; files exist for the following night for only 8% of aircraft-nights, and each file ends at 5:00 pm Pacific."
+      "notes": "Counted from docs/operators.html as rendered on 2026-11-18; until then each case was a row between the two entries. In the analysis of the 48 nights, the gaps the files could not close were mostly aircraft that landed at another airport and came back after their file ended (37 of 49), or had no file for the following night; files exist for the following night for only 8% of aircraft-nights, and each file ends at 5:00 pm Pacific."
+    },
+    {
+      "id": "collection-stopped-2026-10-29",
+      "claim": "The last night in the log is the night ending 2026-10-27. Since 2026-10-29 ADS-B Exchange's public history archive has answered every request from the collection job with HTTP 403. The nightly collection was paused on 2026-11-18.",
+      "status": "verified",
+      "sources": [
+        "https://github.com/micrui/truckee-flights/actions/workflows/weekly.yml",
+        "https://github.com/micrui/truckee-flights/blob/main/data/health/2026-11.md"
+      ],
+      "method": "own-data",
+      "checked": "2026-11-18",
+      "pages": [
+        "docs/quiet-hours.html"
+      ],
+      "notes": "Every scheduled run of the quiet-hours-log workflow from 2026-10-29 failed at the fetch step, twice a day; the run history is public. A single request from another network on 2026-11-17 was also answered 403. The two cron entries in .github/workflows/weekly.yml are commented out since 2026-11-18; a manual run still works. Whether the archive is behind a bot wall or was withdrawn is not known."
     }
   ]
 }

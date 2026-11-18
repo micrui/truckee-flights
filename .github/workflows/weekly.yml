@@ -1,13 +1,20 @@
 name: quiet-hours-log
 
 on:
-  schedule:
-    # Nightly 04:15 UTC (~9:15 pm Pacific): the UTC day just closed, so the
-    # night that ended at 08:30 this morning is now published; add it.
-    - cron: "15 4 * * *"
-    # Morning fallback 15:45 UTC (~8:45 am Pacific): catch late archives so
-    # the page is current for morning readers.
-    - cron: "45 15 * * *"
+  # Schedule paused 2026-11-18. The ADS-B Exchange history archive has answered
+  # HTTP 403 to every request since 2026-10-29 (data/health/2026-11.md), so both
+  # nightly runs failed at the fetch step, twice a day. To resume, restore the
+  # two cron entries below; each missed night then needs a manual backfill
+  # (python3 weekly.py --date YYYY-MM-DD). A manual run still works: use
+  # "Run workflow", or its probe_date input to test the archive.
+  #
+  # schedule:
+  #   # Nightly 04:15 UTC (~9:15 pm Pacific): the UTC day just closed, so the
+  #   # night that ended at 08:30 this morning is now published; add it.
+  #   - cron: "15 4 * * *"
+  #   # Morning fallback 15:45 UTC (~8:45 am Pacific): catch late archives so
+  #   # the page is current for morning readers.
+  #   - cron: "45 15 * * *"
   workflow_dispatch:
     inputs:
       probe_date:
