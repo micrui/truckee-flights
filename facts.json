@@ -1138,7 +1138,7 @@
       "pages": [
         "docs/quiet-hours.html"
       ],
-      "notes": "Every scheduled run of the quiet-hours-log workflow from 2026-10-29 failed at the fetch step, twice a day; the run history is public. A single request from another network on 2026-11-17 was also answered 403. The two cron entries in .github/workflows/weekly.yml are commented out since 2026-11-18; a manual run still works. On 2026-11-18 the archive answered a request for a heatmap slice and for a trace file, for dates before and after 2026-10-29, with HTTP 403 and the text \"Historical data requires a verified session.\"; the site's front page answered 200. No announcement of the change was found."
+      "notes": "Every scheduled run of the quiet-hours-log workflow from 2026-10-29 failed at the fetch step, twice a day; the run history is public. A single request from another network on 2026-11-17 was also answered 403. The two cron entries in .github/workflows/weekly.yml are commented out since 2026-11-18; a manual run still works. On 2026-11-18 the archive answered a request for a heatmap slice and for a trace file, for dates before and after 2026-10-29, with HTTP 403 and the text \"Historical data requires a verified session.\"; the site's front page answered 200. No announcement of the change was found. The map page's own script runs Cloudflare Turnstile without showing anything, posts the token to /turnstile-token, and the server then serves history to that browser session: on 2026-11-18 one browser got a history file with its cookies (HTTP 200) and the same refusal without them. A request that carries only a session id, or that first makes the page's start-up calls, is refused."
     }
   ]
 }
