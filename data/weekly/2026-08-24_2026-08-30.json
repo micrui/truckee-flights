@@ -1932,5 +1932,79 @@
    "pre7": true
   }
  ],
- "local_flights": 14
+ "local_flights": 14,
+ "outside_events": [
+  {
+   "date": "2026-08-25",
+   "reg": "N8647W",
+   "type": "P28B",
+   "cls": "piston",
+   "own": "CHASE DAN",
+   "role": "",
+   "desc": "PIPER PA-28-201T/235/236",
+   "ev": "ARR",
+   "hm": "08:34",
+   "other": "KTRK Truckee",
+   "day": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "DEP",
+   "hm": "09:52",
+   "other": "KCXP Carson City",
+   "day": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N9110H",
+   "type": "C172",
+   "cls": "piston",
+   "own": "SIERRA AERO LLC",
+   "role": "flight school",
+   "desc": "CESSNA 172 Skyhawk",
+   "ev": "ARR",
+   "hm": "11:50",
+   "other": "KCXP Carson City",
+   "day": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "ARR",
+   "hm": "16:20",
+   "other": "KSQL San Carlos",
+   "day": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "reg": "N460NG",
+   "type": "PC12",
+   "cls": "turboprop",
+   "own": "NOVEMBER GOLF MANAGEMENT LLC",
+   "role": "",
+   "desc": "PILATUS PC-12",
+   "ev": "DEP",
+   "hm": "16:38",
+   "other": "KRNO Reno",
+   "day": "2026-08-25"
+  }
+ ],
+ "reread": {
+  "nights": [
+   "2026-08-25"
+  ],
+  "on": "2026-11-17",
+  "rule": "on the ground: the transponder's ground flag, or within 1.5 nm of the field, 30 kt or slower, at field level (geometric altitude 5,830 ft, within 75 ft)"
+ }
 }

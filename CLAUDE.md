@@ -37,10 +37,17 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
 
 - `pipeline.py` fetches ADS-B Exchange heatmaps/traces for a date; windows: "morning"
   (05:00–08:30) and "full" (22:00 prev day–08:30). Stdlib only.
-- `summarize.py` builds event lists, overflight sessions (gap-split at 20 min), operator roles.
+- `summarize.py` builds event lists, overflight sessions (gap-split at 20 min), operator roles,
+  and `outside_events`: every takeoff and landing the day files show outside the recorded hours.
+  A row is on the ground when the transponder says so or when `ground_rule()` does (constants
+  at the top of the file; calibration in METHOD.md).
 - `weekly.py`: `collect()` writes `data/weekly/*.json`; `render()` writes `docs/quiet-hours.html`,
   per-week pages in `docs/weeks/`, and `docs/operators.html`. Aircraft class is re-derived at
-  render time via `klass()`; never trust cached class fields.
+  render time via `klass()`; never trust cached class fields. `collect()`, `daily()` and
+  `reread()` compute a week's figures through one function, `tally()`.
+  `python3 weekly.py --reread` rebuilds every stored night that still has raw files under `days/`
+  (no network), leaves the other nights as stored, and records the nights in the week file's
+  `reread` field.
 - The operators page (`render_operators()` in `weekly.py`) lists each aircraft's entries in the
   order they happened, each with the calendar date it happened. The data files a night under
   the date of its morning; `real_time()` and `real_date()` put a 10:00 pm to midnight entry on
@@ -49,7 +56,10 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
   because a strip is one night. Where two takeoffs or two landings follow each other, the page
   inserts a row saying what the log lacks: only 10:00 pm to 8:30 am is recorded, so the takeoff
   or landing in between usually is not. Whether the two are in one night is decided by the
-  night they are filed under, not by the dates printed.
+  night they are filed under, not by the dates printed. An outside-hours takeoff or landing
+  from `outside_events` is shown, muted, only where it closes such a pair (a landing right after
+  a recorded takeoff, a takeoff right before a recorded landing, at most 24 hours apart); it counts
+  in no tally, and the gap rows are computed after it is placed.
   The weekly tables on the quiet-hours page (`render()`) and the week pages' "Notable this
   week" lists follow the same rule: time order, real dates.
 - `.github/workflows/weekly.yml` runs nightly 04:15 UTC and again 15:45 UTC as a late-archive

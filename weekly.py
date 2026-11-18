@@ -43,7 +43,7 @@ def daily(window="full", date=None):
         return None
     try:
         run_day(ds, window=window)
-        events, airborne_early, aircraft, overflights = build([ds], window=window)
+        events, airborne_early, aircraft, overflights, outside = build([ds], window=window)
     except Exception as e:
         print(f"collection failed (archive may not be published yet): {e}")
         return False
@@ -55,27 +55,68 @@ def daily(window="full", date=None):
     week["days"] = sorted(set(week["days"]) | {ds})
     week["partial"] = len(week["days"]) < 7
     for key, new in (("events", events), ("airborne_quiet", airborne_early),
-                     ("overflights", overflights)):
+                     ("overflights", overflights), ("outside_events", outside)):
         merged = [e for e in week.get(key, []) if e["date"] != ds] + new
-        merged.sort(key=lambda e: (e["date"], e.get("hm") or e.get("first") or ""))
+        merged.sort(key=entry_key)
         week[key] = merged
-    ev = week["events"]
-    quiet = [e for e in ev if e["pre7"]]
-    week["total_ops"] = len(ev)
-    week["unique_aircraft"] = len({e["reg"] for e in ev})
-    week["by_class"] = dict(Counter(e["cls"] for e in ev))
-    week["quiet_hours_ops"] = len(quiet)
-    week["quiet_hours_by_class"] = dict(Counter(e["cls"] for e in quiet))
-    week["quiet_hours_events"] = quiet
-    week["local_flights"] = sum(1 for e in ev if e["other"].startswith("Local flight"))
-    new_ladd = {a["reg"] for a in aircraft
-                if a["ladd"] and a["reg"] in {e["reg"] for e in events}}
-    week["ladd_operators"] = sorted(set(week.get("ladd_operators", [])) | new_ladd)
+    week.update(tally(week["events"], set(week.get("ladd_operators", []))
+                      | {a["reg"] for a in aircraft if a["ladd"]}))
     os.makedirs("data/weekly", exist_ok=True)
     json.dump(week, open(path, "w"), indent=1)
     print(f"wrote {path}: added {ds}; {week['total_ops']} ops, "
           f"{week['quiet_hours_ops']} during quiet hours")
     return True
+
+
+def entry_key(e):
+    return (e["date"], e.get("day", ""), e.get("hm") or e.get("first") or "")
+
+
+def tally(events, ladd):
+    """A week's aggregate figures from its events. collect(), daily() and reread() all use it.
+    ladd: registrations on the FAA LADD list; only those with an event this week are kept."""
+    quiet = [e for e in events if e["pre7"]]
+    regs = {e["reg"] for e in events}
+    return {
+        "total_ops": len(events),
+        "unique_aircraft": len(regs),
+        "by_class": dict(Counter(e["cls"] for e in events)),
+        "quiet_hours_ops": len(quiet),
+        "quiet_hours_by_class": dict(Counter(e["cls"] for e in quiet)),
+        "quiet_hours_events": quiet,
+        "local_flights": sum(1 for e in events if e["other"].startswith("Local flight")),
+        "ladd_operators": sorted(r for r in ladd if r in regs),
+    }
+
+
+REREAD_RULE = ("on the ground: the transponder's ground flag, or within 1.5 nm of the field, "
+               "30 kt or slower, at field level (geometric altitude 5,830 ft, within 75 ft)")
+
+
+def reread():
+    """Rebuild, from the raw files kept under days/, every stored night that has them.
+    No network. Nights without raw files stay exactly as stored."""
+    today = datetime.date.today().isoformat()
+    for path in sorted(glob.glob("data/weekly/*.json")):
+        week = json.load(open(path))
+        ladd = set(week.get("ladd_operators", []))
+        stored = tally(week["events"], ladd)
+        assert all(week[k] == v for k, v in stored.items()), f"{path}: tally() differs from stored figures"
+        raw = [d for d in week["days"] if os.path.exists(f"days/{d}/ops.json")]
+        if not raw:
+            continue
+        window = "full" if week.get("window_local", "").startswith("22") else "morning"
+        events, airborne_early, aircraft, overflights, outside = build(raw, window=window)
+        for key, new in (("events", events), ("airborne_quiet", airborne_early),
+                         ("overflights", overflights), ("outside_events", outside)):
+            merged = [e for e in week.get(key, []) if e["date"] not in raw] + new
+            merged.sort(key=entry_key)
+            week[key] = merged
+        week.update(tally(week["events"], ladd | {a["reg"] for a in aircraft if a["ladd"]}))
+        week["reread"] = {"nights": raw, "on": today, "rule": REREAD_RULE}
+        json.dump(week, open(path, "w"), indent=1)
+        print(f"re-read {path}: {len(raw)} nights from raw files; {week['total_ops']} ops, "
+              f"{week['quiet_hours_ops']} during quiet hours, {len(outside)} outside the recorded hours")
 
 
 def last_complete_week():
@@ -91,28 +132,17 @@ def collect(dates, note=None, window="full", frame=None):
     datestrs = [d.isoformat() for d in dates]
     for ds in datestrs:
         run_day(ds, window=window)
-    events, airborne_early, aircraft, overflights = build(datestrs, window=window)
-    quiet = [e for e in events if e["pre7"]]
+    events, airborne_early, aircraft, overflights, outside = build(datestrs, window=window)
     start = frame[0].isoformat() if frame else datestrs[0]
     end = frame[1].isoformat() if frame else datestrs[-1]
     week = {
         "start": start, "end": end, "days": datestrs,
         "partial": bool(frame) and len(datestrs) < 7,
         "window_local": "22:00-08:30" if window == "full" else "04:00-08:30",
-        "total_ops": len(events),
-        "unique_aircraft": len({e["reg"] for e in events}),
-        "by_class": dict(Counter(e["cls"] for e in events)),
-        "quiet_hours_ops": len(quiet),
-        "quiet_hours_by_class": dict(Counter(e["cls"] for e in quiet)),
-        "quiet_hours_events": quiet,
-        "local_flights": sum(1 for e in events if e["other"].startswith("Local flight")),
-        "ladd_operators": sorted({a["reg"] for a in aircraft
-                                  if a["ladd"] and a["reg"] in {e["reg"] for e in events}}),
-        "note": note,
-        "events": events,
-        "airborne_quiet": airborne_early,
-        "overflights": overflights,
     }
+    week.update(tally(events, {a["reg"] for a in aircraft if a["ladd"]}))
+    week.update({"note": note, "events": events, "airborne_quiet": airborne_early,
+                 "overflights": overflights, "outside_events": outside})
     os.makedirs("data/weekly", exist_ok=True)
     path = f"data/weekly/{week['start']}_{week['end']}.json"
     json.dump(week, open(path, "w"), indent=1)
@@ -321,6 +351,19 @@ def render():
     on the chart pages changed the same way: 11 dates on 8 of the 17 pages. On 2 of those pages, two items
     swapped places, putting the list in time order. Each strip on a weekly chart is still one night,
     labelled with the date of its morning; marks left of midnight happened on the evening before.</p>
+    <p>Re-read 2026-11-17: the raw position files for 48 of the 114 recorded nights (those ending 2026-07-06
+    to 2026-08-25, except 2026-08-16, 2026-08-23 and 2026-08-24) were read again with a changed test for
+    when an aircraft is on the ground. The other 66 nights have no raw files and are unchanged. The method
+    is in <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a>. A scheduled collection on 2026-08-17 had replaced the nights ending 2026-08-13 to
+    2026-08-15 with an incomplete download; 34 takeoffs and landings were missing from 2026-08-17 to
+    2026-11-17 and are restored. Takeoffs and landings in the recorded hours, whole record: 1,013 before,
+    1,066 after. Of those, in quiet hours (10:00 pm to 7:00 am): 190 before, 199 after. Weekly totals that
+    changed (week beginning: before, after): 2026-07-06: 105, 109; 2026-07-13: 80, 83; 2026-07-20: 75, 79;
+    2026-07-27: 116, 114; 2026-08-03: 79, 83; 2026-08-10: 43, 80; 2026-08-17: 74, 77. Quiet-hours counts
+    that changed: 2026-07-13: 23, 24; 2026-07-20: 16, 17; 2026-08-10: 17, 23; 2026-08-17: 14, 15. The night
+    ending 2026-08-16 shows no takeoffs or landings. The same collection of 2026-08-17 wrote it. Its raw
+    files were not kept, so that zero cannot be checked. The week is marked. The two notes above give
+    counts from before this re-read.</p>
   </div>
 </div>
 '''
@@ -386,6 +429,7 @@ OP_CSS = """
     font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
   .table-scroll { overflow-x: auto; }
   tr.gap td { color: var(--muted); font-size: 12px; padding: 3px 10px 3px 14px; border-left: 2px solid var(--axis); }
+  tr.outside td { color: var(--muted); }
   a { color: var(--accent); }
   .foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 12.5px; max-width: 74ch; }
 """
@@ -481,6 +525,23 @@ def role_tag(a):
     return f' <span class="tag">{r}</span>' if r else ""
 
 
+GAP_ONE_NIGHT = "No {missing} recorded between these two {kind}"
+GAP_UNRECORDED = "No {missing} recorded between these. 8:30 am to 10:00 pm not recorded."
+GAP_REREAD = ("No {missing} recorded between these. The raw files kept for this aircraft do not "
+              "show one, and they do not cover every hour in between.")
+GAP_UNLISTED = "Other takeoffs and landings outside recorded hours lie between these and are not listed."
+# An outside-hours entry closes a recorded one only within this many hours of it: a day file
+# and its neighbour give continuous coverage inside 24 hours, and none beyond.
+OUTSIDE_MAX_H = 24
+OUTSIDE_WHAT = {"ARR": "Landed, outside recorded hours", "DEP": "Took off, outside recorded hours"}
+
+
+def outside_time(e):
+    """When an outside-hours entry happened; it carries its real date in day."""
+    h, m = (int(x) for x in e["hm"].split(":"))
+    return datetime.datetime.fromisoformat(e["day"]).replace(hour=h, minute=m)
+
+
 def render_operators(weeks):
     """Aggregate every recorded event across all weeks into per-aircraft logs."""
     seen, all_events = set(), []
@@ -493,6 +554,14 @@ def render_operators(weeks):
                 continue
             seen.add(key)
             all_events.append(e)
+    out_seen, all_out, reread_nights = set(), [], set()
+    for w in weeks:
+        reread_nights.update((w.get("reread") or {}).get("nights", []))
+        for e in w.get("outside_events", []):
+            key = (e["day"], e["hm"], e["reg"], e["ev"])
+            if key not in out_seen:
+                out_seen.add(key)
+                all_out.append(e)
     ovf_seen, all_ovf = set(), []
     for w in weeks:
         for o in w.get("overflights", []):
@@ -548,6 +617,30 @@ def render_operators(weeks):
                        f'<td class="mono">{", ".join(a["q_ovf_dates"])}</td>'
                        f'<td>{html.escape(a["own"] or "")}{role_tag(a)}</td></tr>')
 
+    # An outside-hours entry is shown only when it closes a recorded one: a landing right
+    # after a recorded takeoff, or a takeoff right before a recorded landing. Shown entries
+    # count in no tally.
+    out_by_reg = {}
+    for e in all_out:
+        out_by_reg.setdefault(e["reg"] or "?", []).append(e)
+    shown_out = 0
+    for a in ac.values():
+        merged = sorted([(real_time(e["date"], e["hm"]), e, False) for e in a["events"]]
+                        + [(outside_time(e), e, True) for e in out_by_reg.get(a["reg"], [])],
+                        key=lambda x: x[0])
+        a["out"] = []
+        for i, (when, e, out) in enumerate(merged):
+            if not out:
+                continue
+            near = datetime.timedelta(hours=OUTSIDE_MAX_H)
+            if (e["ev"] == "ARR" and i > 0 and not merged[i - 1][2] and merged[i - 1][1]["ev"] == "DEP"
+                    and when - merged[i - 1][0] <= near):
+                a["out"].append((when, e))
+            elif (e["ev"] == "DEP" and i + 1 < len(merged) and not merged[i + 1][2]
+                    and merged[i + 1][1]["ev"] == "ARR" and merged[i + 1][0] - when <= near):
+                a["out"].append((when, e))
+        shown_out += len(a["out"])
+
     sections, gaps = [], 0
     for a in ranked:
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
@@ -557,6 +650,10 @@ def render_operators(weeks):
                      f'<td>{html.escape(e["other"])}</td>'
                      f'<td>{QCHIP if e["pre7"] else ""}</td></tr>')
                     for e in a["events"]]
+        log_rows += [(when, e,
+                      f'<tr class="outside"><td class="mono">{e["day"]}</td><td class="mono">{e["hm"]}</td>'
+                      f'<td>{OUTSIDE_WHAT[e["ev"]]}</td><td>{html.escape(e["other"])}</td><td></td></tr>')
+                     for when, e in a["out"]]
         log_rows += [(real_time(o["date"], o["first"]), None,
                       f'<tr><td class="mono">{real_date(o["date"], o["first"])}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
                       f'<td>Airborne nearby, no landing ({o["dwell_min"]} min)</td>'
@@ -567,20 +664,27 @@ def render_operators(weeks):
         # Two takeoffs in a row, or two landings in a row, get a row between them saying what
         # the log lacks. Two entries filed under one night key are in one recorded night (their
         # printed dates can differ across midnight); otherwise hours the log does not record
-        # lie between them.
-        out_rows, prev = [], None
+        # lie between them. Where outside-hours entries of the missing kind lie between them
+        # (not listed, as they close nothing), the row says so; otherwise, where either night
+        # was re-read from raw files, the row says the files do not show one.
+        out_rows, prev, prev_when = [], None, None
+        unlisted = [(outside_time(x), x["ev"]) for x in out_by_reg.get(a["reg"], [])]
         for when, e, row in log_rows:
             if e is not None:
                 if prev is not None and prev["ev"] == e["ev"]:
                     missing = "landing" if e["ev"] == "DEP" else "takeoff"
-                    if prev["date"] == e["date"]:
+                    if any(prev_when < t < when and ev != e["ev"] for t, ev in unlisted):
+                        note = GAP_UNLISTED
+                    elif prev["date"] in reread_nights or e["date"] in reread_nights:
+                        note = GAP_REREAD.format(missing=missing)
+                    elif prev["date"] == e["date"]:
                         kind = "takeoffs" if e["ev"] == "DEP" else "landings"
-                        note = f"No {missing} recorded between these two {kind}"
+                        note = GAP_ONE_NIGHT.format(missing=missing, kind=kind)
                     else:
-                        note = f"No {missing} recorded between these. 8:30 am to 10:00 pm not recorded."
+                        note = GAP_UNRECORDED.format(missing=missing)
                     out_rows.append(f'<tr class="gap"><td colspan="5">{note}</td></tr>')
                     gaps += 1
-                prev = e
+                prev, prev_when = e, when
             out_rows.append(row)
         ev_rows = "".join(out_rows)
         sections.append(
@@ -600,13 +704,13 @@ def render_operators(weeks):
   <p class="standfirst">
     This page lists every aircraft recorded taking off or landing at the airport ({span}), including air
     ambulances and other working flights, and tallies each aircraft's takeoffs and landings during the
-    airport's voluntary quiet hours, 10:00 pm to 7:00 am. The log records takeoffs and landings between
-    10:00 pm and 8:30 am; those between 8:30 am and 10:00 pm are not recorded. Every entry (a takeoff, a landing
-    or an "airborne nearby" entry) shows the calendar date on which it happened. The recorded hours run
-    from 10:00 pm on one day to 8:30 am on the next, so one night's entries carry two dates. One aircraft's
-    list can show two takeoffs in a row with no landing between them, or two landings in a row with no
-    takeoff between them: the takeoff or landing in between is not recorded, and the log does not show
-    when it happened. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
+    airport's voluntary quiet hours, 10:00 pm to 7:00 am. The log records and counts takeoffs and landings
+    from 10:00 pm to 8:30 am the next day. Each entry shows its calendar date, so one night's entries show two
+    dates. On the 48 of the 114 recorded nights whose raw position files were kept, a grey row marked
+    "outside recorded hours" shows the landing after a recorded takeoff, or the takeoff before a recorded
+    landing, if the aircraft's file shows it within 24 hours. These rows are not counted. Other takeoffs and
+    landings between 8:30 am and 10:00 pm are not listed. Where an aircraft has two takeoffs or two landings
+    in a row, a row between says what is missing. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
   </p>
   <div class="table-scroll"><table>
     <thead><tr><th>Tail #</th><th>Type</th><th>Class</th><th>Quiet-hours ops</th><th>All ops</th><th>Quiet-hours dates</th><th>Registered owner</th></tr></thead>
@@ -639,12 +743,29 @@ def render_operators(weeks):
   "Quiet-hours dates" cells and 15 of 34 "Dates" cells changed the same way. The order of rows did not
   change. The note of 2026-11-16 said all 82 and 45 had been out of time order. 22 and 8 had been: each
   was listed after a later entry of the same aircraft. The other 60 and 37 were in time order: no later
-  entry of the same aircraft was listed ahead of them.</p></div>
+  entry of the same aircraft was listed ahead of them.</p>
+  <p>Re-read 2026-11-17: the raw position files for 48 of the 114 recorded nights, those ending 2026-07-06
+  to 2026-08-25 except 2026-08-16, 2026-08-23 and 2026-08-24, were read again. The other 66 have none and
+  are unchanged. Before, an aircraft counted as on the ground only when its own position reports said so;
+  some aircraft never say so. Now a position report within 1.5 nautical miles of the airport, at 30 knots
+  or less and at runway height, also counts as on the ground. A takeoff or landing now counts only if the
+  position reports next to it show the aircraft in flight. Those nights gained 23 takeoffs and landings and
+  lost 4 landings (each an aircraft parked with its equipment switched on); 26 changed time by 1 to 3
+  minutes. 31 "airborne nearby" entries were removed (19 were takeoffs or landings, 12 were aircraft moving
+  on the ground); 3 were shortened. On 2026-08-17 a scheduled collection had replaced the nights ending
+  2026-08-13 to 2026-08-15 with an incomplete download; 34 takeoffs and landings were missing until
+  2026-11-17. They are restored from the raw files, with 22 "airborne nearby" entries. Totals, before and
+  after: takeoffs and landings 1,013 and 1,066; "airborne nearby" entries 639 and 630; aircraft listed 644
+  and 659. New: 205 rows marked "outside recorded hours" (176 landings, 29 takeoffs), not counted. 101 of
+  the landings follow a takeoff labelled "Local flight". Rows marking a missing takeoff or landing fell
+  from 343 to 228. The two notes above give counts from before this re-read. <a href="https://github.com/micrui/truckee-flights/blob/main/METHOD.md">METHOD.md</a> has the method and
+  the check of the new ground test.</p></div>
 </div>
 """
     open("docs/operators.html", "w").write(page)
     print(f"rendered docs/operators.html: {len(ranked)} aircraft, {len(all_events)} events, "
-          f"{gaps} rows marking a takeoff or landing the log lacks")
+          f"{gaps} rows marking a takeoff or landing the log lacks, "
+          f"{shown_out} outside-hours rows shown")
 
 
 if __name__ == "__main__":
@@ -655,12 +776,16 @@ if __name__ == "__main__":
     ap.add_argument("--date", help="backfill one night (YYYY-MM-DD) into its week")
     ap.add_argument("--note", help="label for this entry (e.g. 'Study week')")
     ap.add_argument("--render-only", action="store_true")
+    ap.add_argument("--reread", action="store_true",
+                    help="rebuild stored nights from the raw files under days/ (no network), then render")
     ap.add_argument("--window", choices=["full", "morning"], default="full",
                     help="full = 22:00-08:30 (default); morning = 04:00-08:30 (backfill compatibility)")
     args = ap.parse_args()
 
     failed = False
-    if not args.render_only:
+    if args.reread:
+        reread()
+    elif not args.render_only:
         if args.dates:
             s, e = (datetime.date.fromisoformat(x) for x in args.dates.split(","))
             dates = [s + datetime.timedelta(days=i) for i in range((e - s).days + 1)]

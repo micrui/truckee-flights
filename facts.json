@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "facts": [
     {
       "id": "fy2023-property-tax-revenue",
@@ -1002,9 +1002,9 @@
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
-      "checked": "2026-11-16",
+      "checked": "2026-11-17",
       "pages": ["docs/operators.html", "docs/quiet-hours.html"],
-      "notes": "The window is set in pipeline.py (WINDOWS, 'full': 22:00 the evening before to 08:30) and applied in summarize.py. All 1,013 de-duplicated takeoffs and landings in data/weekly/ through the night ending 2026-10-27 fall inside it; none has a time from 09:00 to 21:59."
+      "notes": "The window is set in pipeline.py (WINDOWS, 'full': 22:00 the evening before to 08:30) and applied in summarize.py. All 1,066 de-duplicated takeoffs and landings in data/weekly/ through the night ending 2026-10-27 fall inside it; none has a time from 09:00 to 21:59. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
     },
     {
       "id": "log-night-date-rule",
@@ -1022,9 +1022,9 @@
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
-      "checked": "2026-11-16",
+      "checked": "2026-11-17",
       "pages": ["docs/operators.html"],
-      "notes": "Counted from data/weekly/ on 2026-11-16 in time order per aircraft: 290 takeoffs are followed by another takeoff and 53 landings by another landing. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The page marks each case with a row."
+      "notes": "Counted from data/weekly/ on 2026-11-17, after 48 nights were re-read from raw files, in time order per aircraft with the outside-hours rows the page shows: 176 takeoffs are followed by another takeoff and 52 landings by another landing. Before the re-read the count was 290 and 53. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The page marks each case with a row. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
     },
     {
       "id": "operators-page-correction-2026-11-16",
@@ -1064,6 +1064,66 @@
         "docs/quiet-hours.html"
       ],
       "notes": "Counted on 2026-11-17 from data/weekly/ through the night ending 2026-10-27, and by comparing every regenerated page under docs/ row by row with the version published on 2026-11-16 (commit a561fa2): same number of rows on every page, every changed row timed 22:00 to 23:59 or a date-list cell, and no other difference except the two swapped items. The quiet-hours page has 365 table rows: 190 takeoffs and landings and 175 airborne-nearby entries. Each strip on a weekly chart page is still one night, labelled with the date of its morning."
+    },
+    {
+      "id": "ground-rule-2026-11-17",
+      "claim": "A trace row counts as on the ground when the transponder sends its ground flag, or, without the flag, when it is within 1.5 nm of the airport reference point, at 30 kt or less, and at field level: geometric altitude within 75 ft of 5,830 ft; failing that, pressure altitude corrected by the trace's own offset within 75 ft of 5,830 ft; failing that, pressure altitude within 600 ft of 5,904 ft. A row with no altitude counts on position and speed alone. A block edge counts as a takeoff or landing only when the airborne rows within 600 s of it include one farther than 1.5 nm, more than 300 ft above field elevation by pressure altitude, or faster than 50 kt.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/operators.html", "docs/quiet-hours.html"],
+      "notes": "summarize.py ground_rule() and points(); thresholds in the constants at the top of the file. Calibrated on 2026-11-17 on the 646 trace files of the 48 re-read nights whose aircraft send the flag, the rule alone against the flag, both with the flight test: of 1,315 flagged takeoffs and landings, takeoffs placed within 7 s of the flag's time (median; 90% within 19 s), landings within 16 s (90% within 30 s), 99.7% of matched ones within 2 minutes; 7 missed, 5 added (some are real landings the flag missed); 7 of 4,563 rows called on the ground while the aircraft was clearly airborne. Raw pressure altitude instead of geometric: 601 of 6,463. The flight test removes 3 movements on the 48 nights, all parked aircraft whose GPS altitude was settling after switch-on; at 1.0 nm, 600 ft and 80 kt it removes the same 3. 5,830 ft is the geometric altitude reported by aircraft rolling on the runways; pressure altitude of aircraft standing at the field ran 5,450 to 5,800 ft over these nights. The rule applies to the 48 re-read nights; the other 66 nights are as first collected, without it."
+    },
+    {
+      "id": "reread-2026-11-17",
+      "claim": "On 2026-11-17, 48 of the 114 recorded nights (2026-07-06 to 2026-08-25) were rebuilt from the raw files kept for them, with the ground rule. The other 66 nights, 2026-08-16, 2026-08-23, 2026-08-24 and every night from 2026-08-26 to 2026-10-27, have no raw files kept and are as first collected.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/operators.html", "docs/quiet-hours.html"],
+      "notes": "python3 weekly.py --reread; each re-read week file in data/weekly/ lists its nights under reread. Every entry of the 66 other nights is identical before and after. On the 48 nights the takeoffs and landings went from 567 to 620: 34 restored on three lost nights (see restored-nights-2026-08-13-to-15), 3 more on those nights and 20 elsewhere from the ground rule, 4 removed (landings made by parked transponders, three switching between airborne and ground and one switched on at the parking spot), 2 moved by 3 minutes, 24 moved by 1 or 2 minutes. Airborne-nearby entries on the 48 nights went from 340 to 331."
+    },
+    {
+      "id": "restored-nights-2026-08-13-to-15",
+      "claim": "The record for the nights ending 2026-08-13 (after 00:32), 2026-08-14 and 2026-08-15 lacked 34 takeoffs and landings and 24 airborne-nearby entries from 2026-08-17 to 2026-11-17. The re-read of 2026-11-17 restored them.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/operators.html", "docs/quiet-hours.html"],
+      "notes": "Evidence in git history of data/weekly/2026-08-10_2026-08-16.json: commit 7b9fe9b (2026-08-16) holds 17, 14 and 14 takeoffs and landings for the three nights; commit 4126ecf (the scheduled run of 2026-08-17 05:07 UTC, which re-collected the whole week from the network on a runner with no cached files) wrote 11, 0 and 0. Rebuilding the three nights from the kept raw files with the flag alone reproduces 7b9fe9b item for item; with the ground rule they hold 18, 15 and 15."
+    },
+    {
+      "id": "night-2026-08-16-unverifiable",
+      "claim": "The record shows no takeoffs, landings or airborne-nearby entries for the night ending 2026-08-16. Its raw files were not kept, so this zero cannot be checked.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/quiet-hours.html"],
+      "notes": "The night was written by the same scheduled run, commit 4126ecf, that lost most of the three nights before it (see restored-nights-2026-08-13-to-15). It stays as stored."
+    },
+    {
+      "id": "outside-hours-rows",
+      "claim": "On the operators page, 205 takeoffs and landings outside the recorded hours are shown, muted, each next to a recorded takeoff or landing it closes within 24 hours: 176 landings after a recorded takeoff and 29 takeoffs before a recorded landing. They count in no tally, total or week figure. They come only from trace files of aircraft that also appear in the recorded hours.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/operators.html"],
+      "notes": "summarize.py build() returns outside_events from every trace file kept for the 48 re-read nights (745 movements, files that overlap counted once); render_operators() in weekly.py shows one only when it is immediately followed or preceded by a recorded entry it closes, at most 24 hours away (OUTSIDE_MAX_H). 101 of the shown landings follow a takeoff labelled as a local flight. Trace files exist only for aircraft near the field during the recorded hours, so this is not a daytime log."
+    },
+    {
+      "id": "gaps-remaining-2026-11-17",
+      "claim": "After the re-read, 228 rows on the operators page mark a missing takeoff or landing (176 missing landings, 52 missing takeoffs), against 343 before. In 24 the kept files show outside-hours takeoffs and landings between the two that are not listed, and the row says so. In 57 more one of the two nights was re-read, and the row says the raw files kept for the aircraft do not show the missing takeoff or landing and do not cover every hour in between. 147 keep the older text.",
+      "status": "verified",
+      "sources": ["https://github.com/micrui/truckee-flights"],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": ["docs/operators.html"],
+      "notes": "Counted from docs/operators.html as rendered on 2026-11-17. In the analysis of the 48 nights, the gaps the files could not close were mostly aircraft that landed at another airport and came back after their file ended (37 of 49), or had no file for the following night; files exist for the following night for only 8% of aircraft-nights, and each file ends at 5:00 pm Pacific."
     }
   ]
 }
