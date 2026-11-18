@@ -1008,13 +1008,13 @@
     },
     {
       "id": "log-night-date-rule",
-      "claim": "Each night in the log is listed under the date of its morning, so a takeoff or landing between 10:00 pm and midnight is listed under the following day's date.",
+      "claim": "Every takeoff, landing and airborne-nearby entry on the operators page and the quiet-hours page shows the calendar date on which it happened. The recorded hours run from 10:00 pm on one day to 8:30 am on the next, so one night's entries carry two dates.",
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
-      "checked": "2026-11-16",
+      "checked": "2026-11-17",
       "pages": ["docs/operators.html", "docs/quiet-hours.html"],
-      "notes": "pipeline.py window_bounds() returns the window ending on the morning of the date an entry carries. docs/quiet-hours.html states the rule; docs/operators.html states it from 2026-11-16."
+      "notes": "The data files in data/weekly/ file each night under the date of its morning (pipeline.py window_bounds() returns the window ending on that morning). weekly.py real_date() prints the day before that date for an entry timed 22:00 or later. Until 2026-11-17 this entry held the old rule, that the pages show the morning's date for every entry of the night; see real-dates-correction-2026-11-17. The weekly chart pages still label each strip, which is one night, with the date of its morning."
     },
     {
       "id": "log-gaps-between-recorded-hours",
@@ -1028,13 +1028,13 @@
     },
     {
       "id": "operators-page-correction-2026-11-16",
-      "claim": "Before 2026-11-16 the operators page placed entries between 10:00 pm and midnight after the same date's morning entries, out of time order, and did not state that a night is listed under the date of its morning; 82 takeoffs and landings and 45 airborne-nearby entries were affected. It also gave the period covered as ending 2026-11-01; the last night recorded is the night ending 2026-10-27.",
+      "claim": "Before 2026-11-16 the operators page placed entries between 10:00 pm and midnight after the same date's morning entries, out of time order, and did not state that a night is listed under the date of its morning; 82 takeoffs and landings and 45 airborne-nearby entries were timed in those hours, and 22 and 8 of them were listed after a later entry of the same aircraft. It also gave the period covered as ending 2026-11-01; the last night recorded is the night ending 2026-10-27.",
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
       "checked": "2026-11-16",
       "pages": ["docs/operators.html"],
-      "notes": "Counts are of de-duplicated entries in data/weekly/ with a time of 22:00 or later: 82 of 1,013 takeoffs and landings, 45 of 639 airborne-nearby entries. The old order came from sorting on the listed date and time in weekly.py; the old period came from the calendar weeks' end dates. Corrected in weekly.py and stated in a dated note at the foot of the page."
+      "notes": "Counts are of de-duplicated entries in data/weekly/ with a time of 22:00 or later: 82 of 1,013 takeoffs and landings, 45 of 639 airborne-nearby entries. The old order came from sorting on the listed date and time in weekly.py; the old period came from the calendar weeks' end dates. Corrected in weekly.py and stated in a dated note at the foot of the page. Narrowed 2026-11-17: this claim and the page note of 2026-11-16 said all 82 and 45 entries had been out of time order. Rebuilding each aircraft's list as weekly.py at commit f2dd598 ordered it (sorted on the listed date and time) shows 22 of the 82 and 8 of the 45 listed after an entry of the same aircraft that happened later; the other 60 and 37 were in time order. The page note of 2026-11-17 states this."
     },
     {
       "id": "quiet-hours-page-correction-2026-11-16",
@@ -1048,7 +1048,22 @@
       "pages": [
         "docs/quiet-hours.html"
       ],
-      "notes": "Counted from data/weekly/ on 2026-11-16, through the night ending 2026-10-27, table by table as render() in weekly.py builds them: the three groups of quiet-hours takeoffs and landings in each week, and each week's airborne-nearby table. An entry counts when an entry listed before it in the old order happened later; when things happened is real_time() in weekly.py. The old order was by listed date, then time. 365 rows in all; the set of rows is unchanged."
+      "notes": "Counted from data/weekly/ on 2026-11-16, through the night ending 2026-10-27, table by table as render() in weekly.py builds them: the three groups of quiet-hours takeoffs and landings in each week, and each week's airborne-nearby table. An entry counts when an entry listed before it in the old order happened later; when things happened is real_time() in weekly.py. The old order was by listed date, then time. 365 rows in all; the set of rows is unchanged. The dates shown changed on 2026-11-17; see real-dates-correction-2026-11-17."
+    },
+    {
+      "id": "real-dates-correction-2026-11-17",
+      "claim": "Until 2026-11-17 an entry timed between 10:00 pm and midnight showed the date of the following morning. From 2026-11-17 every entry shows the date on which it happened: on the operators page 82 of 1,013 takeoffs and landings and 45 of 639 airborne-nearby entries now show the day before, and the date lists in its two summary tables changed in 22 of 61 and 15 of 34 cells; in the weekly tables of the quiet-hours page 82 of 190 takeoffs and landings and 41 of 175 airborne-nearby entries now show the day before; in the Notable this week lists 11 dates changed on 8 of the 17 weekly pages, and on 2 of those pages two items changed places. The order of table rows did not change.",
+      "status": "verified",
+      "sources": [
+        "https://github.com/micrui/truckee-flights"
+      ],
+      "method": "own-data",
+      "checked": "2026-11-17",
+      "pages": [
+        "docs/operators.html",
+        "docs/quiet-hours.html"
+      ],
+      "notes": "Counted on 2026-11-17 from data/weekly/ through the night ending 2026-10-27, and by comparing every regenerated page under docs/ row by row with the version published on 2026-11-16 (commit a561fa2): same number of rows on every page, every changed row timed 22:00 to 23:59 or a date-list cell, and no other difference except the two swapped items. The quiet-hours page has 365 table rows: 190 takeoffs and landings and 175 airborne-nearby entries. Each strip on a weekly chart page is still one night, labelled with the date of its morning."
     }
   ]
 }

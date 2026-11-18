@@ -155,8 +155,9 @@ def render():
                     return "medical"
                 return "other"
 
-            # Rows go in the order things happened. A night is filed under the date of its
-            # morning, so a 10:00 pm to midnight row comes before that date's morning rows.
+            # Rows go in the order things happened and carry the date they happened. A night
+            # is filed under the date of its morning; real_date() puts a 10:00 pm to midnight
+            # row on the evening before.
             def ev_table(evs):
                 def other_cell(e):
                     o = e["other"] or ""
@@ -164,7 +165,7 @@ def render():
                         return "local flight"
                     return html.escape(o)
                 body = "".join(
-                    f'<tr><td class="mono">{e["date"][5:]}</td><td class="mono num">{e["hm"]}</td>'
+                    f'<tr><td class="mono">{real_date(e["date"], e["hm"])[5:]}</td><td class="mono num">{e["hm"]}</td>'
                     f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                     f'<td class="mono">{html.escape(e["reg"] or "?")}</td>'
                     f'<td class="mono">{type_link(e["type"], e.get("desc"))}</td><td>{e["cls"]}</td>'
@@ -190,7 +191,7 @@ def render():
             quiet_ovf = [o for o in w.get("overflights", []) if o.get("quiet_min", 0) > 0]
             if quiet_ovf:
                 ovf_body = "".join(
-                    f'<tr><td class="mono">{o["date"][5:]}</td>'
+                    f'<tr><td class="mono">{real_date(o["date"], o["first"])[5:]}</td>'
                     f'<td class="mono num">{o["first"]}–{o["last"]}</td>'
                     f'<td class="mono">{html.escape(o["reg"] or "?")}</td>'
                     f'<td class="mono">{type_link(o["type"], o.get("desc"))}</td><td>{o["cls"]}</td>'
@@ -274,8 +275,9 @@ def render():
     (10:00 pm to 8:30 am), collected weekly from public flight-tracking data. The monitored window
     covers the airport's voluntary quiet hours from 10:00 pm through 7:00 am plus the
     first 90 minutes after they end. The Fly Quiet program also defines Shoulder Hour Protocols
-    for flights that need the edges of the quiet window. For evening flights (10:00 pm to midnight), the time shown belongs
-    to the night before the listed date. Context for night operations: the district\'s own
+    for flights that need the edges of the quiet window. Every entry (a takeoff, a landing or an "airborne nearby"
+    entry) shows the calendar date on which it happened. The recorded hours run from 10:00 pm on one day to
+    8:30 am on the next, so one night\'s entries carry two dates. Context for night operations: the district\'s own
     <a href="https://pilots.truckeetahoeairport.com/fuel.html">fuel service hours</a> are 7:00 am to
     7:00 pm, with after-hours fueling available by arrangement. Per-aircraft tallies and a full log for every tail
     number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
@@ -311,6 +313,14 @@ def render():
     order: an entry timed between 10:00 pm and midnight comes before the morning entries that carry the same
     date. Only the order of rows changed; the dates shown did not, and each night is still listed under the
     date of its morning.</p>
+    <p>Corrected 2026-11-17: until this date, an entry timed between 10:00 pm and midnight showed the date
+    of the following morning. Every entry now shows the date on which it happened. In the weekly tables, 82
+    of 190 takeoffs and landings and 41 of 175 "airborne nearby" entries now show one day earlier. The order
+    of rows did not change. The note of 2026-11-16 says the dates did not change and that each night is
+    listed under its morning\'s date; both stopped being true on 2026-11-17. The "Notable this week" lists
+    on the chart pages changed the same way: 11 dates on 8 of the 17 pages. On 2 of those pages, two items
+    swapped places, putting the list in time order. Each strip on a weekly chart is still one night,
+    labelled with the date of its morning; marks left of midnight happened on the evening before.</p>
   </div>
 </div>
 '''
@@ -413,8 +423,8 @@ def notables(w):
                 if 0 < dt <= 45:
                     role = f' ({a["role"]})' if a.get("role") else ""
                     name = a.get("desc") or a.get("type") or ""
-                    items.append((date, a["hm"],
-                        f'<b>{html.escape(a["hm"])}, {date[5:]}:</b> {html.escape(name)} '
+                    items.append((real_time(date, a["hm"]).isoformat(), a["hm"],
+                        f'<b>{html.escape(a["hm"])}, {real_date(date, a["hm"])[5:]}:</b> {html.escape(name)} '
                         f'{html.escape(reg or "")}{html.escape(role)} stopped for {dt} minutes during quiet hours, '
                         f'in from {html.escape(a["other"])}, out to {html.escape(b["other"])}.'))
     qcount = {}
@@ -437,7 +447,7 @@ def notables(w):
             name = o.get("desc") or o.get("type") or ""
             items.append(("0001", "",
                 f'<b>Longest non-landing presence:</b> {html.escape(name)} {html.escape(o["reg"] or "")}'
-                f'{html.escape(role)}, airborne nearby {o["first"]}–{o["last"]} on {o["date"][5:]} '
+                f'{html.escape(role)}, airborne nearby {o["first"]}–{o["last"]} on {real_date(o["date"], o["first"])[5:]} '
                 f'({o["dwell_min"]} minutes) without landing.'))
     items.sort()
     if not items:
@@ -459,6 +469,11 @@ def real_time(date, hm):
     if h >= 12:
         d -= datetime.timedelta(days=1)
     return datetime.datetime(d.year, d.month, d.day, h, m)
+
+
+def real_date(date, hm):
+    """The calendar date (YYYY-MM-DD) a log entry happened; see real_time()."""
+    return real_time(date, hm).date().isoformat()
 
 
 def role_tag(a):
@@ -502,9 +517,11 @@ def render_operators(weeks):
         a["events"].sort(key=lambda e: real_time(e["date"], e["hm"]))
         a["ovf"].sort(key=lambda o: real_time(o["date"], o["first"]))
         a["quiet"] = sum(1 for e in a["events"] if e["pre7"])
-        a["qdates"] = sorted({e["date"][5:] for e in a["events"] if e["pre7"]})
+        a["qdates"] = [d[5:] for d in sorted({real_date(e["date"], e["hm"])
+                                              for e in a["events"] if e["pre7"]})]
         a["q_ovf_min"] = sum(o.get("quiet_min", 0) for o in a["ovf"])
-        a["q_ovf_dates"] = sorted({o["date"][5:] for o in a["ovf"] if o.get("quiet_min", 0) > 0})
+        a["q_ovf_dates"] = [d[5:] for d in sorted({real_date(o["date"], o["first"])
+                                                   for o in a["ovf"] if o.get("quiet_min", 0) > 0})]
     ranked = sorted(ac.values(), key=lambda a: (-a["quiet"], -len(a["events"]), -a["q_ovf_min"], a["reg"]))
 
     rows = []
@@ -535,21 +552,22 @@ def render_operators(weeks):
     for a in ranked:
         badge = ' <span class="tag">blocked on flightaware</span>' if a["reg"] in ladd else ""
         log_rows = [(real_time(e["date"], e["hm"]), e,
-                     f'<tr><td class="mono">{e["date"]}</td><td class="mono">{e["hm"]}</td>'
+                     f'<tr><td class="mono">{real_date(e["date"], e["hm"])}</td><td class="mono">{e["hm"]}</td>'
                      f'<td>{"Landed" if e["ev"] == "ARR" else "Took off"}</td>'
                      f'<td>{html.escape(e["other"])}</td>'
                      f'<td>{QCHIP if e["pre7"] else ""}</td></tr>')
                     for e in a["events"]]
         log_rows += [(real_time(o["date"], o["first"]), None,
-                      f'<tr><td class="mono">{o["date"]}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
+                      f'<tr><td class="mono">{real_date(o["date"], o["first"])}</td><td class="mono">{o["first"]}–{o["last"]}</td>'
                       f'<td>Airborne nearby, no landing ({o["dwell_min"]} min)</td>'
                       f'<td>{o.get("alt_at_closest") or o["min_alt"]:,.0f} ft at closest pass ({o["min_dist"]} nm)</td>'
                       f'<td>{QCHIP if o.get("quiet_min", 0) > 0 else ""}</td></tr>')
                      for o in a["ovf"]]
         log_rows.sort(key=lambda kv: kv[0])
         # Two takeoffs in a row, or two landings in a row, get a row between them saying what
-        # the log lacks. Two entries filed under one date are in one recorded night; otherwise
-        # hours the log does not record lie between them.
+        # the log lacks. Two entries filed under one night key are in one recorded night (their
+        # printed dates can differ across midnight); otherwise hours the log does not record
+        # lie between them.
         out_rows, prev = [], None
         for when, e, row in log_rows:
             if e is not None:
@@ -583,8 +601,9 @@ def render_operators(weeks):
     This page lists every aircraft recorded taking off or landing at the airport ({span}), including air
     ambulances and other working flights, and tallies each aircraft's takeoffs and landings during the
     airport's voluntary quiet hours, 10:00 pm to 7:00 am. The log records takeoffs and landings between
-    10:00 pm and 8:30 am; those between 8:30 am and 10:00 pm are not recorded. For evening flights
-    (10:00 pm to midnight), the time shown belongs to the night before the listed date. One aircraft's
+    10:00 pm and 8:30 am; those between 8:30 am and 10:00 pm are not recorded. Every entry (a takeoff, a landing
+    or an "airborne nearby" entry) shows the calendar date on which it happened. The recorded hours run
+    from 10:00 pm on one day to 8:30 am on the next, so one night's entries carry two dates. One aircraft's
     list can show two takeoffs in a row with no landing between them, or two landings in a row with no
     takeoff between them: the takeoff or landing in between is not recorded, and the log does not show
     when it happened. Aircraft marked "blocked on FlightAware" have asked commercial tracking sites not to display them.
@@ -612,7 +631,15 @@ def render_operators(weeks):
   takeoffs and landings and 45 "airborne nearby" entries affected are now placed before that date's
   morning entries, in time order, and the introductory paragraph states the rule. Before this date the
   page also gave the period covered as ending 2026-11-01; the last night recorded is the night ending
-  2026-10-27.</p></div>
+  2026-10-27.</p>
+  <p>Corrected 2026-11-17: until this date, an entry timed between 10:00 pm and midnight showed the date of
+  the following morning. The introductory paragraph and the note of 2026-11-16 described that rule; it no
+  longer applies, and every entry shows the date on which it happened. 82 of 1,013 takeoffs and landings
+  and 45 of 639 "airborne nearby" entries now show one day earlier. In the two summary tables, 22 of 61
+  "Quiet-hours dates" cells and 15 of 34 "Dates" cells changed the same way. The order of rows did not
+  change. The note of 2026-11-16 said all 82 and 45 had been out of time order. 22 and 8 had been: each
+  was listed after a later entry of the same aircraft. The other 60 and 37 were in time order: no later
+  entry of the same aircraft was listed ahead of them.</p></div>
 </div>
 """
     open("docs/operators.html", "w").write(page)

@@ -42,12 +42,16 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
   per-week pages in `docs/weeks/`, and `docs/operators.html`. Aircraft class is re-derived at
   render time via `klass()`; never trust cached class fields.
 - The operators page (`render_operators()` in `weekly.py`) lists each aircraft's entries in the
-  order they happened. A night is filed under the date of its morning, so `real_time()` puts a
-  10:00 pm to midnight entry on the evening before the date it carries. Where two takeoffs or
-  two landings follow each other, the page inserts a row saying what the log lacks: only
-  10:00 pm to 8:30 am is recorded, so the takeoff or landing in between usually is not.
-  The weekly tables on the quiet-hours page (`render()`) are in the same order: a 10:00 pm to
-  midnight row comes before the morning rows that carry the same date.
+  order they happened, each with the calendar date it happened. The data files a night under
+  the date of its morning; `real_time()` and `real_date()` put a 10:00 pm to midnight entry on
+  the evening before, and every page prints that date (the "Quiet-hours dates" and "Dates"
+  columns too). Only the week pages' strip labels and night counts keep the morning date,
+  because a strip is one night. Where two takeoffs or two landings follow each other, the page
+  inserts a row saying what the log lacks: only 10:00 pm to 8:30 am is recorded, so the takeoff
+  or landing in between usually is not. Whether the two are in one night is decided by the
+  night they are filed under, not by the dates printed.
+  The weekly tables on the quiet-hours page (`render()`) and the week pages' "Notable this
+  week" lists follow the same rule: time order, real dates.
 - `.github/workflows/weekly.yml` runs nightly 04:15 UTC and again 15:45 UTC as a late-archive
   fallback, full window, adds the night that just closed and commits results. A render that
   crashes fails the job before the commit step, so that night is lost until someone backfills
