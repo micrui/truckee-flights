@@ -1004,7 +1004,7 @@
       "method": "own-data",
       "checked": "2026-11-17",
       "pages": ["docs/operators.html", "docs/quiet-hours.html"],
-      "notes": "The window is set in pipeline.py (WINDOWS, 'full': 22:00 the evening before to 08:30) and applied in summarize.py. All 1,066 de-duplicated takeoffs and landings in data/weekly/ through the night ending 2026-10-27 fall inside it; none has a time from 09:00 to 21:59. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
+      "notes": "The window is set in pipeline.py (WINDOWS, 'full': 22:00 the evening before to 08:30) and applied in summarize.py. All 1,114 de-duplicated takeoffs and landings in data/weekly/ through the night ending 2026-11-17 fall inside it; none has a time from 09:00 to 21:59. Re-counted 2026-11-17 after 48 nights were re-read from raw files. Re-counted 2026-11-18 after 21 more nights were collected."
     },
     {
       "id": "log-night-date-rule",
@@ -1024,7 +1024,7 @@
       "method": "own-data",
       "checked": "2026-11-18",
       "pages": ["docs/operators.html"],
-      "notes": "Counted from data/weekly/ on 2026-11-17, after 48 nights were re-read from raw files, in time order per aircraft with the outside-hours rows the page shows: 176 takeoffs are followed by another takeoff and 52 landings by another landing. Before the re-read the count was 290 and 53. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The earlier of the two entries carries a muted note saying what is missing and that it came before the later entry's date and time: 228 notes, 147 saying 8:30 am to 10:00 pm is not recorded, 57 saying the raw files kept do not show it, 24 saying outside-hours takeoffs and landings lie between that are not listed. Until 2026-11-18 each case was a row between the two entries. Re-counted 2026-11-17 after 48 nights were re-read from raw files."
+      "notes": "Counted from data/weekly/ on 2026-11-17, after 48 nights were re-read from raw files, in time order per aircraft with the outside-hours rows the page shows: 176 takeoffs are followed by another takeoff and 52 landings by another landing. Before the re-read the count was 290 and 53. In every case the two entries are filed under different nights, so hours the log does not record lie between them. The earlier of the two entries carries a muted note saying what is missing and that it came before the later entry's date and time: 228 notes, 147 saying 8:30 am to 10:00 pm is not recorded, 57 saying the raw files kept do not show it, 24 saying outside-hours takeoffs and landings lie between that are not listed. Until 2026-11-18 each case was a row between the two entries. Re-counted 2026-11-17 after 48 nights were re-read from raw files. On 2026-11-18, with 21 more nights collected, the counts are 188 and 53."
     },
     {
       "id": "operators-page-correction-2026-11-16",
@@ -1073,7 +1073,7 @@
       "method": "own-data",
       "checked": "2026-11-17",
       "pages": ["docs/operators.html", "docs/quiet-hours.html"],
-      "notes": "summarize.py ground_rule() and points(); thresholds in the constants at the top of the file. Calibrated on 2026-11-17 on the 646 trace files of the 48 re-read nights whose aircraft send the flag, the rule alone against the flag, both with the flight test: of 1,315 flagged takeoffs and landings, takeoffs placed within 7 s of the flag's time (median; 90% within 19 s), landings within 16 s (90% within 30 s), 99.7% of matched ones within 2 minutes; 7 missed, 5 added (some are real landings the flag missed); 7 of 4,563 rows called on the ground while the aircraft was clearly airborne. Raw pressure altitude instead of geometric: 601 of 6,463. The flight test removes 3 movements on the 48 nights, all parked aircraft whose GPS altitude was settling after switch-on; at 1.0 nm, 600 ft and 80 kt it removes the same 3. 5,830 ft is the geometric altitude reported by aircraft rolling on the runways; pressure altitude of aircraft standing at the field ran 5,450 to 5,800 ft over these nights. The rule applies to the 48 re-read nights; the other 66 nights are as first collected, without it."
+      "notes": "summarize.py ground_rule() and points(); thresholds in the constants at the top of the file. Calibrated on 2026-11-17 on the 646 trace files of the 48 re-read nights whose aircraft send the flag, the rule alone against the flag, both with the flight test: of 1,315 flagged takeoffs and landings, takeoffs placed within 7 s of the flag's time (median; 90% within 19 s), landings within 16 s (90% within 30 s), 99.7% of matched ones within 2 minutes; 7 missed, 5 added (some are real landings the flag missed); 7 of 4,563 rows called on the ground while the aircraft was clearly airborne. Raw pressure altitude instead of geometric: 601 of 6,463. The flight test removes 3 movements on the 48 nights, all parked aircraft whose GPS altitude was settling after switch-on; at 1.0 nm, 600 ft and 80 kt it removes the same 3. 5,830 ft is the geometric altitude reported by aircraft rolling on the runways; pressure altitude of aircraft standing at the field ran 5,450 to 5,800 ft over these nights. The rule applies to the 48 re-read nights and to every night collected from 2026-11-18 on; the 66 nights between 2026-08-16 and 2026-10-27 that have no raw files are as first collected, without it."
     },
     {
       "id": "reread-2026-11-17",
@@ -1107,13 +1107,13 @@
     },
     {
       "id": "outside-hours-rows",
-      "claim": "On the operators page, 205 takeoffs and landings outside the recorded hours are shown, muted, each next to a recorded takeoff or landing it closes within 24 hours: 176 landings after a recorded takeoff and 29 takeoffs before a recorded landing. They count in no tally, total or week figure. They come only from trace files of aircraft that also appear in the recorded hours.",
+      "claim": "On the operators page, 220 takeoffs and landings outside the recorded hours are shown, muted, each next to a recorded takeoff or landing it closes within 24 hours: 189 landings after a recorded takeoff and 31 takeoffs before a recorded landing. They count in no tally, total or week figure. They come only from trace files of aircraft that also appear in the recorded hours.",
       "status": "verified",
       "sources": ["https://github.com/micrui/truckee-flights"],
       "method": "own-data",
       "checked": "2026-11-17",
       "pages": ["docs/operators.html"],
-      "notes": "summarize.py build() returns outside_events from every trace file kept for the 48 re-read nights (745 movements, files that overlap counted once); render_operators() in weekly.py shows one only when it is immediately followed or preceded by a recorded entry it closes, at most 24 hours away (OUTSIDE_MAX_H). 101 of the shown landings follow a takeoff labelled as a local flight. Trace files exist only for aircraft near the field during the recorded hours, so this is not a daytime log."
+      "notes": "summarize.py build() returns outside_events from every trace file kept for the 48 re-read nights (745 movements, files that overlap counted once); render_operators() in weekly.py shows one only when it is immediately followed or preceded by a recorded entry it closes, at most 24 hours away (OUTSIDE_MAX_H). 101 of the shown landings follow a takeoff labelled as a local flight. Trace files exist only for aircraft near the field during the recorded hours, so this is not a daytime log. Counted 2026-11-18 with 21 more nights collected; on 2026-11-17 the counts were 205, 176 and 29."
     },
     {
       "id": "gaps-remaining-2026-11-17",
@@ -1123,11 +1123,11 @@
       "method": "own-data",
       "checked": "2026-11-18",
       "pages": ["docs/operators.html"],
-      "notes": "Counted from docs/operators.html as rendered on 2026-11-18; until then each case was a row between the two entries. In the analysis of the 48 nights, the gaps the files could not close were mostly aircraft that landed at another airport and came back after their file ended (37 of 49), or had no file for the following night; files exist for the following night for only 8% of aircraft-nights, and each file ends at 5:00 pm Pacific."
+      "notes": "Counted from docs/operators.html as rendered on 2026-11-18; until then each case was a row between the two entries. In the analysis of the 48 nights, the gaps the files could not close were mostly aircraft that landed at another airport and came back after their file ended (37 of 49), or had no file for the following night; files exist for the following night for only 8% of aircraft-nights, and each file ends at 5:00 pm Pacific. On 2026-11-18, with 21 more nights collected, 241 entries carry the note."
     },
     {
       "id": "collection-stopped-2026-10-29",
-      "claim": "The last night in the log is the night ending 2026-10-27. Since 2026-10-29 ADS-B Exchange's public history archive has answered every request from the collection job with HTTP 403. The nightly collection was paused on 2026-11-18.",
+      "claim": "From 2026-10-29 ADS-B Exchange's public history archive answered every request from the scheduled collection job with HTTP 403, and no night was collected. On 2026-11-18 collection moved to the maintainer's workstation, where it downloads the same files through a browser window after the maintainer has passed the archive's check in person, at most two files at a time with a pause before each; the 21 nights ending 2026-10-28 to 2026-11-17 were collected that day.",
       "status": "verified",
       "sources": [
         "https://github.com/micrui/truckee-flights/actions/workflows/weekly.yml",
@@ -1138,7 +1138,21 @@
       "pages": [
         "docs/quiet-hours.html"
       ],
-      "notes": "Every scheduled run of the quiet-hours-log workflow from 2026-10-29 failed at the fetch step, twice a day; the run history is public. A single request from another network on 2026-11-17 was also answered 403. The two cron entries in .github/workflows/weekly.yml are commented out since 2026-11-18; a manual run still works. On 2026-11-18 the archive answered a request for a heatmap slice and for a trace file, for dates before and after 2026-10-29, with HTTP 403 and the text \"Historical data requires a verified session.\"; the site's front page answered 200. No announcement of the change was found. The map page's own script runs Cloudflare Turnstile without showing anything, posts the token to /turnstile-token, and the server then serves history to that browser session: on 2026-11-18 one browser got a history file with its cookies (HTTP 200) and the same refusal without them. A request that carries only a session id, or that first makes the page's start-up calls, is refused."
+      "notes": "Every scheduled run of the quiet-hours-log workflow from 2026-10-29 failed at the fetch step, twice a day; the run history is public. A single request from another network on 2026-11-17 was also answered 403. The two cron entries in .github/workflows/weekly.yml are commented out since 2026-11-18; a manual run still works. On 2026-11-18 the archive answered a request for a heatmap slice and for a trace file, for dates before and after 2026-10-29, with HTTP 403 and the text \"Historical data requires a verified session.\"; the site's front page answered 200. No announcement of the change was found. The map page's own script runs Cloudflare Turnstile without showing anything, posts the token to /turnstile-token, and the server then serves history to that browser session: on 2026-11-18 one browser got a history file with its cookies (HTTP 200) and the same refusal without them. A request that carries only a session id, or that first makes the page's start-up calls, is refused. The workstation path is tools/browser_fetch.py, described in METHOD.md under Where the collector runs; nothing answers the check automatically. The scheduled workflow stays off. All 21 nights came through complete (every heatmap slice and every trace)."
+    },
+    {
+      "id": "collector-clock-2026-11-18",
+      "claim": "Until 2026-11-18 the collector's clock was fixed at seven hours behind UTC (Pacific daylight time). Every night collected before that date fell in daylight time, so no stored night was affected. From 2026-11-18 it follows Pacific time, and nights from 2026-11-01 are recorded from 10:00 pm to 8:30 am Pacific standard time.",
+      "status": "verified",
+      "sources": [
+        "https://github.com/micrui/truckee-flights"
+      ],
+      "method": "own-data",
+      "checked": "2026-11-18",
+      "pages": [
+        "docs/quiet-hours.html"
+      ],
+      "notes": "pipeline.py TZ (America/Los_Angeles) and window_slots(). After the change, python3 weekly.py --reread left every stored week file identical. The night ending 2026-11-01 spans the change to standard time and is 11.5 hours long. Each kept trace file is one UTC day: 5:00 pm to 5:00 pm in daylight time, 4:00 pm to 4:00 pm in standard time."
     }
   ]
 }

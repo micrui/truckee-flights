@@ -65,6 +65,7 @@ def add_night(week, ds, window):
     run_day(ds, window=window)
     events, airborne_early, aircraft, overflights, outside = build([ds], window=window)
     week["days"] = sorted(set(week["days"]) | {ds})
+    week["raw_nights"] = sorted(set(week.get("raw_nights", [])) | {ds})   # built from raw files, kept under days/
     span = (datetime.date.fromisoformat(week["end"]) - datetime.date.fromisoformat(week["start"])).days + 1
     week["partial"] = len(week["days"]) < span
     for key, new in (("events", events), ("airborne_quiet", airborne_early),
@@ -346,10 +347,8 @@ def render():
     number are on the <a href="operators.html">operators page</a>. Quiet-hours activity is listed
     flight by flight below, air ambulances and other working flights included.
   </p>
-  <p class="standfirst" style="margin-top:-14px;"><b>Collection stopped:</b> the last night in the log is the
-  night ending 2026-10-27, and no later night is in it. The log is built from ADS-B Exchange\'s public
-  archive of aircraft position reports. Since 2026-10-29 that archive has refused every request from the
-  job that collects each night (the answer is HTTP 403). The nightly collection was paused on 2026-11-18.</p>
+  <p class="standfirst" style="margin-top:-14px;">The last night in the log is the night ending
+  {max(d for w in weeks for d in w["days"])}.</p>
   <details class="howto">
     <summary>Heard something? How to look up a moment</summary>
     <p>Find the week below, open its timeline, and hover the marks near your time; each night
@@ -400,6 +399,14 @@ def render():
     ending 2026-08-16 shows no takeoffs or landings. The same collection of 2026-08-17 wrote it. Its raw
     files were not kept, so that zero cannot be checked. The week is marked. The two notes above give
     counts from before this re-read.</p>
+    <p>Resumed 2026-11-18: from 2026-10-29, ADS-B Exchange\'s archive served files only to a web browser
+    that had passed the check on its map page. The collection job was not one. Every request was refused;
+    no night was collected. On 2026-11-18 collection moved to the maintainer\'s computer, which downloads
+    the files through a browser window, at most two at a time, with a pause before each, after the
+    maintainer passes the check in person. The 21 nights ending 2026-10-28 to 2026-11-17 were collected
+    that way. Until then the collection job\'s clock assumed summer time all year; every night collected
+    before that date fell in summer time, so no stored night was affected. Nights from 2026-11-01 are
+    recorded from 10:00 pm to 8:30 am Pacific standard time.</p>
   </div>
 </div>
 '''
@@ -602,6 +609,7 @@ def render_operators(weeks):
     out_seen, all_out, reread_nights = set(), [], set()
     for w in weeks:
         reread_nights.update((w.get("reread") or {}).get("nights", []))
+        reread_nights.update(w.get("raw_nights", []))
         for e in w.get("outside_events", []):
             key = (e["day"], e["hm"], e["reg"], e["ev"])
             if key not in out_seen:
@@ -753,7 +761,7 @@ def render_operators(weeks):
     ambulances and other working flights, and tallies each aircraft's takeoffs and landings during the
     airport's voluntary quiet hours, 10:00 pm to 7:00 am. The log records and counts takeoffs and landings
     from 10:00 pm to 8:30 am the next day. Each entry shows its calendar date, so one night's entries show two
-    dates. On the 48 of the 114 recorded nights whose raw position files were kept, a grey row marked
+    dates. On the {len(reread_nights)} of the {len({d for w in weeks for d in w["days"]})} recorded nights whose raw position files were kept, a grey row marked
     "outside recorded hours" shows the landing after a recorded takeoff, or the takeoff before a recorded
     landing, if the aircraft's file shows it within 24 hours. These rows are not counted. Other takeoffs and
     landings between 8:30 am and 10:00 pm are not listed. Where an aircraft's list shows two takeoffs in a row,

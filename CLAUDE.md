@@ -37,6 +37,11 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
 
 - `pipeline.py` fetches ADS-B Exchange heatmaps/traces for a date; windows: "morning"
   (05:00–08:30) and "full" (22:00 prev day–08:30). Stdlib only.
+- `tools/browser_fetch.py` downloads the archive files from inside a real Chromium window whose
+  session the maintainer verified in person (`--login` on the desktop; `--check`; default:
+  serve `url<TAB>path` lines). `pipeline.py` uses it when `TRUCKEE_FETCH_HELPER` names it, one
+  process per night; it exits 3 when the session is not verified and never answers the
+  verification itself. `tests/test_helper_hook.py` checks the hook offline with a fake helper.
 - `summarize.py` builds event lists, overflight sessions (gap-split at 20 min), operator roles,
   and `outside_events`: every takeoff and landing the day files show outside the recorded hours.
   A row is on the ground when the transponder says so or when `ground_rule()` does (constants
@@ -86,7 +91,8 @@ micrui.net serves the pages from there, so GitHub Pages stays on).
 - Build incrementally but push coherently: hold pushes, normalize, verify locally, single push.
 - Every number on a page traces to a linked source. When a published claim is found wrong,
   correct it with a dated addendum, never silently.
-- Stdlib-only Python. No external dependencies, no build step; pages are hand-written HTML
+- Stdlib-only Python, except `tools/browser_fetch.py` (Playwright, run with a Python that has
+  it). No other external dependencies, no build step; pages are hand-written HTML
   using the shared CSS token set (light/dark via `prefers-color-scheme` + `data-theme`).
 
 ## The fact registry

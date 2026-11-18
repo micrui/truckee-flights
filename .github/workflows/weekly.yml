@@ -1,12 +1,11 @@
 name: quiet-hours-log
 
 on:
-  # Schedule paused 2026-11-18. The ADS-B Exchange history archive has answered
-  # HTTP 403 to every request since 2026-10-29 (data/health/2026-11.md), so both
-  # nightly runs failed at the fetch step, twice a day. To resume, restore the
-  # two cron entries below; each missed night then needs a manual backfill
-  # (python3 weekly.py --date YYYY-MM-DD). A manual run still works: use
-  # "Run workflow", or its probe_date input to test the archive.
+  # Schedule off since 2026-11-18. From 2026-10-29 the ADS-B Exchange history archive
+  # serves its files only to a browser session that passed the check on its map page,
+  # so this job, which is not a browser, was refused twice a day. Collection now runs
+  # on the maintainer's workstation (METHOD.md, "Where the collector runs"). The cron
+  # entries are kept below for reference; a manual run here will be refused the same way.
   #
   # schedule:
   #   # Nightly 04:15 UTC (~9:15 pm Pacific): the UTC day just closed, so the

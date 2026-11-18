@@ -1,0 +1,96 @@
+{
+ "start": "2026-11-16",
+ "end": "2026-11-22",
+ "days": [
+  "2026-11-16",
+  "2026-11-17"
+ ],
+ "partial": true,
+ "window_local": "22:00-08:30",
+ "note": null,
+ "events": [
+  {
+   "date": "2026-11-17",
+   "reg": "N900KP",
+   "type": "PC24",
+   "cls": "jet",
+   "own": "TOBARTHS LLC",
+   "role": "",
+   "desc": "",
+   "ev": "ARR",
+   "hm": "08:24",
+   "other": "KMRY Monterey",
+   "pre7": false
+  }
+ ],
+ "airborne_quiet": [],
+ "overflights": [
+  {
+   "date": "2026-11-17",
+   "reg": "N900MT",
+   "type": "BE9L",
+   "cls": "turboprop",
+   "own": "LINCOLN VENTURES LLC",
+   "role": "",
+   "desc": "BEECH 90 King Air",
+   "first": "07:43",
+   "last": "07:48",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 12800,
+   "min_dist": 0.6,
+   "alt_at_closest": 12800
+  },
+  {
+   "date": "2026-11-17",
+   "reg": "N200AA",
+   "type": "C208",
+   "cls": "turboprop",
+   "own": "RAD RUNNER LLC",
+   "role": "",
+   "desc": "CESSNA 208 Caravan",
+   "first": "08:10",
+   "last": "08:16",
+   "dwell_min": 6,
+   "quiet_min": 0,
+   "min_alt": 12925,
+   "min_dist": 4.7,
+   "alt_at_closest": 12950
+  },
+  {
+   "date": "2026-11-17",
+   "reg": "N733CE",
+   "type": "C172",
+   "cls": "piston",
+   "own": "N2893E LLC",
+   "role": "",
+   "desc": "",
+   "first": "08:24",
+   "last": "08:29",
+   "dwell_min": 5,
+   "quiet_min": 0,
+   "min_alt": 12725,
+   "min_dist": 1.8,
+   "alt_at_closest": 12950
+  }
+ ],
+ "outside_events": [],
+ "ladd_operators": [],
+ "total_ops": 1,
+ "unique_aircraft": 1,
+ "by_class": {
+  "jet": 1
+ },
+ "quiet_hours_ops": 0,
+ "quiet_hours_by_class": {},
+ "quiet_hours_events": [],
+ "local_flights": 0,
+ "reread": {
+  "nights": [
+   "2026-11-16",
+   "2026-11-17"
+  ],
+  "on": "2026-11-18",
+  "rule": "on the ground: the transponder's ground flag, or within 1.5 nm of the field, 30 kt or slower, at field level (geometric altitude 5,830 ft, within 75 ft)"
+ }
+}

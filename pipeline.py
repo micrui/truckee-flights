@@ -18,21 +18,23 @@ data/all_ops.json. Downloads are cached; reruns are cheap.
 """
 import struct, math, json, os, sys, time, random, datetime
 import urllib.request
+from zoneinfo import ZoneInfo
 import concurrent.futures as cf
 
 # ---------------------------------------------------------------- configuration
 AIRPORT = (39.3200, -120.1396)      # KTRK Truckee Tahoe
 FIELD_ELEV = 5904                   # ft MSL
-TZ = datetime.timezone(datetime.timedelta(hours=-7))   # PDT
+TZ = ZoneInfo("America/Los_Angeles")   # Pacific time, summer and winter
 
-# Collection windows. "full" covers the evening portion of quiet hours plus the
-# morning: 22:00 local the prior evening through 08:30. That whole span maps to
-# one contiguous run of half-hour UTC slots on the MORNING's UTC date
-# (22:00 PDT prev day = 05:00 UTC = slot 10; 08:30 PDT = 15:30 UTC = slot 30).
+# Collection windows, in local clock time. "full" covers the evening portion of quiet
+# hours plus the morning: 22:00 the prior evening through 08:30. That whole span maps
+# to one contiguous run of half-hour UTC slots on the MORNING's UTC date; which slots
+# depends on the season (summer: 05:00 to 15:30 UTC, slots 10 to 30; winter: 06:00 to
+# 16:30 UTC, slots 12 to 32), so window_slots() works them out from the clock.
 # "morning" is the original 04:00-08:30 window, kept for backfill consistency.
 WINDOWS = {
-    "full":    {"slots": range(10, 31), "start": (-1, 22, 0), "end": (0, 8, 30)},
-    "morning": {"slots": range(22, 31), "start": (0, 4, 0),  "end": (0, 8, 30)},
+    "full":    {"start": (-1, 22, 0), "end": (0, 8, 30)},
+    "morning": {"start": (0, 4, 0),  "end": (0, 8, 30)},
 }
 WINDOW = ((4, 0), (8, 30))          # legacy alias (morning); summarize imports it
 RADIUS_NM = 20                      # discovery radius
@@ -142,6 +144,73 @@ def fetch(url, path):
             else:
                 time.sleep(3 * (attempt + 1) + random.random() * 2)
 
+class FetchHelper:
+    """Downloads through tools/browser_fetch.py (named by TRUCKEE_FETCH_HELPER): one process
+    for the night, started at the first download that is not cached. It reads lines
+    "url<TAB>path" and answers each with "OK<TAB>path<TAB>bytes", "404<TAB>path" or
+    "ERR<TAB>path<TAB>reason". It exits 3 when the browser session is not verified."""
+
+    def __init__(self, script):
+        self.script, self.proc, self.err = script, None, None
+
+    def fetch_all(self, jobs):
+        todo = [(u, p) for u, p in jobs if not (os.path.exists(p) and os.path.getsize(p) > 0)]
+        if todo:
+            if self.proc is None:
+                import subprocess, tempfile
+                self.err = tempfile.TemporaryFile("w+")
+                self.proc = subprocess.Popen([sys.executable, self.script], text=True,
+                                             stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                                             stderr=self.err)
+            try:
+                self.proc.stdin.write("".join(f"{u}\t{p}\n" for u, p in todo))
+                self.proc.stdin.flush()
+            except BrokenPipeError:
+                self.died()
+            for _ in todo:
+                line = self.proc.stdout.readline()
+                if not line:
+                    self.died()
+                kind, path, *why = line.rstrip("\n").split("\t")
+                if kind == "OK":
+                    FAILED.pop(path, None)
+                elif kind == "404":
+                    FAILED[path] = 404
+                else:
+                    FAILED[path] = why[0] if why else "fetch helper error"
+                    print(f"  fetch FAILED {path}: {FAILED[path]}", file=sys.stderr)
+        return [p if os.path.exists(p) and os.path.getsize(p) > 0 else None for u, p in jobs]
+
+    def died(self):
+        code = self.proc.wait()
+        self.err.seek(0)
+        lines = [l for l in self.err.read().splitlines() if l.strip()]
+        why = lines[-1] if lines else f"fetch helper exited with code {code}"
+        raise RuntimeError(why if code == 3 else f"fetch helper exited with code {code}: {why}")
+
+    def close(self):
+        if self.proc is not None:
+            try:
+                self.proc.stdin.close()
+            except BrokenPipeError:
+                pass
+            try:
+                self.proc.wait(120)
+            except Exception:
+                self.proc.kill()
+                self.proc.wait()
+            self.err.close()
+            self.proc = None
+
+
+def fetch_all(jobs, workers, helper):
+    """Fetch (url, path) jobs; returns path or None for each, failures in FAILED."""
+    if helper:
+        return helper.fetch_all(jobs)
+    with cf.ThreadPoolExecutor(workers) as ex:
+        return list(ex.map(lambda j: fetch(*j), jobs))
+
+
 def t2s(ts):
     return datetime.datetime.fromtimestamp(ts, TZ).strftime("%H:%M")
 
@@ -159,16 +228,33 @@ def window_bounds(datestr, window="morning"):
     return W0, W1
 
 
+def window_slots(datestr, window="morning"):
+    """The archive's half-hour UTC slots, on datestr's UTC date, that cover the window."""
+    W0, W1 = window_bounds(datestr, window)
+    y, m, d = map(int, datestr.split("-"))
+    midnight = datetime.datetime(y, m, d, tzinfo=datetime.timezone.utc).timestamp()
+    return range(int((W0 - midnight) // 1800), int(-((midnight - W1) // 1800)))
+
+
 def run_day(datestr, window="morning"):
+    script = os.environ.get("TRUCKEE_FETCH_HELPER")
+    helper = FetchHelper(script) if script else None
+    try:
+        return _run_day(datestr, window, helper)
+    finally:
+        if helper:
+            helper.close()
+
+
+def _run_day(datestr, window, helper):
     y, m, d = datestr.split("-")
     daydir = f"days/{datestr}"
     os.makedirs(f"{daydir}/heatmap", exist_ok=True)
     os.makedirs(f"{daydir}/traces", exist_ok=True)
-    SLOTS = WINDOWS[window]["slots"]
+    SLOTS = window_slots(datestr, window)
 
-    with cf.ThreadPoolExecutor(3) as ex:
-        got = list(ex.map(lambda s: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/heatmap/{s}.bin.ttf",
-                                          f"{daydir}/heatmap/{s}.bin"), SLOTS))
+    got = fetch_all([(f"{BASE}/globe_history/{y}/{m}/{d}/heatmap/{s}.bin.ttf",
+                      f"{daydir}/heatmap/{s}.bin") for s in SLOTS], 3, helper)
     print(f"{datestr}: heatmap slices {sum(1 for g in got if g)}/{len(SLOTS)}",
           file=sys.stderr)
     # An incomplete download must not be stored as a night: refuse it (weekly.py exits non-zero).
@@ -209,9 +295,8 @@ def run_day(datestr, window="morning"):
         raise RuntimeError(f"{datestr}: heatmap yielded zero aircraft; "
                            "fetch blocked or archive not published")
 
-    with cf.ThreadPoolExecutor(4) as ex:
-        got = list(ex.map(lambda h: fetch(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
-                                          f"{daydir}/traces/{h}.json"), sel))
+    got = fetch_all([(f"{BASE}/globe_history/{y}/{m}/{d}/traces/{h[-2:]}/trace_full_{h}.json",
+                      f"{daydir}/traces/{h}.json") for h in sel], 4, helper)
     print(f"{datestr}: traces {sum(1 for g in got if g)}/{len(sel)}", file=sys.stderr)
     failed = [(h, FAILED.get(f"{daydir}/traces/{h}.json")) for h, g in zip(sel, got) if not g]
     not_found = [h for h, why in failed if why == 404]

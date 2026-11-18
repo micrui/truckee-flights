@@ -11,11 +11,15 @@ ADS-B Exchange serves two public artifact types from `globe.adsbexchange.com` th
 
 ADS-B Exchange does not filter LADD or PIA aircraft, which is why the privacy-flag analysis is possible at all. Requests carry a browser-style Referer header and are retried with backoff; heavier parallelism gets connection-reset.
 
+## Where the collector runs
+
+Since 2026-10-29 the archive serves history files only to a browser session it has verified (the map page shows a verification box; without it every history request gets HTTP 403, "Historical data requires a verified session."). The collector therefore runs on the maintainer's workstation in a real browser window (Chromium with its own saved profile), and the maintainer answers the verification in person: `tools/browser_fetch.py --login` opens the map in the same Chromium, started plainly on that profile with nothing driving the window, and the maintainer closes it once the map has loaded. A verification lasts about an hour. With `TRUCKEE_FETCH_HELPER` set to that script, `pipeline.py` downloads through it: the open map page fetches the same files the map itself loads, with the browser's own session. It keeps at most two downloads in flight, waits a random 0.4 to 1.6 seconds before each one and 2 to 6 seconds after the page opens. Nothing answers the verification automatically: when the session is not verified, the script says so and the night is not collected. The 21 nights ending 2026-10-28 to 2026-11-17 were collected this way on 2026-11-18, and their raw files are kept under `days/`, as are those of every night collected since.
+
 ## Pipeline (`pipeline.py`)
 
 Per requested date:
 
-1. Download the heatmap slots covering the recorded hours: 10:00 pm the evening before to 08:30 local (slots 10 through 30 for UTC-7). Each night is filed under the date of its morning. Study 1 and some early backfills used the original morning window, 04:00 to 08:30 (slots 22 through 30); every week file in `data/weekly/` now carries `window_local` 22:00-08:30.
+1. Download the heatmap slots covering the recorded hours: 10:00 pm the evening before to 08:30 local (slots 10 through 30 in summer time, 12 through 32 in winter time; `window_slots()` works them out from Pacific time. Until 2026-11-18 the clock was fixed at UTC-7; every night collected before then fell in summer time, so none was affected). Each night is filed under the date of its morning. Study 1 and some early backfills used the original morning window, 04:00 to 08:30 (slots 22 through 30); every week file in `data/weekly/` now carries `window_local` 22:00-08:30.
 2. Parse all records; keep positions within 20 nm of the airport reference point. This yields the day's discovery set (110 to 126 aircraft per morning in the study week).
 3. Reduce to candidates: minimum distance ≤ 13 nm and minimum altitude ≤ 20,000 ft anywhere in the window. This drops enroute overflights and, for KTRK, the Reno-Tahoe arrival stream 17 nm east, both of which otherwise dominate the count.
 4. Download each candidate's full-day trace.
